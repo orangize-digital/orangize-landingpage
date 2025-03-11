@@ -33,24 +33,28 @@
 </template>
 
 <script setup>
+import masterSolarImage from "@/assets/images/Photovoltaikanlagen.png";
+import wiwilaImage from "@/assets/images/wiwila.png";
+import wfmInkassoImage from "@/assets/images/wfm-inkasso.png";
+
 const projects = [
   {
     title: "Master-Solar GmbH",
     description: "Optimierung der Online-Präsenz für ein Start-up.",
-    image: "src/assets/images/Photovoltaikanlagen.png",
+    image: masterSolarImage,
     link: "https://master-solar.de",
   },
   {
     title: "Wiwila - Energie Arbeit",
     description: "Steigerung der Conversion-Rate durch gezieltes PPC.",
-    image: "src/assets/images/wiwila.png",
+    image: wiwilaImage,
     link: "#",
   },
   {
     title: "WFM - Inkasso",
     description: "Datengetriebene Analyse zur Skalierung von Werbekampagnen.",
-    image: "src/assets/images/wfm-inkasso.png",
+    image: wfmInkassoImage,
     link: "https://wfm-inkasso.de",
-  },  
+  },
 ];
 </script>

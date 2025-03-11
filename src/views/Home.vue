@@ -2,8 +2,7 @@
   <Navigation />
   <!-- Hero Section -->
   <div
-    class="hero min-h-screen relative"
-    style="background-image: url('/src/assets/images/brands.jpg')"
+    class="hero min-h-screen relative bg-[url('@/assets/images/brands.jpg')]"
   >
     <div class="hero-overlay bg-black bg-opacity-80"></div>
     <div class="hero-content text-center text-neutral-content relative z-10">
@@ -403,8 +402,7 @@
   <!-- CTA Section -->
   <section class="py-20 relative bg-black">
     <div
-      class="absolute inset-0 bg-cover bg-center bg-no-repeat blur-md opacity-50"
-      style="background-image: url('src/assets/images/cta.jpg')"
+      class="absolute inset-0 bg-cover bg-center bg-no-repeat blur-md opacity-50 bg-[url('@/assets/images/cta.jpg')]"
     ></div>
 
     <div class="container mx-auto px-4 text-center relative z-10">

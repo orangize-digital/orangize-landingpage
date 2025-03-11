@@ -11,12 +11,13 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      input: {
-        home: path.resolve(__dirname, "src/views/Home.vue"),
-        danke: path.resolve(__dirname, "src/views/Danke.vue"),
-        impressum: path.resolve(__dirname, "src/views/Impressum.vue"),
-        datenschutz: path.resolve(__dirname, "src/views/Datenschutz.vue"),
-      },
+      // ❌ Entferne diesen fehlerhaften Code:
+      // input: {
+      //   home: path.resolve(__dirname, "src/views/Home.vue"),
+      //   danke: path.resolve(__dirname, "src/views/Danke.vue"),
+      //   impressum: path.resolve(__dirname, "src/views/Impressum.vue"),
+      //   datenschutz: path.resolve(__dirname, "src/views/Datenschutz.vue"),
+      // },
     },
   },
 });

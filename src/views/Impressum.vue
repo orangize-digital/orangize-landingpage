@@ -92,14 +92,4 @@
 import { onMounted } from "vue";
 import Navigation from "../components/Navigation.vue";
 import Footer from "../components/Footer.vue";
-
-onMounted(() => {
-  fetch(
-    "https://app.cockpit.legal/api/cockpit/resources/legaldocumentshare/d9a184300da668743d2f76d449e9ecde/document/render/html?language=de"
-  )
-    .then((result) => result.text())
-    .then((content) => {
-      document.getElementById("lc-text").innerHTML = content;
-    });
-});
 </script>
