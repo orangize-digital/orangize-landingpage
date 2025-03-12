@@ -46,13 +46,15 @@ const projects = [
   },
   {
     title: "Wiwila - Energie Arbeit",
-    description: "Steigerung der Conversion-Rate durch gezieltes PPC.",
+    description:
+      "Individuelles Webdesign, performante Webentwicklung und kreatives Logo-Design – alles für einen starken digitalen Auftritt.",
     image: wiwilaImage,
     link: "#",
   },
   {
     title: "WFM - Inkasso",
-    description: "Datengetriebene Analyse zur Skalierung von Werbekampagnen.",
+    description:
+      "Datengetriebene Analyse zur Skalierung von Werbekampagnen – kombiniert mit einer Conversion-starken Webseite für maximale Ergebnisse.",
     image: wfmInkassoImage,
     link: "https://wfm-inkasso.de",
   },

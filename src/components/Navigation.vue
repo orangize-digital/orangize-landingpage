@@ -2,10 +2,14 @@
   <nav
     class="navbar fixed top-0 z-50 transition-all border-none duration-500 ease-out"
     :class="{
-      'max-w-[75rem] bg-base-100 mx-auto rounded-xl mt-4 opacity-100 translate-y-0 left-1/2 translate-x-[-50%]':
+      'max-w-[75rem] bg-base-100 rounded-xl mt-4 left-0 right-0 mx-auto translate-x-[-50%]':
         !isScrolled,
-      'bg-base-100 border-none w-full shadow-md opacity-100 translate-y-[0px] left-0 translate-x-0':
+      'bg-base-100 border-none w-full shadow-md left-0 translate-x-0':
         isScrolled,
+    }"
+    :style="{
+      transform: `translateY(${isScrolled ? '0px' : '10px'})`,
+      transition: 'transform 0.4s ease-out, opacity 0.2s ease-in',
     }"
   >
     <div class="container mx-auto px-4">
@@ -107,6 +111,7 @@ import { ref, onMounted, onUnmounted } from "vue";
 const isMenuOpen = ref(false);
 const isScrolled = ref(false);
 const activeSection = ref(null);
+let ticking = false;
 
 const sections = [
   { id: "losung", name: "Lösung" },
@@ -117,8 +122,14 @@ const sections = [
 ];
 
 const updateNavbar = () => {
-  isScrolled.value = window.scrollY > 200;
-  updateActiveSection();
+  if (!ticking) {
+    requestAnimationFrame(() => {
+      isScrolled.value = window.scrollY > 200;
+      updateActiveSection();
+      ticking = false;
+    });
+    ticking = true;
+  }
 };
 
 const scrollToSection = (id) => {
@@ -151,6 +162,7 @@ onUnmounted(() => {
   window.removeEventListener("scroll", updateNavbar);
 });
 </script>
+
 <style>
 .navi-items {
   letter-spacing: 1px !important;
