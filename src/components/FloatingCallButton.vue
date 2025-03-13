@@ -2,7 +2,7 @@
 export default {
   data() {
     return {
-      phoneNumber: "+49 123 4567890",
+      phoneNumber: "015122031093",
       email: "info@orangize.de",
     };
   },
@@ -12,7 +12,7 @@ export default {
   <div class="fixed right-4 bottom-24 z-50">
     <a
       class="group relative flex items-center justify-center overflow-hidden rounded-full bg-orange-500 w-16 h-16 transition-all duration-300 hover:w-64"
-      :href="'mailto:' + email"
+      :href="'tel:' + phoneNumber"
       target="_blank"
     >
       <div
