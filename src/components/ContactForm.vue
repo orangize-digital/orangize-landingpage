@@ -1,16 +1,18 @@
 <template>
   <section id="kontakt" class="py-20 bg-orange-500 bg-opacity-20 text-white">
     <div class="container mx-auto px-4 text-center">
+      <h3
+        class="text-lg text-white font-semibold text-[#f60] text-center"
+        data-aos="fade-up"
+      >
+        Sag uns, worum es geht – wir melden uns schnellstmöglich!
+      </h3>
       <h2
-        class="text-4xl font-bold mb-4 text-black neon-text"
+        class="text-4xl font-bold mb-4 text-white"
         data-text="Kostenlose Beratung"
       >
         Kostenlose Beratung
       </h2>
-      <p class="mb-8">
-        Sag uns, worum es geht – wir melden uns schnellstmöglich!
-      </p>
-
       <div
         class="max-w-lg mx-auto bg-black backdrop-blur-md p-8 rounded-xl shadow-lg"
       >

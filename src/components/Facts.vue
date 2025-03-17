@@ -1,10 +1,13 @@
 <template>
   <section id="fakten" class="py-20 relative overflow-hidden">
     <div class="container mx-auto px-4">
-      <h2
-        class="text-4xl text-black font-bold text-center mb-12 neon-text"
-        data-text="Fakten, die uns antreiben"
+      <h3
+        class="text-lg text-white font-semibold text-[#f60] text-center"
+        data-aos="fade-up"
       >
+        Unsere Motivation in Zahlen – weil Ergebnisse zählen.
+      </h3>
+      <h2 class="text-4xl text-white font-bold text-center mb-12">
         Fakten, die uns antreiben
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
