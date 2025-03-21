@@ -78,18 +78,25 @@
                 {{ feature }}
               </li>
             </ul>
-            <button :class="plan.buttonClass" class="btn text-white w-full">
+            <button
+              :class="plan.buttonClass"
+              class="btn text-white w-full"
+              @click="$refs.pricingModal.openModal(plan.name)"
+            >
               {{ plan.buttonText }}
             </button>
           </div>
         </div>
       </div>
     </div>
+    <PricingModal ref="pricingModal" />
   </section>
 </template>
 
 <script>
+import PricingModal from "./PricingModal.vue";
 export default {
+  components: { PricingModal },
   data() {
     return {
       activeCategory: "web",
