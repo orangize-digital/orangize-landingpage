@@ -36,8 +36,16 @@
 import masterSolarImage from "@/assets/images/Photovoltaikanlagen.png";
 import wiwilaImage from "@/assets/images/wiwila.png";
 import wfmInkassoImage from "@/assets/images/wfm-inkasso.png";
+import albrechtImage from "@/assets/images/metallbaumeister-albrecht.png";
 
 const projects = [
+  {
+    title: "Metallbaumeister Albrecht",
+    description:
+      "Webdesign, Entwicklung und Google Ads für ein wachsendes Handwerksunternehmen.",
+    image: albrechtImage,
+    link: "https://metallbaumeister-albrecht.de",
+  },
   {
     title: "Master-Solar GmbH",
     description: "Optimierung der Online-Präsenz für ein Start-up.",
@@ -49,14 +57,14 @@ const projects = [
     description:
       "Individuelles Webdesign, performante Webentwicklung und kreatives Logo-Design – alles für einen starken digitalen Auftritt.",
     image: wiwilaImage,
-    link: "#",
+    link: "https://wiwila.netlify.app",
   },
   {
     title: "WFM - Inkasso",
     description:
       "Datengetriebene Analyse zur Skalierung von Werbekampagnen – kombiniert mit einer Conversion-starken Webseite für maximale Ergebnisse.",
     image: wfmInkassoImage,
-    link: "https://wfm-inkasso.de",
+    link: "https://wfm-inkasso.netlify.app/",
   },
 ];
 </script>
