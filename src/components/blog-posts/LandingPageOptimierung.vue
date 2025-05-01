@@ -7,14 +7,14 @@ const post = {
   slug: "landing-page-psychologie",
   excerpt:
     "Entdecke die 7 bewährten Strategien für hochkonvertierende Landing Pages. Von psychologischen Tricks bis zu Design-Hacks – alles, was du brauchst, um deine Conversion Rate zu verdoppeln!",
-  image: "/src/assets/images/blog-posts/landingpage.jpg",
+  image: "@/assets/images/blog-posts/landingpage.jpg",
   category: "Webdesign",
   date: "3. Mai 2025",
   readTime: 9,
   author: {
     name: "Naumche Joshevski",
     title: "Conversion-Rate-Optimierer",
-    avatar: "/src/assets/images/Naumche.jpg",
+    avatar: "@/assets/images/Naumche.jpg",
     bio: "Webdesign-Experte mit über 12 Jahren Erfahrung. Spezialisiert auf Conversion-Rate-Optimierung und nutzerorientiertes Design für maximale Performance.",
   },
   tags: ["Landing Pages", "CRO", "Webdesign", "Conversion", "A/B-Testing"],
@@ -200,7 +200,7 @@ defineExpose({ post });
 
         <div class="my-8" data-aos="zoom-in">
           <img
-            src="/src/assets/images/blog-posts/headline-formeln.png"
+            src="@/assets/images/blog-posts/headline-formeln.png"
             alt="Beispiel einer wirkungsvollen Headline"
             class="rounded-lg w-full h-auto shadow-lg"
           />
@@ -322,7 +322,7 @@ defineExpose({ post });
 
         <div class="my-8" data-aos="zoom-in">
           <img
-            src="/src/assets/images/blog-posts/cta-buttons.png"
+            src="@/assets/images/blog-posts/cta-buttons.png"
             alt="Beispiel eines effektiven Call-to-Action Buttons"
             class="rounded-lg w-full h-auto shadow-lg"
           />
@@ -473,7 +473,7 @@ defineExpose({ post });
 
         <div class="my-8" data-aos="zoom-in">
           <img
-            src="/src/assets/images/blog-posts/testimonial-example.png"
+            src="@/assets/images/blog-posts/testimonial-example.png"
             alt="Beispiel eines wirkungsvollen Testimonials"
             class="rounded-lg w-full h-auto shadow-lg"
           />
@@ -584,7 +584,7 @@ defineExpose({ post });
 
         <div class="my-8" data-aos="zoom-in">
           <img
-            src="/src/assets/images/blog-posts/landingpage-mobile-example.jpg"
+            src="@/assets/images/blog-posts/landingpage-mobile-example.jpg"
             alt="Mobile-optimierte Landing Page"
             class="rounded-lg w-full h-auto shadow-lg"
           />
@@ -673,7 +673,7 @@ defineExpose({ post });
 
         <div class="my-8" data-aos="zoom-in">
           <img
-            src="/src/assets/images/blog-posts/ab-testing-example.jpg"
+            src="@/assets/images/blog-posts/ab-testing-example.jpg"
             alt="A/B-Testing Visualisierung"
             class="rounded-lg w-full h-auto shadow-lg"
           />

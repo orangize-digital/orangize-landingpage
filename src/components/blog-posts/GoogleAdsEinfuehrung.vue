@@ -8,14 +8,14 @@ const post = {
   slug: "google-ads-einfuehrung",
   excerpt:
     "Eine unterhaltsame Einführung in die Welt von Google Ads - ohne kompliziertes Fachchinesisch, dafür mit vielen praktischen Tipps und einem Augenzwinkern erklärt.",
-  image: "/src/assets/images/blog-posts/google-ads-intro.jpg",
+  image: "@/assets/images/blog-posts/google-ads-intro.jpg",
   category: "Google Ads",
   date: "28. April 2025",
   readTime: 8,
   author: {
     name: "Naumche Joshevski",
     title: "Google Ads Spezialist",
-    avatar: "/src/assets/images/Naumche.jpg",
+    avatar: "@/assets/images/Naumche.jpg",
     bio: "Google Ads Experte mit über 10 Jahren Erfahrung im digitalen Marketing. Spezialisiert auf Performance Marketing und Conversion-Optimierung für mittelständische Unternehmen.",
   },
   tags: ["Google Ads", "Online Marketing", "PPC", "Werbung", "Einsteiger"],
@@ -172,7 +172,7 @@ defineExpose({ post });
 
         <div class="my-8" data-aos="zoom-in">
           <img
-            src="/src/assets/images/blog-posts/google-such-volume.jpg"
+            src="@/assets/images/blog-posts/google-such-volume.jpg"
             alt="Google Suchanfragen Visualisierung"
             class="rounded-lg w-full h-auto shadow-lg"
           />

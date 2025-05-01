@@ -161,69 +161,7 @@
       </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="py-20 bg-base-200">
-      <div class="container mx-auto px-4 max-w-4xl">
-        <div
-          class="card bg-black border border-[#f60] shadow-xl p-8"
-          data-aos="fade-up"
-        >
-          <div class="text-center mb-8">
-            <h2 class="text-3xl font-bold text-white mb-4">
-              Bleib auf dem Laufenden
-            </h2>
-            <p class="text-white">
-              Abonniere unseren Newsletter für die neuesten Artikel, Tipps und
-              Strategien.
-            </p>
-          </div>
-          <form
-            @submit.prevent="subscribeToNewsletter"
-            class="flex flex-col md:flex-row gap-4"
-          >
-            <input
-              v-model="newsletterEmail"
-              type="email"
-              placeholder="Deine E-Mail-Adresse"
-              class="input input-bordered flex-1 bg-white/10 text-white"
-              required
-            />
-            <button
-              type="submit"
-              class="btn btn-primary bg-[#f60] border-none hover:bg-[#ff751a]"
-              :class="{ loading: isNewsletterLoading }"
-            >
-              Abonnieren
-            </button>
-          </form>
-          <p class="text-sm text-white opacity-75 mt-4 text-center">
-            Wir respektieren deine Privatsphäre. Du kannst dich jederzeit
-            abmelden.
-          </p>
-        </div>
-      </div>
-      <transition name="fade">
-        <div
-          v-if="showModal"
-          class="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
-        >
-          <div
-            class="bg-black border p-6 rounded-xl max-w-md w-full text-center shadow-xl"
-            :class="
-              modalType === 'success' ? 'border-[#0f0]' : 'border-red-500'
-            "
-          >
-            <p class="text-white text-lg mb-4">{{ modalMessage }}</p>
-            <button
-              class="btn bg-[#f60] text-white hover:bg-[#ff751a] border-none"
-              @click="showModal = false"
-            >
-              Schließen
-            </button>
-          </div>
-        </div>
-      </transition>
-    </section>
+    <NewsletterForm />
 
     <CTA />
     <Footer />
@@ -236,6 +174,7 @@ import { useHead } from "@vueuse/head"; // ✅ Add this
 import Navigation from "../components/Navigation.vue";
 import Footer from "../components/Footer.vue";
 import CTA from "../components/FloatingCallButton.vue";
+import NewsletterForm from "../components/NewsletterForm.vue";
 import { getAllPosts, getFeaturedPost } from "../blog-registry";
 
 // SEO Meta for Blog Home
@@ -325,7 +264,6 @@ onMounted(() => {
   );
   displayedPosts.value = postsWithoutFeatured;
 });
-
 </script>
 
 <style scoped>
