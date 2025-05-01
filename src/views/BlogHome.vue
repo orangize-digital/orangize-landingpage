@@ -238,12 +238,6 @@ const activeCategory = ref("all");
 const featuredPost = getFeaturedPost();
 const allPosts = getAllPosts();
 const displayedPosts = ref([]);
-const isNewsletterLoading = ref(false);
-const newsletterEmail = ref("");
-
-const showModal = ref(false);
-const modalMessage = ref("");
-const modalType = ref("success"); // or "error"
 
 // Filter posts by category
 const filteredPosts = computed(() => {

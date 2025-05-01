@@ -4,6 +4,12 @@ import BlogPostTemplate from "./components/blog-posts/BlogPostTemplate.vue";
 import GoogleAdsEinfuehrung from "./components/blog-posts/GoogleAdsEinfuehrung.vue";
 import LandingPageOptimierung from "./components/blog-posts/LandingPageOptimierung.vue";
 
+// Images Import for Blogs
+import avatarImage from "@/assets/images/Naumche.jpg";
+
+import blogImage from "@/assets/images/blog-posts/google-ads-intro.jpg";
+import blogImage1 from "@/assets/images/blog-posts/landingpage.jpg";
+
 // Export the blog post components
 export const blogComponents = {
   "wie-du-mit-google-ads-deinen-roi-steigerst": GoogleAdsRoi,
@@ -23,14 +29,14 @@ export function getAllPosts() {
       slug: "google-ads-einfuehrung",
       excerpt:
         "Eine unterhaltsame Einführung in die Welt von Google Ads - ohne kompliziertes Fachchinesisch, dafür mit vielen praktischen Tipps und einem Augenzwinkern erklärt.",
-      image: "/src/assets/images/blog-posts/google-ads-intro.jpg",
+      image: blogImage,
       category: "Google Ads",
       date: "28. April 2025",
       readTime: 8,
       author: {
         name: "Naumche Joshevski",
         title: "Google Ads Spezialist",
-        avatar: "/src/assets/images/Naumche.jpg",
+        avatar: avatarImage,
         bio: "Google Ads Experte mit über 10 Jahren Erfahrung im digitalen Marketing. Spezialisiert auf Performance Marketing und Conversion-Optimierung für mittelständische Unternehmen.",
       },
     },
@@ -40,14 +46,14 @@ export function getAllPosts() {
       slug: "landing-page-psychologie",
       excerpt:
         "Entdecke die 7 bewährten Strategien für hochkonvertierende Landing Pages. Von psychologischen Tricks bis zu Design-Hacks – alles, was du brauchst, um deine Conversion Rate zu verdoppeln!",
-      image: "/src/assets/images/blog-posts/landingpage.jpg",
+      image: blogImage1,
       category: "Webdesign",
       date: "19. April 2025",
       readTime: 12,
       author: {
         name: "Naumche Joshevski",
         title: "Conversion-Rate-Optimierer",
-        avatar: "/src/assets/images/Naumche.jpg",
+        avatar: avatarImage,
         bio: "Webdesign-Experte mit über 12 Jahren Erfahrung. Spezialisiert auf Conversion-Rate-Optimierung und nutzerorientiertes Design für maximale Performance.",
       },
     },
