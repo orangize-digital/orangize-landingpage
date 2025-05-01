@@ -3,7 +3,7 @@
     <Navigation />
     <!-- Blog Header Section -->
     <div
-      class="hero min-h-[60vh] relative bg-[url('@/assets/images/blog-header.jpg')]"
+      class="hero min-h-[60vh] min-h relative bg-[url('@/assets/images/blog-header-1.jpg')]"
     >
       <div class="hero-overlay bg-black bg-opacity-80"></div>
       <div class="hero-content text-center text-neutral-content relative z-10">
@@ -33,7 +33,7 @@
     <!-- Blog Categories -->
     <section class="py-12 bg-base-100">
       <div class="container mx-auto px-4">
-        <div class="flex flex-wrap justify-center gap-4 mb-12">
+        <div class="flex flex-wrap justify-center gap-4 md:mb-12 mb-0">
           <button
             v-for="category in categories"
             :key="category.id"

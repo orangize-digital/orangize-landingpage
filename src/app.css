@@ -152,3 +152,12 @@ h3 {
 .floating {
   animation: float 6s ease-in-out infinite;
 }
+
+@media only screen and (max-width: 600px) {
+  .input {
+    line-height: 3rem !important;
+  }
+  .min-h {
+    height: 75vh !important;
+  }
+}

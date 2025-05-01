@@ -274,7 +274,7 @@
       </div>
     </section>
 
-    `<NewsletterForm />`
+    <NewsletterForm />
 
     <CTA />
     <Footer />

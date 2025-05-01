@@ -23,7 +23,7 @@
             v-model="newsletterEmail"
             type="email"
             placeholder="Deine E-Mail-Adresse"
-            class="input input-bordered flex-1 bg-white/10 text-white"
+            class="input-newsletter input input-bordered flex-1 bg-white/10 text-white"
             required
           />
           <button
