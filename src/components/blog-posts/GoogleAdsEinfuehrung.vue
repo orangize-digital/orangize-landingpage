@@ -1,5 +1,8 @@
 <script setup>
 import NewsletterForm from "../NewsletterForm.vue";
+// Import image assets
+import blogImage from "@/assets/images/blog-posts/google-ads-intro.jpg";
+import avatarImage from "@/assets/images/Naumche.jpg";
 
 const post = {
   id: 1,
@@ -8,14 +11,14 @@ const post = {
   slug: "google-ads-einfuehrung",
   excerpt:
     "Eine unterhaltsame Einführung in die Welt von Google Ads - ohne kompliziertes Fachchinesisch, dafür mit vielen praktischen Tipps und einem Augenzwinkern erklärt.",
-  image: "@/assets/images/blog-posts/google-ads-intro.jpg",
+  image: blogImage,
   category: "Google Ads",
   date: "28. April 2025",
   readTime: 8,
   author: {
     name: "Naumche Joshevski",
     title: "Google Ads Spezialist",
-    avatar: "@/assets/images/Naumche.jpg",
+    avatar: avatarImage,
     bio: "Google Ads Experte mit über 10 Jahren Erfahrung im digitalen Marketing. Spezialisiert auf Performance Marketing und Conversion-Optimierung für mittelständische Unternehmen.",
   },
   tags: ["Google Ads", "Online Marketing", "PPC", "Werbung", "Einsteiger"],

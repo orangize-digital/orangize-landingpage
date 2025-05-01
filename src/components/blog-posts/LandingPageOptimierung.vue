@@ -1,5 +1,7 @@
 <script setup>
 import NewsletterForm from "../NewsletterForm.vue";
+import blogImage from "@/assets/images/blog-posts/landingpage.jpg";
+import avatarImage from "@/assets/images/Naumche.jpg";
 // Define the blog post metadata
 const post = {
   id: 2,
@@ -7,14 +9,14 @@ const post = {
   slug: "landing-page-psychologie",
   excerpt:
     "Entdecke die 7 bewährten Strategien für hochkonvertierende Landing Pages. Von psychologischen Tricks bis zu Design-Hacks – alles, was du brauchst, um deine Conversion Rate zu verdoppeln!",
-  image: "@/assets/images/blog-posts/landingpage.jpg",
+  image: blogImage,
   category: "Webdesign",
   date: "3. Mai 2025",
   readTime: 9,
   author: {
     name: "Naumche Joshevski",
     title: "Conversion-Rate-Optimierer",
-    avatar: "@/assets/images/Naumche.jpg",
+    avatar: avatarImage,
     bio: "Webdesign-Experte mit über 12 Jahren Erfahrung. Spezialisiert auf Conversion-Rate-Optimierung und nutzerorientiertes Design für maximale Performance.",
   },
   tags: ["Landing Pages", "CRO", "Webdesign", "Conversion", "A/B-Testing"],
