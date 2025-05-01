@@ -59,6 +59,18 @@
               {{ section.name }}
             </a>
           </li>
+          <!-- Add Blog Link -->
+          <li>
+            <router-link
+              to="/blog"
+              class="hover:text-[#f60] text-white transition-colors duration-300 font-bold navi-items"
+              :class="{
+                'text-[#f60] font-bold': $route.path.includes('/blog'),
+              }"
+            >
+              Blog
+            </router-link>
+          </li>
         </ul>
       </div>
 
@@ -91,6 +103,17 @@
           >
             {{ section.name }}
           </a>
+        </li>
+        <!-- Add Blog Link for Mobile -->
+        <li>
+          <router-link
+            to="/blog"
+            class="hover:text-[#f60] transition-colors duration-300"
+            :class="{ 'text-[#f60] font-bold': $route.path.includes('/blog') }"
+            @click="isMenuOpen = false"
+          >
+            Blog
+          </router-link>
         </li>
         <li class="mt-4">
           <button

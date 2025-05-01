@@ -5,8 +5,10 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@vueuse/head": "^2.0.0",
     "aos": "^2.3.4",
     "vue": "^3",
+    "vue-meta": "^3.0.0-alpha.10",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {

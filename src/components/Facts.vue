@@ -25,7 +25,7 @@
           class="feature-card rounded-lg p-6 floating"
           style="animation-delay: 1s"
         >
-          <div class="text-5xl mb-4 text-pink-500 feature-icon">
+          <div class="text-5xl mb-4 text-white feature-icon">
             <i class="fas fa-chart-line"></i>
           </div>
           <h3 class="text-2xl font-bold mb-2">Google Ads</h3>

@@ -550,12 +550,14 @@
   <ContactForm />
 
   <CTA />
+  <NewsletterForm />
 
   <!-- Footer Section -->
   <Footer />
 </template>
 
 <script setup>
+import { useHead } from "@vueuse/head"; // Ensure you're importing useMeta
 import Navigation from "../components/Navigation.vue";
 import Footer from "../components/Footer.vue";
 import Projects from "../components/Projects.vue";
@@ -564,11 +566,74 @@ import Pricing from "../components/Pricing.vue";
 import Facts from "../components/Facts.vue";
 import CTA from "../components/FloatingCallButton.vue";
 import FAQ from "../components/FAQ.vue";
+import NewsletterForm from "../components/NewsletterForm.vue";
 
-const scrollToSection = (id) => {
-  const element = document.getElementById(id);
-  if (element) {
-    element.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-};
+// Dynamically set the meta tags using useMeta directly
+useHead({
+  title:
+    "Webdesign & Google Ads – Landingpages, die überzeugen | Orangize Digital",
+  meta: [
+    {
+      name: "title",
+      content:
+        "Webdesign & Google Ads – Landingpages, die überzeugen | Orangize Digital",
+    },
+    {
+      name: "description",
+      content:
+        "Orangize Digital erstellt professionelle Websites & Landingpages, die Kunden gewinnen. Maßgeschneiderte Google Ads Kampagnen für mehr Reichweite! 🚀",
+    },
+    {
+      name: "keywords",
+      content:
+        "Webdesign, Landingpages, Google Ads, Online Marketing, Webseiten erstellen lassen, Webagentur, digitales Marketing",
+    },
+    {
+      name: "robots",
+      content: "index, follow",
+    },
+    {
+      property: "og:title",
+      content:
+        "Webdesign & Google Ads – Landingpages, die überzeugen | Orangize Digital",
+    },
+    {
+      property: "og:description",
+      content:
+        "Orangize Digital entwickelt Websites und Landingpages, die konvertieren. Perfekt abgestimmte Google Ads für mehr Erfolg!",
+    },
+    {
+      property: "og:image",
+      content:
+        "https://orangize.de/src/assets/images/mockup/Orangize-Mockup.png",
+    },
+    {
+      property: "og:url",
+      content: "https://orangize.de",
+    },
+    {
+      property: "og:type",
+      content: "website",
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:title",
+      content:
+        "Webdesign & Google Ads – Landingpages, die überzeugen | Orangize Digital",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "Professionelle Webseiten & Landingpages für dein Business – inklusive zielgerichteter Google Ads Kampagnen! Jetzt unverbindlich beraten lassen.",
+    },
+    {
+      name: "twitter:image",
+      content:
+        "https://orangize.de/src/assets/images/mockup/Orangize-Mockup.png",
+    },
+  ],
+});
 </script>
