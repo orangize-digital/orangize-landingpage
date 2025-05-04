@@ -3,12 +3,14 @@ import GoogleAdsRoi from "./components/blog-posts/GoogleAdsROI.vue";
 import BlogPostTemplate from "./components/blog-posts/BlogPostTemplate.vue";
 import GoogleAdsEinfuehrung from "./components/blog-posts/GoogleAdsEinfuehrung.vue";
 import LandingPageOptimierung from "./components/blog-posts/LandingPageOptimierung.vue";
+import SocialMediaMarketing from "./components/blog-posts/SocialMediaMarketing.vue";
 
 // Images Import for Blogs
 import avatarImage from "@/assets/images/Naumche.jpg";
 
 import blogImage from "@/assets/images/blog-posts/google-ads-intro.jpg";
 import blogImage1 from "@/assets/images/blog-posts/landingpage.jpg";
+import blogImage2 from "@/assets/images/blog-posts/social-media-hero.jpg";
 
 // Export the blog post components
 export const blogComponents = {
@@ -16,6 +18,7 @@ export const blogComponents = {
   "blogpost-template": BlogPostTemplate,
   "google-ads-einfuehrung": GoogleAdsEinfuehrung,
   "landing-page-psychologie": LandingPageOptimierung,
+  "social-media-marketing-leitfaden": SocialMediaMarketing, 
 };
 
 // Function to get all blog posts metadata
@@ -37,7 +40,7 @@ export function getAllPosts() {
         name: "Naumche Joshevski",
         title: "Google Ads Spezialist",
         avatar: avatarImage,
-        bio: "Google Ads Experte mit über 10 Jahren Erfahrung im digitalen Marketing. Spezialisiert auf Performance Marketing und Conversion-Optimierung für mittelständische Unternehmen.",
+        bio: "Google Ads Experte mit über 5 Jahren Erfahrung im digitalen Marketing. Spezialisiert auf Performance Marketing und Conversion-Optimierung für mittelständische Unternehmen.",
       },
     },
     {
@@ -54,7 +57,24 @@ export function getAllPosts() {
         name: "Naumche Joshevski",
         title: "Conversion-Rate-Optimierer",
         avatar: avatarImage,
-        bio: "Webdesign-Experte mit über 12 Jahren Erfahrung. Spezialisiert auf Conversion-Rate-Optimierung und nutzerorientiertes Design für maximale Performance.",
+        bio: "Webdesign-Experte mit über 5 Jahren Erfahrung. Spezialisiert auf Conversion-Rate-Optimierung und nutzerorientiertes Design für maximale Performance.",
+      },
+    },
+    {
+      id: 3,
+      title: "Social Media Marketing: Der ultimative Leitfaden für 2025",
+      slug: "social-media-marketing-leitfaden",
+      excerpt:
+        "Entdecke die neuesten Strategien, Plattformen und KI-Tools für erfolgreiches Social Media Marketing im Jahr 2025. Von Content-Erstellung bis ROI-Messung – dieser Leitfaden deckt alles ab!",
+      image: blogImage2,
+      category: "Online Marketing",
+      date: "27. April 2025",
+      readTime: 8,
+      author: {
+        name: "Naumche Joshevski",
+        title: "Social Media Stratege",
+        avatar: avatarImage,
+        bio: "Social Media Experte mit über 5 Jahren Erfahrung. Hat für internationale Marken wie Adidas und Red Bull erfolgreiche Social-Media-Kampagnen entwickelt.",
       },
     },
     // {

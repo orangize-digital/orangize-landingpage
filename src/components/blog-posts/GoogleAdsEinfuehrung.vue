@@ -1,6 +1,5 @@
 <script setup>
 import NewsletterForm from "../NewsletterForm.vue";
-// Import image assets
 import blogImage from "@/assets/images/blog-posts/google-ads-intro.jpg";
 import avatarImage from "@/assets/images/Naumche.jpg";
 
@@ -19,7 +18,7 @@ const post = {
     name: "Naumche Joshevski",
     title: "Google Ads Spezialist",
     avatar: avatarImage,
-    bio: "Google Ads Experte mit über 10 Jahren Erfahrung im digitalen Marketing. Spezialisiert auf Performance Marketing und Conversion-Optimierung für mittelständische Unternehmen.",
+    bio: "Google Ads Experte mit über 5 Jahren Erfahrung im digitalen Marketing. Spezialisiert auf Performance Marketing und Conversion-Optimierung für mittelständische Unternehmen.",
   },
   tags: ["Google Ads", "Online Marketing", "PPC", "Werbung", "Einsteiger"],
   relatedPosts: [

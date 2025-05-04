@@ -17,7 +17,7 @@ const post = {
     name: "Naumche Joshevski",
     title: "Conversion-Rate-Optimierer",
     avatar: avatarImage,
-    bio: "Webdesign-Experte mit über 12 Jahren Erfahrung. Spezialisiert auf Conversion-Rate-Optimierung und nutzerorientiertes Design für maximale Performance.",
+    bio: "Webdesign-Experte mit über 5 Jahren Erfahrung. Spezialisiert auf Conversion-Rate-Optimierung und nutzerorientiertes Design für maximale Performance.",
   },
   tags: ["Landing Pages", "CRO", "Webdesign", "Conversion", "A/B-Testing"],
   relatedPosts: [

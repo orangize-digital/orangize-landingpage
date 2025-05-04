@@ -231,7 +231,7 @@ const categories = [
   { id: "google-ads", name: "Google Ads" },
   { id: "webdesign", name: "Webdesign" },
   { id: "seo", name: "SEO" },
-  { id: "marketing", name: "Marketing" },
+  { id: "online-marketing", name: "Marketing" },
 ];
 
 const activeCategory = ref("all");

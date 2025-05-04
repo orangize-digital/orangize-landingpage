@@ -1,37 +1,34 @@
 <script setup>
-// Define the blog post metadata
+import NewsletterForm from "../NewsletterForm.vue";
+import blogImage from "@/assets/images/blog-posts/social-media-hero.jpg";
+import avatarImage from "@/assets/images/Naumche.jpg";
+
 const post = {
   id: 3,
   title: "Social Media Marketing: Der ultimative Leitfaden für 2025",
   slug: "social-media-marketing-leitfaden",
   excerpt:
-    "Wie du Social Media in 2025 richtig nutzt: Von Content-Strategien bis zu den neuesten KI-Tools. Ein humorvoller und praktischer Guide für mehr Reichweite und Engagement!",
-  image: "/src/assets/images/blog-posts/social-media-marketing.jpg",
+    "Entdecke die neuesten Strategien, Plattformen und KI-Tools für erfolgreiches Social Media Marketing im Jahr 2025. Von Content-Erstellung bis ROI-Messung – dieser Leitfaden deckt alles ab!",
+  image: blogImage,
   category: "Online Marketing",
-  date: "10. Mai 2025",
-  readTime: 11,
+  date: "27. April 2025",
+  readTime: 8,
   author: {
     name: "Naumche Joshevski",
     title: "Social Media Stratege",
-    avatar: "/src/assets/images/Naumche.jpg",
-    bio: "Digital Marketing Experte mit besonderem Fokus auf Social Media Strategien. Hat bereits über 100 Unternehmen beim Aufbau erfolgreicher Social Media Präsenzen unterstützt.",
+    avatar: avatarImage,
+    bio: "Social Media Experte mit über 5 Jahren Erfahrung. Hat für internationale Marken wie Adidas und Red Bull erfolgreiche Social-Media-Kampagnen entwickelt.",
   },
-  tags: [
-    "Social Media",
-    "Online Marketing",
-    "Content Marketing",
-    "Instagram",
-    "LinkedIn",
-  ],
+  tags: ["Social Media", "Marketing", "Content-Strategie", "KI-Tools", "ROI"],
   relatedPosts: [
+    {
+      slug: "landing-page-optimierung-mehr-leads",
+      title: "Landing Pages, die konvertieren: 7 Geheimnisse für mehr Leads",
+    },
     {
       slug: "google-ads-einfuehrung",
       title:
         "Google Ads für Einsteiger: Was ist das eigentlich und warum solltest du es nutzen?",
-    },
-    {
-      slug: "landing-page-optimierung-mehr-leads",
-      title: "Landing Pages, die konvertieren: 7 Geheimnisse für mehr Leads",
     },
     {
       slug: "wie-du-mit-google-ads-deinen-roi-steigerst",
@@ -45,92 +42,243 @@ defineExpose({ post });
 </script>
 
 <template>
-  <div>
-    <!-- Table of Contents -->
-    <div
-      class="mb-10 p-6 bg-black border border-[#f60] rounded-lg"
-      data-aos="fade-up"
-    >
-      <h3 class="text-xl font-bold text-white mb-4">Inhaltsverzeichnis</h3>
-      <ul class="space-y-2">
-        <li>
-          <a
-            href="#section-1"
-            class="text-white hover:text-[#f60] transition-colors flex items-center gap-2"
-          >
-            <span class="text-[#f60]">1.</span> Social Media 2025: Was sich
-            geändert hat (und du wahrscheinlich verpasst hast)
-          </a>
-        </li>
-        <li>
-          <a
-            href="#section-2"
-            class="text-white hover:text-[#f60] transition-colors flex items-center gap-2"
-          >
-            <span class="text-[#f60]">2.</span> Plattform-Guide: Wo deine
-            Zielgruppe wirklich ist
-          </a>
-        </li>
-        <li>
-          <a
-            href="#section-3"
-            class="text-white hover:text-[#f60] transition-colors flex items-center gap-2"
-          >
-            <span class="text-[#f60]">3.</span> Content-Strategie: Von
-            langweilig zu viral in 5 Schritten
-          </a>
-        </li>
-        <li>
-          <a
-            href="#section-4"
-            class="text-white hover:text-[#f60] transition-colors flex items-center gap-2"
-          >
-            <span class="text-[#f60]">4.</span> Community-Building: Vom Follower
-            zum Fan zum Kunden
-          </a>
-        </li>
-        <li>
-          <a
-            href="#section-5"
-            class="text-white hover:text-[#f60] transition-colors flex items-center gap-2"
-          >
-            <span class="text-[#f60]">5.</span> Die besten KI-Tools für Social
-            Media (die kaum jemand kennt)
-          </a>
-        </li>
-        <li>
-          <a
-            href="#section-6"
-            class="text-white hover:text-[#f60] transition-colors flex items-center gap-2"
-          >
-            <span class="text-[#f60]">6.</span> Social Media ROI messen (ohne
-            dir die Haare auszureißen)
-          </a>
-        </li>
-      </ul>
-    </div>
+  <div class="container mx-auto py-8">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl font-bold text-white mb-8" data-aos="fade-down">
+        Social Media Marketing 2025: Die wichtigsten Trends, Strategien und
+        KI-Tools
+      </h1>
 
-    <!-- Post Content -->
-    <div class="prose prose-lg max-w-none" data-aos="fade-up">
+      <div class="mb-6" data-aos="fade-up">
+        <img
+          src="@/assets/images/blog-posts/social-media-marketing-2025.jpg"
+          alt="Social Media Marketing 2025"
+          class="rounded-lg w-full h-auto shadow-lg"
+        />
+        <p class="text-center text-sm text-white opacity-75 mt-2">
+          Die Social Media Landschaft verändert sich rasant. Bist du bereit für
+          2025?
+        </p>
+      </div>
+
+      <p class="text-white mb-6">
+        Willkommen im Jahr 2025 – wo Social Media nicht mehr nur ein
+        "nice-to-have" ist, sondern ein entscheidender Faktor für den
+        Geschäftserfolg. Aber Vorsicht: Wer jetzt noch die gleichen Strategien
+        wie 2020 fährt, wird gnadenlos abgehängt.
+      </p>
+
+      <p class="text-white mb-6">
+        In diesem Artikel zeige ich dir die wichtigsten Trends, Strategien und
+        KI-Tools, mit denen du 2025 im Social Media Marketing durchstarten
+        kannst. Egal, ob du ein erfahrener Profi oder ein blutiger Anfänger bist
+        – hier findest du garantiert neue Inspiration und konkrete Tipps, die du
+        sofort umsetzen kannst.
+      </p>
+
       <!-- Section 1 -->
       <div id="section-1">
         <h2 class="text-3xl font-bold text-white mt-12 mb-6">
-          Social Media 2025: Was sich geändert hat (und du wahrscheinlich
-          verpasst hast)
+          Die 5 größten Social Media Trends 2025 (und wie du sie nutzt)
         </h2>
         <p class="text-white mb-6">
-          Erinnerst du dich noch an die guten alten Zeiten, als ein harmloses
-          Katzen-Meme genügte, um viral zu gehen? Oder als Facebook-Likes noch
-          so wertvoll waren wie Bitcoin im Jahr 2010? Tja, willkommen in 2025,
-          wo Social Media so ist wie die Mode der 90er – erkennbar, aber
-          irgendwie... anders.
+          Die Social Media Landschaft ist ständig im Wandel. Wer nicht am Ball
+          bleibt, verliert den Anschluss. Hier sind die fünf wichtigsten Trends,
+          die du 2025 unbedingt auf dem Schirm haben musst:
         </p>
+
+        <ol class="list-decimal pl-6 mb-6 space-y-4">
+          <li class="text-white">
+            <strong class="text-[#f60] text-xl"
+              >Micro-Communities statt Massenpublikum</strong
+            >
+            <p class="mt-2">
+              Die Zeit der großen Reichweiten ist vorbei. 2025 geht es darum,
+              kleine, engagierte Communities rund um deine Marke aufzubauen.
+              Stichwort: "Nischen-Marketing".
+            </p>
+            <div class="mt-3 p-4 bg-base-200 rounded-lg">
+              <p class="text-white">
+                <strong class="text-[#f60]">Beispiel:</strong> Statt eines
+                allgemeinen Fitness-Kanals einen Kanal nur für vegane
+                Fitness-Enthusiasten. Oder statt eines allgemeinen
+                Marketing-Kanals einen Kanal nur für
+                Marketing-Automation-Experten.
+              </p>
+            </div>
+          </li>
+
+          <li class="text-white">
+            <strong class="text-[#f60] text-xl"
+              >Authentizität und Transparenz als Währung</strong
+            >
+            <p class="mt-2">
+              Fake it till you make it? Funktioniert 2025 nicht mehr.
+              Konsumenten sind besser informiert und kritischer denn je. Zeige
+              deine Ecken und Kanten, sei ehrlich und transparent.
+            </p>
+            <div class="mt-3 p-4 bg-base-200 rounded-lg">
+              <p class="text-white">
+                <strong class="text-[#f60]">Beispiel:</strong> Teile nicht nur
+                Erfolgsgeschichten, sondern auch Misserfolge und Learnings.
+                Zeige die Menschen hinter der Marke. Sei nahbar und menschlich.
+              </p>
+            </div>
+          </li>
+
+          <li class="text-white">
+            <strong class="text-[#f60] text-xl"
+              >Video-First (aber richtig)</strong
+            >
+            <p class="mt-2">
+              Video ist schon lange King, aber 2025 wird Video noch wichtiger –
+              vor allem Kurzvideo-Formate wie TikTok, Reels und Shorts. Aber
+              Achtung: Nicht jedes Video ist gleich.
+            </p>
+            <div class="mt-3 p-4 bg-base-200 rounded-lg">
+              <p class="text-white">
+                <strong class="text-[#f60]">Beispiel:</strong> Produziere keine
+                generischen Werbevideos, sondern authentische, unterhaltsame und
+                informative Kurzvideos, die echten Mehrwert bieten. Denke wie
+                ein TikTok-Creator, nicht wie ein Werbefilm-Regisseur.
+              </p>
+            </div>
+          </li>
+
+          <li class="text-white">
+            <strong class="text-[#f60] text-xl"
+              >KI-gestützte Personalisierung</strong
+            >
+            <p class="mt-2">
+              Dank künstlicher Intelligenz können wir Inhalte 2025 noch stärker
+              personalisieren als je zuvor. Aber Achtung: Nicht übertreiben!
+            </p>
+            <div class="mt-3 p-4 bg-base-200 rounded-lg">
+              <p class="text-white">
+                <strong class="text-[#f60]">Beispiel:</strong> Nutze KI-Tools,
+                um deine Zielgruppe besser zu verstehen und Inhalte zu
+                erstellen, die auf ihre individuellen Bedürfnisse zugeschnitten
+                sind. Aber vermeide es, zu aufdringlich oder gar creepy zu
+                wirken. Datenschutz ist wichtiger denn je.
+              </p>
+            </div>
+          </li>
+
+          <li class="text-white">
+            <strong class="text-[#f60] text-xl"
+              >Social Commerce wird erwachsen</strong
+            >
+            <p class="mt-2">
+              Der Trend, Produkte direkt über Social Media zu verkaufen, wird
+              2025 noch stärker. Aber Achtung: Nicht jede Plattform eignet sich
+              für jeden Produkttyp.
+            </p>
+            <div class="mt-3 p-4 bg-base-200 rounded-lg">
+              <p class="text-white">
+                <strong class="text-[#f60]">Beispiel:</strong> Nutze Instagram
+                Shopping für visuell ansprechende Produkte, TikTok für trendige
+                Produkte und Facebook Shops für eine breitere Zielgruppe. Biete
+                ein nahtloses Einkaufserlebnis direkt in der App.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Section 2 -->
+      <div id="section-2">
+        <h2 class="text-3xl font-bold text-white mt-12 mb-6">
+          Die wichtigsten Social Media Plattformen 2025 (und welche sich für
+          dich lohnen)
+        </h2>
         <p class="text-white mb-6">
-          Social Media hat sich in den letzten Jahren so drastisch verändert wie
-          die Frisuren bei einer Teenager-Bandreunion. Was früher funktionierte,
-          löst heute bestenfalls ein Gähnen aus, schlimmstenfalls kostet es dich
-          Follower schneller als du "Algorithmus-Update" sagen kannst.
+          Nicht jede Plattform ist für jedes Unternehmen geeignet. 2025 ist es
+          wichtiger denn je, sich auf die Plattformen zu konzentrieren, auf
+          denen sich deine Zielgruppe wirklich aufhält. Hier ein kurzer
+          Überblick:
         </p>
+
+        <div class="space-y-6 my-8">
+          <div class="bg-base-200 p-6 rounded-lg">
+            <h4 class="text-xl font-bold text-white mb-3">TikTok</h4>
+            <p class="text-white mb-3">
+              Die Plattform für Kurzvideos und virale Trends. Ideal für junge
+              Zielgruppen und Marken, die Spaß und Kreativität in den
+              Vordergrund stellen.
+            </p>
+            <p class="text-white">
+              <strong class="text-[#f60]">Geeignet für:</strong> Marken mit
+              junger Zielgruppe (16-24 Jahre), Entertainment, Lifestyle,
+              Fashion, Beauty
+            </p>
+          </div>
+
+          <div class="bg-base-200 p-6 rounded-lg">
+            <h4 class="text-xl font-bold text-white mb-3">Instagram</h4>
+            <p class="text-white mb-3">
+              Die Plattform für visuell ansprechenden Content. Ideal für Marken,
+              die ihre Produkte oder Dienstleistungen in Szene setzen wollen.
+            </p>
+            <p class="text-white">
+              <strong class="text-[#f60]">Geeignet für:</strong> Marken mit
+              Fokus auf Ästhetik, Fashion, Food, Travel, Design
+            </p>
+          </div>
+
+          <div class="bg-base-200 p-6 rounded-lg">
+            <h4 class="text-xl font-bold text-white mb-3">Facebook</h4>
+            <p class="text-white mb-3">
+              Die Plattform für eine breite Zielgruppe. Ideal für Marken, die
+              eine große Reichweite erzielen und eine Community aufbauen wollen.
+            </p>
+            <p class="text-white">
+              <strong class="text-[#f60]">Geeignet für:</strong> Marken mit
+              breiter Zielgruppe (25-55 Jahre), lokale Unternehmen, Nachrichten,
+              Gruppen
+            </p>
+          </div>
+
+          <div class="bg-base-200 p-6 rounded-lg">
+            <h4 class="text-xl font-bold text-white mb-3">LinkedIn</h4>
+            <p class="text-white mb-3">
+              Die Plattform für Business-Networking und B2B-Marketing. Ideal für
+              Marken, die sich als Experten positionieren und Kontakte knüpfen
+              wollen.
+            </p>
+            <p class="text-white">
+              <strong class="text-[#f60]">Geeignet für:</strong>
+              B2B-Unternehmen, Karriere-Themen, Experten-Content, Recruiting
+            </p>
+          </div>
+
+          <div class="bg-base-200 p-6 rounded-lg">
+            <h4 class="text-xl font-bold text-white mb-3">
+              X (ehemals Twitter)
+            </h4>
+            <p class="text-white mb-3">
+              Die Plattform für Echtzeit-Nachrichten und kurze Statements. Ideal
+              für Marken, die schnell auf aktuelle Ereignisse reagieren und eine
+              Meinung vertreten wollen.
+            </p>
+            <p class="text-white">
+              <strong class="text-[#f60]">Geeignet für:</strong> Nachrichten,
+              Politik, Sport, Tech, Kundenservice
+            </p>
+          </div>
+
+          <div class="bg-base-200 p-6 rounded-lg">
+            <h4 class="text-xl font-bold text-white mb-3">Threads</h4>
+            <p class="text-white mb-3">
+              Die Plattform für textbasierte Diskussionen und
+              Community-Building. Ideal für Marken, die tiefere Gespräche mit
+              ihrer Zielgruppe führen wollen.
+            </p>
+            <p class="text-white">
+              <strong class="text-[#f60]">Geeignet für:</strong> Marken, die
+              Wert auf Community legen, News, Diskussionen, Experten-Content
+            </p>
+          </div>
+        </div>
 
         <div
           class="my-8 bg-[#f60]/10 border border-[#f60] p-6 rounded-lg"
@@ -149,345 +297,134 @@ defineExpose({ post });
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  d="M13 10V3L4 14.72M13 10l6.86-5.14M13 10l-6.26 6.26"
                 />
               </svg>
             </div>
             <div>
               <h4 class="text-xl font-bold text-white mb-2">
-                Die wichtigsten Veränderungen
+                Plattform-Strategie-Tipp
               </h4>
-              <ul class="pl-4 list-disc text-white">
-                <li>
-                  Die organische Reichweite ist auf einem historischen Tiefstand
-                  (ca. 1-2% deiner Follower sehen deine Posts)
-                </li>
-                <li>
-                  Kurzform-Video-Content (unter 60 Sekunden) dominiert ALLE
-                  Plattformen
-                </li>
-                <li>
-                  KI-generierte Inhalte sind allgegenwärtig (und die Algorithmen
-                  erkennen sie)
-                </li>
-                <li>
-                  Mikro- und Nano-Influencer haben die höchsten Engagement-Raten
-                </li>
-                <li>Die goldene Regel: Authentizität schlägt Perfektion</li>
-              </ul>
+              <p class="text-white">
+                Konzentriere dich auf maximal 2-3 Plattformen und entwickle eine
+                spezifische Content-Strategie für jede Plattform. Copy-Paste
+                funktioniert nicht!
+              </p>
             </div>
           </div>
         </div>
 
         <p class="text-white mb-6">
-          Der größte Paradigmenwechsel? Social Media ist nicht mehr nur ein
-          Marketing-Kanal – es ist ein Verkaufskanal geworden. Social Commerce
-          wird in 2025 voraussichtlich 80 Milliarden Euro in Deutschland
-          generieren. Von Instagram Shops bis zu TikTok Checkout – die Grenzen
-          zwischen Unterhaltung, Inspiration und Kauf verschwimmen zunehmend.
-        </p>
-
-        <div class="my-8" data-aos="zoom-in">
-          <img
-            src="/src/assets/images/blog-posts/social-media-evolution.jpg"
-            alt="Evolution von Social Media"
-            class="rounded-lg w-full h-auto shadow-lg"
-          />
-          <p class="text-center text-sm text-white opacity-75 mt-2">
-            Die Evolution von Social Media: Von Broadcasting zu Community zu
-            Commerce
-          </p>
-        </div>
-
-        <p class="text-white mb-6">
-          Was bedeutet das für dich und dein Business? Ganz einfach: Anpassen
-          oder untergehen. Social Media 2025 belohnt nicht mehr die, die am
-          lautesten schreien oder die meisten Hashtags verwenden. Es belohnt
-          die, die echten Mehrwert bieten, Gemeinschaften aufbauen und
-          authentische Geschichten erzählen.
-        </p>
-
-        <p class="text-white mb-6">
-          In diesem Guide zeigen wir dir, wie du die neuen Spielregeln nicht nur
-          verstehst, sondern meisterst – ohne dabei deinen Verstand (oder dein
-          Marketing-Budget) zu verlieren. Und keine Sorge, wir verzichten auf
-          das übliche Marketing-Blabla und geben dir stattdessen handfeste
-          Tipps, die du HEUTE umsetzen kannst.
-        </p>
-      </div>
-
-      <!-- Section 2 -->
-      <div id="section-2">
-        <h2 class="text-3xl font-bold text-white mt-12 mb-6">
-          Plattform-Guide: Wo deine Zielgruppe wirklich ist
-        </h2>
-        <p class="text-white mb-6">
-          "Wir müssen auf TikTok sein!" – der Satz, den Marketing-Teams
-          fürchten, wenn er vom CEO kommt, der gerade mit seinen Kindern
-          gesprochen hat. Aber nicht jede Plattform ist für jede Marke geeignet.
-          Würdest du einen Porsche auf einem Bauernhof bewerben? Eben.
-        </p>
-
-        <p class="text-white mb-6">
-          Lass uns einen Blick auf die wichtigsten Plattformen 2025 werfen und
-          herausfinden, wo DEINE Zielgruppe tatsächlich ihre Zeit verbringt (und
-          für wen welche Plattform wirklich Sinn macht):
-        </p>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-          <div class="bg-base-200 p-6 rounded-lg border border-[#f60]/30">
-            <h4 class="text-xl font-bold text-white mb-3">Instagram</h4>
-            <p class="text-white mb-2">
-              <strong class="text-[#f60]">Demografie:</strong> 18-34 Jahre,
-              leicht weiblich dominiert
-            </p>
-            <p class="text-white mb-2">
-              <strong class="text-[#f60]">Beliebteste Inhalte:</strong>
-              Lifestyle, Beauty, Reisen, Food
-            </p>
-            <p class="text-white mb-2">
-              <strong class="text-[#f60]">Ideale Content-Formate:</strong>
-              Reels, Stories, Karussells
-            </p>
-            <p class="text-white mb-4">
-              <strong class="text-[#f60]">Optimal für:</strong> Visuelle Marken,
-              E-Commerce, Influencer
-            </p>
-            <p class="text-white italic">
-              "Instagram ist wie ein Schaufenster mit Persönlichkeit. Perfekt,
-              wenn dein Produkt gut aussieht oder du eine Geschichte zu erzählen
-              hast."
-            </p>
-          </div>
-          <div class="bg-base-200 p-6 rounded-lg border border-[#f60]/30">
-            <h4 class="text-xl font-bold text-white mb-3">TikTok</h4>
-            <p class="text-white mb-2">
-              <strong class="text-[#f60]">Demografie:</strong> 16-24 Jahre,
-              ausgewogen
-            </p>
-            <p class="text-white mb-2">
-              <strong class="text-[#f60]">Beliebteste Inhalte:</strong> Humor,
-              Tanz, Life-Hacks, Edutainment
-            </p>
-            <p class="text-white mb-2">
-              <strong class="text-[#f60]">Ideale Content-Formate:</strong> Kurze
-              Videos (15-60 Sekunden)
-            </p>
-            <p class="text-white mb-4">
-              <strong class="text-[#f60]">Optimal für:</strong> Trendmarken,
-              jugendliche Zielgruppen
-            </p>
-            <p class="text-white italic">
-              "TikTok ist der Pausenhof des Internets – laut, chaotisch und
-              voller Trends. Willst du Generation Z erreichen? Hier sind sie."
-            </p>
-          </div>
-          <div class="bg-base-200 p-6 rounded-lg border border-[#f60]/30">
-            <h4 class="text-xl font-bold text-white mb-3">LinkedIn</h4>
-            <p class="text-white mb-2">
-              <strong class="text-[#f60]">Demografie:</strong> 25-55 Jahre,
-              Berufstätige, Entscheider
-            </p>
-            <p class="text-white mb-2">
-              <strong class="text-[#f60]">Beliebteste Inhalte:</strong>
-              Branchennews, Karrieretipps, Thought Leadership
-            </p>
-            <p class="text-white mb-2">
-              <strong class="text-[#f60]">Ideale Content-Formate:</strong>
-              Artikel, Dokumente, kurze Videos
-            </p>
-            <p class="text-white mb-4">
-              <strong class="text-[#f60]">Optimal für:</strong> B2B, Recruiting,
-              Expertenpositioning
-            </p>
-            <p class="text-white italic">
-              "LinkedIn ist wie eine Networking-Veranstaltung, bei der jeder
-              einen besseren Job sucht. Spreche wie ein Mensch, nicht wie eine
-              Pressemitteilung."
-            </p>
-          </div>
-          <div class="bg-base-200 p-6 rounded-lg border border-[#f60]/30">
-            <h4 class="text-xl font-bold text-white mb-3">Threads/Twitter/X</h4>
-            <p class="text-white mb-2">
-              <strong class="text-[#f60]">Demografie:</strong> 25-49 Jahre,
-              politisch aktiv, technikaffin
-            </p>
-            <p class="text-white mb-2">
-              <strong class="text-[#f60]">Beliebteste Inhalte:</strong> News,
-              Meinungen, Witze, Nischenthemen
-            </p>
-            <p class="text-white mb-2">
-              <strong class="text-[#f60]">Ideale Content-Formate:</strong> Kurze
-              Texte, Threads, meme-basierte Inhalte
-            </p>
-            <p class="text-white mb-4">
-              <strong class="text-[#f60]">Optimal für:</strong> Marken mit
-              Haltung, Kundenservice, PR
-            </p>
-            <p class="text-white italic">
-              "X/Threads ist wie eine laute Bar voller Menschen, die
-              gleichzeitig reden. Wer hier auffallen will, braucht eine
-              prägnante Stimme oder guten Humor."
-            </p>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-          <div class="bg-base-200 p-6 rounded-lg border border-[#f60]/30">
-            <h4 class="text-xl font-bold text-white mb-3">Facebook</h4>
-            <p class="text-white mb-2">
-              <strong class="text-[#f60]">Demografie:</strong> 35-65+ Jahre,
-              eher weiblich
-            </p>
-            <p class="text-white mb-2">
-              <strong class="text-[#f60]">Beliebteste Inhalte:</strong> Lokale
-              News, Familiäres, Gruppen
-            </p>
-            <p class="text-white mb-2">
-              <strong class="text-[#f60]">Ideale Content-Formate:</strong>
-              Events, Gruppen, Videos
-            </p>
-            <p class="text-white mb-4">
-              <strong class="text-[#f60]">Optimal für:</strong> Lokale
-              Unternehmen, Community, ältere Zielgruppen
-            </p>
-            <p class="text-white italic">
-              "Facebook ist wie ein digitales Café für die Generation 40+. Die
-              Reichweite sinkt, aber die Community-Kraft bleibt stark."
-            </p>
-          </div>
-          <div class="bg-base-200 p-6 rounded-lg border border-[#f60]/30">
-            <h4 class="text-xl font-bold text-white mb-3">YouTube</h4>
-            <p class="text-white mb-2">
-              <strong class="text-[#f60]">Demografie:</strong> 15-65+ Jahre,
-              sehr breit
-            </p>
-            <p class="text-white mb-2">
-              <strong class="text-[#f60]">Beliebteste Inhalte:</strong> How-Tos,
-              Reviews, Unterhaltung, Vlogs
-            </p>
-            <p class="text-white mb-2">
-              <strong class="text-[#f60]">Ideale Content-Formate:</strong>
-              Shorts, optimierte Langvideos
-            </p>
-            <p class="text-white mb-4">
-              <strong class="text-[#f60]">Optimal für:</strong>
-              Erklärungsbedürftige Produkte, Bildung, Nachhaltigkeit
-            </p>
-            <p class="text-white italic">
-              "YouTube ist die zweitgrößte Suchmaschine der Welt. Nicht, wo man
-              viral geht, sondern wo man gefunden wird."
-            </p>
-          </div>
-        </div>
-
-        <div class="bg-black border-l-4 border-[#f60] p-6 my-8 rounded-r-lg">
-          <p class="text-white italic">
-            "Eine durchschnittliche Präsenz auf zwei Plattformen ist besser als
-            eine schlechte Präsenz auf fünf. Es geht nicht darum, überall zu
-            sein, sondern dort, wo du wirklich glänzen kannst."
-          </p>
-          <p class="text-[#f60] mt-2 font-semibold">
-            — Jeder erfolgreiche Social Media Manager unter 30
-          </p>
-        </div>
-
-        <p class="text-white mb-6">
-          Der größte Fehler, den Unternehmen machen? Sie behandeln jede
-          Plattform gleich. Ein LinkedIn-Post wird einfach auf Instagram
-          kopiert, ein TikTok-Video 1:1 auf YouTube hochgeladen. Das ist in etwa
-          so effektiv wie ein Smoking beim Strandurlaub – technisch möglich,
-          aber definitiv nicht optimal.
-        </p>
-
-        <p class="text-white mb-6">
-          Stattdessen: Wähle maximal 2-3 Plattformen, auf denen deine Zielgruppe
-          aktiv ist, und passe deinen Content dem Format und der Kultur der
-          jeweiligen Plattform an. Qualität schlägt Quantität – immer.
+          Und vergiss nicht: Die beste Plattform ist die, auf der sich deine
+          Zielgruppe wirklich aufhält – und nicht die, die gerade am
+          angesagtesten ist. Recherchiere, analysiere und entscheide
+          datenbasiert.
         </p>
       </div>
 
       <!-- Section 3 -->
       <div id="section-3">
         <h2 class="text-3xl font-bold text-white mt-12 mb-6">
-          Content-Strategie: Von langweilig zu viral in 5 Schritten
+          Content-Strategien für 2025: Mehrwert statt Werbung
         </h2>
         <p class="text-white mb-6">
-          Kennst du das? Du postest etwas, worauf du super stolz bist – und die
-          Reaktion ist so beeindruckend wie ein Stein, der ins Wasser fällt...
-          in der Sahara. Kein Like, kein Kommentar, absolute digitale
-          Tumbleweed-Stimmung.
+          2025 ist es wichtiger denn je, mit deinen Inhalten echten Mehrwert zu
+          bieten. Wer nur Werbung postet, wird ignoriert. Hier sind die
+          wichtigsten Content-Strategien für 2025:
         </p>
 
-        <p class="text-white mb-6">
-          Das Problem? Vermutlich dein Content. In einer Welt, in der jeden Tag
-          über 500 Millionen Tweets, 100 Millionen Instagram-Posts und 2
-          Milliarden TikTok-Videos erscheinen, reicht "ganz okay" einfach nicht
-          mehr aus.
-        </p>
-
-        <p class="text-white mb-6">
-          Hier ist meine bewährte 5-Schritte-Formel für Content, der nicht nur
-          gesehen wird, sondern tatsächlich Engagement erzeugt:
-        </p>
-
-        <ol class="list-decimal pl-6 mb-6 space-y-8">
+        <ol class="list-decimal pl-6 mb-6 space-y-4">
           <li class="text-white">
-            <strong class="text-[#f60] text-xl"
-              >Verstehe die Währung der Plattform</strong
-            >
+            <strong class="text-[#f60] text-xl">Fokus auf Micro-Content</strong>
             <p class="mt-2">
-              Jede Plattform hat eine andere "Währung": Bei TikTok ist es
-              Unterhaltung, bei LinkedIn Mehrwert, bei Instagram Ästhetik.
-              Verstehe, was die Nutzer auf der jeweiligen Plattform suchen, und
-              liefere genau das.
+              Die Aufmerksamkeitsspanne sinkt. Produziere kurze, knackige
+              Inhalte, die schnell auf den Punkt kommen.
             </p>
 
             <div class="mt-3 p-4 bg-base-200 rounded-lg">
               <p class="text-white">
-                <strong class="text-[#f60]">Praxisbeispiel:</strong> Ein
-                Finanzberater teilt auf TikTok unterhaltsame
-                30-Sekunden-Spartipps mit überraschenden Twists ("So sparst du
-                10.000€ mit einem Eiswürfelbehälter"), während er auf LinkedIn
-                tiefgehende Analysen zu Markttrends veröffentlicht.
+                <strong class="text-[#f60]">Beispiel:</strong> TikToks, Reels,
+                kurze Videos, prägnante Grafiken, Zitate, kurze Blogposts,
+                Newsletter mit nur einer Kernaussage.
               </p>
             </div>
           </li>
 
           <li class="text-white">
             <strong class="text-[#f60] text-xl"
-              >Hook in den ersten 3 Sekunden</strong
+              >Nutze UGC (User-Generated Content)</strong
             >
             <p class="mt-2">
-              Die Aufmerksamkeitsspanne ist mittlerweile kürzer als die eines
-              Goldfischs. Du hast maximal 3 Sekunden, um jemanden zum
-              Weiterscrollen zu verhindern. Starte mit einem Versprechen, einer
-              überraschenden Aussage oder einer kontroversen Meinung.
+              Deine Community ist deine beste Content-Quelle. Integriere
+              Kundenstimmen, Testimonials und nutzergenerierte Inhalte in deine
+              Strategie.
             </p>
 
             <div class="mt-3 p-4 bg-base-200 rounded-lg">
               <p class="text-white">
-                <strong class="text-[#f60]">Schlechter Hook:</strong> "Heute
-                sprechen wir über E-Mail-Marketing..."
-              </p>
-              <p class="text-white">
-                <strong class="text-[#f60]">Guter Hook:</strong> "Drei Wörter in
-                deiner Betreffzeile können deine Öffnungsrate verdoppeln..."
+                <strong class="text-[#f60]">Beispiel:</strong> Starte einen
+                Hashtag-Wettbewerb, bitte deine Kunden um Feedback-Videos, teile
+                Kundenfotos auf deinem Kanal.
               </p>
             </div>
           </li>
 
-          <div class="my-8" data-aos="zoom-in">
-            <img
-              src="/src/assets/images/blog-posts/content-hooks-example.jpg"
-              alt="Content Hooks Beispiele"
-              class="rounded-lg w-full h-auto shadow-lg"
-            />
-            <p class="text-center text-sm text-white opacity-75 mt-2">
-              Beispiele für effektive Content-Hooks auf verschiedenen
-              Plattformen
+          <li class="text-white">
+            <strong class="text-[#f60] text-xl"
+              >Optimiere für Mobile (ist das überhaupt noch eine Frage?)</strong
+            >
+            <p class="mt-2">
+              99% der Social-Media-Nutzer sind mobil unterwegs. Stelle sicher,
+              dass deine Inhalte auf Smartphones perfekt aussehen und
+              funktionieren.
             </p>
-          </div>
+
+            <div class="mt-3 p-4 bg-base-200 rounded-lg">
+              <p class="text-white">
+                <strong class="text-[#f60]">Beispiel:</strong> Verwende
+                vertikale Videoformate, achte auf gut lesbare Schriftarten,
+                optimiere deine Website für mobile Geräte.
+              </p>
+            </div>
+          </li>
+
+          <li class="text-white">
+            <strong class="text-[#f60] text-xl"
+              >Erstelle "Snackable Content" mit starken Hooks</strong
+            >
+            <p class="mt-2">
+              "Snackable Content" sind Inhalte, die man schnell und einfach
+              konsumieren kann. Aber damit dieser Content überhaupt wahrgenommen
+              wird, braucht er einen starken "Hook" – einen Aufhänger, der
+              sofort die Aufmerksamkeit erregt.
+            </p>
+
+            <div class="mt-3 p-4 bg-base-200 rounded-lg">
+              <p class="text-white">
+                <strong class="text-[#f60]">Beispiel:</strong>
+              </p>
+              <p class="text-white">
+                <strong class="text-[#f60]">Schlechter Hook:</strong> "5 Tipps
+                für mehr Produktivität"
+              </p>
+              <p class="text-white">
+                <strong class="text-[#f60]">Guter Hook:</strong> "Dieser eine
+                Trick hat meine Produktivität verdoppelt (und er ist völlig
+                legal!)"
+              </p>
+              <p class="text-white">
+                <strong class="text-[#f60]">Noch besser:</strong> Direkte Frage,
+                Provokation, überraschende Statistik, persönliches Geständnis.
+              </p>
+              <p class="text-white">
+                <strong class="text-[#f60]">Pro-Tipp:</strong> Analysiere deine
+                erfolgreichsten Posts und identifiziere die stärksten
+                Content-Hooks. Was hat funktioniert? Warum? Lerne daraus und
+                entwickle deine eigenen Beispiele für effektive Content-Hooks
+                auf verschiedenen Plattformen
+              </p>
+            </div>
+          </li>
 
           <li class="text-white">
             <strong class="text-[#f60] text-xl">Nutze das AIDA-Prinzip</strong>
@@ -655,7 +592,7 @@ defineExpose({ post });
 
         <div class="my-8" data-aos="zoom-in">
           <img
-            src="/src/assets/images/blog-posts/community-building.jpg"
+            src="@/assets/images/blog-posts/community-building.png"
             alt="Community Building Pyramide"
             class="rounded-lg w-full h-auto shadow-lg"
           />
@@ -782,6 +719,8 @@ defineExpose({ post });
           lautesten schreien, sondern die, die am besten zuhören.
         </p>
       </div>
+
+      <NewsletterForm />
 
       <!-- Section 5 -->
       <div id="section-5">
@@ -969,7 +908,7 @@ defineExpose({ post });
 
         <div class="my-8" data-aos="zoom-in">
           <img
-            src="/src/assets/images/blog-posts/social-media-roi.jpg"
+            src="@/assets/images/blog-posts/social-media-roi.png"
             alt="Social Media ROI Messung"
             class="rounded-lg w-full h-auto shadow-lg"
           />
@@ -1077,9 +1016,215 @@ defineExpose({ post });
           </div>
 
           <div class="bg-base-200 p-6 rounded-lg">
-            <h4 class="text-xl font-bold text-white mb-3">Schritt 4:</h4>
+            <h4 class="text-xl font-bold text-white mb-3">
+              Schritt 4: Berechne den tatsächlichen ROI
+            </h4>
+            <p class="text-white mb-3">
+              Die grundlegende ROI-Formel für Social Media:
+            </p>
+            <div class="bg-black p-4 rounded-lg text-center my-3">
+              <p class="text-white font-mono">
+                ROI = (Gewinn aus Social Media - Kosten für Social Media) /
+                Kosten für Social Media × 100%
+              </p>
+            </div>
+            <p class="text-white mb-3">
+              Dabei musst du alle Kosten berücksichtigen:
+            </p>
+            <ul class="list-disc pl-6 text-white">
+              <li>Werbeausgaben</li>
+              <li>Personalkosten (inkl. Freelancer)</li>
+              <li>Tool-Kosten</li>
+              <li>Content-Produktionskosten</li>
+            </ul>
+            <p class="text-white mt-3">
+              <strong class="text-[#f60]">Realistisches Beispiel:</strong> Ein
+              E-Commerce-Shop gibt 5.000€ monatlich für Social Media aus (inkl.
+              Ads, Personal, Tools) und generiert dadurch 15.000€ Umsatz bei 40%
+              Marge. Der Gewinn beträgt also 6.000€, der ROI liegt bei (6.000€ -
+              5.000€) / 5.000€ × 100% = 20%.
+            </p>
+          </div>
+
+          <div class="bg-base-200 p-6 rounded-lg">
+            <h4 class="text-xl font-bold text-white mb-3">
+              Schritt 5: Berücksichtige den langfristigen Wert
+            </h4>
+            <p class="text-white mb-3">
+              Der wahre ROI von Social Media zeigt sich oft erst langfristig.
+              Berücksichtige daher auch:
+            </p>
+            <ul class="list-disc pl-6 text-white">
+              <li>
+                Customer Lifetime Value (CLV) der über Social Media gewonnenen
+                Kunden
+              </li>
+              <li>Einfluss auf SEO und organische Sichtbarkeit</li>
+              <li>
+                Reduzierte Kosten für Kundenservice durch Community-Support
+              </li>
+              <li>
+                Erhöhte Mitarbeiterzufriedenheit und vereinfachtes Recruiting
+              </li>
+              <li>Wert der aufgebauten Audience als Marketing-Asset</li>
+            </ul>
+            <p class="text-white mt-3">
+              <strong class="text-[#f60]">Pro-Tipp:</strong> Berechne den
+              "Social Media Multiplier" – wie viel zusätzlichen Wert generiert
+              ein über Social Media gewonnener Kunde im Vergleich zu anderen
+              Kanälen? Oft sind Social-Media-Kunden loyaler und haben einen
+              höheren CLV.
+            </p>
           </div>
         </div>
+
+        <div
+          class="my-8 bg-[#f60]/10 border border-[#f60] p-6 rounded-lg"
+          data-aos="fade-up"
+        >
+          <div class="flex items-start gap-4">
+            <div class="p-2 bg-[#f60] rounded-full text-white">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-xl font-bold text-white mb-2">Reporting-Tipp</h4>
+              <p class="text-white">
+                Erstelle ein monatliches Social-Media-Dashboard mit den
+                wichtigsten KPIs. Aber: Zeige nicht nur Zahlen, sondern erzähle
+                die Geschichte hinter den Daten. Was hat funktioniert? Was
+                nicht? Welche Learnings gibt es? So wird aus einem trockenen
+                Report ein wertvolles strategisches Tool.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-black border-l-4 border-[#f60] p-6 my-8 rounded-r-lg">
+          <p class="text-white italic">
+            "Nicht alles, was zählt, kann gezählt werden, und nicht alles, was
+            gezählt werden kann, zählt. Aber in Social Media solltest du
+            verdammt nochmal versuchen, so viel wie möglich zu zählen."
+          </p>
+          <p class="text-[#f60] mt-2 font-semibold">
+            — Ein Data Analyst mit zu viel Kaffee im Blut
+          </p>
+        </div>
+
+        <p class="text-white mb-6">
+          Die Messung des Social Media ROI ist keine exakte Wissenschaft – es
+          gibt immer Faktoren, die schwer zu quantifizieren sind. Aber mit dem
+          richtigen Framework kannst du zumindest einen großen Teil des Wertes
+          erfassen und nachweisen, dass Social Media mehr ist als nur "nett zu
+          haben".
+        </p>
+
+        <p class="text-white mb-6">
+          Und denk daran: Nicht alles, was zählbar ist, zählt – und nicht alles,
+          was zählt, ist zählbar. Manchmal ist der größte Wert von Social Media
+          die Beziehung, die du zu deiner Community aufbaust – und die lässt
+          sich nicht immer in Euro und Cent ausdrücken.
+        </p>
+      </div>
+
+      <!-- Section 7 / Conclusion -->
+      <div id="section-7">
+        <h2 class="text-3xl font-bold text-white mt-12 mb-6">
+          Fazit: Social Media 2025 – Evolution statt Revolution
+        </h2>
+        <p class="text-white mb-6">
+          Wir haben in diesem Artikel viel über neue Trends, Strategien und
+          Tools gesprochen. Aber das Wichtigste zum Schluss: Der Kern
+          erfolgreichen Social Media Marketings hat sich nicht verändert und
+          wird sich auch 2025 nicht ändern.
+        </p>
+
+        <p class="text-white mb-6">
+          Es geht immer noch darum, echte Verbindungen zu schaffen, Mehrwert zu
+          bieten und authentisch zu sein. Die Plattformen ändern sich, die
+          Algorithmen ändern sich, aber die menschliche Psychologie bleibt
+          erstaunlich konstant.
+        </p>
+
+        <p class="text-white mb-6">
+          Hier sind die fünf zeitlosen Prinzipien, die auch 2025 und darüber
+          hinaus gelten werden:
+        </p>
+
+        <ol class="list-decimal pl-6 mb-6 space-y-2">
+          <li class="text-white">
+            <strong class="text-[#f60]"
+              >Authentizität schlägt Perfektion</strong
+            >
+            – Menschen folgen Menschen, keine makellosen Marken-Robotern.
+          </li>
+          <li class="text-white">
+            <strong class="text-[#f60]">Geben kommt vor Nehmen</strong> – biete
+            zuerst Wert, bevor du um etwas bittest.
+          </li>
+          <li class="text-white">
+            <strong class="text-[#f60]"
+              >Konsistenz ist wichtiger als Brillanz</strong
+            >
+            – besser regelmäßig gut als selten perfekt.
+          </li>
+          <li class="text-white">
+            <strong class="text-[#f60]"
+              >Zuhören ist wichtiger als Sprechen</strong
+            >
+            – Social Media ist ein Dialog, kein Monolog.
+          </li>
+          <li class="text-white">
+            <strong class="text-[#f60]">Testen, messen, anpassen</strong> – lass
+            Daten deine Strategie leiten, nicht Annahmen.
+          </li>
+        </ol>
+
+        <div class="bg-black border-l-4 border-[#f60] p-6 my-8 rounded-r-lg">
+          <p class="text-white italic">
+            "Social Media ist wie eine Party. Niemand mag die Person, die nur
+            über sich selbst redet, zu verkaufen versucht und dann geht. Sei die
+            Person, die interessante Gespräche führt, anderen zuhört und die man
+            gerne wiedersieht."
+          </p>
+          <p class="text-[#f60] mt-2 font-semibold">
+            — Ein weiser Social Media Stratege (der definitiv nicht ich bin...
+            oder doch?)
+          </p>
+        </div>
+
+        <p class="text-white mb-6">
+          Wenn du die Strategien aus diesem Artikel umsetzt, wirst du nicht nur
+          mit den neuesten Trends Schritt halten, sondern deiner Konkurrenz
+          einen Schritt voraus sein. Aber vergiss nie: Technologie und Taktiken
+          sind nur Werkzeuge. Der wahre Erfolg liegt in der Verbindung, die du
+          zu deiner Zielgruppe aufbaust.
+        </p>
+
+        <p class="text-white mb-6">
+          Also, worauf wartest du noch? Die Social-Media-Landschaft 2025 ist
+          voller Möglichkeiten für diejenigen, die bereit sind, strategisch zu
+          denken, authentisch zu handeln und kontinuierlich zu lernen. Deine
+          Community wartet auf dich!
+        </p>
+
+        <p class="text-white mb-6">
+          Und wenn du Unterstützung bei deiner Social-Media-Strategie brauchst –
+          du weißt, wo du uns findest. Wir sind nur einen Klick (oder einen
+          cleveren Social-Media-Post) entfernt! 😉
+        </p>
       </div>
     </div>
   </div>

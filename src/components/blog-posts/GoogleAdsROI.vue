@@ -1,7 +1,7 @@
 <script setup>
 // Define the blog post metadata
 const post = {
-  id: 3,
+  id: 4,
   title: "Wie du mit Google Ads deinen ROI um 300% steigerst",
   slug: "wie-du-mit-google-ads-deinen-roi-steigerst",
   excerpt:
