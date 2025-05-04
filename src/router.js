@@ -1,13 +1,25 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "./views/Home.vue"; // Hier Home (App.vue) importieren
-import BlogHome from "./views/BlogHome.vue"; // Hier Home (App.vue) importieren
-import BlogPost from "./components/blog-posts/BlogPost.vue"; // Hier Home (App.vue) importieren
+import Home from "./views/Home.vue";
+import WebsiteErstellen from "./views/WebsiteErstellen.vue";
+import GoogleAds from "./views/GoogleAds.vue";
+import BlogHome from "./views/BlogHome.vue";
+import BlogPost from "./components/blog-posts/BlogPost.vue";
 
 const routes = [
   {
     path: "/",
     name: "Home",
     component: Home,
+  },
+  {
+    path: "/webseite-erstellen-lassen",
+    name: "WebsiteErstellen",
+    component: WebsiteErstellen,
+  },
+  {
+    path: "/google-ads",
+    name: "GoogleAds",
+    component: GoogleAds,
   },
   {
     path: "/blog",

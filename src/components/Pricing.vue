@@ -117,7 +117,7 @@ export default {
             delay: 0,
           },
           {
-            name: "Firmen Website",
+            name: "Firmen Webseite",
             price: "ab €799",
             period: "/Projekt",
             features: [

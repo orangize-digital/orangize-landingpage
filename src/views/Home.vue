@@ -322,6 +322,9 @@
     </div>
   </section>
 
+  <!-- Services Showcase Section -->
+  <ServicesShowcase />
+
   <!-- Fakten Section -->
   <Facts />
 
@@ -330,6 +333,7 @@
 
   <!-- Pricing Section -->
   <Pricing />
+
   <!-- Ablauf Section -->
   <section id="ablauf" class="py-20 bg-base-100">
     <div class="container mx-auto px-4">
@@ -559,6 +563,7 @@
 <script setup>
 import { useHead } from "@vueuse/head"; // Ensure you're importing useMeta
 import Navigation from "../components/Navigation.vue";
+import ServicesShowcase from "../components/ServicesShowcase.vue";
 import Footer from "../components/Footer.vue";
 import Projects from "../components/Projects.vue";
 import ContactForm from "../components/ContactForm.vue";
