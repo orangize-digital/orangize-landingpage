@@ -1,113 +1,78 @@
-// Import all blog post components
+// src/blog-registry.js
+
+// Import blog post components (only used in app, not in sitemap)
 import GoogleAdsRoi from "./components/blog-posts/GoogleAdsROI.vue";
 import BlogPostTemplate from "./components/blog-posts/BlogPostTemplate.vue";
 import GoogleAdsEinfuehrung from "./components/blog-posts/GoogleAdsEinfuehrung.vue";
 import LandingPageOptimierung from "./components/blog-posts/LandingPageOptimierung.vue";
 import SocialMediaMarketing from "./components/blog-posts/SocialMediaMarketing.vue";
 
-// Images Import for Blogs
+// Images and other full content
 import avatarImage from "@/assets/images/Naumche.jpg";
-
 import blogImage from "@/assets/images/blog-posts/google-ads-intro.jpg";
 import blogImage1 from "@/assets/images/blog-posts/landingpage.jpg";
 import blogImage2 from "@/assets/images/blog-posts/social-media-hero.jpg";
 
-// Export the blog post components
+// Import clean metadata
+import { blogPosts } from "./blog-meta.js";
+
+// Export component registry
 export const blogComponents = {
   "wie-du-mit-google-ads-deinen-roi-steigerst": GoogleAdsRoi,
   "blogpost-template": BlogPostTemplate,
   "google-ads-einfuehrung": GoogleAdsEinfuehrung,
   "landing-page-psychologie": LandingPageOptimierung,
-  "social-media-marketing-leitfaden": SocialMediaMarketing, 
+  "social-media-marketing-leitfaden": SocialMediaMarketing,
 };
 
-// Function to get all blog posts metadata
+// Enrich metadata with full post content
 export function getAllPosts() {
-  // This would be populated at build time
-  return [
-    {
-      id: 1,
-      title:
-        "Google Ads für Einsteiger: Was ist das eigentlich und warum solltest du es nutzen?",
-      slug: "google-ads-einfuehrung",
-      excerpt:
-        "Eine unterhaltsame Einführung in die Welt von Google Ads - ohne kompliziertes Fachchinesisch, dafür mit vielen praktischen Tipps und einem Augenzwinkern erklärt.",
-      image: blogImage,
-      category: "Google Ads",
-      date: "28. April 2025",
-      readTime: 8,
-      author: {
-        name: "Naumche Joshevski",
-        title: "Google Ads Spezialist",
-        avatar: avatarImage,
-        bio: "Google Ads Experte mit über 5 Jahren Erfahrung im digitalen Marketing. Spezialisiert auf Performance Marketing und Conversion-Optimierung für mittelständische Unternehmen.",
+  return blogPosts.map((meta) => {
+    const sharedAuthor = {
+      name: "Naumche Joshevski",
+      avatar: avatarImage,
+      bio: "Google Ads Experte mit über 5 Jahren Erfahrung im digitalen Marketing. Spezialisiert auf Performance Marketing und Conversion-Optimierung für mittelständische Unternehmen.",
+    };
+
+    const fullData = {
+      "google-ads-einfuehrung": {
+        excerpt: "Eine unterhaltsame Einführung in Google Ads...",
+        image: blogImage,
+        category: "Google Ads",
+        readTime: 8,
+        author: { ...sharedAuthor, title: "Google Ads Spezialist" },
       },
-    },
-    {
-      id: 2,
-      title: "Landing Pages, die konvertieren: 7 Geheimnisse für mehr Leads",
-      slug: "landing-page-psychologie",
-      excerpt:
-        "Entdecke die 7 bewährten Strategien für hochkonvertierende Landing Pages. Von psychologischen Tricks bis zu Design-Hacks – alles, was du brauchst, um deine Conversion Rate zu verdoppeln!",
-      image: blogImage1,
-      category: "Webdesign",
-      date: "19. April 2025",
-      readTime: 12,
-      author: {
-        name: "Naumche Joshevski",
-        title: "Conversion-Rate-Optimierer",
-        avatar: avatarImage,
-        bio: "Webdesign-Experte mit über 5 Jahren Erfahrung. Spezialisiert auf Conversion-Rate-Optimierung und nutzerorientiertes Design für maximale Performance.",
+      "landing-page-psychologie": {
+        excerpt: "Entdecke 7 Strategien für konvertierende Landing Pages.",
+        image: blogImage1,
+        category: "Webdesign",
+        readTime: 12,
+        author: { ...sharedAuthor, title: "Conversion-Rate-Optimierer" },
       },
-    },
-    {
-      id: 3,
-      title: "Social Media Marketing: Der ultimative Leitfaden für 2025",
-      slug: "social-media-marketing-leitfaden",
-      excerpt:
-        "Entdecke die neuesten Strategien, Plattformen und KI-Tools für erfolgreiches Social Media Marketing im Jahr 2025. Von Content-Erstellung bis ROI-Messung – dieser Leitfaden deckt alles ab!",
-      image: blogImage2,
-      category: "Online Marketing",
-      date: "27. April 2025",
-      readTime: 8,
-      author: {
-        name: "Naumche Joshevski",
-        title: "Social Media Stratege",
-        avatar: avatarImage,
-        bio: "Social Media Experte mit über 5 Jahren Erfahrung. Hat für internationale Marken wie Adidas und Red Bull erfolgreiche Social-Media-Kampagnen entwickelt.",
+      "social-media-marketing-leitfaden": {
+        excerpt: "Neueste Strategien für Social Media 2025.",
+        image: blogImage2,
+        category: "Online Marketing",
+        readTime: 8,
+        author: { ...sharedAuthor, title: "Social Media Stratege" },
       },
-    },
-    // {
-    //   id: 3,
-    //   title: "Wie du mit Google Ads deinen ROI um 300% steigerst",
-    //   slug: "wie-du-mit-google-ads-deinen-roi-steigerst",
-    //   excerpt:
-    //     "Erfahre, wie du mit gezielten Optimierungen und einer durchdachten Strategie den Return on Investment deiner Google Ads Kampagnen deutlich verbessern kannst.",
-    //   image: "/src/assets/images/blog-posts/roi-steigern.jpg",
-    //   category: "Google Ads",
-    //   date: "15. April 2025",
-    //   readTime: 12,
-    //   author: {
-    //     name: "Naumche Joshevski",
-    //     title: "Google Ads Spezialist",
-    //     avatar: "/src/assets/images/Naumche.jpg",
-    //     bio: "Google Ads Experte mit über 10 Jahren Erfahrung im digitalen Marketing. Spezialisiert auf Performance Marketing und Conversion-Optimierung für mittelständische Unternehmen.",
-    //   },
-    // },
-  ];
+    };
+
+    return {
+      ...meta,
+      ...fullData[meta.slug],
+    };
+  });
 }
 
-// Function to get featured post
 export function getFeaturedPost() {
-  return getAllPosts()[0]; // Just return the first post as featured
+  return getAllPosts()[0];
 }
 
-// Function to get post by slug
 export function getPostBySlug(slug) {
   return getAllPosts().find((post) => post.slug === slug);
 }
 
-// Function to get related posts
 export function getRelatedPosts(currentSlug, category, limit = 3) {
   return getAllPosts()
     .filter((post) => post.slug !== currentSlug && post.category === category)

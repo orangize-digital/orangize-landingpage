@@ -61,7 +61,7 @@
           </li>
           <li>
             <router-link
-              to="/website-erstellen"
+              to="/webseite-erstellen-lassen"
               class="hover:text-[#f60] text-white transition-colors duration-300 font-bold navi-items"
             >
               Website erstellen
