@@ -47,6 +47,11 @@ const routes = [
     name: "Datenschutz",
     component: () => import("@/views/Datenschutz.vue"),
   },
+  // ✅ Catch-all route for 404s → redirects to homepage
+  {
+    path: "/:catchAll(.*)",
+    redirect: "/",
+  },
 ];
 
 const router = createRouter({
