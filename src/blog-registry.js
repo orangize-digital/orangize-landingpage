@@ -36,13 +36,21 @@ export function getAllPosts() {
 
     const fullData = {
       "google-ads-einfuehrung": {
-        excerpt: "Eine unterhaltsame Einführung in Google Ads...",
+        id: 1,
+        title:
+          "Google Ads für Einsteiger: Was ist das eigentlich und warum solltest du es nutzen?",
+        slug: "google-ads-einfuehrung",
+        excerpt:
+          "Eine unterhaltsame Einführung in die Welt von Google Ads - ohne kompliziertes Fachchinesisch, dafür mit vielen praktischen Tipps und einem Augenzwinkern erklärt.",
         image: blogImage,
         category: "Google Ads",
         readTime: 8,
         author: { ...sharedAuthor, title: "Google Ads Spezialist" },
       },
       "landing-page-psychologie": {
+        id: 2,
+        title: "Landing Pages, die konvertieren: 7 Geheimnisse für mehr Leads",
+        slug: "landing-page-psychologie",
         excerpt: "Entdecke 7 Strategien für konvertierende Landing Pages.",
         image: blogImage1,
         category: "Webdesign",
@@ -50,6 +58,9 @@ export function getAllPosts() {
         author: { ...sharedAuthor, title: "Conversion-Rate-Optimierer" },
       },
       "social-media-marketing-leitfaden": {
+        id: 3,
+        title: "Social Media Marketing: Der ultimative Leitfaden für 2025",
+        slug: "social-media-marketing-leitfaden",
         excerpt: "Neueste Strategien für Social Media 2025.",
         image: blogImage2,
         category: "Online Marketing",

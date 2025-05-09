@@ -145,7 +145,12 @@
                     <img :src="post.author.avatar" :alt="post.author.name" />
                   </div>
                 </div>
-                <p class="text-sm text-white">{{ post.author.name }}</p>
+                <div>
+                  <p class="text-sm text-white">{{ post.author.name }}</p>
+                  <p class="text-sm text-white opacity-75">
+                    {{ post.author.title }}
+                  </p>
+                </div>
               </div>
               <div class="card-actions justify-end">
                 <router-link
