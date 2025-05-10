@@ -89,7 +89,6 @@
 </template>
 
 <script setup>
-import { onMounted } from "vue";
 import Navigation from "../components/Navigation.vue";
 import Footer from "../components/Footer.vue";
 </script>

@@ -1019,6 +1019,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import { useHead } from "@vueuse/head";
+import { useRoute } from "vue-router";
 import Navigation from "../components/google-ads/Navigation.vue";
 import Footer from "../components/Footer.vue";
 import ContactForm from "../components/ContactForm.vue";
@@ -1026,6 +1027,8 @@ import CTA from "../components/FloatingCallButton.vue";
 import NewsletterForm from "../components/NewsletterForm.vue";
 import PricingModal from "../components/PricingModal.vue";
 import RegionalePraesenzGoogleAds from "../components/google-ads/RegionalePraesenzGoogleAds.vue";
+
+const route = useRoute();
 
 // SEO Meta Tags für Google Ads Betreuung in Bad Oeynhausen und Umgebung
 useHead({
@@ -1055,6 +1058,12 @@ useHead({
     {
       property: "og:type",
       content: "website",
+    },
+  ],
+  link: [
+    {
+      rel: "canonical",
+      href: `https://orangize.de${route.path}`,
     },
   ],
 });

@@ -994,6 +994,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import { useHead } from "@vueuse/head";
+import { useRoute } from "vue-router";
 import Navigation from "../components/webseite/Navigation.vue";
 import Footer from "../components/Footer.vue";
 import ContactForm from "../components/ContactForm.vue";
@@ -1002,6 +1003,8 @@ import NewsletterForm from "../components/NewsletterForm.vue";
 import PricingModal from "../components/PricingModal.vue";
 import Projects from "../components/Projects.vue";
 import RegionalePraesenz from "../components/webseite/RegionalePraesenz.vue";
+
+const route = useRoute();
 
 // SEO Meta Tags für Webdesign & Website-Erstellung in Bad Oeynhausen und Umgebung
 useHead({
@@ -1031,6 +1034,12 @@ useHead({
     {
       property: "og:type",
       content: "website",
+    },
+  ],
+  link: [
+    {
+      rel: "canonical",
+      href: `https://orangize.de${route.path}`,
     },
   ],
 });

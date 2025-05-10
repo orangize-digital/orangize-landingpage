@@ -366,6 +366,12 @@ const updateMeta = (currentPost) => {
         }`,
       },
     ],
+    link: [
+      {
+        rel: "canonical",
+        href: `https://orangize.de${route.path}`,
+      },
+    ],
   });
 };
 

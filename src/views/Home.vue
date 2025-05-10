@@ -640,5 +640,11 @@ useHead({
         "https://orangize.de/src/assets/images/mockup/Orangize-Mockup.png",
     },
   ],
+  link: [
+    {
+      rel: "canonical",
+      href: `https://orangize.de/`,
+    },
+  ],
 });
 </script>

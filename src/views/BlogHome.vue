@@ -176,11 +176,14 @@
 <script setup>
 import { ref, computed, onMounted } from "vue";
 import { useHead } from "@vueuse/head"; // ✅ Add this
+import { useRoute } from "vue-router";
 import Navigation from "../components/Navigation.vue";
 import Footer from "../components/Footer.vue";
 import CTA from "../components/FloatingCallButton.vue";
 import NewsletterForm from "../components/NewsletterForm.vue";
 import { getAllPosts, getFeaturedPost } from "../blog-registry";
+
+const route = useRoute();
 
 // SEO Meta for Blog Home
 useHead({
@@ -226,6 +229,12 @@ useHead({
       name: "twitter:description",
       content:
         "Wissen und Tipps über Webdesign, Google Ads, SEO und digitales Marketing von Orangize Digital.",
+    },
+  ],
+  link: [
+    {
+      rel: "canonical",
+      href: `https://orangize.de${route.path}`,
     },
   ],
 });
