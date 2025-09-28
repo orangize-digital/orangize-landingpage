@@ -6,20 +6,20 @@
       class="hero min-h-[60vh] min-h relative bg-[url('@/assets/images/blog-header-1.jpg')]"
     >
       <div class="hero-overlay bg-black bg-opacity-80"></div>
-      <div class="hero-content text-center text-neutral-content relative z-10">
+      <div class="hero-content text-center text-base-content relative z-10">
         <div class="max-w-3xl">
-          <h1 class="text-5xl font-bold text-[#f60]" data-aos="fade-down">
+          <h1 class="text-5xl font-bold text-primary" data-aos="fade-down">
             The Orangize Journal
           </h1>
           <p
-            class="py-6 text-2xl text-white"
+            class="py-6 text-2xl text-base-content"
             data-aos="fade-up"
             data-aos-delay="200"
           >
             Insights, Tipps und Strategien für dein digitales Marketing
           </p>
           <p
-            class="mb-8 text-lg text-white"
+            class="mb-8 text-lg text-base-content"
             data-aos="fade-up"
             data-aos-delay="400"
           >
@@ -42,7 +42,7 @@
             :class="
               activeCategory === category.id
                 ? 'bg-[#f60] text-white'
-                : 'bg-base-200 text-white hover:bg-[#f60] hover:text-white'
+                : 'bg-base-200 text-base-content hover:bg-primary hover:text-white'
             "
           >
             {{ category.name }}
@@ -55,7 +55,7 @@
     <section class="py-8 bg-base-100">
       <div class="container mx-auto px-4">
         <div
-          class="card lg:card-side bg-black shadow-xl border-blog-card overflow-hidden"
+          class="card lg:card-side bg-base-200 shadow-xl border-blog-card overflow-hidden"
           data-aos="fade-up"
         >
           <figure class="lg:w-1/2">
@@ -67,15 +67,17 @@
           </figure>
           <div class="card-body lg:w-1/2">
             <div class="flex items-center gap-2 mb-2">
-              <span class="badge badge-lg border-none bg-[#f60] text-white">{{
+              <span class="badge badge-lg border-none bg-primary text-white">{{
                 featuredPost.category
               }}</span>
-              <span class="text-white text-sm">{{ featuredPost.date }}</span>
+              <span class="text-base-content text-sm">{{
+                featuredPost.date
+              }}</span>
             </div>
-            <h2 class="card-title text-3xl text-white">
+            <h2 class="card-title text-3xl text-base-content">
               {{ featuredPost.title }}
             </h2>
-            <p class="text-white mb-4">{{ featuredPost.excerpt }}</p>
+            <p class="text-base-content mb-4">{{ featuredPost.excerpt }}</p>
             <div class="flex items-center gap-4 mb-6">
               <div class="avatar">
                 <div class="w-10 rounded-full">
@@ -86,10 +88,10 @@
                 </div>
               </div>
               <div>
-                <p class="font-semibold text-white">
+                <p class="font-semibold text-base-content">
                   {{ featuredPost.author.name }}
                 </p>
-                <p class="text-sm text-white opacity-75">
+                <p class="text-sm text-base-content opacity-75">
                   {{ featuredPost.author.title }}
                 </p>
               </div>
@@ -97,7 +99,7 @@
             <div class="card-actions justify-end">
               <router-link
                 :to="`/blog/${featuredPost.slug}`"
-                class="btn btn-primary bg-[#f60] border-none hover:bg-[#ff751a]"
+                class="btn btn-primary bg-[#f60] border-none hover:bg-[#f60]/90"
               >
                 Weiterlesen
               </router-link>
@@ -114,7 +116,7 @@
           <div
             v-for="(post, index) in filteredPosts"
             :key="post.id"
-            class="card bg-black border-blog-card shadow-xl hover:shadow-2xl transition-all duration-300 hover:translate-y-[-5px]"
+            class="card bg-base-200 border-blog-card shadow-xl hover:shadow-2xl transition-all duration-300 hover:translate-y-[-5px]"
             data-aos="fade-up"
             :data-aos-delay="index * 100"
           >
@@ -125,20 +127,23 @@
                 class="w-full h-full object-cover"
               />
               <div class="absolute top-4 left-4">
-                <span class="badge badge-lg border-none bg-[#f60] text-white">{{
-                  post.category
-                }}</span>
+                <span
+                  class="badge badge-lg border-none bg-primary text-white"
+                  >{{ post.category }}</span
+                >
               </div>
             </figure>
             <div class="card-body">
               <div class="flex justify-between items-center mb-2">
-                <span class="text-white text-sm">{{ post.date }}</span>
-                <span class="text-white text-sm"
+                <span class="text-base-content text-sm">{{ post.date }}</span>
+                <span class="text-base-content text-sm"
                   >{{ post.readTime }} min Lesezeit</span
                 >
               </div>
-              <h2 class="card-title text-xl text-white">{{ post.title }}</h2>
-              <p class="text-white mb-4">{{ post.excerpt }}</p>
+              <h2 class="card-title text-xl text-base-content">
+                {{ post.title }}
+              </h2>
+              <p class="text-base-content mb-4">{{ post.excerpt }}</p>
               <div class="flex items-center gap-3 mb-4">
                 <div class="avatar">
                   <div class="w-8 rounded-full">
@@ -146,8 +151,10 @@
                   </div>
                 </div>
                 <div>
-                  <p class="text-sm text-white">{{ post.author.name }}</p>
-                  <p class="text-sm text-white opacity-75">
+                  <p class="text-sm text-base-content">
+                    {{ post.author.name }}
+                  </p>
+                  <p class="text-sm text-base-content opacity-75">
                     {{ post.author.title }}
                   </p>
                 </div>
@@ -155,7 +162,7 @@
               <div class="card-actions justify-end">
                 <router-link
                   :to="`/blog/${post.slug}`"
-                  class="btn btn-outline text-white hover:bg-[#f60] hover:border-[#f60]"
+                  class="btn btn-outline text-base-content hover:bg-primary hover:border-primary hover:text-white"
                 >
                   Weiterlesen
                 </router-link>
@@ -166,7 +173,7 @@
       </div>
     </section>
 
-    <NewsletterForm />
+    <!-- <NewsletterForm /> -->
 
     <CTA />
     <Footer />
@@ -179,7 +186,7 @@ import { useHead } from "@vueuse/head"; // ✅ Add this
 import { useRoute } from "vue-router";
 import Navigation from "../components/Navigation.vue";
 import Footer from "../components/Footer.vue";
-import CTA from "../components/FloatingCallButton.vue";
+import CTA from "../components/CTA.vue";
 import NewsletterForm from "../components/NewsletterForm.vue";
 import { getAllPosts, getFeaturedPost } from "../blog-registry";
 

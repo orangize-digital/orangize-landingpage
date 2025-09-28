@@ -1,21 +1,17 @@
 <template>
-  <footer class="bg-black text-base-content py-6">
+  <footer class="bg-base-200 text-base-content py-6">
     <div
       class="footer container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center px-6 text-right"
     >
       <!-- Logo & Slogan -->
       <div class="md:text-left">
         <a href="#">
-          <img
-            src="/src/assets/images/logo/logo-new.svg"
-            alt="Orangize Logo"
-            class="h-14"
-          />
+          <img :src="logoSrc" alt="Orangize Logo" class="h-14" />
         </a>
-        <p class="mt-3 text-white">Orangize deine Bussiness</p>
+        <p class="mt-3 text-base-content">Orangize deine Bussiness</p>
 
         <!-- Kontaktinformationen -->
-        <p class="mt-4 text-white flex items-center gap-2">
+        <p class="mt-4 text-base-content flex items-center gap-2">
           <svg
             width="20"
             height="20"
@@ -32,7 +28,7 @@
             info@orangize.de
           </a>
         </p>
-        <p class="mt-2 text-white flex items-center gap-2">
+        <p class="mt-2 text-base-content flex items-center gap-2">
           <svg
             width="20"
             height="20"
@@ -55,16 +51,59 @@
       <nav
         class="flex bg-transparent border-none flex-col md:flex-row gap-4 mt-4 md:mt-0"
       >
-        <a href="/impressum" class="text-white hover:text-[#f60]">Impressum</a>
-        <a href="/datenschutz" class="text-white hover:text-[#f60]"
+        <a href="/impressum" class="text-base-content hover:text-[#f60]"
+          >Impressum</a
+        >
+        <a href="/datenschutz" class="text-base-content hover:text-[#f60]"
           >Datenschutz</a
         >
       </nav>
 
       <!-- Copyright -->
-      <p class="mt-4 md:mt-0 text-white">
+      <p class="mt-4 md:mt-0 text-base-content">
         &copy; 2025 - Alle Rechte vorbehalten
       </p>
     </div>
   </footer>
 </template>
+
+<script setup>
+import { ref, computed, onMounted } from "vue";
+
+const currentTheme = ref("light");
+
+const logoSrc = computed(() => {
+  return currentTheme.value === "dark"
+    ? "/src/assets/images/logo/orangize-white.svg"
+    : "/src/assets/images/logo/orangize-black.svg";
+});
+
+const updateTheme = () => {
+  if (typeof window !== "undefined") {
+    const theme =
+      document.documentElement.getAttribute("data-theme") || "light";
+    currentTheme.value = theme;
+  }
+};
+
+onMounted(() => {
+  updateTheme();
+
+  // Watch for theme changes
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (
+        mutation.type === "attributes" &&
+        mutation.attributeName === "data-theme"
+      ) {
+        updateTheme();
+      }
+    });
+  });
+
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["data-theme"],
+  });
+});
+</script>

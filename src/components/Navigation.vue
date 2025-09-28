@@ -2,7 +2,7 @@
   <nav
     class="navbar fixed top-0 z-50 transition-all border-none duration-500 ease-out"
     :class="{
-      'max-w-[75rem] bg-base-100 rounded-xl mt-4 left-0 right-0 mx-auto translate-x-[-50%]':
+      'max-w-[85rem] bg-base-100 rounded-xl mt-4 left-0 right-0 mx-auto translate-x-[-50%]':
         !isScrolled,
       'bg-base-100 border-none w-full shadow-md left-0 translate-x-0':
         isScrolled,
@@ -16,11 +16,7 @@
       <!-- Logo -->
       <div class="flex-1 lg:flex-none">
         <a href="/">
-          <img
-            src="/src/assets/images/logo/logo-new.svg"
-            alt="Orangize Logo"
-            class="h-14"
-          />
+          <img :src="logoSrc" alt="Orangize Logo" class="h-14" />
         </a>
       </div>
 
@@ -52,8 +48,7 @@
           <li v-for="section in sections" :key="section.id">
             <a
               :href="'#' + section.id"
-              :class="{ 'text-[#f60] font-bold': activeSection === section.id }"
-              class="hover:text-[#f60] text-white transition-colors duration-300 font-bold navi-items"
+              class="hover:text-[#f60] text-base-content transition-colors duration-300 font-bold navi-items"
               @click.prevent="scrollToSection(section.id)"
             >
               {{ section.name }}
@@ -63,10 +58,7 @@
           <li>
             <router-link
               to="/blog"
-              class="hover:text-[#f60] text-white transition-colors duration-300 font-bold navi-items"
-              :class="{
-                'text-[#f60] font-bold': $route.path.includes('/blog'),
-              }"
+              class="hover:text-[#f60] text-base-content transition-colors duration-300 font-bold navi-items"
             >
               Blog
             </router-link>
@@ -74,8 +66,9 @@
         </ul>
       </div>
 
-      <!-- CTA Button -->
-      <div class="flex-none hidden lg:block">
+      <!-- CTA Button and Theme Switcher -->
+      <div class="flex-none hidden lg:flex lg:items-center lg:gap-4">
+        <ThemeSwitcher />
         <button
           class="btn btn-primary bg-[#f60] text-white border-none hover:bg-[#ff751a]"
           @click.prevent="scrollToSection('kontakt')"
@@ -94,7 +87,6 @@
         <li v-for="section in sections" :key="section.id">
           <a
             :href="'#' + section.id"
-            :class="{ 'text-[#f60] font-bold': activeSection === section.id }"
             class="hover:text-[#f60] transition-colors duration-300"
             @click.prevent="
               scrollToSection(section.id);
@@ -109,11 +101,13 @@
           <router-link
             to="/blog"
             class="hover:text-[#f60] transition-colors duration-300"
-            :class="{ 'text-[#f60] font-bold': $route.path.includes('/blog') }"
             @click="isMenuOpen = false"
           >
             Blog
           </router-link>
+        </li>
+        <li class="mt-4">
+          <ThemeSwitcher />
         </li>
         <li class="mt-4">
           <button
@@ -129,12 +123,28 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, computed, onMounted, onUnmounted } from "vue";
+import ThemeSwitcher from "./ThemeSwitcher.vue";
 
 const isMenuOpen = ref(false);
 const isScrolled = ref(false);
 const activeSection = ref(null);
+const currentTheme = ref("light");
 let ticking = false;
+
+const logoSrc = computed(() => {
+  return currentTheme.value === "dark"
+    ? "/src/assets/images/logo/orangize-white.svg"
+    : "/src/assets/images/logo/orangize-black.svg";
+});
+
+const updateTheme = () => {
+  if (typeof window !== "undefined") {
+    const theme =
+      document.documentElement.getAttribute("data-theme") || "light";
+    currentTheme.value = theme;
+  }
+};
 
 const sections = [
   { id: "losung", name: "Lösung" },
@@ -179,6 +189,24 @@ const updateActiveSection = () => {
 onMounted(() => {
   window.addEventListener("scroll", updateNavbar);
   updateActiveSection();
+  updateTheme();
+
+  // Watch for theme changes
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (
+        mutation.type === "attributes" &&
+        mutation.attributeName === "data-theme"
+      ) {
+        updateTheme();
+      }
+    });
+  });
+
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["data-theme"],
+  });
 });
 
 onUnmounted(() => {

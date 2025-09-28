@@ -33,6 +33,56 @@
 /* Apply the font globally */
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #ffffff !important;
+}
+
+/* Theme-specific overrides */
+[data-theme="light"] {
+  --fallback-b1: 255 255 255;
+  --b1: 255 255 255;
+  --b2: 255 255 255;
+  --b3: 255 255 255;
+  --bc: 0 0 0;
+}
+
+[data-theme="dark"] {
+  --fallback-b1: 0 0 0;
+  --b1: 0 0 0;
+  --b2: 0 0 0;
+  --b3: 0 0 0;
+  --bc: 255 255 255;
+}
+
+/* Ensure bg-base-100 works properly */
+.bg-base-100 {
+  background-color: hsl(var(--b1) / 1) !important;
+}
+
+.bg-base-200 {
+  background-color: hsl(var(--b2) / 1) !important;
+}
+
+.text-base-content {
+  color: hsl(var(--bc) / 1) !important;
+}
+
+/* Add subtle orange borders for card separation since no gray colors */
+.card {
+  border: 1px solid rgb(255, 102, 0);
+}
+
+.card-body {
+  border-radius: 1rem;
+}
+
+[data-theme="light"] .card {
+  border: 1px solid rgb(255, 102, 0);
+  box-shadow: 0 4px 6px -1px rgba(255, 102, 0, 0.1);
+}
+
+[data-theme="dark"] .card {
+  border: 1px solid rgb(255, 102, 0);
+  box-shadow: 0 4px 6px -1px rgba(255, 102, 0, 0.1);
 }
 
 @keyframes smooth-bounce {
@@ -47,16 +97,6 @@ body {
 
 .animate-bounce {
   animation: smooth-bounce 1.5s infinite ease-in-out;
-}
-
-nav {
-  background-color: #000 !important;
-}
-
-p,
-li,
-h3 {
-  color: white;
 }
 
 @keyframes neon-pulse {
@@ -93,21 +133,21 @@ h3 {
   }
 }
 
-.cyber-grid {
+/* .cyber-grid {
   background-image: linear-gradient(rgba(255, 102, 0, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 102, 0, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
   animation: cyber-grid-move 20s linear infinite;
-}
+} */
 
-@keyframes cyber-grid-move {
+/* @keyframes cyber-grid-move {
   0% {
     background-position: 0 0;
   }
   100% {
     background-position: 20px 20px;
   }
-}
+} */
 
 .border-blog-card {
   backdrop-filter: blur(10px);
@@ -121,8 +161,7 @@ h3 {
 
 .feature-card {
   backdrop-filter: blur(10px);
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 102, 0, 1);
+  border: 1px solid rgb(255, 102, 0);
   transition: all 0.3s ease;
 }
 
@@ -153,6 +192,224 @@ h3 {
   animation: float 6s ease-in-out infinite;
 }
 
+/* Fix form input colors - remove yellow/amber, use only black/white/orange */
+.input,
+.textarea,
+.select {
+  border-color: #f60 !important;
+  background-color: hsl(var(--b1)) !important;
+  color: hsl(var(--bc)) !important;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  border-color: #f60 !important;
+  box-shadow: 0 0 0 2px rgba(255, 102, 0, 0.2) !important;
+  outline: none !important;
+}
+
+/* Remove any yellow/amber focus states */
+.input:focus-visible,
+.textarea:focus-visible,
+.select:focus-visible {
+  outline: 2px solid #f60 !important;
+  outline-offset: 2px !important;
+}
+
+/* Toggle switch styling - orange bubble */
+.toggle {
+  background-color: hsl(var(--bc) / 0.3) !important;
+  border-color: hsl(var(--bc) / 0.3) !important;
+}
+
+.toggle:checked {
+  background-color: #f60 !important;
+  border-color: #f60 !important;
+}
+
+.toggle:focus-visible {
+  outline: 2px solid #f60 !important;
+  outline-offset: 2px !important;
+}
+
+/* Fix radio button colors - remove yellow, use orange - AGGRESSIVE OVERRIDE */
+.radio,
+input[type="radio"],
+input[type="radio"].radio {
+  --chkbg: transparent !important;
+  --chkfg: #f60 !important;
+  --bc: 0 0 0 !important;
+  --tw-border-opacity: 1 !important;
+  border-color: rgba(0, 0, 0, 0.3) !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+[data-theme="dark"] .radio,
+[data-theme="dark"] input[type="radio"],
+[data-theme="dark"] input[type="radio"].radio {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.radio:checked,
+input[type="radio"]:checked,
+input[type="radio"].radio:checked {
+  --chkbg: #f60 !important;
+  --chkfg: #ffffff !important;
+  background-color: #f60 !important;
+  border-color: #f60 !important;
+  background-image: radial-gradient(
+    circle,
+    #ffffff 25%,
+    transparent 25%
+  ) !important;
+  background-size: 16px 16px !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.radio:focus,
+input[type="radio"]:focus,
+input[type="radio"].radio:focus {
+  box-shadow: 0 0 0 2px rgba(255, 102, 0, 0.2) !important;
+  outline: none !important;
+  border-color: #f60 !important;
+}
+
+.radio:focus-visible,
+input[type="radio"]:focus-visible,
+input[type="radio"].radio:focus-visible {
+  outline: 2px solid #f60 !important;
+  outline-offset: 2px !important;
+}
+
+/* Fix checkbox colors - remove yellow, use orange */
+.checkbox {
+  border-color: hsl(var(--bc) / 0.3) !important;
+  background-color: transparent !important;
+}
+
+.checkbox:checked {
+  background-color: #f60 !important;
+  border-color: #f60 !important;
+  background-image: none !important;
+}
+
+.checkbox:focus {
+  box-shadow: 0 0 0 2px rgba(255, 102, 0, 0.2) !important;
+  outline: none !important;
+}
+
+.checkbox:focus-visible {
+  outline: 2px solid #f60 !important;
+  outline-offset: 2px !important;
+}
+
+/* ELIMINATE ALL YELLOW COLORS - Force black/white/orange only */
+* {
+  /* Override any yellow/amber colors */
+  --tw-yellow-50: #ffffff !important;
+  --tw-yellow-100: #ffffff !important;
+  --tw-yellow-200: #ffffff !important;
+  --tw-yellow-300: #f60 !important;
+  --tw-yellow-400: #f60 !important;
+  --tw-yellow-500: #f60 !important;
+  --tw-yellow-600: #f60 !important;
+  --tw-yellow-700: #f60 !important;
+  --tw-yellow-800: #000000 !important;
+  --tw-yellow-900: #000000 !important;
+  --tw-amber-50: #ffffff !important;
+  --tw-amber-100: #ffffff !important;
+  --tw-amber-200: #ffffff !important;
+  --tw-amber-300: #f60 !important;
+  --tw-amber-400: #f60 !important;
+  --tw-amber-500: #f60 !important;
+  --tw-amber-600: #f60 !important;
+  --tw-amber-700: #f60 !important;
+  --tw-amber-800: #000000 !important;
+  --tw-amber-900: #000000 !important;
+}
+
+/* Force override any elements with yellow colors */
+span,
+div,
+p,
+button,
+input,
+label,
+a,
+h1,
+h2,
+h4,
+h5,
+h6 {
+  color: hsl(var(--bc)) !important;
+}
+h3 {
+  color: #f60 !important;
+}
+
+/* Hero section text override - always white on dark overlay */
+.hero .hero-content h1 {
+  color: #f60 !important;
+}
+
+.hero .hero-content p,
+.hero .hero-content span,
+.hero .hero-content a {
+  color: #ffffff !important;
+}
+
+.hero .hero-content .text-white {
+  color: #ffffff !important;
+}
+
+/* CTA section text override - always white on dark background */
+.bg-black h2,
+.bg-black p,
+.bg-black span,
+.bg-black a {
+  color: #ffffff !important;
+}
+
+.bg-black .text-white {
+  color: #ffffff !important;
+}
+
+/* FAQ and Footer sections - specific overrides only for bg-black elements */
+.bg-black button,
+.bg-black .text-white {
+  color: #ffffff !important;
+}
+
+/* FAQ hover states - force orange background */
+button.bg-base-200:hover,
+.hover\:bg-\[\#f60\]:hover {
+  background-color: #f60 !important;
+  --tw-bg-opacity: 1 !important;
+}
+
+/* FAQ button hover text - force white */
+.group:hover .group-hover\:text-white {
+  color: #ffffff !important;
+}
+
+span[style*="color: #FFFF00"],
+span[style*="color: yellow"],
+span[style*="color: #FFF"],
+*[style*="color: #FFFF00"],
+*[style*="color: yellow"] {
+  color: #f60 !important;
+}
+
+/* Fix any yellow backgrounds */
+*[style*="background-color: #FFFF00"],
+*[style*="background-color: yellow"],
+*[style*="background: yellow"] {
+  background-color: #f60 !important;
+}
+
 @media only screen and (max-width: 600px) {
   .input {
     line-height: 3rem !important;
@@ -160,4 +417,126 @@ h3 {
   .min-h {
     height: 75vh !important;
   }
+}
+
+/* FINAL OVERRIDE - Force all yellow to orange at the very end */
+* {
+  --tw-yellow-400: #f60 !important;
+  --tw-yellow-500: #f60 !important;
+}
+
+/* Body and html background fix */
+html,
+body {
+  background-color: hsl(var(--b1)) !important;
+}
+
+/* Browser-level radio override */
+input[type="radio"] {
+  accent-color: #f60 !important;
+}
+
+/* Force any remaining yellow elements - comprehensive */
+[style*="color: rgb(255, 255, 0)"],
+[style*="color: #ffff00"],
+[style*="color: yellow"],
+*[class*="yellow"],
+.bg-yellow-400,
+.bg-yellow-500,
+.text-yellow-400,
+.text-yellow-500 {
+  color: #f60 !important;
+  background-color: #f60 !important;
+}
+
+/* Override any yellow backgrounds on body or containers */
+body[style*="background-color: yellow"],
+body[style*="background: yellow"],
+.container[style*="background-color: yellow"] {
+  background-color: hsl(var(--b1)) !important;
+}
+
+/* DaisyUI radio final override */
+.radio:checked {
+  background-color: #f60 !important;
+  border-color: #f60 !important;
+}
+
+/* Fix DaisyUI menu hover colors - force orange hover */
+.menu li > *:not(ul):not(.menu-title):not(details):hover,
+.menu li > details > summary:hover {
+  background-color: rgba(255, 102, 0, 0.273) !important;
+  color: #f60 !important;
+}
+
+/* Specific override for navigation menu items */
+.menu li a:hover,
+.menu li .router-link-active:hover,
+.navbar .menu li a:hover {
+  background-color: rgba(255, 102, 0, 0.273) !important;
+  color: #f60 !important;
+}
+
+/* Override any remaining menu hover styles */
+ul.menu li:hover > *,
+ul.menu li:hover a {
+  background-color: rgba(255, 102, 0, 0.273) !important;
+  color: #f60 !important;
+}
+
+/* Force hover color for specific navigation classes */
+.hover\:text-\[#f60\]:hover {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 102 0 / var(--tw-text-opacity)) !important;
+}
+
+/* Add active states with same background as hover */
+.menu li > *:not(ul):not(.menu-title):not(details):active,
+.menu li > details > summary:active {
+  background-color: rgba(255, 102, 0, 0.273) !important;
+  color: #f60 !important;
+}
+
+/* Specific override for navigation menu items - active states */
+.menu li a:active,
+.menu li .router-link-active:active,
+.navbar .menu li a:active {
+  background-color: rgba(255, 102, 0, 0.273) !important;
+  color: #f60 !important;
+}
+
+/* Override any remaining menu active styles */
+ul.menu li:active > *,
+ul.menu li:active a {
+  background-color: rgba(255, 102, 0, 0.273) !important;
+  color: #f60 !important;
+}
+
+/* Add selected states with same background as hover */
+.menu li > *:not(ul):not(.menu-title):not(details):focus,
+.menu li > *:not(ul):not(.menu-title):not(details).selected,
+.menu li > details > summary:focus,
+.menu li > details > summary.selected {
+  background-color: rgba(255, 102, 0, 0.273) !important;
+  color: #f60 !important;
+}
+
+/* Specific override for navigation menu items - selected states */
+.menu li a:focus,
+.menu li a.selected,
+.menu li .router-link-active,
+.menu li .router-link-exact-active,
+.navbar .menu li a:focus,
+.navbar .menu li a.selected {
+  background-color: rgba(255, 102, 0, 0.273) !important;
+  color: #f60 !important;
+}
+
+/* Override any remaining menu selected styles */
+ul.menu li:focus > *,
+ul.menu li:focus a,
+ul.menu li.selected > *,
+ul.menu li.selected a {
+  background-color: rgba(255, 102, 0, 0.273) !important;
+  color: #f60 !important;
 }

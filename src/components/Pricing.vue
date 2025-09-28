@@ -2,7 +2,7 @@
   <section id="pricing" class="py-20 bg-base-200">
     <div class="container mx-auto px-4">
       <h2
-        class="text-4xl text-white font-bold text-center mb-6"
+        class="text-4xl text-base-content font-bold text-center mb-6"
         data-aos="fade-up"
       >
         Unsere Pakete
@@ -15,7 +15,7 @@
           :class="
             activeCategory === 'web'
               ? 'bg-[#f60] text-white'
-              : 'bg-white text-[#f608]'
+              : 'bg-base-100 text-base-content border border-base-300'
           "
           class="px-6 py-2 rounded-l-lg text-lg font-semibold transition-all duration-300"
         >
@@ -26,7 +26,7 @@
           :class="
             activeCategory === 'ads'
               ? 'bg-[#f60] text-white'
-              : 'bg-white text-[#f608]'
+              : 'bg-base-100 text-base-content border border-base-300'
           "
           class="px-6 py-2 rounded-r-lg text-lg font-semibold transition-all duration-300"
         >
@@ -53,10 +53,12 @@
             </div>
           </div>
           <div
-            class="card-body rounded-3xl hover:scale-x-10 bg-black overflow-hidden"
+            class="card-body rounded-[0.9rem] hover:scale-x-10 bg-base-100 overflow-hidden"
           >
-            <h3 class="card-title text-2xl font-bold mb-4">{{ plan.name }}</h3>
-            <p class="text-4xl font-bold mb-6">
+            <h3 class="card-title text-2xl font-bold mb-4 text-base-content">
+              {{ plan.name }}
+            </h3>
+            <p class="text-4xl font-bold mb-6 text-base-content">
               {{ plan.price }}
               <span class="text-base font-normal">{{ plan.period }}</span>
             </p>
@@ -64,7 +66,7 @@
               <li
                 v-for="(feature, i) in plan.features"
                 :key="i"
-                class="flex items-center gap-2"
+                class="flex items-center gap-2 text-base-content"
               >
                 <svg
                   class="w-5 h-5 text-[#f60]"

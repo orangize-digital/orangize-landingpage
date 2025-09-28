@@ -3,14 +3,14 @@
   <section class="py-20 bg-base-200">
     <div class="container mx-auto px-4 max-w-4xl">
       <div
-        class="card bg-black border border-[#f60] shadow-xl p-8"
+        class="card bg-base-300 border border-[#f60] shadow-xl p-8"
         data-aos="fade-up"
       >
         <div class="text-center mb-8">
-          <h2 class="text-3xl font-bold text-white mb-4">
+          <h2 class="text-3xl font-bold text-base-content mb-4">
             Bleib auf dem Laufenden
           </h2>
-          <p class="text-white">
+          <p class="text-base-content">
             Abonniere unseren Newsletter für die neuesten Artikel, Tipps und
             Strategien.
           </p>
@@ -23,7 +23,7 @@
             v-model="newsletterEmail"
             type="email"
             placeholder="Deine E-Mail-Adresse"
-            class="input-newsletter input input-bordered flex-1 bg-white/10 text-white"
+            class="input-newsletter input input-bordered flex-1 bg-base-100 text-base-content border-[#f60]"
             required
           />
           <button
@@ -34,7 +34,7 @@
             Abonnieren
           </button>
         </form>
-        <p class="text-sm text-white opacity-75 mt-4 text-center">
+        <p class="text-sm text-base-content opacity-75 mt-4 text-center">
           Wir respektieren deine Privatsphäre. Du kannst dich jederzeit
           abmelden.
         </p>
@@ -47,10 +47,10 @@
         class="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
       >
         <div
-          class="bg-black border p-6 rounded-xl max-w-md w-full text-center shadow-xl"
+          class="bg-base-200 border p-6 rounded-xl max-w-md w-full text-center shadow-xl"
           :class="modalType === 'success' ? 'border-[#0f0]' : 'border-red-500'"
         >
-          <p class="text-white text-lg mb-4">{{ modalMessage }}</p>
+          <p class="text-base-content text-lg mb-4">{{ modalMessage }}</p>
           <button
             class="btn bg-[#f60] text-white hover:bg-[#ff751a] border-none"
             @click="showModal = false"

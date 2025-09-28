@@ -1,23 +1,27 @@
 <template>
   <div
     v-if="show"
-    class="fixed inset-0 flex items-center justify-center bg-black bg-black border-[#f60] bg-opacity-80"
+    class="fixed inset-0 flex items-center justify-center bg-base-300 bg-opacity-80 backdrop-blur-sm"
     @click.self="closeModal"
   >
-    <div class="bg-black border-2 p-8 rounded-xl shadow-lg w-96 relative border-[#f60]">
+    <div
+      class="bg-base-100 border-2 p-8 rounded-xl shadow-lg w-96 relative border-[#f60]"
+    >
       <button
-        class="absolute top-4 right-4 text-white hover:text-white"
+        class="absolute top-4 right-4 text-base-content hover:text-[#f60]"
         @click="closeModal"
       >
         &times;
       </button>
       <input type="hidden" v-model="form.interest" />
-      <p class="mb-4 text-left">
+      <p class="mb-4 text-left text-base-content">
         Interessiert an: <strong>{{ form.interest }}</strong>
       </p>
       <form @submit.prevent="handleSubmit" class="space-y-4">
         <div>
-          <label class="block text-sm font-semibold mb-2 text-white" for="name"
+          <label
+            class="block text-sm font-semibold mb-2 text-base-content"
+            for="name"
             >Dein Name</label
           >
           <input
@@ -25,13 +29,15 @@
             type="text"
             id="name"
             placeholder="Max Mustermann"
-            class="input input-bordered w-full text-white bg-white/10 focus:ring-[#f60]"
+            class="input input-bordered w-full bg-base-200 text-base-content focus:ring-[#f60]"
             required
           />
         </div>
 
         <div>
-          <label class="block text-sm font-semibold mb-2 text-white" for="email"
+          <label
+            class="block text-sm font-semibold mb-2 text-base-content"
+            for="email"
             >E-Mail</label
           >
           <input
@@ -39,17 +45,19 @@
             type="email"
             id="email"
             placeholder="max@example.com"
-            class="input input-bordered w-full text-white bg-white/10 focus:ring-[#f60]"
+            class="input input-bordered w-full bg-base-200 text-base-content focus:ring-[#f60]"
             required
           />
         </div>
 
         <div>
-          <label class="block text-sm font-semibold mb-2 text-white"
+          <label class="block text-sm font-semibold mb-2 text-base-content"
             >Interessiert an</label
           >
           <div class="flex flex-wrap gap-4">
-            <label class="flex items-center gap-2 cursor-pointer text-white">
+            <label
+              class="flex items-center gap-2 cursor-pointer text-base-content"
+            >
               <input
                 type="radio"
                 v-model="form.interest"
@@ -64,7 +72,7 @@
 
         <div>
           <label
-            class="block text-sm font-semibold mb-2 text-white"
+            class="block text-sm font-semibold mb-2 text-base-content"
             for="message"
             >Deine Nachricht</label
           >
@@ -72,7 +80,7 @@
             v-model="form.message"
             id="message"
             placeholder="Erzähl uns mehr über dein Projekt..."
-            class="textarea textarea-bordered w-full text-white bg-white/10 focus:ring-[#f60]"
+            class="textarea textarea-bordered w-full bg-base-200 text-base-content focus:ring-[#f60]"
             required
           ></textarea>
         </div>

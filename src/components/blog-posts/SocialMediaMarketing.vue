@@ -88,7 +88,7 @@ defineExpose({ post });
         </p>
 
         <ol class="list-decimal pl-6 mb-6 space-y-4">
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60] text-xl"
               >Micro-Communities statt Massenpublikum</strong
             >
@@ -108,7 +108,7 @@ defineExpose({ post });
             </div>
           </li>
 
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60] text-xl"
               >Authentizität und Transparenz als Währung</strong
             >
@@ -126,7 +126,7 @@ defineExpose({ post });
             </div>
           </li>
 
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60] text-xl"
               >Video-First (aber richtig)</strong
             >
@@ -145,7 +145,7 @@ defineExpose({ post });
             </div>
           </li>
 
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60] text-xl"
               >KI-gestützte Personalisierung</strong
             >
@@ -164,7 +164,7 @@ defineExpose({ post });
             </div>
           </li>
 
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60] text-xl"
               >Social Commerce wird erwachsen</strong
             >
@@ -334,7 +334,7 @@ defineExpose({ post });
         </p>
 
         <ol class="list-decimal pl-6 mb-6 space-y-4">
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60] text-xl">Fokus auf Micro-Content</strong>
             <p class="mt-2">
               Die Aufmerksamkeitsspanne sinkt. Produziere kurze, knackige
@@ -350,7 +350,7 @@ defineExpose({ post });
             </div>
           </li>
 
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60] text-xl"
               >Nutze UGC (User-Generated Content)</strong
             >
@@ -369,7 +369,7 @@ defineExpose({ post });
             </div>
           </li>
 
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60] text-xl"
               >Optimiere für Mobile (ist das überhaupt noch eine Frage?)</strong
             >
@@ -388,7 +388,7 @@ defineExpose({ post });
             </div>
           </li>
 
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60] text-xl"
               >Erstelle "Snackable Content" mit starken Hooks</strong
             >
@@ -426,7 +426,7 @@ defineExpose({ post });
             </div>
           </li>
 
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60] text-xl">Nutze das AIDA-Prinzip</strong>
             <p class="mt-2">
               Attention (Aufmerksamkeit), Interest (Interesse), Desire
@@ -458,7 +458,7 @@ defineExpose({ post });
             </div>
           </li>
 
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60] text-xl"
               >Erzähle Geschichten, keine Fakten</strong
             >
@@ -484,7 +484,7 @@ defineExpose({ post });
             </div>
           </li>
 
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60] text-xl"
               >Fordere zur Interaktion auf (aber subtil)</strong
             >
@@ -539,15 +539,15 @@ defineExpose({ post });
                 Folge der 70-20-10-Regel für ausgewogenen Content:
               </p>
               <ul class="pl-4 list-disc text-white mt-2">
-                <li>
+                <li class="text-base-content">
                   <strong>70%</strong> wertvoller, bildender Content (der deiner
                   Zielgruppe wirklich hilft)
                 </li>
-                <li>
+                <li class="text-base-content">
                   <strong>20%</strong> geteilter Content von anderen (zeigt,
                   dass du nicht nur über dich sprichst)
                 </li>
-                <li>
+                <li class="text-base-content">
                   <strong>10%</strong> direkter Verkaufs-Content (ja, nur 10%!)
                 </li>
               </ul>
@@ -720,7 +720,7 @@ defineExpose({ post });
         </p>
       </div>
 
-      <NewsletterForm />
+      <!-- <NewsletterForm /> -->
 
       <!-- Section 5 -->
       <div id="section-5">
@@ -933,11 +933,11 @@ defineExpose({ post });
               eigentlich erreichen willst. Typische Ziele sind:
             </p>
             <ul class="list-disc pl-6 text-white">
-              <li>Lead-Generierung</li>
-              <li>Direktverkäufe</li>
-              <li>Kundenbindung/Reduktion der Abwanderungsrate</li>
-              <li>Markenbekanntheit in einer neuen Zielgruppe</li>
-              <li>Recruiting/Employer Branding</li>
+              <li class="text-base-content">Lead-Generierung</li>
+              <li class="text-base-content">Direktverkäufe</li>
+              <li class="text-base-content">Kundenbindung/Reduktion der Abwanderungsrate</li>
+              <li class="text-base-content">Markenbekanntheit in einer neuen Zielgruppe</li>
+              <li class="text-base-content">Recruiting/Employer Branding</li>
             </ul>
             <p class="text-white mt-3">
               <strong class="text-[#f60]">Pro-Tipp:</strong> Wähle maximal 2-3
@@ -958,33 +958,33 @@ defineExpose({ post });
               <div>
                 <p class="text-white font-bold">Für Lead-Generierung:</p>
                 <ul class="list-disc pl-6 text-white">
-                  <li>Cost per Lead (CPL)</li>
-                  <li>Conversion Rate von Besucher zu Lead</li>
-                  <li>Lead-Qualität (% der Sales-Qualified Leads)</li>
+                  <li class="text-base-content">Cost per Lead (CPL)</li>
+                  <li class="text-base-content">Conversion Rate von Besucher zu Lead</li>
+                  <li class="text-base-content">Lead-Qualität (% der Sales-Qualified Leads)</li>
                 </ul>
               </div>
               <div>
                 <p class="text-white font-bold">Für Direktverkäufe:</p>
                 <ul class="list-disc pl-6 text-white">
-                  <li>Return on Ad Spend (ROAS)</li>
-                  <li>Durchschnittlicher Bestellwert</li>
-                  <li>Conversion Rate von Besucher zu Käufer</li>
+                  <li class="text-base-content">Return on Ad Spend (ROAS)</li>
+                  <li class="text-base-content">Durchschnittlicher Bestellwert</li>
+                  <li class="text-base-content">Conversion Rate von Besucher zu Käufer</li>
                 </ul>
               </div>
               <div>
                 <p class="text-white font-bold">Für Kundenbindung:</p>
                 <ul class="list-disc pl-6 text-white">
-                  <li>Engagement-Rate bestehender Kunden</li>
-                  <li>Kundenzufriedenheit (NPS)</li>
-                  <li>Wiederkaufsrate</li>
+                  <li class="text-base-content">Engagement-Rate bestehender Kunden</li>
+                  <li class="text-base-content">Kundenzufriedenheit (NPS)</li>
+                  <li class="text-base-content">Wiederkaufsrate</li>
                 </ul>
               </div>
               <div>
                 <p class="text-white font-bold">Für Markenbekanntheit:</p>
                 <ul class="list-disc pl-6 text-white">
-                  <li>Reichweite in der Zielgruppe</li>
-                  <li>Share of Voice (im Vergleich zu Wettbewerbern)</li>
-                  <li>Markenrecherchen/Direktaufrufe</li>
+                  <li class="text-base-content">Reichweite in der Zielgruppe</li>
+                  <li class="text-base-content">Share of Voice (im Vergleich zu Wettbewerbern)</li>
+                  <li class="text-base-content">Markenrecherchen/Direktaufrufe</li>
                 </ul>
               </div>
             </div>
@@ -999,13 +999,13 @@ defineExpose({ post });
               dass du diese Basics abdeckst:
             </p>
             <ul class="list-disc pl-6 text-white">
-              <li>UTM-Parameter für alle Links in Social Media</li>
-              <li>Conversion-Tracking (Meta Pixel, TikTok Pixel, etc.)</li>
-              <li>Event-Tracking für wichtige Aktionen auf deiner Website</li>
-              <li>
+              <li class="text-base-content">UTM-Parameter für alle Links in Social Media</li>
+              <li class="text-base-content">Conversion-Tracking (Meta Pixel, TikTok Pixel, etc.)</li>
+              <li class="text-base-content">Event-Tracking für wichtige Aktionen auf deiner Website</li>
+              <li class="text-base-content">
                 Telefon-Tracking, wenn relevant (z.B. mit Calltracking-Nummern)
               </li>
-              <li>Promo-Codes für Offline-Conversions</li>
+              <li class="text-base-content">Promo-Codes für Offline-Conversions</li>
             </ul>
             <p class="text-white mt-3">
               <strong class="text-[#f60]">Pro-Tipp:</strong> Nutze ein
@@ -1032,10 +1032,10 @@ defineExpose({ post });
               Dabei musst du alle Kosten berücksichtigen:
             </p>
             <ul class="list-disc pl-6 text-white">
-              <li>Werbeausgaben</li>
-              <li>Personalkosten (inkl. Freelancer)</li>
-              <li>Tool-Kosten</li>
-              <li>Content-Produktionskosten</li>
+              <li class="text-base-content">Werbeausgaben</li>
+              <li class="text-base-content">Personalkosten (inkl. Freelancer)</li>
+              <li class="text-base-content">Tool-Kosten</li>
+              <li class="text-base-content">Content-Produktionskosten</li>
             </ul>
             <p class="text-white mt-3">
               <strong class="text-[#f60]">Realistisches Beispiel:</strong> Ein
@@ -1055,18 +1055,18 @@ defineExpose({ post });
               Berücksichtige daher auch:
             </p>
             <ul class="list-disc pl-6 text-white">
-              <li>
+              <li class="text-base-content">
                 Customer Lifetime Value (CLV) der über Social Media gewonnenen
                 Kunden
               </li>
-              <li>Einfluss auf SEO und organische Sichtbarkeit</li>
-              <li>
+              <li class="text-base-content">Einfluss auf SEO und organische Sichtbarkeit</li>
+              <li class="text-base-content">
                 Reduzierte Kosten für Kundenservice durch Community-Support
               </li>
-              <li>
+              <li class="text-base-content">
                 Erhöhte Mitarbeiterzufriedenheit und vereinfachtes Recruiting
               </li>
-              <li>Wert der aufgebauten Audience als Marketing-Asset</li>
+              <li class="text-base-content">Wert der aufgebauten Audience als Marketing-Asset</li>
             </ul>
             <p class="text-white mt-3">
               <strong class="text-[#f60]">Pro-Tipp:</strong> Berechne den
@@ -1164,29 +1164,29 @@ defineExpose({ post });
         </p>
 
         <ol class="list-decimal pl-6 mb-6 space-y-2">
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60]"
               >Authentizität schlägt Perfektion</strong
             >
             – Menschen folgen Menschen, keine makellosen Marken-Robotern.
           </li>
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60]">Geben kommt vor Nehmen</strong> – biete
             zuerst Wert, bevor du um etwas bittest.
           </li>
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60]"
               >Konsistenz ist wichtiger als Brillanz</strong
             >
             – besser regelmäßig gut als selten perfekt.
           </li>
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60]"
               >Zuhören ist wichtiger als Sprechen</strong
             >
             – Social Media ist ein Dialog, kein Monolog.
           </li>
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60]">Testen, messen, anpassen</strong> – lass
             Daten deine Strategie leiten, nicht Annahmen.
           </li>

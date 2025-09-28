@@ -12,7 +12,7 @@ const routes = [
     component: Home,
   },
   {
-    path: "/webseite-erstellen-lassen",
+    path: "/website-erstellen-lassen",
     name: "WebsiteErstellen",
     component: WebsiteErstellen,
   },
@@ -57,6 +57,23 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    // If there's a saved position (like browser back/forward), use it
+    if (savedPosition) {
+      return savedPosition;
+    }
+
+    // If navigating to a hash anchor (like #section)
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: "smooth",
+      };
+    }
+
+    // For all other navigation, scroll to top
+    return { top: 0 };
+  },
 });
 
 export default router;

@@ -6,14 +6,14 @@
           Unsere Kernkompetenzen
         </h3>
         <h2
-          class="text-4xl text-white font-bold"
+          class="text-4xl text-base-content font-bold"
           data-aos="fade-up"
           data-aos-delay="100"
         >
           Digitale Lösungen für Ihren Erfolg
         </h2>
         <p
-          class="mt-4 text-lg text-white max-w-3xl mx-auto"
+          class="mt-4 text-lg text-base-content max-w-3xl mx-auto"
           data-aos="fade-up"
           data-aos-delay="200"
         >
@@ -26,7 +26,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Website erstellen Card -->
         <div
-          class="card bg-black shadow-xl border border-[#f60]/20 hover:border-[#f60] transition-all duration-300 overflow-hidden group"
+          class="card bg-base-200 shadow-xl border border-[#f60]/20 hover:border-[#f60] transition-all duration-300 overflow-hidden group"
           data-aos="fade-up"
         >
           <figure class="relative h-64 overflow-hidden">
@@ -57,16 +57,16 @@
               </div>
             </div>
           </figure>
-          <div class="card-body">
-            <h3 class="text-2xl font-bold text-white mb-4">
+          <div class="card-body bg-base-100">
+            <h3 class="text-2xl font-bold text-base-content mb-4">
               Webseite erstellen lassen
             </h3>
-            <p class="text-white mb-6">
+            <p class="text-base-content mb-6">
               Professionelle, maßgeschneiderte Webseiten, die nicht nur gut
               aussehen, sondern auch konvertieren und bei Google optimal ranken.
             </p>
             <ul class="space-y-2 mb-6">
-              <li class="flex items-center text-white">
+              <li class="flex items-center text-base-content">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -83,7 +83,7 @@
                 </svg>
                 Responsive Design
               </li>
-              <li class="flex items-center text-white">
+              <li class="flex items-center text-base-content">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -100,7 +100,7 @@
                 </svg>
                 SEO-Optimierung
               </li>
-              <li class="flex items-center text-white">
+              <li class="flex items-center text-base-content">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -119,7 +119,7 @@
               </li>
             </ul>
             <router-link
-              to="/webseite-erstellen-lassen"
+              to="/website-erstellen-lassen"
               class="btn bg-[#f60] text-white border-none hover:bg-[#ff751a] w-full"
             >
               Mehr erfahren
@@ -129,7 +129,7 @@
 
         <!-- Google Ads Card -->
         <div
-          class="card bg-black shadow-xl border border-[#f60]/20 hover:border-[#f60] transition-all duration-300 overflow-hidden group"
+          class="card bg-base-200 shadow-xl border border-[#f60]/20 hover:border-[#f60] transition-all duration-300 overflow-hidden group"
           data-aos="fade-up"
           data-aos-delay="100"
         >
@@ -165,16 +165,16 @@
               </div>
             </div>
           </figure>
-          <div class="card-body">
-            <h3 class="text-2xl font-bold text-white mb-4">
+          <div class="card-body bg-base-100">
+            <h3 class="text-2xl font-bold text-base-content mb-4">
               Google Ads einrichten & optimieren
             </h3>
-            <p class="text-white mb-6">
+            <p class="text-base-content mb-6">
               Professionelle Google Ads Kampagnen, die Ihren ROI maximieren und
               gezielt neue Kunden für Ihr Unternehmen gewinnen.
             </p>
             <ul class="space-y-2 mb-6">
-              <li class="flex items-center text-white">
+              <li class="flex items-center text-base-content">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -191,7 +191,7 @@
                 </svg>
                 Sofortige Sichtbarkeit
               </li>
-              <li class="flex items-center text-white">
+              <li class="flex items-center text-base-content">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -208,7 +208,7 @@
                 </svg>
                 Messbare Ergebnisse
               </li>
-              <li class="flex items-center text-white">
+              <li class="flex items-center text-base-content">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -239,7 +239,7 @@
       <!-- CTA Button -->
       <div class="text-center mt-12" data-aos="fade-up">
         <button
-          class="btn btn-md bg-white text-[#f60] border-none hover:bg-gray-100 shadow-lg"
+          class="btn btn-md text-base-100 border-none bg-[#f60] hover:bg-[#ff751a] hover:text-white shadow-lg transition-colors duration-300"
           onclick="window.open('https://zeeg.me/orangize', '_blank')"
         >
           Kostenlose Beratung vereinbaren

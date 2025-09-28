@@ -37,54 +37,56 @@ defineExpose({ post });
   <div>
     <!-- Table of Contents -->
     <div
-      class="mb-10 p-6 bg-black border border-[#f60] rounded-lg"
+      class="mb-10 p-6 bg-base-200 border border-primary rounded-lg"
       data-aos="fade-up"
     >
-      <h3 class="text-xl font-bold text-white mb-4">Inhaltsverzeichnis</h3>
+      <h3 class="text-xl font-bold text-base-content mb-4">
+        Inhaltsverzeichnis
+      </h3>
       <ul class="space-y-2">
         <li>
           <a
             href="#section-1"
-            class="text-white hover:text-[#f60] transition-colors flex items-center gap-2"
+            class="text-base-content hover:text-primary transition-colors flex items-center gap-2"
           >
-            <span class="text-[#f60]">1.</span> Google Ads: Wenn Google und
+            <span class="text-primary">1.</span> Google Ads: Wenn Google und
             Werbung ein Kind bekommen
           </a>
         </li>
         <li>
           <a
             href="#section-2"
-            class="text-white hover:text-[#f60] transition-colors flex items-center gap-2"
+            class="text-base-content hover:text-primary transition-colors flex items-center gap-2"
           >
-            <span class="text-[#f60]">2.</span> Warum Google Ads? (Oder: Warum
+            <span class="text-primary">2.</span> Warum Google Ads? (Oder: Warum
             nicht einfach im Wald nach Kunden schreien?)
           </a>
         </li>
         <li>
           <a
             href="#section-3"
-            class="text-white hover:text-[#f60] transition-colors flex items-center gap-2"
+            class="text-base-content hover:text-primary transition-colors flex items-center gap-2"
           >
-            <span class="text-[#f60]">3.</span> Die verschiedenen
+            <span class="text-primary">3.</span> Die verschiedenen
             Anzeigenformate (Für jeden Geschmack was dabei!)
           </a>
         </li>
         <li>
           <a
             href="#section-4"
-            class="text-white hover:text-[#f60] transition-colors flex items-center gap-2"
+            class="text-base-content hover:text-primary transition-colors flex items-center gap-2"
           >
-            <span class="text-[#f60]">4.</span> So funktioniert die Abrechnung
+            <span class="text-primary">4.</span> So funktioniert die Abrechnung
             (Keine Panik, dein Erstgeborenes bleibt dir)
           </a>
         </li>
         <li>
           <a
             href="#section-5"
-            class="text-white hover:text-[#f60] transition-colors flex items-center gap-2"
+            class="text-base-content hover:text-primary transition-colors flex items-center gap-2"
           >
-            <span class="text-[#f60]">5.</span> Erste Schritte: Deine Google Ads
-            Kampagne zum Leben erwecken
+            <span class="text-primary">5.</span> Erste Schritte: Deine Google
+            Ads Kampagne zum Leben erwecken
           </a>
         </li>
       </ul>
@@ -94,10 +96,10 @@ defineExpose({ post });
     <div class="prose prose-lg max-w-none" data-aos="fade-up">
       <!-- Section 1 -->
       <div id="section-1">
-        <h2 class="text-3xl font-bold text-white mt-12 mb-6">
+        <h2 class="text-3xl font-bold text-base-content mt-12 mb-6">
           Google Ads: Wenn Google und Werbung ein Kind bekommen
         </h2>
-        <p class="text-white mb-6">
+        <p class="text-base-content mb-6">
           Stell dir vor, du hast einen Zauberstab, mit dem du genau dann
           auftauchen kannst, wenn jemand nach deinem Produkt oder deiner
           Dienstleistung sucht. Klingt nach einem schlechten Fantasy-Roman?
@@ -105,7 +107,7 @@ defineExpose({ post });
           Google beschloss, dass zwei Wörter zu kompliziert sind), ist Google
           Ads die Werbeplattform des Suchmaschinen-Giganten.
         </p>
-        <p class="text-white mb-6">
+        <p class="text-base-content mb-6">
           Aber was ist Google Ads eigentlich genau? Stell es dir wie eine
           digitale Litfaßsäule vor – nur dass diese Litfaßsäule magisch ist und
           nur den Menschen erscheint, die tatsächlich nach dem suchen, was du
@@ -135,8 +137,8 @@ defineExpose({ post });
               </svg>
             </div>
             <div>
-              <h4 class="text-xl font-bold text-white mb-2">Fun Fact</h4>
-              <p class="text-white">
+              <h4 class="text-xl font-bold text-base-content mb-2">Fun Fact</h4>
+              <p class="text-base-content">
                 Google Ads wurde 2000 mit gerade mal 350 Werbetreibenden
                 gestartet. Heute nutzen über 4 Millionen Unternehmen die
                 Plattform. Das ist, als würde ein kleiner Dorfladen plötzlich
@@ -146,7 +148,7 @@ defineExpose({ post });
           </div>
         </div>
 
-        <p class="text-white mb-6">
+        <p class="text-base-content mb-6">
           Im Kern ist Google Ads ein Auktionssystem. Du bietest auf Keywords
           (Suchbegriffe), die potenzielle Kunden in die Suchmaschine eingeben
           könnten. Wenn jemand nach "vegane Schokoladentorte Berlin" sucht und
@@ -158,11 +160,11 @@ defineExpose({ post });
 
       <!-- Section 2 -->
       <div id="section-2">
-        <h2 class="text-3xl font-bold text-white mt-12 mb-6">
+        <h2 class="text-3xl font-bold text-base-content mt-12 mb-6">
           Warum Google Ads? (Oder: Warum nicht einfach im Wald nach Kunden
           schreien?)
         </h2>
-        <p class="text-white mb-6">
+        <p class="text-base-content mb-6">
           "Aber ich habe doch schon eine Website! Und einen Instagram-Account!
           Und ich habe sogar mal einen TikTok-Tanz gemacht!" höre ich dich
           rufen. Das ist großartig! Aber lass mich dir ein kleines Geheimnis
@@ -178,107 +180,117 @@ defineExpose({ post });
             alt="Google Suchanfragen Visualisierung"
             class="rounded-lg w-full h-auto shadow-lg"
           />
-          <p class="text-center text-sm text-white opacity-75 mt-2">
+          <p class="text-center text-sm text-base-content opacity-75 mt-2">
             So viele Suchanfragen pro Sekunde – und jede davon könnte dein
             nächster Kunde sein!
           </p>
         </div>
 
-        <p class="text-white mb-6">
+        <p class="text-base-content mb-6">
           Hier sind fünf Gründe, warum Google Ads dein neuer bester Freund sein
           sollte:
         </p>
 
         <ul class="list-disc pl-6 mb-6 space-y-2">
-          <li class="text-white">
-            <strong class="text-[#f60]">Zielgerichtete Werbung:</strong> Du
+          <li class="text-base-content">
+            <strong class="text-primary">Zielgerichtete Werbung:</strong> Du
             erreichst Menschen, die AKTIV nach deinen Produkten oder
             Dienstleistungen suchen. Das ist, als würdest du einen Regenschirm
             nur den Leuten anbieten, die gerade im Regen stehen.
           </li>
-          <li class="text-white">
-            <strong class="text-[#f60]">Messbare Ergebnisse:</strong> Anders als
-            bei einer Plakatwerbung weißt du genau, wie viele Menschen deine
+          <li class="text-base-content">
+            <strong class="text-primary">Messbare Ergebnisse:</strong> Anders
+            als bei einer Plakatwerbung weißt du genau, wie viele Menschen deine
             Anzeige gesehen, angeklickt und daraufhin etwas gekauft haben. Keine
             mehr "Ich glaube, die Werbung hat funktioniert"-Momente.
           </li>
-          <li class="text-white">
-            <strong class="text-[#f60]">Flexibles Budget:</strong> Du kannst mit
-            5€ pro Tag starten oder 5.000€ ausgeben – ganz nach deinen
+          <li class="text-base-content">
+            <strong class="text-primary">Flexibles Budget:</strong> Du kannst
+            mit 5€ pro Tag starten oder 5.000€ ausgeben – ganz nach deinen
             Möglichkeiten. Google Ads ist wie ein All-you-can-eat-Buffet, bei
             dem du nur für das bezahlst, was du tatsächlich isst.
           </li>
-          <li class="text-white">
-            <strong class="text-[#f60]">Schnelle Ergebnisse:</strong> Anders als
-            SEO, das Monate dauern kann, kannst du mit Google Ads innerhalb von
-            Minuten nach der Aktivierung erste Besucher auf deiner Website
+          <li class="text-base-content">
+            <strong class="text-primary">Schnelle Ergebnisse:</strong> Anders
+            als SEO, das Monate dauern kann, kannst du mit Google Ads innerhalb
+            von Minuten nach der Aktivierung erste Besucher auf deiner Website
             begrüßen.
           </li>
-          <li class="text-white">
-            <strong class="text-[#f60]">Kontrolle:</strong> Du entscheidest,
+          <li class="text-base-content">
+            <strong class="text-primary">Kontrolle:</strong> Du entscheidest,
             wann, wo und wem deine Anzeigen angezeigt werden. Es ist wie ein
             Fernbedienung für deine Werbung!
           </li>
         </ul>
 
-        <div class="bg-black border-l-4 border-[#f60] p-6 my-8 rounded-r-lg">
-          <p class="text-white italic">
+        <div
+          class="bg-base-200 border-l-4 border-primary p-6 my-8 rounded-r-lg"
+        >
+          <p class="text-base-content italic">
             Google Ads ist wie Dating: Du musst nicht jeden beeindrucken – nur
             die, die wirklich zu dir passen. Und genau wie beim Dating solltest
             du nicht mit einer Lüge beginnen.
           </p>
-          <p class="text-[#f60] mt-2 font-semibold">
+          <p class="text-primary mt-2 font-semibold">
             — Ein weiser Marketingexperte (der vielleicht ich bin)
           </p>
         </div>
       </div>
 
-      <NewsletterForm />
+      <!-- <NewsletterForm /> -->
 
       <!-- Section 3 -->
       <div id="section-3">
-        <h2 class="text-3xl font-bold text-white mt-12 mb-6">
+        <h2 class="text-3xl font-bold text-base-content mt-12 mb-6">
           Die verschiedenen Anzeigenformate (Für jeden Geschmack was dabei!)
         </h2>
-        <p class="text-white mb-6">
+        <p class="text-base-content mb-6">
           Google Ads ist nicht nur die klassische Textanzeige, die du oben in
           den Suchergebnissen siehst. Oh nein, Google hat ein ganzes Buffet an
           Werbeformaten für dich vorbereitet. Hier ist deine Speisekarte:
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-          <div class="bg-base-200 p-6 rounded-lg border border-[#f60]/30">
-            <h4 class="text-xl font-bold text-white mb-3">Suchanzeigen</h4>
-            <p class="text-white">
+          <div class="bg-base-200 p-6 rounded-lg border border-primary/30">
+            <h4 class="text-xl font-bold text-base-content mb-3">
+              Suchanzeigen
+            </h4>
+            <p class="text-base-content">
               Die Klassiker! Textanzeigen, die erscheinen, wenn jemand bei
               Google sucht. Wie ein Kellner, der genau dann auftaucht, wenn du
               Hunger hast.
             </p>
           </div>
-          <div class="bg-base-200 p-6 rounded-lg border border-[#f60]/30">
-            <h4 class="text-xl font-bold text-white mb-3">Display-Anzeigen</h4>
-            <p class="text-white">
+          <div class="bg-base-200 p-6 rounded-lg border border-primary/30">
+            <h4 class="text-xl font-bold text-base-content mb-3">
+              Display-Anzeigen
+            </h4>
+            <p class="text-base-content">
               Visuelle Anzeigen auf Websites im Google-Netzwerk. Wie Poster, die
               überall dort hängen, wo deine potenziellen Kunden unterwegs sind.
             </p>
           </div>
-          <div class="bg-base-200 p-6 rounded-lg border border-[#f60]/30">
-            <h4 class="text-xl font-bold text-white mb-3">Video-Anzeigen</h4>
-            <p class="text-white">
+          <div class="bg-base-200 p-6 rounded-lg border border-primary/30">
+            <h4 class="text-xl font-bold text-base-content mb-3">
+              Video-Anzeigen
+            </h4>
+            <p class="text-base-content">
               Anzeigen auf YouTube. Perfekt für alle, die denken: "Mein Produkt
               ist zu cool, um es nur in Text zu beschreiben!"
             </p>
           </div>
-          <div class="bg-base-200 p-6 rounded-lg border border-[#f60]/30">
-            <h4 class="text-xl font-bold text-white mb-3">Shopping-Anzeigen</h4>
-            <p class="text-white">
+          <div class="bg-base-200 p-6 rounded-lg border border-primary/30">
+            <h4 class="text-xl font-bold text-base-content mb-3">
+              Shopping-Anzeigen
+            </h4>
+            <p class="text-base-content">
               Zeigen deine Produkte mit Bild, Preis und Shop-Name. Wie ein
               digitales Schaufenster direkt in den Suchergebnissen.
             </p>
           </div>
         </div>
 
-        <p class="text-white mb-6">
+        <p class="text-base-content mb-6">
           Mein persönlicher Favorit? Eine Kombination aus allem! Wie bei einem
           guten Buffet solltest du nicht nur beim Nachtisch zuschlagen, sondern
           von allem etwas probieren. Eine gut ausbalancierte Google
@@ -286,7 +298,7 @@ defineExpose({ post });
           verschiedenen Phasen ihrer "Kaufreise" abzuholen.
         </p>
 
-        <p class="text-white mb-6">
+        <p class="text-base-content mb-6">
           Zum Beispiel: Jemand sieht deine Display-Anzeige und denkt "Hmm,
           interessant". Später sucht er aktiv nach deinem Produkt und sieht
           deine Suchanzeige. Dann schaut er ein YouTube-Video und – oh, da ist
@@ -298,18 +310,18 @@ defineExpose({ post });
 
       <!-- Section 4 -->
       <div id="section-4">
-        <h2 class="text-3xl font-bold text-white mt-12 mb-6">
+        <h2 class="text-3xl font-bold text-base-content mt-12 mb-6">
           So funktioniert die Abrechnung (Keine Panik, dein Erstgeborenes bleibt
           dir)
         </h2>
-        <p class="text-white mb-6">
+        <p class="text-base-content mb-6">
           Eine der größten Sorgen bei Werbung ist immer: "Wie viel wird mich das
           kosten? Muss ich mein Auto verkaufen? Oder schlimmer noch – meinen
           Netflix-Account kündigen?" Keine Sorge, bei Google Ads behältst du die
           Kontrolle über dein Budget.
         </p>
 
-        <p class="text-white mb-6">
+        <p class="text-base-content mb-6">
           Das Schöne an Google Ads ist das Pay-per-Click-Modell (PPC). Das
           bedeutet: Du zahlst nur, wenn jemand tatsächlich auf deine Anzeige
           klickt. Stell dir vor, du müsstest im Restaurant nur für die Gerichte
@@ -339,8 +351,8 @@ defineExpose({ post });
               </svg>
             </div>
             <div>
-              <h4 class="text-xl font-bold text-white mb-2">Pro Tipp</h4>
-              <p class="text-white">
+              <h4 class="text-xl font-bold text-base-content mb-2">Pro Tipp</h4>
+              <p class="text-base-content">
                 Setze ein Tagesbudget fest und halte dich daran! Google Ads kann
                 süchtig machen, wenn du siehst, wie gut es funktioniert. Wie bei
                 einem Spielautomaten könntest du denken "Nur noch ein bisschen
@@ -355,24 +367,24 @@ defineExpose({ post });
         </p>
 
         <ol class="list-decimal pl-6 mb-6 space-y-2">
-          <li class="text-white">
+          <li class="text-base-content">
             Du legst ein <strong class="text-[#f60]">Tagesbudget</strong> fest
             (z.B. 10€ pro Tag)
           </li>
-          <li class="text-white">
+          <li class="text-base-content">
             Du bietest auf <strong class="text-[#f60]">Keywords</strong> (z.B.
             bist du bereit, 0,50€ pro Klick zu zahlen)
           </li>
-          <li class="text-white">
+          <li class="text-base-content">
             Google führt eine
             <strong class="text-[#f60]">Auktion</strong> durch, jedes Mal wenn
             jemand sucht
           </li>
-          <li class="text-white">
+          <li class="text-base-content">
             Deine Anzeige wird angezeigt, wenn dein Gebot und deine
             <strong class="text-[#f60]">Anzeigenqualität</strong> gut genug sind
           </li>
-          <li class="text-white">
+          <li class="text-base-content">
             Du zahlst nur, wenn jemand
             <strong class="text-[#f60]">klickt</strong> (und nie mehr als dein
             Tagesbudget)
@@ -462,25 +474,25 @@ defineExpose({ post });
           <h4 class="text-xl font-bold text-white mb-4">
             Schritt 4: Anzeigen erstellen
           </h4>
-          <p class="text-white mb-4">
+          <p class="text-base-content mb-4">
             Jetzt wird's lustig! Schreibe überzeugende Anzeigentexte, die
             Menschen zum Klicken bringen. Eine gute Anzeige:
           </p>
           <ul class="list-disc pl-6 mb-4 space-y-2">
-            <li class="text-white">Enthält dein Keyword (zeigt Relevanz)</li>
-            <li class="text-white">
+            <li class="text-base-content">Enthält dein Keyword (zeigt Relevanz)</li>
+            <li class="text-base-content">
               Bietet einen klaren Nutzen ("Spare 50%" oder "24h Lieferung")
             </li>
-            <li class="text-white">
+            <li class="text-base-content">
               Hat einen Call-to-Action ("Jetzt kaufen" oder "Termin
               vereinbaren")
             </li>
-            <li class="text-white">
+            <li class="text-base-content">
               Hebt dich von der Konkurrenz ab ("Handgefertigt in Berlin" oder
               "Seit 1995")
             </li>
           </ul>
-          <p class="text-white mb-4">
+          <p class="text-base-content mb-4">
             Erstelle mindestens 3 verschiedene Anzeigenvarianten. Warum? Weil
             selbst Marketing-Gurus nicht vorhersagen können, welche Anzeige am
             besten funktioniert. Lass die Daten sprechen!

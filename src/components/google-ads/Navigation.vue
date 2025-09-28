@@ -2,7 +2,7 @@
   <nav
     class="navbar fixed top-0 z-50 transition-all border-none duration-500 ease-out"
     :class="{
-      'max-w-[75rem] bg-base-100 rounded-xl mt-4 left-0 right-0 mx-auto translate-x-[-50%]':
+      'max-w-[85rem] bg-base-100 rounded-xl mt-4 left-0 right-0 mx-auto translate-x-[-50%]':
         !isScrolled,
       'bg-base-100 border-none w-full shadow-md left-0 translate-x-0':
         isScrolled,
@@ -16,11 +16,7 @@
       <!-- Logo -->
       <div class="flex-1 lg:flex-none">
         <router-link to="/">
-          <img
-            src="/src/assets/images/logo/logo-new.svg"
-            alt="Orangize Logo"
-            class="h-14"
-          />
+          <img :src="logoSrc" alt="Orangize Logo" class="h-14" />
         </router-link>
       </div>
 
@@ -52,8 +48,7 @@
           <li v-for="section in sections" :key="section.id">
             <a
               :href="'#' + section.id"
-              :class="{ 'text-[#f60] font-bold': activeSection === section.id }"
-              class="hover:text-[#f60] text-white transition-colors duration-300 font-bold navi-items"
+              class="hover:text-[#f60] text-base-content transition-colors duration-300 font-bold navi-items"
               @click.prevent="scrollToSection(section.id)"
             >
               {{ section.name }}
@@ -61,8 +56,8 @@
           </li>
           <li>
             <router-link
-              to="/webseite-erstellen-lassen"
-              class="hover:text-[#f60] text-white transition-colors duration-300 font-bold navi-items"
+              to="/website-erstellen-lassen"
+              class="hover:text-[#f60] text-base-content transition-colors duration-300 font-bold navi-items"
             >
               Website erstellen
             </router-link>
@@ -70,7 +65,7 @@
           <li>
             <router-link
               to="/blog"
-              class="hover:text-[#f60] text-white transition-colors duration-300 font-bold navi-items"
+              class="hover:text-[#f60] text-base-content transition-colors duration-300 font-bold navi-items"
             >
               Blog
             </router-link>
@@ -78,10 +73,11 @@
         </ul>
       </div>
 
-      <!-- CTA Button -->
-      <div class="flex-none hidden lg:block">
+      <!-- Theme Switcher & CTA Button -->
+      <div class="flex-none hidden lg:flex lg:items-center lg:gap-4">
+        <ThemeSwitcher />
         <button
-          class="btn btn-primary bg-[#f60] text-white border-none hover:bg-[#ff751a]"
+          class="btn btn-primary bg-[#f60] text-neutral-content border-none hover:bg-[#f60]/90"
           @click="openCalendar"
         >
           Beratung vereinbaren
@@ -98,7 +94,6 @@
         <li v-for="section in sections" :key="section.id">
           <a
             :href="'#' + section.id"
-            :class="{ 'text-[#f60] font-bold': activeSection === section.id }"
             class="hover:text-[#f60] transition-colors duration-300"
             @click.prevent="
               scrollToSection(section.id);
@@ -127,12 +122,15 @@
           </router-link>
         </li>
         <li class="mt-4">
-          <button
-            class="btn btn-primary bg-[#f60] border-none hover:bg-[#ff751a] w-full flex items-center justify-center sm:w-auto"
-            @click="openCalendar"
-          >
-            Beratung vereinbaren
-          </button>
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
+            <ThemeSwitcher />
+            <button
+              class="btn btn-primary bg-[#f60] border-none hover:bg-[#f60]/90 w-full flex items-center justify-center sm:w-auto"
+              @click="openCalendar"
+            >
+              Beratung vereinbaren
+            </button>
+          </div>
         </li>
       </ul>
     </div>
@@ -140,12 +138,28 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, computed, onMounted, onUnmounted } from "vue";
+import ThemeSwitcher from "../ThemeSwitcher.vue";
 
 const isMenuOpen = ref(false);
 const isScrolled = ref(false);
 const activeSection = ref(null);
+const currentTheme = ref("light");
 let ticking = false;
+
+const logoSrc = computed(() => {
+  return currentTheme.value === "dark"
+    ? "/src/assets/images/logo/orangize-white.svg"
+    : "/src/assets/images/logo/orangize-black.svg";
+});
+
+const updateTheme = () => {
+  if (typeof window !== "undefined") {
+    const theme =
+      document.documentElement.getAttribute("data-theme") || "light";
+    currentTheme.value = theme;
+  }
+};
 
 // Angepasste Sektionen für die Google Ads Seite
 const sections = [
@@ -196,6 +210,24 @@ const openCalendar = () => {
 onMounted(() => {
   window.addEventListener("scroll", updateNavbar);
   updateActiveSection();
+  updateTheme();
+
+  // Watch for theme changes
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (
+        mutation.type === "attributes" &&
+        mutation.attributeName === "data-theme"
+      ) {
+        updateTheme();
+      }
+    });
+  });
+
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["data-theme"],
+  });
 });
 
 onUnmounted(() => {

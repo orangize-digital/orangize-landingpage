@@ -45,7 +45,7 @@ defineExpose({ post });
   <div>
     <!-- Table of Contents -->
     <div
-      class="mb-10 p-6 bg-black border border-[#f60] rounded-lg"
+      class="mb-10 p-6 bg-base-200 border border-[#f60] rounded-lg"
       data-aos="fade-up"
     >
       <h3 class="text-xl font-bold text-white mb-4">Inhaltsverzeichnis</h3>
@@ -395,30 +395,30 @@ defineExpose({ post });
         </p>
 
         <ul class="list-disc pl-6 mb-6 space-y-2">
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60]">Ein Angebot, eine Seite:</strong> Jede
             Landing Page sollte genau EIN Ziel haben. Nicht zwei, nicht drei –
             eines. Willst du E-Mail-Adressen sammeln oder verkaufen? Entscheide
             dich.
           </li>
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60]">Entferne die Navigation:</strong> Deine
             Hauptnavigation ist auf einer Landing Page wie eine Notausgangstür
             im Kino – alle werden versucht sein, sie zu benutzen. Entferne sie,
             um Ablenkungen zu vermeiden.
           </li>
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60]">Nutze visuellen Fokus:</strong> Setze
             Farbe, Größe und Kontrast ein, um die Aufmerksamkeit auf das
             Wichtigste zu lenken – deinen CTA. Alles andere sollte diesem Ziel
             dienen.
           </li>
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60]">Whitespace ist dein Freund:</strong> Gib
             deinen Elementen Raum zum Atmen. Eine vollgestopfte Seite erschlägt
             den Besucher und wirkt unseriös.
           </li>
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60]">F-Pattern:</strong> Menschen scannen
             Webseiten oft in einer F-Form. Platziere die wichtigsten
             Informationen oben und am linken Rand.
@@ -452,7 +452,7 @@ defineExpose({ post });
         </p>
       </div>
 
-      <NewsletterForm />
+      <!-- <NewsletterForm /> -->
 
       <!-- Section 5 -->
       <div id="section-5">
@@ -491,32 +491,32 @@ defineExpose({ post });
         </p>
 
         <ol class="list-decimal pl-6 mb-6 space-y-2">
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60]">Video-Testimonials</strong> von echten
             Kunden, die spezifische Ergebnisse nennen
           </li>
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60]"
               >Fallstudien mit messbaren Ergebnissen</strong
             >
             ("37% mehr Umsatz in 30 Tagen")
           </li>
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60]"
               >Schriftliche Testimonials mit Foto, vollem Namen und
               Unternehmen</strong
             >
           </li>
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60]"
               >Logos von bekannten Kunden oder Medienerwähnungen</strong
             >
           </li>
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60]">Anzahl der Kunden/Nutzer</strong> ("Über
             10.000 zufriedene Kunden")
           </li>
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60]">Generische Testimonials</strong> ohne
             Namen ("Tolles Produkt!" – Ein zufriedener Kunde)
           </li>
@@ -600,27 +600,27 @@ defineExpose({ post });
         </p>
 
         <ul class="list-disc pl-6 mb-6 space-y-2">
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60]">Große Touch-Targets:</strong> Buttons
             sollten mindestens 44x44 Pixel groß sein – Smartphone-Nutzer haben
             keine Nadeln als Finger!
           </li>
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60]">Einfache Navigation:</strong>
             Komplizierte Dropdown-Menüs sind auf Touch-Geräten der sichere Weg
             in die Hölle der schlechten UX.
           </li>
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60]">Schlanke Formulare:</strong> Jedes
             zusätzliche Feld in deinem Formular kostet dich mobile Conversions.
             Frage nur das Allernötigste!
           </li>
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60]">Schnelle Ladezeiten:</strong> Bei
             mobilen Nutzern sinkt die Absprungrate um 32% für jede zusätzliche
             Sekunde Ladezeit. Optimiere deine Bilder!
           </li>
-          <li class="text-white">
+          <li class="text-base-content">
             <strong class="text-[#f60]">Lesbare Schrift:</strong> Mindestens
             16px für Fließtext – alles andere verursacht Augenkrebs und
             Zoomen-Frustration.

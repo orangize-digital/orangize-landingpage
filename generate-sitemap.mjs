@@ -9,7 +9,7 @@ const hostname = "https://orangize.de";
 // Static routes
 const staticRoutes = [
   "/",
-  "/webseite-erstellen-lassen",
+  "/website-erstellen-lassen",
   "/google-ads",
   "/blog",
   "/impressum",

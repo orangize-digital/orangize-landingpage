@@ -8,11 +8,11 @@
       <div class="hero-overlay bg-black bg-opacity-90"></div>
       <div class="hero-content text-center text-neutral-content relative z-10">
         <div class="max-w-3xl">
-          <h1 class="text-5xl font-bold text-[#f60]" data-aos="fade-down">
+          <h1 class="text-5xl font-bold text-primary" data-aos="fade-down">
             Professionelle Webseiten erstellen lassen
           </h1>
           <p
-            class="py-6 text-2xl text-white"
+            class="py-6 text-2xl text-neutral-content"
             data-aos="fade-up"
             data-aos-delay="200"
           >
@@ -20,7 +20,7 @@
             verwandeln
           </p>
           <p
-            class="mb-8 text-lg text-white"
+            class="mb-8 text-lg text-neutral-content"
             data-aos="fade-up"
             data-aos-delay="400"
           >
@@ -29,7 +29,7 @@
             rankt.
           </p>
           <button
-            class="btn btn-primary text-white bg-[#f60] border-none hover:bg-[#ff751a]"
+            class="btn btn-primary"
             data-aos="zoom-in"
             data-aos-delay="600"
             onclick="window.open('https://zeeg.me/orangize', '_blank')"
@@ -42,7 +42,7 @@
         <a
           href="#"
           @click.prevent="scrollToSection('losung')"
-          class="text-white animate-bounce"
+          class="text-neutral-content animate-bounce"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -66,14 +66,11 @@
     <section id="losung" class="py-20 bg-base-100">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-          <h3
-            class="text-lg text-white font-semibold text-[#f60]"
-            data-aos="fade-up"
-          >
+          <h3 class="text-lg text-primary font-semibold" data-aos="fade-up">
             Ihre Webseite ist Ihr digitales Aushängeschild
           </h3>
           <h2
-            class="text-4xl text-white font-bold"
+            class="text-4xl text-base-content font-bold"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -84,7 +81,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <!-- Linke Seite: Detaillierte Beschreibung -->
           <div data-aos="fade-right">
-            <p class="text-lg text-white leading-relaxed">
+            <p class="text-lg text-base-content leading-relaxed">
               In der heutigen digitalen Welt ist Ihre Website oft der erste
               Kontaktpunkt mit potenziellen Kunden. Ein professioneller
               Webauftritt ist daher unverzichtbar für Ihren Geschäftserfolg.
@@ -106,7 +103,7 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <!-- Vorteil 1 -->
             <div class="flex items-start space-x-4" data-aos="fade-up">
-              <div class="p-3 bg-[#f60] text-white rounded-full">
+              <div class="p-3 bg-primary text-primary-content rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -125,10 +122,10 @@
                 </svg>
               </div>
               <div>
-                <h4 class="text-xl text-white font-semibold mb-2">
+                <h4 class="text-xl text-base-content font-semibold mb-2">
                   Responsive Design
                 </h4>
-                <p class="text-white">
+                <p class="text-base-content">
                   Perfekte Darstellung auf allen Geräten – vom Smartphone bis
                   zum Desktop
                 </p>
@@ -141,7 +138,7 @@
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <div class="p-3 bg-[#f60] text-white rounded-full">
+              <div class="p-3 bg-primary text-primary-content rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -159,10 +156,10 @@
                 </svg>
               </div>
               <div>
-                <h4 class="text-xl text-white font-semibold mb-2">
+                <h4 class="text-xl text-base-content font-semibold mb-2">
                   Modernes Design
                 </h4>
-                <p class="text-white">
+                <p class="text-base-content">
                   Zeitgemäße Optik, die Ihre Marke perfekt repräsentiert
                 </p>
               </div>
@@ -174,7 +171,7 @@
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <div class="p-3 bg-[#f60] text-white rounded-full">
+              <div class="p-3 bg-primary text-primary-content rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -201,10 +198,10 @@
                 </svg>
               </div>
               <div>
-                <h4 class="text-xl text-white font-semibold mb-2">
+                <h4 class="text-xl text-base-content font-semibold mb-2">
                   SEO-Optimierung
                 </h4>
-                <p class="text-white">
+                <p class="text-base-content">
                   Bessere Rankings bei Google durch technische und inhaltliche
                   Optimierung
                 </p>
@@ -217,7 +214,7 @@
               data-aos="fade-up"
               data-aos-delay="300"
             >
-              <div class="p-3 bg-[#f60] text-white rounded-full">
+              <div class="p-3 bg-primary text-primary-content rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -234,10 +231,10 @@
                 </svg>
               </div>
               <div>
-                <h4 class="text-xl text-white font-semibold mb-2">
+                <h4 class="text-xl text-base-content font-semibold mb-2">
                   Conversion-Optimierung
                 </h4>
-                <p class="text-white">
+                <p class="text-base-content">
                   Strategische Gestaltung, die Besucher zu zahlenden Kunden
                   macht
                 </p>
@@ -252,11 +249,11 @@
     <section id="leistungen" class="py-20 bg-base-200">
       <div class="container mx-auto px-4">
         <div class="text-center mb-16">
-          <h3 class="text-lg text-[#f60] font-semibold" data-aos="fade-up">
+          <h3 class="text-lg text-primary font-semibold" data-aos="fade-up">
             Unsere Webdesign-Leistungen
           </h3>
           <h2
-            class="text-4xl text-white font-bold"
+            class="text-4xl text-base-content font-bold"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -267,12 +264,12 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Leistung 1 -->
           <div
-            class="card bg-black shadow-xl border border-[#f60]/20 hover:border-[#f60] transition-all duration-300"
+            class="card bg-base-100 shadow-xl border border-primary/20 hover:border-primary transition-all duration-300"
             data-aos="fade-up"
           >
             <div class="card-body">
               <div
-                class="w-16 h-16 bg-[#f60]/10 rounded-lg flex items-center justify-center mb-4"
+                class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -296,17 +293,17 @@
                   <path d="M15 9v1" />
                 </svg>
               </div>
-              <h3 class="text-2xl font-bold text-white mb-4">
+              <h3 class="text-2xl font-bold text-base-content mb-4">
                 Unternehmenswebsites
               </h3>
-              <p class="text-white mb-6">
+              <p class="text-base-content mb-6">
                 Professionelle Firmenwebsites, die Ihr Unternehmen optimal
                 präsentieren und Vertrauen bei potenziellen Kunden schaffen. Mit
                 allen wichtigen Elementen wie Über uns, Leistungen, Referenzen
                 und Kontakt.
               </p>
               <ul class="space-y-2 mb-6">
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -323,7 +320,7 @@
                   </svg>
                   Responsive Design
                 </li>
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -340,7 +337,7 @@
                   </svg>
                   SEO-Optimierung
                 </li>
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -359,7 +356,7 @@
                 </li>
               </ul>
               <button
-                class="btn bg-[#f60] text-white border-none hover:bg-[#ff751a] w-full"
+                class="btn btn-primary w-full"
                 @click="openPricingModal('Unternehmenswebsite')"
               >
                 Angebot anfordern
@@ -369,13 +366,13 @@
 
           <!-- Leistung 2 -->
           <div
-            class="card bg-black shadow-xl border border-[#f60]/20 hover:border-[#f60] transition-all duration-300"
+            class="card bg-base-100 shadow-xl border border-primary/20 hover:border-primary transition-all duration-300"
             data-aos="fade-up"
             data-aos-delay="100"
           >
             <div class="card-body">
               <div
-                class="w-16 h-16 bg-[#f60]/10 rounded-lg flex items-center justify-center mb-4"
+                class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -394,14 +391,16 @@
                   <path d="M22 2h-10v10h10V2Z" />
                 </svg>
               </div>
-              <h3 class="text-2xl font-bold text-white mb-4">Landing Pages</h3>
-              <p class="text-white mb-6">
+              <h3 class="text-2xl font-bold text-base-content mb-4">
+                Landing Pages
+              </h3>
+              <p class="text-base-content mb-6">
                 Conversion-optimierte Landing Pages für Ihre Werbekampagnen.
                 Speziell entwickelt, um Besucher in Leads oder Kunden zu
                 verwandeln – ideal für Google Ads und andere Marketingmaßnahmen.
               </p>
               <ul class="space-y-2 mb-6">
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -418,7 +417,7 @@
                   </svg>
                   Conversion-optimiert
                 </li>
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -435,7 +434,7 @@
                   </svg>
                   A/B-Testing
                 </li>
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -454,7 +453,7 @@
                 </li>
               </ul>
               <button
-                class="btn bg-[#f60] text-white border-none hover:bg-[#ff751a] w-full"
+                class="btn btn-primary w-full"
                 @click="openPricingModal('Landing Page')"
               >
                 Angebot anfordern
@@ -464,13 +463,13 @@
 
           <!-- Leistung 3 -->
           <div
-            class="card bg-black shadow-xl border border-[#f60]/20 hover:border-[#f60] transition-all duration-300"
+            class="card bg-base-100 shadow-xl border border-primary/20 hover:border-primary transition-all duration-300"
             data-aos="fade-up"
             data-aos-delay="200"
           >
             <div class="card-body">
               <div
-                class="w-16 h-16 bg-[#f60]/10 rounded-lg flex items-center justify-center mb-4"
+                class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -488,14 +487,16 @@
                   />
                 </svg>
               </div>
-              <h3 class="text-2xl font-bold text-white mb-4">Online-Shops</h3>
-              <p class="text-white mb-6">
+              <h3 class="text-2xl font-bold text-base-content mb-4">
+                Online-Shops
+              </h3>
+              <p class="text-base-content mb-6">
                 Professionelle E-Commerce-Lösungen, die Ihnen den Einstieg in
                 den Online-Handel ermöglichen. Mit benutzerfreundlichem Design
                 und sicheren Zahlungsmethoden für optimale Conversion-Raten.
               </p>
               <ul class="space-y-2 mb-6">
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -512,7 +513,7 @@
                   </svg>
                   Produktkatalog
                 </li>
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -529,7 +530,7 @@
                   </svg>
                   Sichere Zahlungsmethoden
                 </li>
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -548,7 +549,7 @@
                 </li>
               </ul>
               <button
-                class="btn bg-[#f60] text-white border-none hover:bg-[#ff751a] w-full"
+                class="btn btn-primary w-full"
                 @click="openPricingModal('Online-Shop')"
               >
                 Angebot anfordern
@@ -563,11 +564,11 @@
     <section id="prozess" class="py-20 bg-base-100">
       <div class="container mx-auto px-4">
         <div class="text-center mb-16">
-          <h3 class="text-lg text-[#f60] font-semibold" data-aos="fade-up">
+          <h3 class="text-lg text-primary font-semibold" data-aos="fade-up">
             Unser Prozess
           </h3>
           <h2
-            class="text-4xl text-white font-bold"
+            class="text-4xl text-base-content font-bold"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -578,19 +579,19 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <!-- Schritt 1 -->
           <div
-            class="card bg-black shadow-xl border border-[#f60]/20"
+            class="card bg-base-100 shadow-xl border border-primary/20"
             data-aos="fade-up"
           >
             <div class="card-body text-center">
               <div
-                class="w-16 h-16 rounded-full bg-[#f60] text-white flex items-center justify-center text-2xl font-bold mx-auto mb-6"
+                class="w-16 h-16 rounded-full bg-primary text-primary-content flex items-center justify-center text-2xl font-bold mx-auto mb-6"
               >
                 1
               </div>
-              <h3 class="text-xl font-bold text-white mb-4">
+              <h3 class="text-xl font-bold text-base-content mb-4">
                 Beratung & Analyse
               </h3>
-              <p class="text-white">
+              <p class="text-base-content">
                 Wir analysieren Ihre Ziele, Zielgruppe und Wettbewerber, um eine
                 maßgeschneiderte Strategie zu entwickeln.
               </p>
@@ -599,20 +600,20 @@
 
           <!-- Schritt 2 -->
           <div
-            class="card bg-black shadow-xl border border-[#f60]/20"
+            class="card bg-base-100 shadow-xl border border-primary/20"
             data-aos="fade-up"
             data-aos-delay="100"
           >
             <div class="card-body text-center">
               <div
-                class="w-16 h-16 rounded-full bg-[#f60] text-white flex items-center justify-center text-2xl font-bold mx-auto mb-6"
+                class="w-16 h-16 rounded-full bg-primary text-primary-content flex items-center justify-center text-2xl font-bold mx-auto mb-6"
               >
                 2
               </div>
-              <h3 class="text-xl font-bold text-white mb-4">
+              <h3 class="text-xl font-bold text-base-content mb-4">
                 Konzeption & Design
               </h3>
-              <p class="text-white">
+              <p class="text-base-content">
                 Wir erstellen ein maßgeschneidertes Design-Konzept, das Ihre
                 Marke perfekt repräsentiert und Ihre Ziele unterstützt.
               </p>
@@ -621,18 +622,20 @@
 
           <!-- Schritt 3 -->
           <div
-            class="card bg-black shadow-xl border border-[#f60]/20"
+            class="card bg-base-100 shadow-xl border border-primary/20"
             data-aos="fade-up"
             data-aos-delay="200"
           >
             <div class="card-body text-center">
               <div
-                class="w-16 h-16 rounded-full bg-[#f60] text-white flex items-center justify-center text-2xl font-bold mx-auto mb-6"
+                class="w-16 h-16 rounded-full bg-primary text-primary-content flex items-center justify-center text-2xl font-bold mx-auto mb-6"
               >
                 3
               </div>
-              <h3 class="text-xl font-bold text-white mb-4">Entwicklung</h3>
-              <p class="text-white">
+              <h3 class="text-xl font-bold text-base-content mb-4">
+                Entwicklung
+              </h3>
+              <p class="text-base-content">
                 Unsere Entwickler setzen das Design um und integrieren alle
                 gewünschten Funktionen und Inhalte.
               </p>
@@ -641,20 +644,20 @@
 
           <!-- Schritt 4 -->
           <div
-            class="card bg-black shadow-xl border border-[#f60]/20"
+            class="card bg-base-100 shadow-xl border border-primary/20"
             data-aos="fade-up"
             data-aos-delay="300"
           >
             <div class="card-body text-center">
               <div
-                class="w-16 h-16 rounded-full bg-[#f60] text-white flex items-center justify-center text-2xl font-bold mx-auto mb-6"
+                class="w-16 h-16 rounded-full bg-primary text-primary-content flex items-center justify-center text-2xl font-bold mx-auto mb-6"
               >
                 4
               </div>
-              <h3 class="text-xl font-bold text-white mb-4">
+              <h3 class="text-xl font-bold text-base-content mb-4">
                 Launch & Optimierung
               </h3>
-              <p class="text-white">
+              <p class="text-base-content">
                 Nach umfangreichen Tests geht Ihre Website online und wird
                 kontinuierlich optimiert und verbessert.
               </p>
@@ -672,20 +675,22 @@
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div data-aos="fade-right">
-            <h3 class="text-lg text-[#f60] font-semibold mb-4">
+            <h3 class="text-lg text-primary font-semibold mb-4">
               Suchmaschinenoptimierung
             </h3>
-            <h2 class="text-4xl text-white font-bold mb-6">
+            <h2 class="text-4xl text-base-content font-bold mb-6">
               Besser gefunden werden mit SEO
             </h2>
-            <p class="text-lg text-white mb-6">
+            <p class="text-lg text-base-content mb-6">
               Eine schöne Website nützt wenig, wenn sie niemand findet. Deshalb
               integrieren wir von Anfang an umfassende SEO-Maßnahmen in jede
               Website, die wir erstellen.
             </p>
             <ul class="space-y-4">
               <li class="flex items-start gap-4">
-                <div class="p-2 bg-[#f60] text-white rounded-full mt-1">
+                <div
+                  class="p-2 bg-primary text-primary-content rounded-full mt-1"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -701,15 +706,17 @@
                   </svg>
                 </div>
                 <div>
-                  <h4 class="font-bold text-white">Technische SEO</h4>
-                  <p class="text-white">
+                  <h4 class="font-bold text-base-content">Technische SEO</h4>
+                  <p class="text-base-content">
                     Optimale Ladezeiten, mobile Optimierung, strukturierte Daten
                     und sauberer Code für bessere Rankings.
                   </p>
                 </div>
               </li>
               <li class="flex items-start gap-4">
-                <div class="p-2 bg-[#f60] text-white rounded-full mt-1">
+                <div
+                  class="p-2 bg-primary text-primary-content rounded-full mt-1"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -725,15 +732,17 @@
                   </svg>
                 </div>
                 <div>
-                  <h4 class="font-bold text-white">On-Page SEO</h4>
-                  <p class="text-white">
+                  <h4 class="font-bold text-base-content">On-Page SEO</h4>
+                  <p class="text-base-content">
                     Keyword-optimierte Inhalte, Meta-Tags, Überschriften und
                     interne Verlinkung für bessere Sichtbarkeit.
                   </p>
                 </div>
               </li>
               <li class="flex items-start gap-4">
-                <div class="p-2 bg-[#f60] text-white rounded-full mt-1">
+                <div
+                  class="p-2 bg-primary text-primary-content rounded-full mt-1"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -749,8 +758,60 @@
                   </svg>
                 </div>
                 <div>
-                  <h4 class="font-bold text-white">Local SEO</h4>
-                  <p class="text-white">
+                  <h4 class="font-bold text-base-content">Technische SEO</h4>
+                  <p class="text-base-content">
+                    Optimale Ladezeiten, mobile Optimierung, strukturierte Daten
+                    und sauberer Code für bessere Rankings.
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div
+                  class="p-2 bg-primary text-primary-content rounded-full mt-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-base-content">On-Page SEO</h4>
+                  <p class="text-base-content">
+                    Keyword-optimierte Inhalte, Meta-Tags, Überschriften und
+                    interne Verlinkung für bessere Sichtbarkeit.
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div
+                  class="p-2 bg-primary text-primary-content rounded-full mt-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-base-content">Local SEO</h4>
+                  <p class="text-base-content">
                     Optimierung für lokale Suchanfragen, Google My Business und
                     lokale Backlinks für regionale Unternehmen.
                   </p>
@@ -773,11 +834,11 @@
     <section class="py-16 bg-base-100">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-          <h3 class="text-lg text-[#f60] font-semibold" data-aos="fade-up">
+          <h3 class="text-lg text-primary font-semibold" data-aos="fade-up">
             Unsere Expertise
           </h3>
           <h2
-            class="text-4xl text-white font-bold"
+            class="text-4xl text-base-content font-bold"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -789,65 +850,60 @@
           class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
         >
           <div
-            class="bg-black p-4 rounded-lg border border-[#f60]/20 text-center"
+            class="bg-base-100 p-4 rounded-lg border border-primary/20 text-center"
           >
-            <p class="text-white">Webseite erstellen lassen</p>
+            <p class="text-base-content">Webseite erstellen lassen</p>
           </div>
           <div
-            class="bg-black p-4 rounded-lg border border-[#f60]/20 text-center"
+            class="bg-base-100 p-4 rounded-lg border border-primary/20 text-center"
           >
-            <p class="text-white">Webdesign Agentur</p>
+            <p class="text-base-content">Webdesign Agentur</p>
           </div>
           <div
-            class="bg-black p-4 rounded-lg border border-[#f60]/20 text-center"
+            class="bg-base-100 p-4 rounded-lg border border-primary/20 text-center"
           >
-            <p class="text-white">Professionelle Webseite</p>
+            <p class="text-base-content">Professionelle Webseite</p>
           </div>
           <div
-            class="bg-black p-4 rounded-lg border border-[#f60]/20 text-center"
+            class="bg-base-100 p-4 rounded-lg border border-primary/20 text-center"
           >
-            <p class="text-white">Homepage erstellen</p>
+            <p class="text-base-content">Homepage erstellen</p>
           </div>
           <div
-            class="bg-black p-4 rounded-lg border border-[#f60]/20 text-center"
+            class="bg-base-100 p-4 rounded-lg border border-primary/20 text-center"
           >
-            <p class="text-white">Landingpage erstellen</p>
+            <p class="text-base-content">Landingpage erstellen</p>
           </div>
           <div
-            class="bg-black p-4 rounded-lg border border-[#f60]/20 text-center"
+            class="bg-base-100 p-4 rounded-lg border border-primary/20 text-center"
           >
-            <p class="text-white">Webseite für Handwerker</p>
+            <p class="text-base-content">Webseite für Handwerker</p>
           </div>
           <div
-            class="bg-black p-4 rounded-lg border border-[#f60]/20 text-center"
+            class="bg-base-100 p-4 rounded-lg border border-primary/20 text-center"
           >
-            <p class="text-white">Website für Ärzte</p>
+            <p class="text-base-content">Website für Ärzte</p>
           </div>
           <div
-            class="bg-black p-4 rounded-lg border border-[#f60]/20 text-center"
+            class="bg-base-100 p-4 rounded-lg border border-primary/20 text-center"
           >
-            <p class="text-white">Online-Shop erstellen</p>
+            <p class="text-base-content">Online-Shop erstellen</p>
           </div>
           <div
-            class="bg-black p-4 rounded-lg border border-[#f60]/20 text-center"
+            class="bg-base-100 p-4 rounded-lg border border-primary/20 text-center"
           >
-            <p class="text-white">Webseite für Anwälte</p>
+            <p class="text-base-content">Webseite für Anwälte</p>
           </div>
           <div
-            class="bg-black p-4 rounded-lg border border-[#f60]/20 text-center"
+            class="bg-base-100 p-4 rounded-lg border border-primary/20 text-center"
           >
-            <p class="text-white">Responsive Webdesign</p>
+            <p class="text-base-content">Responsive Webdesign</p>
           </div>
           <div
-            class="bg-black p-4 rounded-lg border border-[#f60]/20 text-center"
+            class="bg-base-100 p-4 rounded-lg border border-primary/20 text-center"
           >
-            <p class="text-white">SEO-optimierte Webseite</p>
+            <p class="text-base-content">SEO-optimierte Webseite</p>
           </div>
-          <!-- <div
-            class="bg-black p-4 rounded-lg border border-[#f60]/20 text-center"
-          >
-            <p class="text-white">Webseite mit CMS</p>
-          </div> -->
         </div>
       </div>
     </section>
@@ -856,39 +912,17 @@
     <RegionalePraesenz />
 
     <!-- CTA Section -->
-    <section class="py-20 relative bg-black">
-      <div
-        class="absolute inset-0 bg-cover bg-center bg-no-repeat blur-md opacity-50 bg-[url('@/assets/images/cta.jpg')]"
-      ></div>
-
-      <div class="container mx-auto px-4 text-center relative z-10">
-        <h2 class="text-4xl font-bold text-white mb-6 drop-shadow-lg">
-          Bereit für Ihre neue Website?
-        </h2>
-        <p class="text-white text-xl mb-8 drop-shadow-lg">
-          Lassen Sie uns gemeinsam Ihre perfekte Website erstellen!
-        </p>
-        <div class="flex flex-col items-center gap-4">
-          <button
-            class="btn btn-lg bg-white text-[#f60] border-none hover:bg-gray-100 shadow-lg animate-bounce"
-            onclick="window.open('https://zeeg.me/orangize', '_blank')"
-          >
-            Kostenloses Erstgespräch vereinbaren
-          </button>
-          <p class="text-white opacity-90">Unverbindlich & kostenlos</p>
-        </div>
-      </div>
-    </section>
+    <CTA />
 
     <!-- FAQ Section -->
     <section id="faq" class="py-20 bg-base-200">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-          <h3 class="text-lg text-[#f60] font-semibold" data-aos="fade-up">
+          <h3 class="text-lg text-primary font-semibold" data-aos="fade-up">
             Häufig gestellte Fragen
           </h3>
           <h2
-            class="text-4xl text-white font-bold"
+            class="text-4xl text-base-content font-bold"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -899,12 +933,12 @@
         <div class="max-w-3xl mx-auto">
           <div class="space-y-4">
             <!-- FAQ Item 1 -->
-            <div class="collapse collapse-plus bg-black">
+            <div class="collapse collapse-plus bg-base-100">
               <input type="radio" name="faq-accordion" checked="checked" />
-              <div class="collapse-title text-xl font-medium text-white">
+              <div class="collapse-title text-xl font-medium text-base-content">
                 Was kostet eine professionelle Website?
               </div>
-              <div class="collapse-content text-white">
+              <div class="collapse-content text-base-content">
                 <p>
                   Die Kosten für eine professionelle Website hängen von
                   verschiedenen Faktoren ab: Umfang, Design, Funktionen und
@@ -919,12 +953,12 @@
             </div>
 
             <!-- FAQ Item 2 -->
-            <div class="collapse collapse-plus bg-black">
+            <div class="collapse collapse-plus bg-base-100">
               <input type="radio" name="faq-accordion" />
-              <div class="collapse-title text-xl font-medium text-white">
+              <div class="collapse-title text-xl font-medium text-base-content">
                 Wie lange dauert die Erstellung einer Website?
               </div>
-              <div class="collapse-content text-white">
+              <div class="collapse-content text-base-content">
                 <p>
                   Die Entwicklungszeit variiert je nach Projektumfang. Eine
                   einfache Website kann innerhalb von 2-4 Wochen fertiggestellt
@@ -937,12 +971,12 @@
             </div>
 
             <!-- FAQ Item 3 -->
-            <div class="collapse collapse-plus bg-black">
+            <div class="collapse collapse-plus bg-base-100">
               <input type="radio" name="faq-accordion" />
-              <div class="collapse-title text-xl font-medium text-white">
+              <div class="collapse-title text-xl font-medium text-base-content">
                 Wie wird meine Website bei Google gefunden?
               </div>
-              <div class="collapse-content text-white">
+              <div class="collapse-content text-base-content">
                 <p>
                   Wir integrieren von Anfang an umfassende SEO-Maßnahmen in Ihre
                   Website. Dazu gehören technische Optimierungen,
@@ -955,12 +989,12 @@
             </div>
 
             <!-- FAQ Item 4 -->
-            <div class="collapse collapse-plus bg-black">
+            <div class="collapse collapse-plus bg-base-100">
               <input type="radio" name="faq-accordion" />
-              <div class="collapse-title text-xl font-medium text-white">
+              <div class="collapse-title text-xl font-medium text-base-content">
                 Welche laufenden Kosten entstehen nach der Erstellung?
               </div>
-              <div class="collapse-content text-white">
+              <div class="collapse-content text-base-content">
                 <p>
                   Nach der Erstellung fallen in der Regel Kosten für Hosting
                   (Webspace), Domain und ggf. für Wartung und Updates an. Wir
@@ -978,10 +1012,10 @@
     <!-- Kontaktformular Section -->
     <ContactForm />
 
-    <NewsletterForm />
+    <!-- <NewsletterForm /> -->
 
     <!-- Floating Buttons -->
-    <CTA />
+    <CTAFloatingButtons />
 
     <!-- Footer Section -->
     <Footer />
@@ -998,11 +1032,12 @@ import { useRoute } from "vue-router";
 import Navigation from "../components/webseite/Navigation.vue";
 import Footer from "../components/Footer.vue";
 import ContactForm from "../components/ContactForm.vue";
-import CTA from "../components/FloatingCallButton.vue";
+import CTAFloatingButtons from "../components/FloatingCallButton.vue";
 import NewsletterForm from "../components/NewsletterForm.vue";
 import PricingModal from "../components/PricingModal.vue";
 import Projects from "../components/Projects.vue";
 import RegionalePraesenz from "../components/webseite/RegionalePraesenz.vue";
+import CTA from "../components/CTA.vue";
 
 const route = useRoute();
 

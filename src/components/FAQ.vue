@@ -1,7 +1,7 @@
 <template>
   <section id="faq" class="py-20 bg-base-100">
     <div class="container mx-auto px-4 text-center">
-      <h2 class="text-4xl font-bold mb-8 text-white">
+      <h2 class="text-4xl font-bold mb-8 text-base-content">
         Häufig gestellte Fragen
       </h2>
 
@@ -12,7 +12,7 @@
           :class="
             activeCategory === 'web'
               ? 'bg-[#f60] text-white'
-              : 'bg-white text-[#f608]'
+              : 'bg-base-100 text-base-content border border-[#f60]'
           "
           class="px-6 py-2 rounded-l-lg text-lg font-semibold transition-all duration-300"
         >
@@ -23,7 +23,7 @@
           :class="
             activeCategory === 'ads'
               ? 'bg-[#f60] text-white'
-              : 'bg-white text-[#f608]'
+              : 'bg-base-100 text-base-content border border-[#f60]'
           "
           class="px-6 py-2 rounded-r-lg text-lg font-semibold transition-all duration-300"
         >
@@ -37,15 +37,16 @@
           <div
             v-for="(faq, index) in faqs[activeCategory]"
             :key="index"
-            class="border border-gray-300 rounded-lg overflow-hidden shadow-md"
+            class="border border-[#f60] rounded-lg overflow-hidden shadow-md"
           >
             <button
               @click="toggleFAQ(index)"
-              class="w-full text-left px-6 py-4 bg-black hover:bg-orange-600 flex justify-between items-center transition duration-200 group"
+              class="w-full text-left px-6 py-4 bg-base-200 hover:bg-[#f60] flex justify-between items-center transition duration-200 group"
             >
-              <span class="text-lg font-medium text-white">{{
-                faq.question
-              }}</span>
+              <span
+                class="text-lg font-medium text-base-content group-hover:text-white"
+                >{{ faq.question }}</span
+              >
               <svg
                 :class="{ 'rotate-180': openFAQ === index }"
                 class="w-6 h-6 text-[#f60] group-hover:text-white transition-transform duration-300"
@@ -61,7 +62,7 @@
             </button>
             <div
               v-if="openFAQ === index"
-              class="p-6 bg-black text-white text-left border-t border-orange-600"
+              class="p-6 bg-base-200 text-base-content text-left border-t border-[#f60]"
             >
               <p v-html="faq.answer"></p>
             </div>

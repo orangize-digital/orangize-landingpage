@@ -9,7 +9,7 @@
       :style="`background-image: url('${post.image}')`"
     >
       <div class="hero-overlay bg-black bg-opacity-80"></div>
-      <div class="hero-content text-center text-neutral-content relative z-10">
+      <div class="hero-content text-center text-base-content relative z-10">
         <div class="max-w-3xl">
           <div
             class="flex items-center justify-center gap-3 mb-4"
@@ -20,13 +20,15 @@
               class="badge badge-lg border-none bg-[#f60] text-white"
               >{{ post.category }}</span
             >
-            <span v-if="post.date" class="text-white">{{ post.date }}</span>
-            <span v-if="post.readTime" class="text-white"
+            <span v-if="post.date" class="text-base-content">{{
+              post.date
+            }}</span>
+            <span v-if="post.readTime" class="text-base-content"
               >{{ post.readTime }} min Lesezeit</span
             >
           </div>
           <h1
-            class="text-4xl md:text-5xl font-bold text-white mb-6"
+            class="text-4xl md:text-5xl font-bold text-base-content mb-6"
             data-aos="fade-up"
           >
             {{ post.title || "Loading..." }}
@@ -43,8 +45,13 @@
               </div>
             </div>
             <div class="text-left">
-              <p class="font-semibold text-white">{{ post.author.name }}</p>
-              <p v-if="post.author.title" class="text-sm text-white opacity-75">
+              <p class="font-semibold text-base-content">
+                {{ post.author.name }}
+              </p>
+              <p
+                v-if="post.author.title"
+                class="text-sm text-base-content opacity-75"
+              >
                 {{ post.author.title }}
               </p>
             </div>
@@ -79,21 +86,21 @@
     <section id="content" class="py-16 bg-base-100">
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
-          <div class="bg-base-200 rounded-xl shadow-xl">
+          <div class="bg-base-200 rounded-xl">
             <!-- Dynamic Component for Blog Post Content -->
             <component :is="currentPostComponent" />
 
             <!-- Tags -->
             <div
               v-if="post && post.tags"
-              class="mt-12 pt-8 border-t border-gray-700"
+              class="mt-12 pt-8 border-t border-base-content/20"
             >
               <div class="flex flex-wrap gap-2">
-                <span class="text-white mr-2">Tags:</span>
+                <span class="text-base-content mr-2">Tags:</span>
                 <span
                   v-for="(tag, index) in post.tags"
                   :key="index"
-                  class="badge bg-base-100 text-white border-[#f60]"
+                  class="badge bg-base-100 text-base-content border-primary"
                 >
                   {{ tag }}
                 </span>
@@ -102,7 +109,7 @@
 
             <!-- Share Buttons -->
             <div class="mt-8">
-              <h4 class="text-white font-semibold mb-4">
+              <h4 class="text-base-content font-semibold mb-4">
                 Teile diesen Artikel:
               </h4>
               <div class="flex gap-3">
@@ -177,7 +184,7 @@
           <!-- Author Bio -->
           <div
             v-if="post && post.author && post.author.bio"
-            class="mt-12 bg-base-200 p-6 rounded-xl shadow-xl"
+            class="mt-12 bg-base-200 p-6 rounded-xl"
             data-aos="fade-up"
           >
             <div class="flex flex-col md:flex-row items-center gap-6">
@@ -187,14 +194,14 @@
                 </div>
               </div>
               <div>
-                <h3 class="text-2xl font-bold text-white mb-2">
+                <h3 class="text-2xl font-bold text-base-content mb-2">
                   {{ post.author.name }}
                 </h3>
-                <p class="text-white mb-4">{{ post.author.bio }}</p>
+                <p class="text-base-content mb-4">{{ post.author.bio }}</p>
                 <div class="flex gap-3">
                   <a
                     href="#"
-                    class="text-[#f60] hover:text-white transition-colors"
+                    class="text-primary hover:text-base-content transition-colors"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -233,14 +240,17 @@
 
           <!-- Related Posts -->
           <div v-if="relatedPosts && relatedPosts.length > 0" class="mt-16">
-            <h3 class="text-2xl font-bold text-white mb-8" data-aos="fade-up">
+            <h3
+              class="text-2xl font-bold text-base-content mb-8"
+              data-aos="fade-up"
+            >
               Ähnliche Artikel
             </h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div
                 v-for="(relatedPost, index) in relatedPosts"
                 :key="index"
-                class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:translate-y-[-5px]"
+                class="card bg-base-200 hover:shadow-2xl transition-all duration-300 hover:translate-y-[-5px]"
                 data-aos="fade-up"
                 :data-aos-delay="index * 100"
               >
@@ -251,17 +261,19 @@
                     class="w-full h-full object-cover"
                   />
                 </figure>
-                <div class="card-body bg-black">
-                  <h4 class="card-title text-white text-lg">
+                <div class="card-body bg-base-200">
+                  <h4 class="card-title text-base-content text-lg">
                     {{ relatedPost.title }}
                   </h4>
                   <div class="flex justify-between items-center mt-4">
-                    <span v-if="relatedPost.date" class="text-white text-sm">{{
-                      relatedPost.date
-                    }}</span>
+                    <span
+                      v-if="relatedPost.date"
+                      class="text-base-content text-sm"
+                      >{{ relatedPost.date }}</span
+                    >
                     <router-link
                       :to="`/blog/${relatedPost.slug}`"
-                      class="text-[#f60] hover:underline"
+                      class="text-primary hover:underline"
                     >
                       Lesen →
                     </router-link>
@@ -274,7 +286,7 @@
       </div>
     </section>
 
-    <NewsletterForm />
+    <!-- <NewsletterForm /> -->
 
     <CTA />
     <Footer />
@@ -287,7 +299,7 @@ import { useRoute } from "vue-router";
 import { useHead } from "@vueuse/head"; // ✅ Import useHead
 import Navigation from "../Navigation.vue";
 import Footer from "../Footer.vue";
-import CTA from "../FloatingCallButton.vue";
+import CTA from "../CTA.vue";
 import NewsletterForm from "../NewsletterForm.vue";
 import {
   blogComponents,

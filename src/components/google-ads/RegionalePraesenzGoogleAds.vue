@@ -2,18 +2,18 @@
   <section id="regionen" class="py-20 bg-base-200">
     <div class="container mx-auto px-4">
       <div class="text-center mb-16">
-        <h3 class="text-lg text-[#f60] font-semibold" data-aos="fade-up">
+        <h3 class="text-lg text-primary font-semibold" data-aos="fade-up">
           Ihr lokaler Google Ads Partner
         </h3>
         <h2
-          class="text-4xl text-white font-bold"
+          class="text-4xl text-base-content font-bold"
           data-aos="fade-up"
           data-aos-delay="100"
         >
           Google Ads Betreuung in Ihrer Region
         </h2>
         <p
-          class="mt-4 text-lg text-white max-w-3xl mx-auto"
+          class="mt-4 text-lg text-base-content max-w-3xl mx-auto"
           data-aos="fade-up"
           data-aos-delay="200"
         >
@@ -26,7 +26,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Bad Oeynhausen -->
         <div
-          class="card bg-black shadow-xl border border-[#f60]/20 hover:border-[#f60] transition-all duration-300"
+          class="card bg-base-100 shadow-xl border border-primary/20 hover:border-primary transition-all duration-300"
           data-aos="fade-up"
         >
           <div class="card-body">
@@ -49,17 +49,21 @@
                   <circle cx="12" cy="10" r="3" />
                 </svg>
               </div>
-              <h3 class="text-2xl font-bold text-white">Bad Oeynhausen</h3>
+              <h3 class="text-2xl font-bold text-base-content">
+                Bad Oeynhausen
+              </h3>
             </div>
-            <p class="text-white mb-6">
+            <p class="text-base-content mb-6">
               Als Google Ads Agentur aus Bad Oeynhausen kennen wir den lokalen
               Markt und erstellen maßgeschneiderte Kampagnen, die gezielt Kunden
               aus Ihrer Region ansprechen und Ihren ROI maximieren.
             </p>
             <div class="mt-auto">
-              <h4 class="font-semibold text-[#f60] mb-2">Unsere Leistungen:</h4>
+              <h4 class="font-semibold text-primary mb-2">
+                Unsere Leistungen:
+              </h4>
               <ul class="space-y-1">
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -76,7 +80,7 @@
                   </svg>
                   Google Ads Bad Oeynhausen
                 </li>
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -93,7 +97,7 @@
                   </svg>
                   SEA Bad Oeynhausen
                 </li>
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -117,7 +121,7 @@
 
         <!-- Herford -->
         <div
-          class="card bg-black shadow-xl border border-[#f60]/20 hover:border-[#f60] transition-all duration-300"
+          class="card bg-base-100 shadow-xl border border-primary/20 hover:border-primary transition-all duration-300"
           data-aos="fade-up"
           data-aos-delay="100"
         >
@@ -141,17 +145,19 @@
                   <circle cx="12" cy="10" r="3" />
                 </svg>
               </div>
-              <h3 class="text-2xl font-bold text-white">Herford</h3>
+              <h3 class="text-2xl font-bold text-base-content">Herford</h3>
             </div>
-            <p class="text-white mb-6">
+            <p class="text-base-content mb-6">
               Für Unternehmen aus Herford entwickeln wir effektive Google Ads
               Strategien, die Ihre Sichtbarkeit erhöhen und qualifizierte Leads
               generieren. Mit persönlicher Betreuung vor Ort.
             </p>
             <div class="mt-auto">
-              <h4 class="font-semibold text-[#f60] mb-2">Unsere Leistungen:</h4>
+              <h4 class="font-semibold text-primary mb-2">
+                Unsere Leistungen:
+              </h4>
               <ul class="space-y-1">
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -168,7 +174,7 @@
                   </svg>
                   Google Ads Agentur Herford
                 </li>
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -185,7 +191,7 @@
                   </svg>
                   Google Ads optimieren Herford
                 </li>
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -209,7 +215,7 @@
 
         <!-- Minden -->
         <div
-          class="card bg-black shadow-xl border border-[#f60]/20 hover:border-[#f60] transition-all duration-300"
+          class="card bg-base-100 shadow-xl border border-primary/20 hover:border-primary transition-all duration-300"
           data-aos="fade-up"
           data-aos-delay="200"
         >
@@ -233,17 +239,19 @@
                   <circle cx="12" cy="10" r="3" />
                 </svg>
               </div>
-              <h3 class="text-2xl font-bold text-white">Minden</h3>
+              <h3 class="text-2xl font-bold text-base-content">Minden</h3>
             </div>
-            <p class="text-white mb-6">
+            <p class="text-base-content mb-6">
               Wir unterstützen Unternehmen aus Minden mit professionellen Google
               Ads Kampagnen, die gezielt auf Ihre Zielgruppe ausgerichtet sind
               und messbare Ergebnisse liefern.
             </p>
             <div class="mt-auto">
-              <h4 class="font-semibold text-[#f60] mb-2">Unsere Leistungen:</h4>
+              <h4 class="font-semibold text-primary mb-2">
+                Unsere Leistungen:
+              </h4>
               <ul class="space-y-1">
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -260,7 +268,7 @@
                   </svg>
                   SEA Agentur Minden
                 </li>
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -277,7 +285,7 @@
                   </svg>
                   Google Ads Minden
                 </li>
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -301,7 +309,7 @@
 
         <!-- Porta Westfalica -->
         <div
-          class="card bg-black shadow-xl border border-[#f60]/20 hover:border-[#f60] transition-all duration-300"
+          class="card bg-base-100 shadow-xl border border-primary/20 hover:border-primary transition-all duration-300"
           data-aos="fade-up"
           data-aos-delay="300"
         >
@@ -325,17 +333,21 @@
                   <circle cx="12" cy="10" r="3" />
                 </svg>
               </div>
-              <h3 class="text-2xl font-bold text-white">Porta Westfalica</h3>
+              <h3 class="text-2xl font-bold text-base-content">
+                Porta Westfalica
+              </h3>
             </div>
-            <p class="text-white mb-6">
+            <p class="text-base-content mb-6">
               Für Unternehmen aus Porta Westfalica bieten wir maßgeschneiderte
               Google Ads Lösungen, die Ihren Umsatz steigern und Ihre
               Marketingkosten optimieren.
             </p>
             <div class="mt-auto">
-              <h4 class="font-semibold text-[#f60] mb-2">Unsere Leistungen:</h4>
+              <h4 class="font-semibold text-primary mb-2">
+                Unsere Leistungen:
+              </h4>
               <ul class="space-y-1">
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -352,7 +364,7 @@
                   </svg>
                   Google Ads Porta Westfalica
                 </li>
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -369,7 +381,7 @@
                   </svg>
                   Google Ads einrichten Porta Westfalica
                 </li>
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -393,7 +405,7 @@
 
         <!-- Bünde -->
         <div
-          class="card bg-black shadow-xl border border-[#f60]/20 hover:border-[#f60] transition-all duration-300"
+          class="card bg-base-100 shadow-xl border border-primary/20 hover:border-primary transition-all duration-300"
           data-aos="fade-up"
           data-aos-delay="400"
         >
@@ -417,17 +429,19 @@
                   <circle cx="12" cy="10" r="3" />
                 </svg>
               </div>
-              <h3 class="text-2xl font-bold text-white">Bünde</h3>
+              <h3 class="text-2xl font-bold text-base-content">Bünde</h3>
             </div>
-            <p class="text-white mb-6">
+            <p class="text-base-content mb-6">
               Wir erstellen für Unternehmen aus Bünde erfolgreiche Google Ads
               Kampagnen, die gezielt neue Kunden ansprechen und Ihren Return on
               Investment maximieren.
             </p>
             <div class="mt-auto">
-              <h4 class="font-semibold text-[#f60] mb-2">Unsere Leistungen:</h4>
+              <h4 class="font-semibold text-primary mb-2">
+                Unsere Leistungen:
+              </h4>
               <ul class="space-y-1">
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -444,7 +458,7 @@
                   </svg>
                   Google Ads Bünde
                 </li>
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -461,7 +475,7 @@
                   </svg>
                   Google Ads optimieren Bünde
                 </li>
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -485,7 +499,7 @@
 
         <!-- Weitere Regionen -->
         <div
-          class="card bg-black shadow-xl border border-[#f60]/20 hover:border-[#f60] transition-all duration-300"
+          class="card bg-base-100 shadow-xl border border-primary/20 hover:border-primary transition-all duration-300"
           data-aos="fade-up"
           data-aos-delay="500"
         >
@@ -510,17 +524,21 @@
                   <path d="M2 12h20" />
                 </svg>
               </div>
-              <h3 class="text-2xl font-bold text-white">Weitere Regionen</h3>
+              <h3 class="text-2xl font-bold text-base-content">
+                Weitere Regionen
+              </h3>
             </div>
-            <p class="text-white mb-6">
+            <p class="text-base-content mb-6">
               Wir betreuen Google Ads Kampagnen für Kunden im gesamten Kreis
               Minden-Lübbecke, Herford und darüber hinaus. Profitieren Sie von
               unserer Expertise und persönlichen Betreuung.
             </p>
             <div class="mt-auto">
-              <h4 class="font-semibold text-[#f60] mb-2">Weitere Standorte:</h4>
+              <h4 class="font-semibold text-primary mb-2">
+                Weitere Standorte:
+              </h4>
               <ul class="grid grid-cols-2 gap-1">
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -537,7 +555,7 @@
                   </svg>
                   Löhne
                 </li>
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -554,7 +572,7 @@
                   </svg>
                   Bielefeld
                 </li>
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -571,7 +589,7 @@
                   </svg>
                   Espelkamp
                 </li>
-                <li class="flex items-center text-white">
+                <li class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -596,26 +614,26 @@
 
       <!-- Regionale Karte -->
       <div
-        class="mt-16 bg-black p-6 rounded-lg border border-[#f60]/20"
+        class="mt-16 bg-base-100 p-6 rounded-lg border border-primary/20"
         data-aos="fade-up"
       >
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
-            <h3 class="text-2xl font-bold text-white mb-4">
+            <h3 class="text-2xl font-bold text-base-content mb-4">
               Ihr lokaler Google Ads Experte in Ostwestfalen
             </h3>
-            <p class="text-white mb-4">
+            <p class="text-base-content mb-4">
               Als Google Ads Agentur aus Bad Oeynhausen kennen wir die lokalen
               Märkte und Zielgruppen in Ostwestfalen. Wir wissen genau, wie Sie
               Ihre Werbeanzeigen optimal auf regionale Kunden ausrichten können.
             </p>
-            <p class="text-white mb-6">
+            <p class="text-base-content mb-6">
               Unsere Kunden schätzen die Kombination aus digitalem Know-how und
               persönlicher Betreuung vor Ort. Wir sind nicht nur online für Sie
               da, sondern auch persönlich ansprechbar.
             </p>
             <button
-              class="btn bg-[#f60] text-white border-none hover:bg-[#ff751a]"
+              class="btn bg-[#f60] text-neutral-content border-none hover:bg-[#f60]/90"
               onclick="window.open('https://zeeg.me/orangize', '_blank')"
             >
               Kostenlose Google Ads Beratung

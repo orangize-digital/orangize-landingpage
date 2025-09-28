@@ -63,14 +63,11 @@
   <section id="losung" class="py-20 bg-base-100">
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
-        <h3
-          class="text-lg text-white font-semibold text-[#f60]"
-          data-aos="fade-up"
-        >
+        <h3 class="text-lg text-[#f60] font-semibold" data-aos="fade-up">
           Unsere Lösung für deinen Erfolg
         </h3>
         <h2
-          class="text-4xl text-white font-bold"
+          class="text-4xl text-base-content font-bold"
           data-aos="fade-up"
           data-aos-delay="100"
         >
@@ -81,7 +78,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <!-- Linke Seite: Detaillierte Beschreibung -->
         <div data-aos="fade-right">
-          <p class="text-lg text-white leading-relaxed">
+          <p class="text-lg text-base-content leading-relaxed">
             Du hast ein starkes Angebot – aber deine potenziellen Kunden wissen
             es noch nicht? Dann geht es dir wie vielen Unternehmern, die auf
             klassische Werbung setzen, während andere mit **Google Ads &
@@ -144,10 +141,10 @@
               </svg>
             </div>
             <div>
-              <h4 class="text-xl text-white font-semibold mb-6">
+              <h4 class="text-xl text-base-content font-semibold mb-6">
                 Messbare Erfolge statt Rätselraten
               </h4>
-              <p class="text-white text-lg">
+              <p class="text-base-content text-lg">
                 Jedes investierte Werbebudget muss sich lohnen. Wir tracken jede
                 Zahl und analysieren, was wirklich funktioniert – mit klaren
                 KPIs und Echtzeit-Daten.
@@ -191,10 +188,10 @@
               </svg>
             </div>
             <div>
-              <h4 class="text-xl text-white font-semibold mb-6">
+              <h4 class="text-xl text-base-content font-semibold mb-6">
                 Landing Pages, die verkaufen
               </h4>
-              <p class="text-white text-lg">
+              <p class="text-base-content text-lg">
                 Ein Klick auf die Anzeige ist nur der erste Schritt – die wahre
                 Magie passiert auf deiner Website. Wir bauen **Conversion-starke
                 Webseiten**, die Besucher zu Kunden machen.
@@ -246,10 +243,10 @@
               </svg>
             </div>
             <div>
-              <h4 class="text-xl text-white font-semibold mb-6">
+              <h4 class="text-xl text-base-content font-semibold mb-6">
                 Automatisierte Neukundengewinnung
               </h4>
-              <p class="text-white text-lg">
+              <p class="text-base-content text-lg">
                 Stell dir vor, du bekommst täglich neue Anfragen – ohne manuelle
                 Kaltakquise. Mit unserem System machst du dein Marketing
                 **planbar und skalierbar**.
@@ -307,10 +304,10 @@
               </svg>
             </div>
             <div>
-              <h4 class="text-xl text-white font-semibold mb-6">
+              <h4 class="text-xl text-base-content font-semibold mb-6">
                 Full-Service Betreuung
               </h4>
-              <p class="text-white text-lg">
+              <p class="text-base-content text-lg">
                 Kein Stress mit Technik oder komplizierten
                 Kampagnen-Einstellungen. Wir übernehmen alles – von der
                 Strategie bis zur laufenden Optimierung.
@@ -338,65 +335,67 @@
   <section id="ablauf" class="py-20 bg-base-100">
     <div class="container mx-auto px-4">
       <h2
-        class="text-4xl text-white font-bold text-center mb-12"
+        class="text-4xl text-base-content font-bold text-center mb-12"
         data-aos="fade-up"
       >
         Unser Ablauf
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
         <div class="card bg-base-200" data-aos="fade-up">
-          <div class="card-body items-center text-center">
+          <div class="card-body items-center text-center bg-base-100">
             <div
               class="w-12 h-12 rounded-full bg-[#f60] text-white flex items-center justify-center text-xl font-bold mb-4"
             >
               1
             </div>
-            <h3 class="card-title text-white">Erstgespräch</h3>
-            <p class="text-white">Analyse Ihrer Ziele und Anforderungen</p>
+            <h3 class="card-title text-base-content">Erstgespräch</h3>
+            <p class="text-base-content">
+              Analyse Ihrer Ziele und Anforderungen
+            </p>
           </div>
         </div>
         <div class="card bg-base-200" data-aos="fade-up" data-aos-delay="200">
-          <div class="card-body items-center text-center">
+          <div class="card-body items-center text-center bg-base-100">
             <div
               class="w-12 h-12 rounded-full bg-[#f60] text-white flex items-center justify-center text-xl font-bold mb-4"
             >
               2
             </div>
-            <h3 class="card-title text-white">Strategieentwicklung</h3>
-            <p class="text-white">Maßgeschneiderte Kampagnenplanung</p>
+            <h3 class="card-title text-base-content">Strategieentwicklung</h3>
+            <p class="text-base-content">Maßgeschneiderte Kampagnenplanung</p>
           </div>
         </div>
         <div class="card bg-base-200" data-aos="fade-up" data-aos-delay="600">
-          <div class="card-body items-center text-center">
+          <div class="card-body items-center text-center bg-base-100">
             <div
               class="w-12 h-12 rounded-full bg-[#f60] text-white flex items-center justify-center text-xl font-bold mb-4"
             >
               3
             </div>
-            <h3 class="card-title text-white">Kampagnen-Setup</h3>
-            <p class="text-white">Professionelle Implementierung</p>
+            <h3 class="card-title text-base-content">Kampagnen-Setup</h3>
+            <p class="text-base-content">Professionelle Implementierung</p>
           </div>
         </div>
         <div class="card bg-base-200" data-aos="fade-up" data-aos-delay="1200">
-          <div class="card-body items-center text-center">
+          <div class="card-body items-center text-center bg-base-100">
             <div
               class="w-12 h-12 rounded-full bg-[#f60] text-white flex items-center justify-center text-xl font-bold mb-4"
             >
               4
             </div>
-            <h3 class="card-title text-white">Optimierung</h3>
-            <p class="text-white">Kontinuierliche Verbesserung</p>
+            <h3 class="card-title text-base-content">Optimierung</h3>
+            <p class="text-base-content">Kontinuierliche Verbesserung</p>
           </div>
         </div>
         <div class="card bg-base-200" data-aos="fade-up" data-aos-delay="1800">
-          <div class="card-body items-center text-center">
+          <div class="card-body items-center text-center bg-base-100">
             <div
               class="w-12 h-12 rounded-full bg-[#f60] text-white flex items-center justify-center text-xl font-bold mb-4"
             >
               5
             </div>
-            <h3 class="card-title text-white">Reporting</h3>
-            <p class="text-white">Transparente Erfolgsmessung</p>
+            <h3 class="card-title text-base-content">Reporting</h3>
+            <p class="text-base-content">Transparente Erfolgsmessung</p>
           </div>
         </div>
       </div>
@@ -404,27 +403,26 @@
   </section>
 
   <!-- CTA Section -->
-
-  <section class="py-20 relative bg-neutral">
+  <section class="py-20 relative bg-black">
     <div
       class="absolute inset-0 bg-cover bg-center bg-no-repeat blur-md opacity-50 bg-[url('@/assets/images/cta.jpg')]"
     ></div>
 
     <div class="container mx-auto px-4 text-center relative z-10">
-      <h2 class="text-4xl font-bold text-neutral-content mb-6 drop-shadow-lg">
-        Bereit für Ihre neue Website?
+      <h2 class="text-4xl font-bold text-white mb-6 drop-shadow-lg">
+        Bereit für mehr Erfolg?
       </h2>
-      <p class="text-neutral-content text-xl mb-8 drop-shadow-lg">
-        Lassen Sie uns gemeinsam Ihre perfekte Website erstellen!
+      <p class="text-white text-xl mb-8 drop-shadow-lg">
+        Lass uns gemeinsam deine Google Ads Strategie entwickeln und umsetzen!
       </p>
       <div class="flex flex-col items-center gap-4">
         <button
-          class="btn btn-lg bg-[#f60] text-white border-none hover:bg-[#ff751a] shadow-lg animate-bounce"
+          class="btn btn-lg bg-[#f60] text-[#f60] border-none hover:bg-[#ff751a] shadow-lg animate-bounce"
           onclick="window.open('https://zeeg.me/orangize', '_blank')"
         >
           Kostenloses Erstgespräch vereinbaren
         </button>
-        <p class="text-neutral-content opacity-90">Unverbindlich & kostenlos</p>
+        <p class="text-white opacity-90">Unverbindlich & kostenlos</p>
       </div>
     </div>
   </section>
@@ -432,7 +430,7 @@
   <!-- Über Mich Section -->
   <section id="uber-mich" class="py-20 bg-base-200">
     <div class="container mx-auto px-6 lg:px-12">
-      <h2 class="text-4xl font-bold text-center mb-12 text-white">
+      <h2 class="text-4xl font-bold text-center mb-12 text-base-content">
         Web & Ads – Die perfekte Kombination für dein Business
       </h2>
       <div class="flex flex-col md:flex-row items-start gap-12">
@@ -451,20 +449,20 @@
             <h3 class="text-3xl font-bold text-[#f60] mb-4">
               Webentwickler & Google Ads Spezialist
             </h3>
-            <p class="text-lg text-white mb-4">
+            <p class="text-lg text-base-content mb-4">
               Ich bin Naumche, dein Experte für professionelle Google Ads
               Kampagnen und moderne Webentwicklung. Durch meine Erfahrung in
               beiden Bereichen helfe ich Unternehmen, nicht nur mehr
               Sichtbarkeit zu gewinnen, sondern auch mit einer performanten und
               ansprechenden Website zu überzeugen.
             </p>
-            <p class="text-lg text-white mb-4">
+            <p class="text-lg text-base-content mb-4">
               Dank meiner Doppelkompetenz optimiere ich Werbekampagnen gezielt
               und stelle sicher, dass die Zielseite technisch und strategisch
               perfekt darauf abgestimmt ist – für bessere Conversions und
               langfristigen Erfolg.
             </p>
-            <p class="text-lg text-white mb-4">
+            <p class="text-lg text-base-content mb-4">
               Unterstützt werde ich von einem Netzwerk aus Freelancern, die mich
               je nach Projekt in verschiedenen Bereichen ergänzen. So bekommst
               du die beste Kombination aus fundierter Expertise, Flexibilität
@@ -493,8 +491,10 @@
                   ✓
                 </div>
                 <div>
-                  <h4 class="font-bold text-lg text-white">Transparenz</h4>
-                  <p class="text-white">
+                  <h4 class="font-bold text-lg text-base-content">
+                    Transparenz
+                  </h4>
+                  <p class="text-base-content">
                     Ehrliche Beratung und klare Kommunikation
                   </p>
                 </div>
@@ -506,8 +506,10 @@
                   ✓
                 </div>
                 <div>
-                  <h4 class="font-bold text-lg text-white">Flexibilität</h4>
-                  <p class="text-white">
+                  <h4 class="font-bold text-lg text-base-content">
+                    Flexibilität
+                  </h4>
+                  <p class="text-base-content">
                     Individuelle Lösungen statt Standardpakete
                   </p>
                 </div>
@@ -519,8 +521,10 @@
                   ✓
                 </div>
                 <div>
-                  <h4 class="font-bold text-lg text-white">Ergebnisse</h4>
-                  <p class="text-white">
+                  <h4 class="font-bold text-lg text-base-content">
+                    Ergebnisse
+                  </h4>
+                  <p class="text-base-content">
                     Fokus auf messbaren Erfolg für meine Kunden
                   </p>
                 </div>
@@ -532,10 +536,10 @@
                   ✓
                 </div>
                 <div>
-                  <h4 class="font-bold text-lg text-white">
+                  <h4 class="font-bold text-lg text-base-content">
                     Weiterentwicklung
                   </h4>
-                  <p class="text-white">
+                  <p class="text-base-content">
                     Immer auf dem neuesten Stand der Branche
                   </p>
                 </div>
