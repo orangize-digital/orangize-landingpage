@@ -74,8 +74,8 @@ const currentTheme = ref("light");
 
 const logoSrc = computed(() => {
   return currentTheme.value === "dark"
-    ? "/src/assets/images/logo/orangize-white.svg"
-    : "/src/assets/images/logo/orangize-black.svg";
+    ? "/images/logo/orangize-white.svg"
+    : "/images/logo/orangize-black.svg";
 });
 
 const updateTheme = () => {
