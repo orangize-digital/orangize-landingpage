@@ -25,14 +25,16 @@
           Wir erstellen zielgerichtete Kampagnen und optimierte Webseiten, damit
           deine Werbung nicht nur Klicks, sondern echte Kunden bringt.
         </p>
-        <button
+        <a
+          href="https://zeeg.me/orangize"
+          target="_blank"
+          rel="noopener"
           class="btn btn-primary text-white bg-[#f60] border-none hover:bg-[#ff751a]"
           data-aos="zoom-in"
           data-aos-delay="600"
-          onclick="window.open('https://zeeg.me/orangize', '_blank')"
         >
           Jetzt kostenloses Erstgespräch sichern
-        </button>
+        </a>
       </div>
     </div>
     <div class="absolute bottom-8 w-full flex justify-center">
@@ -46,7 +48,7 @@
           class="h-10 w-10"
           fill="none"
           viewBox="0 0 24 24"
-          stroke="currentColor"
+          stroke="#ffffff"
         >
           <path
             stroke-linecap="round"
