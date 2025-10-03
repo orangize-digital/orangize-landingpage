@@ -1064,14 +1064,14 @@
 import { ref, onMounted, onUnmounted } from "vue";
 import { useHead } from "@vueuse/head";
 import { useRoute } from "vue-router";
-import Navigation from "../components/Website/Navigation.vue";
+import Navigation from "../components/website/Navigation.vue";
 import Footer from "../components/Footer.vue";
 import ContactForm from "../components/ContactForm.vue";
 import CTAFloatingButtons from "../components/FloatingCallButton.vue";
 import NewsletterForm from "../components/NewsletterForm.vue";
 import PricingModal from "../components/PricingModal.vue";
 import Projects from "../components/Projects.vue";
-import RegionalePraesenz from "../components/Website/RegionalePraesenz.vue";
+import RegionalePraesenz from "../components/website/RegionalePraesenz.vue";
 import CTA from "../components/CTA.vue";
 import HeroContactForm from "../components/HeroContactForm.vue";
 
