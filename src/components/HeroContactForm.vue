@@ -53,7 +53,9 @@
           class="select select-bordered w-full bg-gray-800 text-white border-gray-600 focus:border-orange-500"
           required
         >
-          <option value="" disabled>Bitte wählen</option>
+          <option value="" disabled style="color: gray !important">
+            Bitte wählen
+          </option>
           <option v-for="option in options" :key="option" :value="option">
             {{ option }}
           </option>
@@ -81,7 +83,9 @@
         class="kostenlose btn btn-primary w-full bg-[#f60] border-none hover:bg-[#f60]/90 text-white"
         :disabled="loading"
       >
-        <span v-if="!loading" class="kostenlose-btn">Kostenlose Beratung anfragen</span>
+        <span v-if="!loading" class="kostenlose-btn"
+          >Kostenlose Beratung anfragen</span
+        >
         <span v-else class="loading loading-spinner loading-sm"></span>
       </button>
 
