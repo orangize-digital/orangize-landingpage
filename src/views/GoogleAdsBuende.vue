@@ -62,7 +62,7 @@
             </div>
 
             <!-- Contact Form -->
-            <div data-aos="fade-left" class="relative">
+            <div data-aos="fade-up" class="relative">
               <div
                 class="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl blur-xl"
               ></div>
@@ -798,7 +798,7 @@
               </li>
             </ul>
           </div>
-          <div data-aos="fade-left">
+          <div data-aos="fade-up">
             <img
               src="@/assets/images/google-ads-analytics.gif"
               alt="Google Ads Analytics"
