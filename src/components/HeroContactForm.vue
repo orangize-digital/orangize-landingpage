@@ -50,7 +50,8 @@
         </label>
         <select
           v-model="form.interest"
-          class="select select-bordered w-full bg-gray-800 text-white border-gray-600 focus:border-orange-500"
+          class="select select-bordered w-full text-gray bg-gray-800 text-white border-gray-600 focus:border-orange-500"
+          style="color: gray !important"
           required
         >
           <option value="" disabled style="color: gray !important">
