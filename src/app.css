@@ -38,19 +38,19 @@ body {
 
 /* Theme-specific overrides */
 [data-theme="light"] {
-  --fallback-b1: 255 255 255;
-  --b1: 255 255 255;
-  --b2: 255 255 255;
-  --b3: 255 255 255;
-  --bc: 0 0 0;
+  --fallback-b1: 0 0% 100%;
+  --b1: 0 0% 100%;
+  --b2: 0 0% 100%;
+  --b3: 0 0% 100%;
+  --bc: 0 0% 0%;
 }
 
 [data-theme="dark"] {
-  --fallback-b1: 0 0 0;
-  --b1: 0 0 0;
-  --b2: 0 0 0;
-  --b3: 0 0 0;
-  --bc: 255 255 255;
+  --fallback-b1: 0 0% 0%;
+  --b1: 0 0% 0%;
+  --b2: 0 0% 0%;
+  --b3: 0 0% 0%;
+  --bc: 0 0% 100%;
 }
 
 /* Ensure bg-base-100 works properly */
@@ -549,4 +549,38 @@ ul.menu li.selected > *,
 ul.menu li.selected a {
   background-color: rgba(255, 102, 0, 0.273) !important;
   color: #f60 !important;
+}
+
+/* Fix project button colors - force orange background with white text */
+.btn-primary,
+.btn.btn-primary {
+  background-color: #f60 !important;
+  border-color: #f60 !important;
+  color: #ffffff !important;
+}
+
+.btn-primary:hover,
+.btn.btn-primary:hover {
+  background-color: rgba(255, 102, 0, 0.8) !important;
+  border-color: rgba(255, 102, 0, 0.8) !important;
+  color: #ffffff !important;
+}
+
+/* Specific fix for project card buttons */
+#projekte .btn-primary,
+#projekte .btn.btn-primary,
+.card .btn-primary,
+.card .btn.btn-primary {
+  background-color: #f60 !important;
+  border-color: #f60 !important;
+  color: #ffffff !important;
+}
+
+#projekte .btn-primary:hover,
+#projekte .btn.btn-primary:hover,
+.card .btn-primary:hover,
+.card .btn.btn-primary:hover {
+  background-color: rgba(255, 102, 0, 0.8) !important;
+  border-color: rgba(255, 102, 0, 0.8) !important;
+  color: #ffffff !important;
 }
