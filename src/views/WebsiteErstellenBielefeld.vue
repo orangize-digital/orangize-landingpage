@@ -3,10 +3,10 @@
     <Navigation />
     <!-- Hero Section -->
     <div
-      class="hero min-h-[110vh] relative bg-[url('@/assets/images/website-erstellen-hero.jpg')] mt-28 lg:mt-0"
+      class="hero min-h-[110vh] relative bg-[url('@/assets/images/website-erstellen-hero.jpg')] lg:mt-0"
     >
       <div class="hero-overlay bg-black bg-opacity-95"></div>
-      <div class="hero-content relative z-10 w-full max-w-7xl mx-auto px-4">
+      <div class="hero-content relative z-10 w-full max-w-7xl mx-auto px-4 lg:py-0 py-[150px]">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <!-- Left Side - Content -->
           <div class="text-left text-neutral-content" data-aos="fade-right">

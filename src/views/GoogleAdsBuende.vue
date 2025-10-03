@@ -3,10 +3,10 @@
     <Navigation />
     <!-- Hero Section -->
     <div
-      class="hero min-h-[110vh] relative bg-[url('@/assets/images/google-ads-hero.jpeg')] mt-28 lg:mt-0"
+      class="hero min-h-[110vh] relative bg-[url('@/assets/images/google-ads-hero.jpeg')] lg:mt-0"
     >
       <div class="hero-overlay bg-black bg-opacity-80"></div>
-      <div class="hero-content relative z-10 w-full">
+      <div class="hero-content relative z-10 w-full lg:py-0 py-[150px]">
         <div class="container mx-auto px-4">
           <div
             class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]"
