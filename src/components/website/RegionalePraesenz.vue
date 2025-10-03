@@ -10,14 +10,14 @@
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          Webdesign & Webseiten in Ihrer Region
+          Webdesign & Websiten in Ihrer Region
         </h2>
         <p
           class="mt-4 text-lg text-base-content max-w-3xl mx-auto"
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          Wir erstellen professionelle Webseiten für Unternehmen in Bad
+          Wir erstellen professionelle Websiten für Unternehmen in Bad
           Oeynhausen, Herford, Minden und Umgebung. Persönliche Beratung vor Ort
           inklusive.
         </p>
@@ -26,8 +26,9 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Bad Oeynhausen -->
         <div
-          class="card bg-base-100 shadow-xl border border-primary/20 hover:border-primary transition-all duration-300"
+          class="card bg-base-100 shadow-xl border border-primary/20 hover:border-primary transition-all duration-300 cursor-pointer"
           data-aos="fade-up"
+          @click="navigateToCity('bad-oeynhausen')"
         >
           <div class="card-body">
             <div class="flex items-center mb-4">
@@ -55,7 +56,7 @@
             </div>
             <p class="text-base-content mb-6">
               Als Webdesign-Agentur aus Bad Oeynhausen kennen wir die lokalen
-              Gegebenheiten und erstellen maßgeschneiderte Webseiten für
+              Gegebenheiten und erstellen maßgeschneiderte Websiten für
               Unternehmen jeder Größe – vom Einzelhändler bis zum
               mittelständischen Betrieb.
             </p>
@@ -122,9 +123,10 @@
 
         <!-- Herford -->
         <div
-          class="card bg-base-100 shadow-xl border border-primary/20 hover:border-primary transition-all duration-300"
+          class="card bg-base-100 shadow-xl border border-primary/20 hover:border-primary transition-all duration-300 cursor-pointer"
           data-aos="fade-up"
           data-aos-delay="100"
+          @click="navigateToCity('herford')"
         >
           <div class="card-body">
             <div class="flex items-center mb-4">
@@ -150,7 +152,7 @@
             </div>
             <p class="text-base-content mb-6">
               Für Unternehmen aus Herford entwickeln wir moderne, responsive
-              Webseiten, die Ihre Kunden begeistern und Ihnen einen
+              Websiten, die Ihre Kunden begeistern und Ihnen einen
               Wettbewerbsvorteil verschaffen. Persönliche Beratung vor Ort.
             </p>
             <div class="mt-auto">
@@ -216,9 +218,10 @@
 
         <!-- Minden -->
         <div
-          class="card bg-base-100 shadow-xl border border-primary/20 hover:border-primary transition-all duration-300"
+          class="card bg-base-100 shadow-xl border border-primary/20 hover:border-primary transition-all duration-300 cursor-pointer"
           data-aos="fade-up"
           data-aos-delay="200"
+          @click="navigateToCity('minden')"
         >
           <div class="card-body">
             <div class="flex items-center mb-4">
@@ -310,9 +313,10 @@
 
         <!-- Porta Westfalica -->
         <div
-          class="card bg-base-100 shadow-xl border border-primary/20 hover:border-primary transition-all duration-300"
+          class="card bg-base-100 shadow-xl border border-primary/20 hover:border-primary transition-all duration-300 cursor-pointer"
           data-aos="fade-up"
           data-aos-delay="300"
+          @click="navigateToCity('porta-westfalica')"
         >
           <div class="card-body">
             <div class="flex items-center mb-4">
@@ -380,7 +384,7 @@
                   >
                     <path d="M20 6 9 17l-5-5" />
                   </svg>
-                  Webseite erstellen Porta Westfalica
+                  Website erstellen Porta Westfalica
                 </li>
                 <li class="flex items-center text-base-content">
                   <svg
@@ -406,9 +410,10 @@
 
         <!-- Bünde -->
         <div
-          class="card bg-base-100 shadow-xl border border-primary/20 hover:border-primary transition-all duration-300"
+          class="card bg-base-100 shadow-xl border border-primary/20 hover:border-primary transition-all duration-300 cursor-pointer"
           data-aos="fade-up"
           data-aos-delay="400"
+          @click="navigateToCity('buende')"
         >
           <div class="card-body">
             <div class="flex items-center mb-4">
@@ -433,9 +438,9 @@
               <h3 class="text-2xl font-bold text-base-content">Bünde</h3>
             </div>
             <p class="text-base-content mb-6">
-              Wir erstellen für Unternehmen aus Bünde moderne Webseiten, die
-              Ihre Kunden überzeugen und Ihnen helfen, online erfolgreich zu
-              sein. Lokale Expertise mit persönlichem Service.
+              Wir erstellen für Unternehmen aus Bünde moderne Websiten, die Ihre
+              Kunden überzeugen und Ihnen helfen, online erfolgreich zu sein.
+              Lokale Expertise mit persönlichem Service.
             </p>
             <div class="mt-auto">
               <h4 class="font-semibold text-primary mb-2">
@@ -556,7 +561,10 @@
                   </svg>
                   Löhne
                 </li>
-                <li class="flex items-center text-base-content">
+                <li
+                  class="flex items-center text-base-content cursor-pointer hover:text-primary transition-colors"
+                  @click="navigateToCity('bielefeld')"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -667,6 +675,25 @@
 
 <script setup>
 import { onMounted } from "vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+// Navigation zu verschiedenen Städte-Seiten
+const navigateToCity = (city) => {
+  const routes = {
+    "bad-oeynhausen": "/website-erstellen-bad-oeynhausen",
+    herford: "/website-erstellen-herford",
+    minden: "/website-erstellen-minden",
+    "porta-westfalica": "/website-erstellen-porta-westfalica",
+    buende: "/website-erstellen-buende",
+    bielefeld: "/website-erstellen-bielefeld",
+  };
+
+  if (routes[city]) {
+    router.push(routes[city]);
+  }
+};
 
 // Wenn Sie AOS (Animate on Scroll) verwenden, können Sie es hier initialisieren
 onMounted(() => {

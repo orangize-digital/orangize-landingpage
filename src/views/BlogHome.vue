@@ -213,7 +213,7 @@ useHead({
     {
       property: "og:description",
       content:
-        "Wertvolle Insights rund um Online Marketing, Webseiten und Werbeanzeigen. Von Experten geschrieben.",
+        "Wertvolle Insights rund um Online Marketing, Websiten und Werbeanzeigen. Von Experten geschrieben.",
     },
     {
       property: "og:type",

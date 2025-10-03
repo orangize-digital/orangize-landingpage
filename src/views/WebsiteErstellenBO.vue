@@ -11,19 +11,19 @@
           <!-- Left Side - Content -->
           <div class="text-left text-neutral-content" data-aos="fade-right">
             <div class="mb-4">
-              <span class="text-primary font-semibold text-lg">
-                Professionelle Websiten
-              </span>
+              <span class="text-primary font-semibold text-lg"
+                >Webdesign Bad Oeynhausen</span
+              >
             </div>
             <h1
               class="text-4xl lg:text-6xl text-white font-bold mb-6 leading-tight"
             >
-              Website erstellen lassen
-              <span class="text-primary">für Ihren Erfolg</span>
+              Website erstellen lassen in
+              <span class="text-primary">Bad Oeynhausen</span>
             </h1>
             <p class="text-xl lg:text-2xl mb-6 text-neutral-content/90">
-              Maßgeschneiderte Websites & Landingpages, die Besucher in Kunden
-              verwandeln – Ihr digitaler Erfolg beginnt hier
+              Ihre Webdesign-Agentur direkt aus Bad Oeynhausen – Ihr lokaler
+              Partner für professionelle Websites
             </p>
             <div class="space-y-4 mb-8">
               <div class="flex items-center gap-3">
@@ -32,15 +32,15 @@
               </div>
               <div class="flex items-center gap-3">
                 <div class="w-2 h-2 bg-primary rounded-full"></div>
-                <span class="text-lg">
-                  SEO-optimiert für bessere Google-Rankings
-                </span>
+                <span class="text-lg"
+                  >SEO-optimiert für bessere Google-Rankings</span
+                >
               </div>
               <div class="flex items-center gap-3">
                 <div class="w-2 h-2 bg-primary rounded-full"></div>
-                <span class="text-lg">
-                  Conversion-optimiert für mehr Kunden
-                </span>
+                <span class="text-lg"
+                  >Lokale Betreuung direkt aus Bad Oeynhausen</span
+                >
               </div>
             </div>
             <div class="flex flex-col sm:flex-row gap-4">
@@ -69,6 +69,7 @@
           </div>
         </div>
       </div>
+
       <!-- Scroll indicator -->
       <div class="absolute bottom-8 w-full flex justify-center">
         <a
@@ -99,14 +100,14 @@
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
           <h3 class="text-lg text-primary font-semibold" data-aos="fade-up">
-            Ihre Website ist Ihr digitales Aushängeschild
+            Ihre Webdesign-Agentur aus Bad Oeynhausen
           </h3>
           <h2
             class="text-4xl text-base-content font-bold"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            Warum Sie eine professionelle Website brauchen
+            Warum Mindener Unternehmen auf uns vertrauen
           </h2>
         </div>
 
@@ -114,20 +115,22 @@
           <!-- Linke Seite: Detaillierte Beschreibung -->
           <div data-aos="fade-right">
             <p class="text-lg text-base-content leading-relaxed">
-              In der heutigen digitalen Welt ist Ihre Website oft der erste
-              Kontaktpunkt mit potenziellen Kunden. Ein professioneller
-              Webauftritt ist daher unverzichtbar für Ihren Geschäftserfolg.
+              Als lokale Webdesign-Agentur in Minden kennen wir die Bedürfnisse
+              von Unternehmen in Ostwestfalen. Wir sind nicht nur Ihre digitalen
+              Partner, sondern auch Ihre Nachbarn – mit persönlicher Betreuung
+              direkt vor Ort.
               <br /><br />
-              Viele Unternehmen verlieren täglich Kunden durch veraltete,
-              langsame oder nicht mobiloptimierte Websites. Eine moderne,
-              **benutzerfreundliche Website** hingegen schafft Vertrauen,
-              generiert Leads und steigert Ihren Umsatz – rund um die Uhr.
+              Viele Mindener Unternehmen verlieren täglich potenzielle Kunden
+              durch veraltete oder nicht mobiloptimierte Websites. Eine
+              **moderne, benutzerfreundliche Website** hingegen schafft
+              Vertrauen bei Ihren lokalen Kunden und steigert Ihren Umsatz –
+              rund um die Uhr.
               <br /><br />
-              Wir erstellen **maßgeschneiderte Websites**, die nicht nur optisch
-              überzeugen, sondern auch technisch auf dem neuesten Stand sind.
-              Mit **SEO-optimierten Inhalten** und einer
-              **conversion-orientierten Struktur** sorgen wir dafür, dass Ihre
-              Website bei Google gut rankt und Besucher zu Kunden macht.
+              Wir erstellen **maßgeschneiderte Websites für Minden**, die nicht
+              nur optisch überzeugen, sondern auch bei Google für "Minden + Ihr
+              Service" optimal gefunden werden. Mit **lokaler SEO-Optimierung**
+              und einer **conversion-orientierten Struktur** bringen wir mehr
+              Mindener Kunden zu Ihnen.
             </p>
           </div>
 
@@ -1074,30 +1077,30 @@ import HeroContactForm from "../components/HeroContactForm.vue";
 
 const route = useRoute();
 
-// SEO Meta Tags für Webdesign & Website-Erstellung in Bad Oeynhausen und Umgebung
+// SEO Meta Tags für Webdesign & Website-Erstellung in Bad Oeynhausen
 useHead({
   title:
-    "Website erstellen lassen in Bad Oeynhausen | Webdesign & Landingpages | Orangize",
+    "Website erstellen lassen in Bad Oeynhausen | Lokale Webdesign Agentur | Orangize",
   meta: [
     {
       name: "description",
       content:
-        "Website erstellen lassen in Bad Oeynhausen ✓ Maßgeschneiderte Websiten & Landingpages ✓ Responsive Design ✓ SEO-optimiert ✓ Für Herford, Minden & Umgebung.",
+        "Website erstellen lassen in Bad Oeynhausen ✓ Ihre lokale Webdesign Agentur ✓ Responsive Design ✓ SEO-optimiert ✓ Persönliche Betreuung direkt aus Bad Oeynhausen.",
     },
     {
       name: "keywords",
       content:
-        "Website erstellen lassen bad oeynhausen, webdesign bad oeynhausen, landingpage erstellen lassen, homepage erstellen lassen, werbe herford, webdesign minden, porta westfalica webdesign, professionelle Website erstellen",
+        "Website erstellen lassen bad oeynhausen, webdesign bad oeynhausen, homepage erstellen bad oeynhausen, landingpage bad oeynhausen, webdesign agentur bad oeynhausen, professionelle Website bad oeynhausen, responsive webdesign bad oeynhausen",
     },
     {
       property: "og:title",
       content:
-        "Website erstellen lassen in Bad Oeynhausen | Webdesign & Landingpages | Orangize",
+        "Website erstellen lassen in Bad Oeynhausen | Lokale Webdesign Agentur | Orangize",
     },
     {
       property: "og:description",
       content:
-        "Professionelles Webdesign & moderne Websiten für Bad Oeynhausen, Herford, Minden & Umgebung. Individuelle Umsetzung und persönliche Beratung.",
+        "Ihre Webdesign-Agentur direkt aus Bad Oeynhausen. Professionelle Websites und persönliche Betreuung für Unternehmen in Bad Oeynhausen und Ostwestfalen.",
     },
     {
       property: "og:type",

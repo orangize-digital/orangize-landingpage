@@ -3,73 +3,77 @@
     <Navigation />
     <!-- Hero Section -->
     <div
-      class="hero min-h-[110vh] relative bg-[url('@/assets/images/website-erstellen-hero.jpg')] mt-28 lg:mt-0"
+      class="hero min-h-[110vh] relative bg-[url('@/assets/images/google-ads-hero.jpeg')] mt-28 lg:mt-0"
     >
-      <div class="hero-overlay bg-black bg-opacity-95"></div>
-      <div class="hero-content relative z-10 w-full max-w-7xl mx-auto px-4">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <!-- Left Side - Content -->
-          <div class="text-left text-neutral-content" data-aos="fade-right">
-            <div class="mb-4">
-              <span class="text-primary font-semibold text-lg">
-                Professionelle Websiten
-              </span>
-            </div>
-            <h1
-              class="text-4xl lg:text-6xl text-white font-bold mb-6 leading-tight"
-            >
-              Website erstellen lassen
-              <span class="text-primary">für Ihren Erfolg</span>
-            </h1>
-            <p class="text-xl lg:text-2xl mb-6 text-neutral-content/90">
-              Maßgeschneiderte Websites & Landingpages, die Besucher in Kunden
-              verwandeln – Ihr digitaler Erfolg beginnt hier
-            </p>
-            <div class="space-y-4 mb-8">
-              <div class="flex items-center gap-3">
-                <div class="w-2 h-2 bg-primary rounded-full"></div>
-                <span class="text-lg">Responsive Design für alle Geräte</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <div class="w-2 h-2 bg-primary rounded-full"></div>
-                <span class="text-lg">
-                  SEO-optimiert für bessere Google-Rankings
-                </span>
-              </div>
-              <div class="flex items-center gap-3">
-                <div class="w-2 h-2 bg-primary rounded-full"></div>
-                <span class="text-lg">
-                  Conversion-optimiert für mehr Kunden
-                </span>
-              </div>
-            </div>
-            <div class="flex flex-col sm:flex-row gap-4">
-              <button
-                class="btn btn-primary bg-[#f60] border-none hover:bg-[#f60]/90 text-white px-8"
-                @click="scrollToSection('kontakt')"
-              >
-                Kostenloses Angebot erhalten
-              </button>
-              <button
-                class="btn btn-outline border-white text-white hover:bg-white hover:text-black px-8"
-                @click="scrollToSection('projekte')"
-              >
-                Referenzen ansehen
-              </button>
-            </div>
-          </div>
-
-          <!-- Right Side - Contact Form -->
+      <div class="hero-overlay bg-black bg-opacity-80"></div>
+      <div class="hero-content relative z-10 w-full">
+        <div class="container mx-auto px-4">
           <div
-            class="flex justify-center lg:justify-end"
-            data-aos="fade-left"
-            data-aos-delay="200"
+            class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]"
           >
-            <HeroContactForm />
+            <!-- Text Content -->
+            <div data-aos="fade-right">
+              <h1
+                class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
+              >
+                Google Ads Agentur in
+                <span class="text-primary">Minden</span>
+              </h1>
+              <p class="text-xl text-white mb-8 leading-relaxed">
+                Professionelle Google Ads Betreuung direkt aus Minden.
+                Maximieren Sie Ihren ROI mit gezielten Kampagnen für das
+                Weserbergland.
+              </p>
+
+              <div class="space-y-4 mb-8">
+                <div class="flex items-center gap-3">
+                  <div class="w-2 h-2 bg-primary rounded-full"></div>
+                  <span class="text-white"
+                    >Sofortige Sichtbarkeit bei Google</span
+                  >
+                </div>
+                <div class="flex items-center gap-3">
+                  <div class="w-2 h-2 bg-primary rounded-full"></div>
+                  <span class="text-white"
+                    >Messbare Ergebnisse & ROI-Optimierung</span
+                  >
+                </div>
+                <div class="flex items-center gap-3">
+                  <div class="w-2 h-2 bg-primary rounded-full"></div>
+                  <span class="text-white"
+                    >Persönliche Betreuung aus Minden</span
+                  >
+                </div>
+              </div>
+
+              <div class="flex flex-col sm:flex-row gap-4">
+                <button
+                  class="btn bg-[#f60] text-neutral-content border-none hover:bg-[#f60]/90 text-lg px-8"
+                  onclick="window.open('https://zeeg.me/orangize', '_blank')"
+                >
+                  Kostenlose Beratung
+                </button>
+                <button
+                  class="btn btn-outline border-white text-white hover:bg-white hover:text-black text-lg px-8"
+                  @click="scrollToSection('leistungen')"
+                >
+                  Unsere Leistungen
+                </button>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div data-aos="fade-left" class="relative">
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl blur-xl"
+              ></div>
+              <div class="relative">
+                <HeroContactForm />
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Scroll indicator -->
       <div class="absolute bottom-8 w-full flex justify-center">
         <a
           href="#"
@@ -78,10 +82,10 @@
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-8 w-8"
+            class="h-10 w-10"
             fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+            viewBox="0 0 24 24 "
+            stroke="#fff"
           >
             <path
               stroke-linecap="round"
@@ -99,14 +103,14 @@
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
           <h3 class="text-lg text-primary font-semibold" data-aos="fade-up">
-            Ihre Website ist Ihr digitales Aushängeschild
+            Google Ads - Ihr direkter Weg zu neuen Kunden
           </h3>
           <h2
             class="text-4xl text-base-content font-bold"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            Warum Sie eine professionelle Website brauchen
+            Warum Sie auf Google Ads setzen sollten
           </h2>
         </div>
 
@@ -114,20 +118,20 @@
           <!-- Linke Seite: Detaillierte Beschreibung -->
           <div data-aos="fade-right">
             <p class="text-lg text-base-content leading-relaxed">
-              In der heutigen digitalen Welt ist Ihre Website oft der erste
-              Kontaktpunkt mit potenziellen Kunden. Ein professioneller
-              Webauftritt ist daher unverzichtbar für Ihren Geschäftserfolg.
+              Google Ads ist das effektivste Instrument, um genau dann gefunden
+              zu werden, wenn potenzielle Kunden aktiv nach Ihren Produkten oder
+              Dienstleistungen suchen. Anders als bei klassischer Werbung
+              erreichen Sie hier Menschen mit konkretem Kaufinteresse.
               <br /><br />
-              Viele Unternehmen verlieren täglich Kunden durch veraltete,
-              langsame oder nicht mobiloptimierte Websites. Eine moderne,
-              **benutzerfreundliche Website** hingegen schafft Vertrauen,
-              generiert Leads und steigert Ihren Umsatz – rund um die Uhr.
+              Viele Unternehmen verschwenden jedoch ihr Budget durch falsch
+              eingerichtete Kampagnen, unpassende Keywords oder ineffiziente
+              Anzeigentexte. Das Ergebnis: hohe Kosten, aber wenig Conversions.
               <br /><br />
-              Wir erstellen **maßgeschneiderte Websites**, die nicht nur optisch
-              überzeugen, sondern auch technisch auf dem neuesten Stand sind.
-              Mit **SEO-optimierten Inhalten** und einer
-              **conversion-orientierten Struktur** sorgen wir dafür, dass Ihre
-              Website bei Google gut rankt und Besucher zu Kunden macht.
+              Unsere **Google Ads Experten** entwickeln für Sie maßgeschneiderte
+              Kampagnen, die **gezielt auf Ihre Zielgruppe ausgerichtet** sind.
+              Durch kontinuierliche Optimierung und datenbasierte Entscheidungen
+              **maximieren wir Ihren ROI** und sorgen für einen stetigen Strom
+              qualifizierter Leads und Neukunden.
             </p>
           </div>
 
@@ -135,7 +139,7 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <!-- Vorteil 1 -->
             <div class="flex items-start space-x-4" data-aos="fade-up">
-              <div class="p-3 bg-primary text-primary-content rounded-full">
+              <div class="p-3 bg-primary text-neutral-content rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -147,19 +151,23 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 >
-                  <rect width="18" height="18" x="3" y="3" rx="2" />
-                  <path d="M7 7h10" />
-                  <path d="M7 12h10" />
-                  <path d="M7 17h10" />
+                  <path d="M12 2v8" />
+                  <path d="m4.93 10.93 1.41 1.41" />
+                  <path d="M2 18h2" />
+                  <path d="M20 18h2" />
+                  <path d="m19.07 10.93-1.41 1.41" />
+                  <path d="M22 22H2" />
+                  <path d="m16 6-4 4-4-4" />
+                  <path d="M16 18a4 4 0 0 0-8 0" />
                 </svg>
               </div>
               <div>
                 <h4 class="text-xl text-base-content font-semibold mb-2">
-                  Responsive Design
+                  Sofortige Sichtbarkeit
                 </h4>
                 <p class="text-base-content">
-                  Perfekte Darstellung auf allen Geräten – vom Smartphone bis
-                  zum Desktop
+                  Direkt auf Seite 1 bei Google - ohne monatelanges Warten auf
+                  SEO-Ergebnisse
                 </p>
               </div>
             </div>
@@ -170,7 +178,7 @@
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <div class="p-3 bg-primary text-primary-content rounded-full">
+              <div class="p-3 bg-primary text-neutral-content rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -182,17 +190,16 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 >
-                  <path
-                    d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"
-                  />
+                  <path d="M3 3v18h18" />
+                  <path d="m19 9-5 5-4-4-3 3" />
                 </svg>
               </div>
               <div>
                 <h4 class="text-xl text-base-content font-semibold mb-2">
-                  Modernes Design
+                  Messbare Ergebnisse
                 </h4>
                 <p class="text-base-content">
-                  Zeitgemäße Optik, die Ihre Marke perfekt repräsentiert
+                  Volle Transparenz über Kosten, Klicks, Conversions und ROI
                 </p>
               </div>
             </div>
@@ -203,7 +210,7 @@
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <div class="p-3 bg-primary text-primary-content rounded-full">
+              <div class="p-3 bg-primary text-neutral-content rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -215,27 +222,18 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 >
-                  <path d="M9 10h.01" />
-                  <path d="M15 10h.01" />
-                  <path
-                    d="M12 18H9.2c-3.2 0-4.8 0-6-1.2C2 15.6 2 14 2 10.8V4h20v6.8c0 3.2 0 4.8-1.2 6-1.2 1.2-2.8 1.2-6 1.2H12Z"
-                  />
-                  <path d="M2 4h20" />
-                  <path d="M4 2v2" />
-                  <path d="M10 2v2" />
-                  <path d="M16 2v2" />
-                  <path d="M22 10v2" />
-                  <path d="M12 10v2" />
-                  <path d="M12 12a4 4 0 0 0 4 4h4" />
+                  <circle cx="12" cy="12" r="10" />
+                  <circle cx="12" cy="12" r="6" />
+                  <circle cx="12" cy="12" r="2" />
                 </svg>
               </div>
               <div>
                 <h4 class="text-xl text-base-content font-semibold mb-2">
-                  SEO-Optimierung
+                  Präzises Targeting
                 </h4>
                 <p class="text-base-content">
-                  Bessere Rankings bei Google durch technische und inhaltliche
-                  Optimierung
+                  Erreichen Sie genau die Zielgruppe, die für Ihr Angebot
+                  relevant ist
                 </p>
               </div>
             </div>
@@ -246,7 +244,7 @@
               data-aos="fade-up"
               data-aos-delay="300"
             >
-              <div class="p-3 bg-primary text-primary-content rounded-full">
+              <div class="p-3 bg-primary text-neutral-content rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -264,11 +262,11 @@
               </div>
               <div>
                 <h4 class="text-xl text-base-content font-semibold mb-2">
-                  Conversion-Optimierung
+                  Volle Kostenkontrolle
                 </h4>
                 <p class="text-base-content">
-                  Strategische Gestaltung, die Besucher zu zahlenden Kunden
-                  macht
+                  Flexibles Budget und Bezahlung nur bei tatsächlichem Interesse
+                  (Pay-per-Click)
                 </p>
               </div>
             </div>
@@ -282,14 +280,14 @@
       <div class="container mx-auto px-4">
         <div class="text-center mb-16">
           <h3 class="text-lg text-primary font-semibold" data-aos="fade-up">
-            Unsere Webdesign-Leistungen
+            Unsere Google Ads Leistungen
           </h3>
           <h2
             class="text-4xl text-base-content font-bold"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            Maßgeschneiderte Website-Lösungen für Ihr Business
+            Maßgeschneiderte Google Ads Strategien für Ihren Erfolg
           </h2>
         </div>
 
@@ -314,25 +312,22 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 >
-                  <rect width="18" height="18" x="3" y="3" rx="2" />
-                  <path d="M9 14v1" />
-                  <path d="M9 19v2" />
-                  <path d="M9 3v2" />
-                  <path d="M9 9v1" />
-                  <path d="M15 14v1" />
-                  <path d="M15 19v2" />
-                  <path d="M15 3v2" />
-                  <path d="M15 9v1" />
+                  <path d="M4 11v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8" />
+                  <path d="M4 11V7a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v4" />
+                  <path d="M4 11H2" />
+                  <path d="M22 11h-2" />
+                  <path d="m8 14 4 4 4-4" />
+                  <path d="M12 18v-7" />
                 </svg>
               </div>
               <h3 class="text-2xl font-bold text-base-content mb-4">
-                Unternehmenswebsites
+                Google Suchanzeigen
               </h3>
               <p class="text-base-content mb-6">
-                Professionelle Firmenwebsites, die Ihr Unternehmen optimal
-                präsentieren und Vertrauen bei potenziellen Kunden schaffen. Mit
-                allen wichtigen Elementen wie Über uns, Leistungen, Referenzen
-                und Kontakt.
+                Erreichen Sie potenzielle Kunden genau dann, wenn sie aktiv nach
+                Ihren Produkten oder Dienstleistungen suchen. Unsere
+                Suchanzeigen-Kampagnen bringen qualifizierte Leads auf Ihre
+                Website.
               </p>
               <ul class="space-y-2 mb-6">
                 <li class="flex items-center text-base-content">
@@ -350,7 +345,7 @@
                   >
                     <path d="M20 6 9 17l-5-5" />
                   </svg>
-                  Responsive Design
+                  Keyword-Recherche & -Analyse
                 </li>
                 <li class="flex items-center text-base-content">
                   <svg
@@ -367,7 +362,7 @@
                   >
                     <path d="M20 6 9 17l-5-5" />
                   </svg>
-                  SEO-Optimierung
+                  Conversion-optimierte Anzeigentexte
                 </li>
                 <li class="flex items-center text-base-content">
                   <svg
@@ -384,12 +379,12 @@
                   >
                     <path d="M20 6 9 17l-5-5" />
                   </svg>
-                  Content Management System
+                  Negative Keywords & Gebotsstrategien
                 </li>
               </ul>
               <button
-                class="btn btn-primary w-full"
-                @click="openPricingModal('Unternehmenswebsite')"
+                class="btn bg-[#f60] text-neutral-content border-none hover:bg-[#f60]/90 w-full"
+                @click="openPricingModal('Google Suchanzeigen')"
               >
                 Angebot anfordern
               </button>
@@ -417,19 +412,18 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 >
-                  <path d="M12 2H2v10h10V2Z" />
-                  <path d="M22 12h-10v10h10V12Z" />
-                  <path d="M12 12H2v10h10V12Z" />
-                  <path d="M22 2h-10v10h10V2Z" />
+                  <rect width="16" height="16" x="4" y="4" rx="2" />
+                  <path d="M4 12h16" />
+                  <path d="M12 4v16" />
                 </svg>
               </div>
               <h3 class="text-2xl font-bold text-base-content mb-4">
-                Landing Pages
+                Google Display Kampagnen
               </h3>
               <p class="text-base-content mb-6">
-                Conversion-optimierte Landing Pages für Ihre Werbekampagnen.
-                Speziell entwickelt, um Besucher in Leads oder Kunden zu
-                verwandeln – ideal für Google Ads und andere Marketingmaßnahmen.
+                Steigern Sie Ihre Markenbekanntheit und erreichen Sie
+                potenzielle Kunden mit visuell ansprechenden Anzeigen auf
+                Millionen von Websites im Google Display-Netzwerk.
               </p>
               <ul class="space-y-2 mb-6">
                 <li class="flex items-center text-base-content">
@@ -447,7 +441,7 @@
                   >
                     <path d="M20 6 9 17l-5-5" />
                   </svg>
-                  Conversion-optimiert
+                  Professionelles Anzeigendesign
                 </li>
                 <li class="flex items-center text-base-content">
                   <svg
@@ -464,7 +458,7 @@
                   >
                     <path d="M20 6 9 17l-5-5" />
                   </svg>
-                  A/B-Testing
+                  Zielgruppenbasiertes Targeting
                 </li>
                 <li class="flex items-center text-base-content">
                   <svg
@@ -481,12 +475,12 @@
                   >
                     <path d="M20 6 9 17l-5-5" />
                   </svg>
-                  Tracking & Analyse
+                  Remarketing-Strategien
                 </li>
               </ul>
               <button
-                class="btn btn-primary w-full"
-                @click="openPricingModal('Landing Page')"
+                class="btn bg-[#f60] text-neutral-content border-none hover:bg-[#f60]/90 w-full"
+                @click="openPricingModal('Google Display Kampagne')"
               >
                 Angebot anfordern
               </button>
@@ -515,17 +509,19 @@
                   stroke-linejoin="round"
                 >
                   <path
-                    d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"
+                    d="M2 12a5 5 0 0 0 5 5 8 8 0 0 1 5 2 8 8 0 0 1 5-2 5 5 0 0 0 5-5V7h-5a8 8 0 0 0-5 2 8 8 0 0 0-5-2H2Z"
                   />
+                  <path d="M6 11c1.5 0 3 .5 3 2-2 0-3 0-3-2Z" />
+                  <path d="M18 11c-1.5 0-3 .5-3 2 2 0 3 0 3-2Z" />
                 </svg>
               </div>
               <h3 class="text-2xl font-bold text-base-content mb-4">
-                Online-Shops
+                Google Shopping Kampagnen
               </h3>
               <p class="text-base-content mb-6">
-                Professionelle E-Commerce-Lösungen, die Ihnen den Einstieg in
-                den Online-Handel ermöglichen. Mit benutzerfreundlichem Design
-                und sicheren Zahlungsmethoden für optimale Conversion-Raten.
+                Präsentieren Sie Ihre Produkte mit Bild, Preis und Shopname
+                direkt in den Google-Suchergebnissen. Ideal für Online-Shops und
+                E-Commerce-Unternehmen.
               </p>
               <ul class="space-y-2 mb-6">
                 <li class="flex items-center text-base-content">
@@ -543,7 +539,7 @@
                   >
                     <path d="M20 6 9 17l-5-5" />
                   </svg>
-                  Produktkatalog
+                  Produktdaten-Optimierung
                 </li>
                 <li class="flex items-center text-base-content">
                   <svg
@@ -560,7 +556,7 @@
                   >
                     <path d="M20 6 9 17l-5-5" />
                   </svg>
-                  Sichere Zahlungsmethoden
+                  Feed-Einrichtung & -Management
                 </li>
                 <li class="flex items-center text-base-content">
                   <svg
@@ -577,12 +573,12 @@
                   >
                     <path d="M20 6 9 17l-5-5" />
                   </svg>
-                  Bestandsverwaltung
+                  ROAS-Optimierung
                 </li>
               </ul>
               <button
-                class="btn btn-primary w-full"
-                @click="openPricingModal('Online-Shop')"
+                class="btn bg-[#f60] text-neutral-content border-none hover:bg-[#f60]/90 w-full"
+                @click="openPricingModal('Google Shopping Kampagne')"
               >
                 Angebot anfordern
               </button>
@@ -604,7 +600,7 @@
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            So erstellen wir Ihre Website
+            So optimieren wir Ihre Google Ads Kampagnen
           </h2>
         </div>
 
@@ -616,16 +612,16 @@
           >
             <div class="card-body text-center">
               <div
-                class="w-16 h-16 rounded-full bg-primary text-primary-content flex items-center justify-center text-2xl font-bold mx-auto mb-6"
+                class="w-16 h-16 rounded-full bg-[#f60]/30 text-neutral-content flex items-center justify-center text-2xl font-bold mx-auto mb-6"
               >
                 1
               </div>
               <h3 class="text-xl font-bold text-base-content mb-4">
-                Beratung & Analyse
+                Analyse & Strategie
               </h3>
               <p class="text-base-content">
                 Wir analysieren Ihre Ziele, Zielgruppe und Wettbewerber, um eine
-                maßgeschneiderte Strategie zu entwickeln.
+                maßgeschneiderte Google Ads Strategie zu entwickeln.
               </p>
             </div>
           </div>
@@ -638,16 +634,16 @@
           >
             <div class="card-body text-center">
               <div
-                class="w-16 h-16 rounded-full bg-primary text-primary-content flex items-center justify-center text-2xl font-bold mx-auto mb-6"
+                class="w-16 h-16 rounded-full bg-[#f60]/30 text-neutral-content flex items-center justify-center text-2xl font-bold mx-auto mb-6"
               >
                 2
               </div>
               <h3 class="text-xl font-bold text-base-content mb-4">
-                Konzeption & Design
+                Kampagnen-Setup
               </h3>
               <p class="text-base-content">
-                Wir erstellen ein maßgeschneidertes Design-Konzept, das Ihre
-                Marke perfekt repräsentiert und Ihre Ziele unterstützt.
+                Wir erstellen optimierte Kampagnenstrukturen, recherchieren
+                Keywords und entwickeln überzeugende Anzeigentexte.
               </p>
             </div>
           </div>
@@ -660,16 +656,16 @@
           >
             <div class="card-body text-center">
               <div
-                class="w-16 h-16 rounded-full bg-primary text-primary-content flex items-center justify-center text-2xl font-bold mx-auto mb-6"
+                class="w-16 h-16 rounded-full bg-[#f60]/30 text-neutral-content flex items-center justify-center text-2xl font-bold mx-auto mb-6"
               >
                 3
               </div>
               <h3 class="text-xl font-bold text-base-content mb-4">
-                Entwicklung
+                Kontinuierliche Optimierung
               </h3>
               <p class="text-base-content">
-                Unsere Entwickler setzen das Design um und integrieren alle
-                gewünschten Funktionen und Inhalte.
+                Wir überwachen und optimieren Ihre Kampagnen laufend, um die
+                Performance zu steigern und Kosten zu senken.
               </p>
             </div>
           </div>
@@ -682,16 +678,16 @@
           >
             <div class="card-body text-center">
               <div
-                class="w-16 h-16 rounded-full bg-primary text-primary-content flex items-center justify-center text-2xl font-bold mx-auto mb-6"
+                class="w-16 h-16 rounded-full bg-[#f60]/30 text-neutral-content flex items-center justify-center text-2xl font-bold mx-auto mb-6"
               >
                 4
               </div>
               <h3 class="text-xl font-bold text-base-content mb-4">
-                Launch & Optimierung
+                Reporting & Analyse
               </h3>
               <p class="text-base-content">
-                Nach umfangreichen Tests geht Ihre Website online und wird
-                kontinuierlich optimiert und verbessert.
+                Sie erhalten regelmäßige, transparente Reports mit allen
+                wichtigen KPIs und Optimierungsvorschlägen.
               </p>
             </div>
           </div>
@@ -699,29 +695,27 @@
       </div>
     </section>
 
-    <!-- Projekte Section -->
-    <Projects />
-
-    <!-- SEO Section -->
-    <section id="seo" class="py-20 bg-base-200">
+    <!-- Conversion Tracking Section -->
+    <section id="tracking" class="py-20 bg-base-200">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div data-aos="fade-right">
             <h3 class="text-lg text-primary font-semibold mb-4">
-              Suchmaschinenoptimierung
+              Conversion Tracking & Analyse
             </h3>
             <h2 class="text-4xl text-base-content font-bold mb-6">
-              Besser gefunden werden mit SEO
+              Datenbasierte Entscheidungen für maximalen ROI
             </h2>
             <p class="text-lg text-base-content mb-6">
-              Eine schöne Website nützt wenig, wenn sie niemand findet. Deshalb
-              integrieren wir von Anfang an umfassende SEO-Maßnahmen in jede
-              Website, die wir erstellen.
+              Ohne präzises Tracking ist Google Ads wie Blindflug. Wir
+              implementieren umfassendes Conversion Tracking, um genau zu
+              messen, welche Kampagnen, Keywords und Anzeigen tatsächlich zu
+              Leads, Verkäufen und Umsatz führen.
             </p>
             <ul class="space-y-4">
               <li class="flex items-start gap-4">
                 <div
-                  class="p-2 bg-primary text-primary-content rounded-full mt-1"
+                  class="p-2 bg-primary text-neutral-content rounded-full mt-1"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -738,16 +732,18 @@
                   </svg>
                 </div>
                 <div>
-                  <h4 class="font-bold text-base-content">Technische SEO</h4>
+                  <h4 class="font-bold text-base-content">
+                    Präzises Conversion Tracking
+                  </h4>
                   <p class="text-base-content">
-                    Optimale Ladezeiten, mobile Optimierung, strukturierte Daten
-                    und sauberer Code für bessere Rankings.
+                    Wir messen Leads, Anrufe, Formularausfüllungen und Verkäufe,
+                    um den exakten ROI Ihrer Kampagnen zu bestimmen.
                   </p>
                 </div>
               </li>
               <li class="flex items-start gap-4">
                 <div
-                  class="p-2 bg-primary text-primary-content rounded-full mt-1"
+                  class="p-2 bg-primary text-neutral-content rounded-full mt-1"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -764,16 +760,18 @@
                   </svg>
                 </div>
                 <div>
-                  <h4 class="font-bold text-base-content">On-Page SEO</h4>
+                  <h4 class="font-bold text-base-content">
+                    Datenbasierte Optimierung
+                  </h4>
                   <p class="text-base-content">
-                    Keyword-optimierte Inhalte, Meta-Tags, Überschriften und
-                    interne Verlinkung für bessere Sichtbarkeit.
+                    Auf Basis der Tracking-Daten optimieren wir kontinuierlich
+                    Ihre Kampagnen für bessere Performance.
                   </p>
                 </div>
               </li>
               <li class="flex items-start gap-4">
                 <div
-                  class="p-2 bg-primary text-primary-content rounded-full mt-1"
+                  class="p-2 bg-primary text-neutral-content rounded-full mt-1"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -790,62 +788,12 @@
                   </svg>
                 </div>
                 <div>
-                  <h4 class="font-bold text-base-content">Technische SEO</h4>
+                  <h4 class="font-bold text-base-content">
+                    Transparente Berichte
+                  </h4>
                   <p class="text-base-content">
-                    Optimale Ladezeiten, mobile Optimierung, strukturierte Daten
-                    und sauberer Code für bessere Rankings.
-                  </p>
-                </div>
-              </li>
-              <li class="flex items-start gap-4">
-                <div
-                  class="p-2 bg-primary text-primary-content rounded-full mt-1"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 6 9 17l-5-5" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-bold text-base-content">On-Page SEO</h4>
-                  <p class="text-base-content">
-                    Keyword-optimierte Inhalte, Meta-Tags, Überschriften und
-                    interne Verlinkung für bessere Sichtbarkeit.
-                  </p>
-                </div>
-              </li>
-              <li class="flex items-start gap-4">
-                <div
-                  class="p-2 bg-primary text-primary-content rounded-full mt-1"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 6 9 17l-5-5" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-bold text-base-content">Local SEO</h4>
-                  <p class="text-base-content">
-                    Optimierung für lokale Suchanfragen, Google My Business und
-                    lokale Backlinks für regionale Unternehmen.
+                    Regelmäßige, verständliche Reports zeigen Ihnen genau, wie
+                    Ihr Budget eingesetzt wird und welche Ergebnisse es bringt.
                   </p>
                 </div>
               </li>
@@ -853,8 +801,8 @@
           </div>
           <div data-aos="fade-left">
             <img
-              src="@/assets/images/seo-illustration.png"
-              alt="SEO Optimierung"
+              src="@/assets/images/google-ads-analytics.gif"
+              alt="Google Ads Analytics"
               class="rounded-lg shadow-xl w-full"
             />
           </div>
@@ -874,7 +822,7 @@
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            Website erstellen lassen für verschiedene Branchen
+            Google Ads für verschiedene Branchen
           </h2>
         </div>
 
@@ -884,64 +832,69 @@
           <div
             class="bg-base-100 p-4 rounded-lg border border-primary/20 text-center"
           >
-            <p class="text-base-content">Website erstellen lassen</p>
+            <p class="text-base-content">Google Ads einrichten</p>
           </div>
           <div
             class="bg-base-100 p-4 rounded-lg border border-primary/20 text-center"
           >
-            <p class="text-base-content">Webdesign Agentur</p>
+            <p class="text-base-content">Google Ads optimieren</p>
           </div>
           <div
             class="bg-base-100 p-4 rounded-lg border border-primary/20 text-center"
           >
-            <p class="text-base-content">Professionelle Website</p>
+            <p class="text-base-content">Google Ads Agentur</p>
           </div>
           <div
             class="bg-base-100 p-4 rounded-lg border border-primary/20 text-center"
           >
-            <p class="text-base-content">Homepage erstellen</p>
+            <p class="text-base-content">Google Ads Beratung</p>
           </div>
           <div
             class="bg-base-100 p-4 rounded-lg border border-primary/20 text-center"
           >
-            <p class="text-base-content">Landingpage erstellen</p>
+            <p class="text-base-content">Google Ads für Handwerker</p>
           </div>
           <div
             class="bg-base-100 p-4 rounded-lg border border-primary/20 text-center"
           >
-            <p class="text-base-content">Website für Handwerker</p>
+            <p class="text-base-content">Google Ads für Ärzte</p>
           </div>
           <div
             class="bg-base-100 p-4 rounded-lg border border-primary/20 text-center"
           >
-            <p class="text-base-content">Website für Ärzte</p>
+            <p class="text-base-content">Google Ads für Anwälte</p>
           </div>
           <div
             class="bg-base-100 p-4 rounded-lg border border-primary/20 text-center"
           >
-            <p class="text-base-content">Online-Shop erstellen</p>
+            <p class="text-base-content">Google Shopping Kampagne</p>
           </div>
           <div
             class="bg-base-100 p-4 rounded-lg border border-primary/20 text-center"
           >
-            <p class="text-base-content">Website für Anwälte</p>
+            <p class="text-base-content">Google Ads Kosten senken</p>
           </div>
           <div
             class="bg-base-100 p-4 rounded-lg border border-primary/20 text-center"
           >
-            <p class="text-base-content">Responsive Webdesign</p>
+            <p class="text-base-content">Google Ads Conversion steigern</p>
           </div>
           <div
             class="bg-base-100 p-4 rounded-lg border border-primary/20 text-center"
           >
-            <p class="text-base-content">SEO-optimierte Website</p>
+            <p class="text-base-content">Google Ads Remarketing</p>
+          </div>
+          <div
+            class="bg-base-100 p-4 rounded-lg border border-primary/20 text-center"
+          >
+            <p class="text-base-content">Google Ads Qualitätsfaktor</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Regionale Präsenz Section einfügen -->
-    <RegionalePraesenz />
+    <RegionalePraesenzGoogleAds />
 
     <!-- CTA Section -->
     <CTA />
@@ -958,7 +911,7 @@
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            Alles Wichtige zum Thema Website erstellen
+            Alles Wichtige zu Google Ads
           </h2>
         </div>
 
@@ -968,18 +921,20 @@
             <div class="collapse collapse-plus bg-base-100">
               <input type="radio" name="faq-accordion" checked="checked" />
               <div class="collapse-title text-xl font-medium text-base-content">
-                Was kostet eine professionelle Website?
+                Was kostet Google Ads?
               </div>
               <div class="collapse-content text-base-content">
                 <p>
-                  Die Kosten für eine professionelle Website hängen von
-                  verschiedenen Faktoren ab: Umfang, Design, Funktionen und
-                  Ihren individuellen Anforderungen. Eine einfache
-                  Unternehmenswebsite beginnt bei etwa 699€, während komplexere
-                  Projekte wie Online-Shops oder umfangreiche Portale
-                  entsprechend höher liegen. In einem kostenlosen Erstgespräch
-                  analysieren wir Ihre Anforderungen und erstellen ein
-                  maßgeschneidertes Angebot.
+                  Die Kosten für Google Ads setzen sich aus zwei Komponenten
+                  zusammen: 1) Die Klickkosten, die Sie an Google zahlen
+                  (Pay-per-Click) und 2) die Kosten für die professionelle
+                  Betreuung. Die Klickkosten variieren je nach Branche und
+                  Wettbewerb erheblich - von wenigen Cent bis zu über 10€ pro
+                  Klick. Für die Betreuung bieten wir verschiedene Pakete ab
+                  500€ monatlich an, abhängig vom Umfang und Budget Ihrer
+                  Kampagnen. In einem kostenlosen Erstgespräch analysieren wir
+                  Ihre Anforderungen und erstellen ein maßgeschneidertes
+                  Angebot.
                 </p>
               </div>
             </div>
@@ -988,16 +943,18 @@
             <div class="collapse collapse-plus bg-base-100">
               <input type="radio" name="faq-accordion" />
               <div class="collapse-title text-xl font-medium text-base-content">
-                Wie lange dauert die Erstellung einer Website?
+                Wie schnell sehe ich Ergebnisse mit Google Ads?
               </div>
               <div class="collapse-content text-base-content">
                 <p>
-                  Die Entwicklungszeit variiert je nach Projektumfang. Eine
-                  einfache Website kann innerhalb von 2-4 Wochen fertiggestellt
-                  werden, während komplexere Projekte 2-3 Monate oder länger
-                  dauern können. Wir erstellen zu Beginn einen detaillierten
-                  Zeitplan und halten Sie während des gesamten Prozesses auf dem
-                  Laufenden.
+                  Der große Vorteil von Google Ads ist die sofortige
+                  Sichtbarkeit. Sobald Ihre Kampagnen live sind, können Sie in
+                  den Suchergebnissen erscheinen und erste Klicks generieren.
+                  Die ersten messbaren Ergebnisse in Form von Leads oder
+                  Verkäufen sehen Sie typischerweise innerhalb der ersten Woche.
+                  Die volle Performance wird jedoch erst nach einigen Wochen
+                  erreicht, wenn wir genügend Daten für die Optimierung
+                  gesammelt haben.
                 </p>
               </div>
             </div>
@@ -1006,16 +963,18 @@
             <div class="collapse collapse-plus bg-base-100">
               <input type="radio" name="faq-accordion" />
               <div class="collapse-title text-xl font-medium text-base-content">
-                Wie wird meine Website bei Google gefunden?
+                Welches Budget sollte ich für Google Ads einplanen?
               </div>
               <div class="collapse-content text-base-content">
                 <p>
-                  Wir integrieren von Anfang an umfassende SEO-Maßnahmen in Ihre
-                  Website. Dazu gehören technische Optimierungen,
-                  keyword-optimierte Inhalte, Meta-Tags und eine saubere
-                  Struktur. Für noch bessere Ergebnisse empfehlen wir ergänzend
-                  unsere Google Ads Kampagnen, die gezielt Traffic auf Ihre neue
-                  Website lenken.
+                  Das optimale Budget hängt von Ihrer Branche, Ihren Zielen und
+                  dem Wettbewerb ab. Für lokale Dienstleister kann ein
+                  monatliches Werbebudget von 500-1.000€ bereits gute Ergebnisse
+                  bringen, während in wettbewerbsintensiven Branchen oder bei
+                  überregionalen Kampagnen 2.000-5.000€ oder mehr sinnvoll sein
+                  können. Wir beraten Sie individuell, welches Budget für Ihre
+                  Ziele angemessen ist und sorgen dafür, dass jeder Euro
+                  effizient eingesetzt wird.
                 </p>
               </div>
             </div>
@@ -1024,15 +983,37 @@
             <div class="collapse collapse-plus bg-base-100">
               <input type="radio" name="faq-accordion" />
               <div class="collapse-title text-xl font-medium text-base-content">
-                Welche laufenden Kosten entstehen nach der Erstellung?
+                Warum sollte ich eine Agentur für Google Ads beauftragen?
               </div>
               <div class="collapse-content text-base-content">
                 <p>
-                  Nach der Erstellung fallen in der Regel Kosten für Hosting
-                  (Webspace), Domain und ggf. für Wartung und Updates an. Wir
-                  bieten verschiedene Wartungspakete an, die regelmäßige
-                  Updates, Sicherheits-Checks und technischen Support umfassen.
-                  Die genauen Kosten besprechen wir transparent im Erstgespräch.
+                  Google Ads ist ein komplexes System mit vielen Stellschrauben.
+                  Ohne Expertise verschwendet man leicht Budget durch falsche
+                  Einstellungen, unpassende Keywords oder ineffiziente
+                  Anzeigentexte. Als zertifizierte Google Ads Experten kennen
+                  wir alle Optimierungsmöglichkeiten und Best Practices. Unsere
+                  Kunden profitieren von höheren Conversion-Raten, niedrigeren
+                  Klickpreisen und einem deutlich besseren ROI im Vergleich zu
+                  selbst verwalteten Kampagnen.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="collapse collapse-plus bg-base-100">
+              <input type="radio" name="faq-accordion" />
+              <div class="collapse-title text-xl font-medium text-base-content">
+                Wie messen Sie den Erfolg von Google Ads Kampagnen?
+              </div>
+              <div class="collapse-content text-base-content">
+                <p>
+                  Wir implementieren umfassendes Conversion Tracking, um genau
+                  zu messen, welche Kampagnen, Keywords und Anzeigen zu Leads,
+                  Anrufen, Formularausfüllungen oder Verkäufen führen. In
+                  regelmäßigen Reports zeigen wir Ihnen transparent alle
+                  wichtigen KPIs wie Klicks, Conversions, Kosten pro Conversion
+                  und ROI. So sehen Sie genau, welche Ergebnisse Ihr Investment
+                  bringt und wo Optimierungspotenzial besteht.
                 </p>
               </div>
             </div>
@@ -1061,43 +1042,42 @@
 import { ref, onMounted, onUnmounted } from "vue";
 import { useHead } from "@vueuse/head";
 import { useRoute } from "vue-router";
-import Navigation from "../components/Website/Navigation.vue";
+import Navigation from "../components/google-ads/Navigation.vue";
 import Footer from "../components/Footer.vue";
 import ContactForm from "../components/ContactForm.vue";
 import CTAFloatingButtons from "../components/FloatingCallButton.vue";
 import NewsletterForm from "../components/NewsletterForm.vue";
 import PricingModal from "../components/PricingModal.vue";
-import Projects from "../components/Projects.vue";
-import RegionalePraesenz from "../components/Website/RegionalePraesenz.vue";
+import RegionalePraesenzGoogleAds from "../components/google-ads/RegionalePraesenzGoogleAds.vue";
 import CTA from "../components/CTA.vue";
 import HeroContactForm from "../components/HeroContactForm.vue";
 
 const route = useRoute();
 
-// SEO Meta Tags für Webdesign & Website-Erstellung in Bad Oeynhausen und Umgebung
+// SEO Meta Tags für Google Ads Betreuung in Minden und Umgebung
 useHead({
   title:
-    "Website erstellen lassen in Bad Oeynhausen | Webdesign & Landingpages | Orangize",
+    "Google Ads Agentur Minden | Professionelle Kampagnen-Betreuung | Orangize",
   meta: [
     {
       name: "description",
       content:
-        "Website erstellen lassen in Bad Oeynhausen ✓ Maßgeschneiderte Websiten & Landingpages ✓ Responsive Design ✓ SEO-optimiert ✓ Für Herford, Minden & Umgebung.",
+        "Google Ads Agentur Minden ✓ Professionelle Kampagnen für das Weserbergland ✓ ROI-Optimierung ✓ Lokale Expertise ✓ Kostenlose Beratung ✓ Messbare Ergebnisse.",
     },
     {
       name: "keywords",
       content:
-        "Website erstellen lassen bad oeynhausen, webdesign bad oeynhausen, landingpage erstellen lassen, homepage erstellen lassen, werbe herford, webdesign minden, porta westfalica webdesign, professionelle Website erstellen",
+        "google ads minden, google ads agentur minden, sea agentur weserbergland, google ads beratung minden, google adwords minden, google ads optimierung, ppc agentur minden, google kampagnen weserbergland",
     },
     {
       property: "og:title",
       content:
-        "Website erstellen lassen in Bad Oeynhausen | Webdesign & Landingpages | Orangize",
+        "Google Ads Agentur Minden | Professionelle Kampagnen-Betreuung | Orangize",
     },
     {
       property: "og:description",
       content:
-        "Professionelles Webdesign & moderne Websiten für Bad Oeynhausen, Herford, Minden & Umgebung. Individuelle Umsetzung und persönliche Beratung.",
+        "Professionelle Google Ads Agentur in Minden. Spezialisiert auf ROI-Optimierung und messbare Ergebnisse für Unternehmen im Weserbergland. Kostenlose Erstberatung!",
     },
     {
       property: "og:type",

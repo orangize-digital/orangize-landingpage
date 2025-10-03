@@ -3,37 +3,72 @@
     <Navigation />
     <!-- Hero Section -->
     <div
-      class="hero min-h-screen relative bg-[url('@/assets/images/google-ads-hero.jpeg')]"
+      class="hero min-h-[110vh] relative bg-[url('@/assets/images/google-ads-hero.jpeg')] mt-28 lg:mt-0"
     >
       <div class="hero-overlay bg-black bg-opacity-80"></div>
-      <div class="hero-content text-center text-neutral-content relative z-10">
-        <div class="max-w-3xl">
-          <h1 class="text-5xl font-bold text-primary" data-aos="fade-down">
-            Google Ads einrichten & optimieren
-          </h1>
-          <p
-            class="py-6 text-2xl text-neutral-content"
-            data-aos="fade-up"
-            data-aos-delay="200"
+      <div class="hero-content relative z-10 w-full">
+        <div class="container mx-auto px-4">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]"
           >
-            Professionelle Google Ads Kampagnen, die messbare Ergebnisse liefern
-          </p>
-          <p
-            class="mb-8 text-lg text-neutral-content"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            Wir entwickeln für Sie maßgeschneiderte Google Ads Strategien, die
-            Ihren ROI maximieren und gezielt neue Kunden gewinnen.
-          </p>
-          <button
-            class="btn btn-primary text-neutral-content bg-[#f60] border-none hover:bg-[#f60]/90"
-            data-aos="zoom-in"
-            data-aos-delay="600"
-            onclick="window.open('https://zeeg.me/orangize', '_blank')"
-          >
-            Jetzt kostenlose Google Ads Beratung sichern
-          </button>
+            <!-- Text Content -->
+            <div data-aos="fade-right">
+              <h1
+                class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
+              >
+                Google Ads Agentur in
+                <span class="text-primary">Ostwestfalen</span>
+              </h1>
+              <p class="text-xl text-white mb-8 leading-relaxed">
+                Professionelle Google Ads Betreuung für maximalen ROI. Gezielte
+                Kampagnen, die messbare Ergebnisse liefern.
+              </p>
+
+              <div class="space-y-4 mb-8">
+                <div class="flex items-center gap-3">
+                  <div class="w-2 h-2 bg-primary rounded-full"></div>
+                  <span class="text-white"
+                    >Sofortige Sichtbarkeit bei Google</span
+                  >
+                </div>
+                <div class="flex items-center gap-3">
+                  <div class="w-2 h-2 bg-primary rounded-full"></div>
+                  <span class="text-white"
+                    >Messbare Ergebnisse & ROI-Optimierung</span
+                  >
+                </div>
+                <div class="flex items-center gap-3">
+                  <div class="w-2 h-2 bg-primary rounded-full"></div>
+                  <span class="text-white">Persönliche Betreuung aus OWL</span>
+                </div>
+              </div>
+
+              <div class="flex flex-col sm:flex-row gap-4">
+                <button
+                  class="btn bg-[#f60] text-neutral-content border-none hover:bg-[#f60]/90 text-lg px-8"
+                  onclick="window.open('https://zeeg.me/orangize', '_blank')"
+                >
+                  Kostenlose Beratung
+                </button>
+                <button
+                  class="btn btn-outline border-white text-white hover:bg-white hover:text-black text-lg px-8"
+                  @click="scrollToSection('losung')"
+                >
+                  Mehr erfahren
+                </button>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div data-aos="fade-left" class="relative">
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl blur-xl"
+              ></div>
+              <div class="relative">
+                <HeroContactForm />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="absolute bottom-8 w-full flex justify-center">
@@ -1012,6 +1047,7 @@ import NewsletterForm from "../components/NewsletterForm.vue";
 import PricingModal from "../components/PricingModal.vue";
 import RegionalePraesenzGoogleAds from "../components/google-ads/RegionalePraesenzGoogleAds.vue";
 import CTA from "../components/CTA.vue";
+import HeroContactForm from "../components/HeroContactForm.vue";
 
 const route = useRoute();
 

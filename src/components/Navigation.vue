@@ -87,7 +87,7 @@
         <li v-for="section in sections" :key="section.id">
           <a
             :href="'#' + section.id"
-            class="hover:text-[#f60] transition-colors duration-300"
+            class="text-white hover:text-[#f60] transition-colors duration-300"
             @click.prevent="
               scrollToSection(section.id);
               isMenuOpen = false;
@@ -100,7 +100,7 @@
         <li>
           <router-link
             to="/blog"
-            class="hover:text-[#f60] transition-colors duration-300"
+            class="text-white hover:text-[#f60] transition-colors duration-300"
             @click="isMenuOpen = false"
           >
             Blog

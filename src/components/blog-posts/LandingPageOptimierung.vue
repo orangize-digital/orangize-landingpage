@@ -420,7 +420,7 @@ defineExpose({ post });
           </li>
           <li class="text-base-content">
             <strong class="text-[#f60]">F-Pattern:</strong> Menschen scannen
-            Webseiten oft in einer F-Form. Platziere die wichtigsten
+            Websiten oft in einer F-Form. Platziere die wichtigsten
             Informationen oben und am linken Rand.
           </li>
         </ul>

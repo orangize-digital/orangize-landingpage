@@ -18,8 +18,7 @@
           data-aos-delay="200"
         >
           Wir bieten maßgeschneiderte Strategien für Ihren Online-Erfolg - von
-          der professionellen Webseite bis zur erfolgreichen Google Ads
-          Kampagne.
+          der professionellen Website bis zur erfolgreichen Google Ads Kampagne.
         </p>
       </div>
 
@@ -32,7 +31,7 @@
           <figure class="relative h-64 overflow-hidden">
             <img
               src="@/assets/images/website-erstellen-hero.jpg"
-              alt="Webseite erstellen"
+              alt="Website erstellen"
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div class="absolute inset-0 bg-black bg-opacity-60"></div>
@@ -59,10 +58,10 @@
           </figure>
           <div class="card-body bg-base-100">
             <h3 class="text-2xl font-bold text-base-content mb-4">
-              Webseite erstellen lassen
+              Website erstellen lassen
             </h3>
             <p class="text-base-content mb-6">
-              Professionelle, maßgeschneiderte Webseiten, die nicht nur gut
+              Professionelle, maßgeschneiderte Websiten, die nicht nur gut
               aussehen, sondern auch konvertieren und bei Google optimal ranken.
             </p>
             <ul class="space-y-2 mb-6">

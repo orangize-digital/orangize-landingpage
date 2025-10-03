@@ -59,7 +59,7 @@
               to="/website-erstellen-lassen"
               class="hover:text-[#f60] text-base-content transition-colors duration-300 font-bold navi-items"
             >
-              Website erstellen
+              Websiten
             </router-link>
           </li>
           <li>
@@ -94,7 +94,7 @@
         <li v-for="section in sections" :key="section.id">
           <a
             :href="'#' + section.id"
-            class="hover:text-[#f60] transition-colors duration-300"
+            class="text-white hover:text-[#f60] transition-colors duration-300"
             @click.prevent="
               scrollToSection(section.id);
               isMenuOpen = false;
@@ -106,7 +106,7 @@
         <li>
           <router-link
             to="/website-erstellen"
-            class="hover:text-[#f60] transition-colors duration-300"
+            class="text-white hover:text-[#f60] transition-colors duration-300"
             @click="isMenuOpen = false"
           >
             Website erstellen
@@ -115,7 +115,7 @@
         <li>
           <router-link
             to="/blog"
-            class="hover:text-[#f60] transition-colors duration-300"
+            class="text-white hover:text-[#f60] transition-colors duration-300"
             @click="isMenuOpen = false"
           >
             Blog
@@ -166,7 +166,6 @@ const sections = [
   { id: "losung", name: "Lösung" },
   { id: "leistungen", name: "Leistungen" },
   { id: "prozess", name: "Prozess" },
-  { id: "vorteile", name: "Vorteile" },
   { id: "regionen", name: "Regionen" },
   { id: "faq", name: "FAQ" },
 ];

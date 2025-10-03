@@ -6,8 +6,8 @@ module.exports = {
       {
         light: {
           ...require("daisyui/src/theming/themes")["light"],
-          primary: "#ff6600",
-          "primary-focus": "#ff6600",
+          primary: "#ff6600 !important",
+          "primary-focus": "#ff6600 !important",
           "primary-content": "#ffffff",
           secondary: "#ff6600",
           accent: "#ff6600",
@@ -25,8 +25,8 @@ module.exports = {
       {
         dark: {
           ...require("daisyui/src/theming/themes")["dark"],
-          primary: "#ff6600",
-          "primary-focus": "#ff6600",
+          primary: "#ff6600 !important",
+          "primary-focus": "#ff6600 !important",
           "primary-content": "#ffffff",
           secondary: "#ff6600",
           accent: "#ff6600",

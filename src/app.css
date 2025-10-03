@@ -352,12 +352,22 @@ h3 {
 
 /* Hero section text override - always white on dark overlay */
 .hero .hero-content h1 {
-  color: #f60 !important;
+  color: #f60;
 }
 
 .hero .hero-content p,
-.hero .hero-content span,
 .hero .hero-content a {
+  color: #ffffff !important;
+}
+.hero .hero-content span {
+  color: #f60 !important;
+}
+
+.hero .hero-content .kostenlose {
+  background-color: #019b01 !important;
+}
+
+.hero .hero-content .kostenlose-btn {
   color: #ffffff !important;
 }
 

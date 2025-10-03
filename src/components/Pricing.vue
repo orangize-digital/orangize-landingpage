@@ -1,12 +1,29 @@
 <template>
-  <section id="pricing" class="py-20 bg-base-200">
+  <section
+    id="pricing"
+    class="py-24 bg-gradient-to-b from-base-200 to-base-100"
+  >
     <div class="container mx-auto px-4">
-      <h2
-        class="text-4xl text-base-content font-bold text-center mb-6"
-        data-aos="fade-up"
-      >
-        Unsere Pakete
-      </h2>
+      <div class="text-center mb-16">
+        <h3 class="text-lg text-primary font-semibold mb-2" data-aos="fade-up">
+          Transparente Preise
+        </h3>
+        <h2
+          class="text-5xl text-base-content font-bold mb-6"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          Unsere Pakete
+        </h2>
+        <p
+          class="text-xl text-base-content max-w-2xl mx-auto"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          Wählen Sie das perfekte Paket für Ihre Anforderungen. Faire Preise,
+          maximale Leistung.
+        </p>
+      </div>
 
       <!-- Toggle Switch -->
       <div class="flex justify-center mb-12">
@@ -35,32 +52,48 @@
       </div>
 
       <!-- Pricing Plans -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto relative"
+      >
         <div
           v-for="(plan, index) in pricingPlans[activeCategory]"
           :key="index"
-          class="card bg-base-100 shadow-xl"
-          :class="{ 'border-2 border-[#f60] relative': plan.popular }"
+          class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300"
+          :class="{
+            'border-4 border-[#f60] relative transform scale-105 z-10 bg-gradient-to-b from-base-100 to-[#f60]/5':
+              plan.popular,
+            'hover:transform hover:scale-105': !plan.popular,
+          }"
           data-aos="fade-up"
           :data-aos-delay="plan.delay"
         >
           <div
             v-if="plan.popular"
-            class="absolute -top-4 left-1/2 transform -translate-x-1/2"
+            class="absolute -top-6 left-1/2 transform -translate-x-1/2 z-20"
           >
-            <div class="badge badge-primary bg-[#f60] border-[#f60]">
-              Beliebt
+            <div
+              class="badge badge-lg bg-[#f60] border-[#f60] text-white font-bold px-4 py-3 text-sm shadow-lg"
+            >
+              ⭐ BELIEBT ⭐
             </div>
           </div>
           <div
-            class="card-body rounded-[0.9rem] hover:scale-x-10 bg-base-100 overflow-hidden"
+            class="card-body rounded-[0.9rem] bg-base-100 overflow-hidden"
+            :class="{ 'pt-8': plan.popular }"
           >
             <h3 class="card-title text-2xl font-bold mb-4 text-base-content">
               {{ plan.name }}
             </h3>
-            <p class="text-4xl font-bold mb-6 text-base-content">
+            <p
+              class="text-4xl font-bold mb-6"
+              :class="plan.popular ? 'text-[#f60]' : 'text-base-content'"
+            >
               {{ plan.price }}
-              <span class="text-base font-normal">{{ plan.period }}</span>
+              <span
+                class="text-base font-normal"
+                :class="plan.popular ? 'text-base-content' : ''"
+                >{{ plan.period }}</span
+              >
             </p>
             <ul class="space-y-3 mb-8">
               <li
@@ -119,7 +152,7 @@ export default {
             delay: 0,
           },
           {
-            name: "Firmen Webseite",
+            name: "Firmen Website",
             price: "ab €799",
             period: "/Projekt",
             features: [

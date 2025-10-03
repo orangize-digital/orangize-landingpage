@@ -7,7 +7,11 @@
     <div class="hero-overlay bg-black bg-opacity-80"></div>
     <div class="hero-content text-center text-neutral-content relative z-10">
       <div class="max-w-3xl">
-        <h1 class="text-5xl font-bold text-[#f60]" data-aos="fade-down">
+        <h1
+          class="text-5xl font-bold text-[#f60]"
+          style="color: #f60 !important"
+          data-aos="fade-down"
+        >
           Orangize deine Bussiness
         </h1>
         <p
@@ -22,7 +26,7 @@
           data-aos="fade-up"
           data-aos-delay="400"
         >
-          Wir erstellen zielgerichtete Kampagnen und optimierte Webseiten, damit
+          Wir erstellen zielgerichtete Kampagnen und optimierte Websiten, damit
           deine Werbung nicht nur Klicks, sondern echte Kunden bringt.
         </p>
         <a
@@ -91,7 +95,7 @@
             automatisiert Neukunden gewinnen**.
             <br /><br />
             Die Lösung? Ein smartes System aus **zielgerichteten Kampagnen,
-            hochperformanten Webseiten und datengetriebenem Feintuning**. Keine
+            hochperformanten Websiten und datengetriebenem Feintuning**. Keine
             Streuverluste, keine leeren Klicks – sondern **reale Anfragen und
             profitable Ergebnisse**.
             <br /><br />
@@ -199,7 +203,7 @@
               <p class="text-white text-lg">
                 Ein Klick auf die Anzeige ist nur der erste Schritt – die wahre
                 Magie passiert auf deiner Website. Wir bauen **Conversion-starke
-                Webseiten**, die Besucher zu Kunden machen.
+                Websiten**, die Besucher zu Kunden machen.
               </p>
             </div>
           </div>
@@ -594,7 +598,7 @@ useHead({
     {
       name: "keywords",
       content:
-        "Webdesign, Landingpages, Google Ads, Online Marketing, Webseiten erstellen lassen, Webagentur, digitales Marketing",
+        "Webdesign, Landingpages, Google Ads, Online Marketing, Websiten erstellen lassen, Webagentur, digitales Marketing",
     },
     {
       name: "robots",
@@ -635,7 +639,7 @@ useHead({
     {
       name: "twitter:description",
       content:
-        "Professionelle Webseiten & Landingpages für dein Business – inklusive zielgerichteter Google Ads Kampagnen! Jetzt unverbindlich beraten lassen.",
+        "Professionelle Websiten & Landingpages für dein Business – inklusive zielgerichteter Google Ads Kampagnen! Jetzt unverbindlich beraten lassen.",
     },
     {
       name: "twitter:image",
