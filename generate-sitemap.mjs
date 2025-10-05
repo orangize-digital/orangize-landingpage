@@ -17,6 +17,7 @@ const staticRoutes = [
   "/website-erstellen-bad-oeynhausen",
   "/website-erstellen-bielefeld",
   "/google-ads",
+  "/google-ads-analyse",
   "/google-ads-porta-westfalica",
   "/google-ads-bielefeld",
   "/google-ads-buende",

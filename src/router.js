@@ -13,6 +13,7 @@ import GoogleAdsBielefeld from "./views/GoogleAdsBielefeld.vue";
 import GoogleAdsBuende from "./views/GoogleAdsBuende.vue";
 import GoogleAdsHerford from "./views/GoogleAdsHerford.vue";
 import GoogleAdsMinden from "./views/GoogleAdsMinden.vue";
+import GoogleAdsAnalyse from "./views/GoogleAdsAnalyse.vue";
 import BlogHome from "./views/BlogHome.vue";
 import BlogPost from "./components/blog-posts/BlogPost.vue";
 
@@ -86,6 +87,11 @@ const routes = [
     path: "/google-ads-minden",
     name: "GoogleAdsMinden",
     component: GoogleAdsMinden,
+  },
+  {
+    path: "/google-ads-analyse",
+    name: "GoogleAdsAnalyse",
+    component: GoogleAdsAnalyse,
   },
   {
     path: "/blog",

@@ -16,7 +16,7 @@
       <!-- Logo -->
       <div class="flex-1 lg:flex-none">
         <router-link to="/">
-          <img :src="logoSrc" alt="Orangize Logo" class="h-14" />
+          <img :src="logoSrc" alt="Orangize Logo" class="h-12" />
         </router-link>
       </div>
 

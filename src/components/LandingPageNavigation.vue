@@ -15,9 +15,9 @@
     <div class="container mx-auto px-4">
       <!-- Logo -->
       <div class="flex-1 lg:flex-none">
-        <a href="/">
+        <router-link to="/">
           <img :src="logoSrc" alt="Orangize Logo" class="h-12" />
-        </a>
+        </router-link>
       </div>
 
       <!-- Mobile Menu Button -->
@@ -54,7 +54,22 @@
               {{ section.name }}
             </a>
           </li>
-          <!-- Add Blog Link -->
+          <li>
+            <router-link
+              to="/website-erstellen-lassen"
+              class="hover:text-[#f60] text-base-content transition-colors duration-300 font-bold navi-items"
+            >
+              Website erstellen
+            </router-link>
+          </li>
+          <li>
+            <router-link
+              to="/google-ads"
+              class="hover:text-[#f60] text-base-content transition-colors duration-300 font-bold navi-items"
+            >
+              Google Ads
+            </router-link>
+          </li>
           <li>
             <router-link
               to="/blog"
@@ -66,12 +81,12 @@
         </ul>
       </div>
 
-      <!-- CTA Button and Theme Switcher -->
+      <!-- Theme Switcher & CTA Button -->
       <div class="flex-none hidden lg:flex lg:items-center lg:gap-4">
-        <ThemeSwitcher />
+        <!-- <ThemeSwitcher /> -->
         <button
-          class="btn btn-primary bg-[#f60] text-white border-none hover:bg-[#ff751a]"
-          @click.prevent="scrollToSection('kontakt')"
+          class="btn btn-primary bg-[#f60] text-neutral-content border-none hover:bg-[#f60]/90"
+          @click="openCalendar"
         >
           Beratung vereinbaren
         </button>
@@ -96,7 +111,24 @@
             {{ section.name }}
           </a>
         </li>
-        <!-- Add Blog Link for Mobile -->
+        <li>
+          <router-link
+            to="/website-erstellen"
+            class="text-white hover:text-[#f60] transition-colors duration-300"
+            @click="isMenuOpen = false"
+          >
+            Website erstellen
+          </router-link>
+        </li>
+        <li>
+          <router-link
+            to="/google-ads"
+            class="text-white hover:text-[#f60] transition-colors duration-300"
+            @click="isMenuOpen = false"
+          >
+            Google Ads
+          </router-link>
+        </li>
         <li>
           <router-link
             to="/blog"
@@ -107,15 +139,15 @@
           </router-link>
         </li>
         <li class="mt-4">
-          <ThemeSwitcher />
-        </li>
-        <li class="mt-4">
-          <button
-            class="btn btn-primary bg-[#f60] border-none hover:bg-[#ff751a] w-full flex items-center justify-center sm:w-auto"
-            style="align-content: center !important"
-          >
-            Beratung vereinbaren
-          </button>
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
+            <ThemeSwitcher />
+            <button
+              class="btn btn-primary bg-[#f60] border-none hover:bg-[#f60]/90 w-full flex items-center justify-center sm:w-auto"
+              @click="openCalendar"
+            >
+              Beratung vereinbaren
+            </button>
+          </div>
         </li>
       </ul>
     </div>
@@ -146,11 +178,10 @@ const updateTheme = () => {
   }
 };
 
+// Angepasste Sektionen für die Google Ads Seite
 const sections = [
-  { id: "losung", name: "Lösung" },
-  { id: "fakten", name: "Fakten" },
-  { id: "ablauf", name: "Ablauf" },
-  { id: "uber-mich", name: "Über uns" },
+  { id: "optimierung", name: "Optimierung" },
+  { id: "performance", name: "Performance" },
   { id: "faq", name: "FAQ" },
 ];
 
@@ -184,6 +215,10 @@ const updateActiveSection = () => {
     }
   });
   activeSection.value = currentSection;
+};
+
+const openCalendar = () => {
+  window.open("https://zeeg.me/orangize", "_blank");
 };
 
 onMounted(() => {
