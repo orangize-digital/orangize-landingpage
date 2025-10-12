@@ -22,7 +22,7 @@
           type="text"
           id="hero-name"
           placeholder="Max Mustermann"
-          class="input input-bordered w-full bg-gray-800 text-white border-gray-600 focus:border-orange-500 placeholder-gray-400"
+          class="input input-bordered w-full bg-gray-800 text-black border-gray-600 focus:border-orange-500 placeholder-gray-400"
           required
         />
       </div>
@@ -39,7 +39,7 @@
           type="email"
           id="hero-email"
           placeholder="max@example.com"
-          class="input input-bordered w-full bg-gray-800 text-white border-gray-600 focus:border-orange-500 placeholder-gray-400"
+          class="input input-bordered w-full bg-gray-800 text-black border-gray-600 focus:border-orange-500 placeholder-gray-400"
           required
         />
       </div>
@@ -74,7 +74,7 @@
           v-model="form.message"
           id="hero-message"
           placeholder="Beschreiben Sie kurz Ihr Projekt..."
-          class="textarea textarea-bordered w-full bg-gray-800 text-white border-gray-600 focus:border-orange-500 placeholder-gray-400 h-20"
+          class="textarea textarea-bordered w-full bg-gray-800 text-black border-gray-600 placeholder-gray-400 h-20"
           required
         ></textarea>
       </div>
