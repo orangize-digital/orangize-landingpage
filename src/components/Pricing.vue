@@ -189,11 +189,11 @@ export default {
         ads: [
           {
             name: "Starter",
-            price: "ab €300",
+            price: "ab €199",
             period: "/Monat",
             features: [
-              "Setup-Gebühr: 300 EUR",
-              "Optimierung: ab 300 EUR monatlich",
+              "Setup-Gebühr: 299 EUR",
+              "Optimierung: ab 199 EUR monatlich",
               "Grund-Setup: Einrichtung und erste Konfiguration",
               "Performance-Analyse für kontinuierliche Verbesserung",
             ],
@@ -203,11 +203,11 @@ export default {
           },
           {
             name: "Professional",
-            price: "ab €500",
+            price: "ab €299",
             period: "/Monat",
             features: [
-              "Setup-Gebühr: 500 EUR",
-              "Optimierung: ab 500 EUR monatlich",
+              "Setup-Gebühr: 499 EUR",
+              "Optimierung: ab 299 EUR monatlich",
               "Erweitertes Setup: Detaillierte Anpassungen & Optimierungen",
               "Monatliche Analyse & Optimierung für nachhaltiges Wachstum",
               "Zugriff auf Performance-Dashboard",
