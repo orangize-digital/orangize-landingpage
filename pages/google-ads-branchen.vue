@@ -28,7 +28,7 @@
             <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="200">
               <button
                 class="btn bg-[#f60] text-white border-none hover:bg-[#f60]/90 text-lg px-8"
-                onclick="window.open('https://zeeg.me/orangize', '_blank')"
+                @click="scrollToSection('kontakt')"
               >
                 Kostenlose Beratung
               </button>
@@ -303,7 +303,7 @@
               </p>
               <button
                 class="btn bg-[#f60] text-white border-none hover:bg-[#f60]/90 w-full"
-                onclick="window.open('https://zeeg.me/orangize', '_blank')"
+                @click="scrollToSection('kontakt')"
               >
                 Jetzt anfragen
               </button>

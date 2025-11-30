@@ -181,7 +181,7 @@
       <div class="text-center mt-10" data-aos="fade-up">
         <button
           class="btn btn-md text-white border-none bg-[#f60] hover:bg-[#ff751a] shadow-lg transition-all duration-300 hover:scale-105"
-          onclick="window.open('https://zeeg.me/orangize', '_blank')"
+          @click="scrollToContact"
         >
           Kostenlose Beratung vereinbaren
         </button>
@@ -192,6 +192,15 @@
 
 <script setup>
 import { onMounted } from "vue";
+
+const scrollToContact = () => {
+  const kontaktSection = document.getElementById("kontakt");
+  if (kontaktSection) {
+    kontaktSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  } else {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  }
+};
 
 onMounted(() => {
   if (window.AOS) {

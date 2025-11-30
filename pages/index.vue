@@ -31,9 +31,8 @@
           deine Werbung nicht nur Klicks, sondern echte Kunden bringt.
         </p>
         <a
-          href="https://zeeg.me/orangize"
-          target="_blank"
-          rel="noopener"
+          href="#kontakt"
+          @click.prevent="scrollToSection('kontakt')"
           class="btn btn-primary text-white bg-[#f60] border-none hover:bg-[#ff751a]"
           data-aos="zoom-in"
           data-aos-delay="600"
@@ -543,7 +542,7 @@
       <div class="flex flex-col items-center gap-4">
         <button
           class="btn btn-lg bg-[#f60] text-white border-none hover:bg-[#ff751a] shadow-lg animate-bounce"
-          onclick="window.open('https://zeeg.me/orangize', '_blank')"
+          @click="scrollToSection('kontakt')"
         >
           Kostenloses Erstgespräch vereinbaren
         </button>

@@ -78,7 +78,7 @@
         <ThemeSwitcher />
         <button
           class="btn btn-primary bg-[#f60] text-white border-none hover:bg-[#ff751a]"
-          @click="openCalendar"
+          @click="scrollToContact"
         >
           Beratung vereinbaren
         </button>
@@ -127,7 +127,7 @@
         <li class="mt-4">
           <button
             class="btn btn-primary bg-[#f60] border-none hover:bg-[#ff751a] w-full flex items-center justify-center sm:w-auto"
-            @click="openCalendar"
+            @click="scrollToContact"
           >
             Beratung vereinbaren
           </button>
@@ -202,8 +202,13 @@ const updateActiveSection = () => {
   activeSection.value = currentSection;
 };
 
-const openCalendar = () => {
-  window.open("https://zeeg.me/orangize", "_blank");
+const scrollToContact = () => {
+  const kontaktSection = document.getElementById("kontakt");
+  if (kontaktSection) {
+    kontaktSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  } else {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  }
 };
 
 onMounted(() => {

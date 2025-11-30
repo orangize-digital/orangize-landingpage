@@ -634,7 +634,7 @@
             </p>
             <button
               class="btn bg-[#f60] text-neutral-content border-none hover:bg-[#f60]/90"
-              onclick="window.open('https://zeeg.me/orangize', '_blank')"
+              @click="scrollToContact"
             >
               Kostenlose Google Ads Beratung
             </button>
@@ -665,6 +665,15 @@
 
 <script setup>
 import { onMounted } from "vue";
+
+const scrollToContact = () => {
+  const kontaktSection = document.getElementById("kontakt");
+  if (kontaktSection) {
+    kontaktSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  } else {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  }
+};
 
 // Wenn Sie AOS (Animate on Scroll) verwenden, können Sie es hier initialisieren
 onMounted(() => {

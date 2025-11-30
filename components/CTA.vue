@@ -18,7 +18,7 @@
       <div class="flex flex-col items-center gap-4">
         <button
           class="btn btn-lg bg-[#f60] text-white border-none hover:bg-[#ff751a] shadow-lg animate-bounce"
-          @click="openBookingLink"
+          @click="scrollToContact"
         >
           Kostenloses Erstgespräch vereinbaren
         </button>
@@ -31,7 +31,12 @@
 <script setup>
 import ctaImage from "~/assets/images/cta.jpg";
 
-const openBookingLink = () => {
-  window.open("https://zeeg.me/orangize", "_blank");
+const scrollToContact = () => {
+  const kontaktSection = document.getElementById("kontakt");
+  if (kontaktSection) {
+    kontaktSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  } else {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  }
 };
 </script>

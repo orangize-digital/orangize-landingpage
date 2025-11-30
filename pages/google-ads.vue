@@ -42,7 +42,7 @@
               <div class="flex flex-col sm:flex-row gap-4">
                 <button
                   class="btn bg-[#f60] text-neutral-content border-none hover:bg-[#f60]/90 text-lg px-8"
-                  onclick="window.open('https://zeeg.me/orangize', '_blank')"
+                  @click="scrollToSection('kontakt')"
                 >
                   Kostenlose Beratung
                 </button>
