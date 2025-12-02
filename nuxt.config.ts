@@ -38,10 +38,27 @@ export default defineNuxtConfig({
   ],
 
   routeRules: {
-    // Pre-render static pages for better SEO
+    // Pre-render all static pages for better SEO
     '/': { prerender: true },
     '/google-ads': { prerender: true },
+    '/google-ads-analyse': { prerender: true },
+    '/google-ads-bielefeld': { prerender: true },
+    '/google-ads-buende': { prerender: true },
+    '/google-ads-herford': { prerender: true },
+    '/google-ads-minden': { prerender: true },
+    '/google-ads-porta-westfalica': { prerender: true },
+    '/google-ads-handwerker': { prerender: true },
+    '/google-ads-branchen': { prerender: true },
     '/website-erstellen-lassen': { prerender: true },
+    '/website-erstellen-bielefeld': { prerender: true },
+    '/website-erstellen-buende': { prerender: true },
+    '/website-erstellen-herford': { prerender: true },
+    '/website-erstellen-minden': { prerender: true },
+    '/website-erstellen-porta-westfalica': { prerender: true },
+    '/website-erstellen-bad-oeynhausen': { prerender: true },
+    '/impressum': { prerender: true },
+    '/datenschutz': { prerender: true },
+    '/danke': { prerender: true },
     '/blog/**': { prerender: true }
   }
 })
