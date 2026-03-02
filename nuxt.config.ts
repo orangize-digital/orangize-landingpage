@@ -15,7 +15,7 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'google-site-verification', content: 'your-verification-code' }
+        { name: 'google-site-verification', content: 'SeRlVe4a9vWrgh-Cjhkp6V1JS_SUUmcxXj0v8zqNvIo' }
       ],
       link: [
         { rel: 'icon', type: 'image/png', href: '/favicon.png' }
@@ -36,6 +36,10 @@ export default defineNuxtConfig({
   css: [
     '~/assets/css/app.css'
   ],
+
+  nitro: {
+    preset: 'netlify'
+  },
 
   routeRules: {
     // Pre-render all static pages for better SEO

@@ -90,6 +90,13 @@
         <span v-else class="loading loading-spinner loading-sm"></span>
       </button>
 
+      <div v-if="errorMessage" class="alert alert-error mt-4 text-sm text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-5 w-5" fill="none" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span>{{ errorMessage }}</span>
+      </div>
+
       <!-- Privacy Notice -->
       <p class="text-xs text-gray-300 text-center mt-3">
         Mit Absenden des Formulars stimmen Sie unseren
@@ -116,6 +123,7 @@ const form = reactive({
 });
 
 const loading = ref(false);
+const errorMessage = ref('');
 const options = [
   "Website erstellen",
   "Google Ads",
@@ -178,7 +186,8 @@ ${form.message || 'Keine zusätzlichen Informationen'}
     }
   } catch (error) {
     console.error('Error submitting form:', error);
-    alert('Es gab einen Fehler beim Senden Ihrer Nachricht. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.');
+    errorMessage.value = 'Es gab einen Fehler beim Senden Ihrer Nachricht. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.';
+    setTimeout(() => { errorMessage.value = ''; }, 6000);
   } finally {
     loading.value = false;
   }
