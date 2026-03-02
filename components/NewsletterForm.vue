@@ -73,23 +73,22 @@ const showModal = ref(false);
 const modalMessage = ref("");
 const modalType = ref("success");
 
-const apiKey = import.meta.env.VITE_BREVO_API_KEY;
-
 const subscribeToNewsletter = async () => {
   isNewsletterLoading.value = true;
 
   try {
-    const response = await fetch("https://api.brevo.com/v3/contacts", {
-      method: "POST",
+    const response = await fetch('https://www.joshevski.com/v1/send', {
+      method: 'POST',
       headers: {
-        "api-key": apiKey,
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
+        'X-Form-Key': 'pk_mRHFApc83lpCwcx1BX5X5g'
       },
       body: JSON.stringify({
-        email: newsletterEmail.value,
-        listIds: [3],
-        updateEnabled: false,
-      }),
+        to: ['info@orangize.de'],
+        subject: `Neue Newsletter-Anmeldung: ${newsletterEmail.value}`,
+        html: `<h2>Neue Newsletter-Anmeldung</h2><p><strong>E-Mail:</strong> ${newsletterEmail.value}</p>`,
+        text: `Neue Newsletter-Anmeldung\nE-Mail: ${newsletterEmail.value}`
+      })
     });
 
     if (!response.ok) throw new Error("Subscription failed");

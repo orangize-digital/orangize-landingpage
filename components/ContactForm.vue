@@ -155,17 +155,21 @@ Nachricht:
 ${form.message || 'Keine zusätzlichen Informationen'}
     `.trim();
 
-    // Use server API route to avoid CORS issues
-    const response = await $fetch('/api/contact', {
+    const response = await fetch('https://www.joshevski.com/v1/send', {
       method: 'POST',
-      body: {
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Form-Key': 'pk_mRHFApc83lpCwcx1BX5X5g'
+      },
+      body: JSON.stringify({
+        to: ['info@orangize.de'],
         subject: subject,
         html: htmlBody,
         text: textBody
-      }
+      })
     });
 
-    if (response.success) {
+    if (response.ok) {
       // Reset form
       form.name = "";
       form.email = "";

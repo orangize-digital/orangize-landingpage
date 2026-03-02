@@ -2,45 +2,147 @@
   <Navigation />
   <!-- Hero Section -->
   <div
-    class="hero min-h-screen relative"
+    class="hero min-h-[110vh] relative"
     :style="`background-image: url('${brandsImage}')`"
   >
     <div class="hero-overlay bg-black bg-opacity-80"></div>
-    <div class="hero-content text-center text-neutral-content relative z-10">
-      <div class="max-w-3xl">
-        <h1
-          class="text-5xl font-bold text-[#f60]"
-          style="color: #f60 !important"
-          data-aos="fade-down"
-        >
-          Orangize deine Bussiness
-        </h1>
-        <p
-          class="py-6 text-2xl text-white"
-          data-aos="fade-up"
+    <div
+      class="hero-content relative z-10 w-full lg:py-0 py-[120px] max-w-7xl mx-auto px-4"
+    >
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Left Side - Text -->
+        <div class="text-left text-white" data-aos="fade-right">
+          <div class="mb-4">
+            <span class="text-primary font-semibold text-lg">
+              Deine Digitalagentur aus OWL
+            </span>
+          </div>
+          <h1
+            class="text-4xl lg:text-6xl font-bold mb-6 leading-tight text-white"
+          >
+            Weniger raten.
+            <span class="text-primary">Mehr Kunden.</span>
+          </h1>
+          <p class="text-xl lg:text-2xl mb-6 text-white">
+            Wir bauen Websites, die verkaufen und schalten Google Ads, die sich
+            rechnen. Alles aus einer Hand.
+          </p>
+
+          <div class="space-y-4 mb-8">
+            <div class="flex items-center gap-3">
+              <svg
+                class="w-5 h-5 text-white flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4"
+                ></path>
+              </svg>
+              <span class="text-lg text-white"
+                >Conversion-optimierte Landingpages</span
+              >
+            </div>
+            <div class="flex items-center gap-3">
+              <svg
+                class="w-5 h-5 text-white flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4"
+                ></path>
+              </svg>
+              <span class="text-lg text-white"
+                >Google Ads mit echtem ROI</span
+              >
+            </div>
+            <div class="flex items-center gap-3">
+              <svg
+                class="w-5 h-5 text-white flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4"
+                ></path>
+              </svg>
+              <span class="text-lg text-white"
+                >Transparentes Reporting & Tracking</span
+              >
+            </div>
+            <div class="flex items-center gap-3">
+              <svg
+                class="w-5 h-5 text-white flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4"
+                ></path>
+              </svg>
+              <span class="text-lg text-white"
+                >Persönliche Betreuung statt Agentur-Fließband</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="bg-primary/20 border border-white/30 rounded-lg p-6 mb-8"
+          >
+            <div class="flex items-start gap-3 mb-2">
+              <svg
+                class="w-6 h-6 text-white mt-0.5 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                ></path>
+              </svg>
+              <p class="text-lg font-semibold text-white">
+                Ergebnisse, keine Versprechen
+              </p>
+            </div>
+            <p class="text-base ml-9 text-white">
+              Über <strong class="text-[#f60]">850.000€ verwaltetes Werbebudget</strong>
+              und Websites, die im Schnitt 3x mehr Anfragen generieren.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Side - Contact Form -->
+        <div
+          class="flex justify-center lg:justify-end"
+          data-aos="fade-left"
           data-aos-delay="200"
         >
-          Hochperformante Landing Pages & Google Ads, die verkaufen.
-        </p>
-        <p
-          class="mb-8 text-lg text-white"
-          data-aos="fade-up"
-          data-aos-delay="400"
-        >
-          Wir erstellen zielgerichtete Kampagnen und optimierte Websiten, damit
-          deine Werbung nicht nur Klicks, sondern echte Kunden bringt.
-        </p>
-        <a
-          href="#kontakt"
-          @click.prevent="scrollToSection('kontakt')"
-          class="btn btn-primary text-white bg-[#f60] border-none hover:bg-[#ff751a]"
-          data-aos="zoom-in"
-          data-aos-delay="600"
-        >
-          Jetzt kostenloses Erstgespräch sichern
-        </a>
+          <HeroContactForm />
+        </div>
       </div>
     </div>
+
+    <!-- Scroll indicator -->
     <div class="absolute bottom-8 w-full flex justify-center">
       <a
         href="#"
