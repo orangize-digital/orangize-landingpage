@@ -37,10 +37,6 @@ export default defineNuxtConfig({
     '~/assets/css/app.css'
   ],
 
-  nitro: {
-    preset: 'netlify'
-  },
-
   routeRules: {
     // Pre-render all static pages for better SEO
     '/': { prerender: true },
