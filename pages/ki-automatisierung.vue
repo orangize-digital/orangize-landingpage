@@ -163,6 +163,124 @@
       </div>
     </section>
 
+    <!-- Leistungen -->
+    <section id="leistungen" class="py-20 bg-base-200">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h3 class="text-lg text-[#f60] font-semibold" data-aos="fade-up">
+            Unsere KI-Leistungen
+          </h3>
+          <h2 class="text-4xl text-base-content font-bold" data-aos="fade-up" data-aos-delay="100">
+            Drei Schubladen, ein Ziel: weniger manuelle Arbeit
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Karte 1: Workflow-Automatisierung -->
+          <div class="card bg-base-100 shadow-xl border border-[#f60]/20 hover:border-[#f60] transition-all duration-300" data-aos="fade-up">
+            <div class="card-body">
+              <div class="w-16 h-16 bg-[#f60]/10 rounded-lg flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              </div>
+              <h3 class="text-2xl font-bold text-base-content mb-2">Workflow-Automatisierung</h3>
+              <p class="text-[#f60] font-semibold mb-4">Manuelle Klick-Arbeit eliminieren — ohne neues Personal</p>
+              <p class="text-base-content mb-6">
+                Wir verbinden deine bestehenden Tools (CRM, E-Mail, Kalender, Buchhaltung, Webshop) zu reibungslosen Abläufen. Daten fließen automatisch dort hin, wo sie gebraucht werden.
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-center text-base-content">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M20 6 9 17l-5-5"/></svg>
+                  n8n / Make / Zapier
+                </li>
+                <li class="flex items-center text-base-content">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M20 6 9 17l-5-5"/></svg>
+                  API-Integrationen
+                </li>
+                <li class="flex items-center text-base-content">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M20 6 9 17l-5-5"/></svg>
+                  Fehler-Monitoring
+                </li>
+              </ul>
+              <p class="text-sm text-base-content/70 italic mb-6">
+                Beispiel: "Neue Anfrage → CRM-Eintrag + Slack-Benachrichtigung + Angebots-Entwurf"
+              </p>
+              <button class="btn bg-[#f60] text-neutral-content border-none hover:bg-[#f60]/90 w-full" @click="openPricingModal('KI-Workflow Setup')">
+                Angebot anfordern
+              </button>
+            </div>
+          </div>
+
+          <!-- Karte 2: KI-Agenten -->
+          <div class="card bg-base-100 shadow-xl border border-[#f60]/20 hover:border-[#f60] transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-body">
+              <div class="w-16 h-16 bg-[#f60]/10 rounded-lg flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg>
+              </div>
+              <h3 class="text-2xl font-bold text-base-content mb-2">KI-Agenten (maßgeschneidert)</h3>
+              <p class="text-[#f60] font-semibold mb-4">Ein Mitarbeiter, der nie schläft — und nur Bruchteile kostet</p>
+              <p class="text-base-content mb-6">
+                Individuelle KI-Agenten für Recherche, E-Mail-Bearbeitung, Lead-Qualifizierung oder Datenanalyse. Trainiert auf deine Tonalität, dein Wissen, deine Prozesse.
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-center text-base-content">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M20 6 9 17l-5-5"/></svg>
+                  OpenAI / Anthropic / Mistral
+                </li>
+                <li class="flex items-center text-base-content">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M20 6 9 17l-5-5"/></svg>
+                  Wissensbasis-Anbindung
+                </li>
+                <li class="flex items-center text-base-content">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M20 6 9 17l-5-5"/></svg>
+                  Mensch-im-Loop wenn nötig
+                </li>
+              </ul>
+              <p class="text-sm text-base-content/70 italic mb-6">
+                Beispiele: "Recherche-Agent erstellt Konkurrenz-Briefings", "Inbox-Agent priorisiert &amp; schlägt Antworten vor"
+              </p>
+              <button class="btn bg-[#f60] text-neutral-content border-none hover:bg-[#f60]/90 w-full" @click="openPricingModal('KI-Agent maßgeschneidert')">
+                Angebot anfordern
+              </button>
+            </div>
+          </div>
+
+          <!-- Karte 3: Prozess-Beratung -->
+          <div class="card bg-base-100 shadow-xl border border-[#f60]/20 hover:border-[#f60] transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-body">
+              <div class="w-16 h-16 bg-[#f60]/10 rounded-lg flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </div>
+              <h3 class="text-2xl font-bold text-base-content mb-2">Prozess-Automatisierung &amp; Beratung</h3>
+              <p class="text-[#f60] font-semibold mb-4">Erst verstehen, dann automatisieren — sonst skaliert ihr Chaos</p>
+              <p class="text-base-content mb-6">
+                Wir analysieren deine Prozesse, identifizieren die teuersten manuellen Schritte und bauen einen Automation-Fahrplan. Inklusive Aufwands-/ROI-Schätzung pro Prozess.
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-center text-base-content">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M20 6 9 17l-5-5"/></svg>
+                  Prozess-Audit
+                </li>
+                <li class="flex items-center text-base-content">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M20 6 9 17l-5-5"/></svg>
+                  ROI-Bewertung
+                </li>
+                <li class="flex items-center text-base-content">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M20 6 9 17l-5-5"/></svg>
+                  DSGVO-Check &amp; Schulung
+                </li>
+              </ul>
+              <p class="text-sm text-base-content/70 italic mb-6">
+                Beispiel: "2-Tages-Audit identifiziert 12h/Woche Sparpotenzial im Vertrieb"
+              </p>
+              <button class="btn bg-[#f60] text-neutral-content border-none hover:bg-[#f60]/90 w-full" @click="openPricingModal('KI-Automation Beratung &amp; Audit')">
+                Audit anfordern
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Kontaktformular -->
     <ContactForm />
 
