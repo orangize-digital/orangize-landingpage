@@ -14,7 +14,7 @@
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         <!-- Website erstellen Card -->
         <NuxtLink
           to="/website-erstellen-lassen"
@@ -170,6 +170,76 @@
                 >
                   <path d="M5 12h14" />
                   <path d="m12 5 7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </NuxtLink>
+
+        <!-- KI-Automatisierung Card -->
+        <NuxtLink
+          to="/ki-automatisierung"
+          class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-base-200 to-base-300 p-1 transition-all duration-300 hover:shadow-xl hover:shadow-[#f60]/10"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div class="relative overflow-hidden rounded-xl bg-base-100 p-6 h-full">
+            <div class="absolute inset-0 bg-gradient-to-br from-[#f60]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+            <div class="relative z-10 flex flex-col h-full">
+              <div class="flex items-start gap-4 mb-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-[#f60]/10 rounded-xl flex items-center justify-center group-hover:bg-[#f60] group-hover:scale-110 transition-all duration-300">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-[#f60] group-hover:text-white transition-colors duration-300"
+                  >
+                    <rect x="3" y="11" width="18" height="10" rx="2"/>
+                    <circle cx="12" cy="5" r="2"/>
+                    <path d="M12 7v4"/>
+                    <line x1="8" y1="16" x2="8" y2="16"/>
+                    <line x1="16" y1="16" x2="16" y2="16"/>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-xl font-bold text-base-content group-hover:text-[#f60] transition-colors duration-300">
+                    KI-Automatisierung
+                  </h3>
+                  <p class="text-base-content/60 text-sm mt-1">
+                    Workflows &amp; KI-Agenten, die für dich arbeiten
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 text-xs font-medium bg-[#f60]/10 text-[#f60] rounded-full">n8n / Make / Zapier</span>
+                <span class="px-3 py-1 text-xs font-medium bg-[#f60]/10 text-[#f60] rounded-full">DSGVO-konform</span>
+                <span class="px-3 py-1 text-xs font-medium bg-[#f60]/10 text-[#f60] rounded-full">Personal sparen</span>
+              </div>
+
+              <div class="mt-auto flex items-center text-[#f60] font-medium text-sm">
+                <span class="group-hover:mr-2 transition-all duration-300">Mehr erfahren</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="transform group-hover:translate-x-1 transition-transform duration-300"
+                >
+                  <path d="M5 12h14"/>
+                  <path d="m12 5 7 7-7 7"/>
                 </svg>
               </div>
             </div>
