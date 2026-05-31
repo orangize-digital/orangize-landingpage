@@ -69,6 +69,26 @@
       </div>
     </div>
 
+    <!-- Tools & Stack -->
+    <section class="py-12 bg-base-200">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-8">
+          <p class="text-base-content/60 text-sm uppercase tracking-wider">
+            Unser Stack
+          </p>
+        </div>
+        <div class="flex flex-wrap justify-center items-center gap-6 md:gap-10">
+          <span class="px-5 py-3 rounded-lg bg-base-100 text-base-content font-semibold shadow" data-aos="fade-up">n8n</span>
+          <span class="px-5 py-3 rounded-lg bg-base-100 text-base-content font-semibold shadow" data-aos="fade-up" data-aos-delay="60">Make</span>
+          <span class="px-5 py-3 rounded-lg bg-base-100 text-base-content font-semibold shadow" data-aos="fade-up" data-aos-delay="120">Zapier</span>
+          <span class="px-5 py-3 rounded-lg bg-base-100 text-base-content font-semibold shadow" data-aos="fade-up" data-aos-delay="180">OpenAI</span>
+          <span class="px-5 py-3 rounded-lg bg-base-100 text-base-content font-semibold shadow" data-aos="fade-up" data-aos-delay="240">Anthropic</span>
+          <span class="px-5 py-3 rounded-lg bg-base-100 text-base-content font-semibold shadow" data-aos="fade-up" data-aos-delay="300">Slack</span>
+          <span class="px-5 py-3 rounded-lg bg-base-100 text-base-content font-semibold shadow" data-aos="fade-up" data-aos-delay="360">HubSpot</span>
+        </div>
+      </div>
+    </section>
+
     <!-- Kontaktformular -->
     <ContactForm />
 
