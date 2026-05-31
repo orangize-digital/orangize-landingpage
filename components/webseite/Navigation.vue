@@ -45,6 +45,18 @@
       <!-- Desktop Menu -->
       <div class="flex-none hidden lg:flex lg:flex-1 lg:justify-center">
         <ul class="menu menu-horizontal px-1 gap-8">
+          <li>
+            <details class="dropdown">
+              <summary class="hover:text-[#f60] text-base-content transition-colors duration-300 font-bold navi-items cursor-pointer">
+                Leistungen
+              </summary>
+              <ul class="menu dropdown-content bg-base-100 rounded-box z-[60] w-60 p-2 shadow mt-2">
+                <li><router-link to="/google-ads" class="text-base-content hover:text-[#f60]">Google Ads</router-link></li>
+                <li><router-link to="/website-erstellen-lassen" class="text-[#f60] font-semibold">Webdesign</router-link></li>
+                <li><router-link to="/ki-automatisierung" class="text-base-content hover:text-[#f60]">KI-Automatisierung</router-link></li>
+              </ul>
+            </details>
+          </li>
           <li v-for="section in sections" :key="section.id">
             <a
               :href="'#' + section.id"
@@ -53,14 +65,6 @@
             >
               {{ section.name }}
             </a>
-          </li>
-          <li>
-            <router-link
-              to="/google-ads"
-              class="hover:text-[#f60] text-base-content transition-colors duration-300 font-bold navi-items"
-            >
-              Google Ads
-            </router-link>
           </li>
           <li>
             <router-link
@@ -91,6 +95,16 @@
       class="lg:hidden absolute top-full left-0 right-0 bg-base-100/80 backdrop-blur-md shadow-md transition-opacity duration-500 ease-out"
     >
       <ul class="menu menu-vertical px-4 py-2">
+        <li>
+          <details>
+            <summary class="text-white hover:text-[#f60] font-semibold">Leistungen</summary>
+            <ul>
+              <li><router-link to="/google-ads" class="text-white hover:text-[#f60]" @click="isMenuOpen = false">Google Ads</router-link></li>
+              <li><router-link to="/website-erstellen-lassen" class="text-[#f60] font-semibold" @click="isMenuOpen = false">Webdesign</router-link></li>
+              <li><router-link to="/ki-automatisierung" class="text-white hover:text-[#f60]" @click="isMenuOpen = false">KI-Automatisierung</router-link></li>
+            </ul>
+          </details>
+        </li>
         <li v-for="section in sections" :key="section.id">
           <a
             :href="'#' + section.id"
@@ -102,15 +116,6 @@
           >
             {{ section.name }}
           </a>
-        </li>
-        <li>
-          <router-link
-            to="/google-ads"
-            class="text-white hover:text-[#f60] transition-colors duration-300"
-            @click="isMenuOpen = false"
-          >
-            Google Ads
-          </router-link>
         </li>
         <li>
           <router-link
