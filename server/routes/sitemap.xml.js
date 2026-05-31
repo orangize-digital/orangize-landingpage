@@ -8,6 +8,7 @@ export default defineEventHandler((event) => {
     { loc: '/', priority: 1.0, changefreq: 'weekly' },
     { loc: '/google-ads', priority: 0.9, changefreq: 'weekly' },
     { loc: '/website-erstellen-lassen', priority: 0.9, changefreq: 'weekly' },
+    { loc: '/ki-automatisierung', priority: 0.9, changefreq: 'weekly' },
     { loc: '/google-ads-analyse', priority: 0.8, changefreq: 'monthly' },
     { loc: '/blog', priority: 0.8, changefreq: 'weekly' },
     // City pages - Website
