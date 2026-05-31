@@ -24,8 +24,8 @@
             <span class="text-primary">Mehr Kunden.</span>
           </h1>
           <p class="text-xl lg:text-2xl mb-6 text-white">
-            Wir bauen Websites, die verkaufen und schalten Google Ads, die sich
-            rechnen. Alles aus einer Hand.
+            Wir bauen Websites, die verkaufen, schalten Google Ads, die sich
+            rechnen, und automatisieren Prozesse mit KI. Alles aus einer Hand.
           </p>
 
           <div class="space-y-4 mb-8">
@@ -81,6 +81,24 @@
               </svg>
               <span class="text-lg text-white"
                 >Transparentes Reporting & Tracking</span
+              >
+            </div>
+            <div class="flex items-center gap-3">
+              <svg
+                class="w-5 h-5 text-white flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4"
+                ></path>
+              </svg>
+              <span class="text-lg text-white"
+                >KI-Automationen, die Zeit &amp; Personal sparen</span
               >
             </div>
             <div class="flex items-center gap-3">
@@ -673,7 +691,7 @@
           <!-- Google Ads Spezialist -->
           <div class="bg-base-100 p-6 rounded-lg">
             <h3 class="text-3xl font-bold text-[#f60] mb-4">
-              Webentwickler & Google Ads Spezialist
+              Webentwickler, Google Ads Spezialist &amp; Automation Engineer
             </h3>
             <p class="text-lg text-white mb-4">
               Ich bin Naumche, dein Experte für professionelle Google Ads
@@ -689,10 +707,10 @@
               langfristigen Erfolg.
             </p>
             <p class="text-lg text-white mb-4">
-              Unterstützt werde ich von einem Netzwerk aus Freelancern, die mich
-              je nach Projekt in verschiedenen Bereichen ergänzen. So bekommst
-              du die beste Kombination aus fundierter Expertise, Flexibilität
-              und praxisnahen Lösungen.
+              Seit Jahren baue ich nicht nur Websites und Kampagnen, sondern
+              auch die Workflows dahinter — von Lead-Routing bis KI-Agenten.
+              Diese drei Bereiche wachsen zusammen, und genau diese Verbindung
+              ist das, was meinen Kunden den größten Hebel bringt.
             </p>
             <div class="flex flex-wrap gap-3">
               <div class="badge badge-lg border-none bg-[#f60] text-white">
@@ -703,6 +721,12 @@
               </div>
               <div class="badge badge-lg border-none bg-[#f60] text-white">
                 Performance Marketing
+              </div>
+              <div class="badge badge-lg border-none bg-[#f60] text-white">
+                Workflow-Automatisierung
+              </div>
+              <div class="badge badge-lg border-none bg-[#f60] text-white">
+                KI-Agenten / LLM-Integration
               </div>
             </div>
           </div>
