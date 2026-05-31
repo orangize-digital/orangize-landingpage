@@ -449,6 +449,86 @@
       </div>
     </section>
 
+    <!-- Pricing -->
+    <section id="pricing" class="py-24 bg-gradient-to-b from-base-200 to-base-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h3 class="text-lg text-[#f60] font-semibold mb-2" data-aos="fade-up">Transparente Pakete</h3>
+          <h2 class="text-5xl text-base-content font-bold mb-6" data-aos="fade-up" data-aos-delay="100">Pakete für KI-Automation</h2>
+          <p class="text-xl text-base-content max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+            Klein anfangen oder direkt skalieren — alle Pakete inklusive DSGVO-Setup und Schulung.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto relative">
+          <!-- Starter -->
+          <div class="card bg-base-100 shadow-xl hover:shadow-2xl hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up">
+            <div class="card-body">
+              <h3 class="card-title text-2xl font-bold mb-2 text-base-content">Starter</h3>
+              <p class="text-sm text-base-content/70 mb-4">Erster Workflow live in 2 Wochen</p>
+              <p class="text-4xl font-bold mb-1 text-base-content">ab 1.490 €</p>
+              <p class="text-sm text-base-content/70 mb-6">einmalig + 99 €/Mo Wartung</p>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-center gap-2 text-base-content"><svg class="w-5 h-5 text-[#f60]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>1 Workflow (bis 3 Tools)</li>
+                <li class="flex items-center gap-2 text-base-content"><svg class="w-5 h-5 text-[#f60]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Zapier oder Make</li>
+                <li class="flex items-center gap-2 text-base-content"><svg class="w-5 h-5 text-[#f60]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>1 Discovery-Call + 30-Min Übergabe</li>
+                <li class="flex items-center gap-2 text-base-content"><svg class="w-5 h-5 text-[#f60]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>E-Mail-Support, 48h Reaktion</li>
+                <li class="flex items-center gap-2 text-base-content"><svg class="w-5 h-5 text-[#f60]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>DSGVO-AVV inklusive</li>
+                <li class="flex items-center gap-2 text-base-content"><svg class="w-5 h-5 text-[#f60]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Basis-Alerts</li>
+              </ul>
+              <button class="btn btn-outline hover:bg-[#f60] hover:border-[#f60] w-full" @click="openPricingModal('KI Starter')">Starter wählen</button>
+            </div>
+          </div>
+
+          <!-- Business (Beliebt) -->
+          <div class="card bg-base-100 shadow-xl border-4 border-[#f60] relative transform scale-105 z-10 bg-gradient-to-b from-base-100 to-[#f60]/5" data-aos="fade-up" data-aos-delay="100">
+            <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 z-20">
+              <div class="badge badge-lg bg-[#f60] border-[#f60] text-white font-bold px-4 py-3 text-sm shadow-lg">⭐ BELIEBT ⭐</div>
+            </div>
+            <div class="card-body pt-8">
+              <h3 class="card-title text-2xl font-bold mb-2 text-base-content">Business</h3>
+              <p class="text-sm text-base-content/70 mb-4">Mehrere Automationen + dein erster KI-Agent</p>
+              <p class="text-4xl font-bold mb-1 text-[#f60]">ab 3.900 €</p>
+              <p class="text-sm text-base-content mb-6">einmalig + 249 €/Mo Wartung</p>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-center gap-2 text-base-content"><svg class="w-5 h-5 text-[#f60]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>bis 3 Workflows + 1 KI-Agent</li>
+                <li class="flex items-center gap-2 text-base-content"><svg class="w-5 h-5 text-[#f60]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>n8n (self-host möglich) oder Make</li>
+                <li class="flex items-center gap-2 text-base-content"><svg class="w-5 h-5 text-[#f60]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>OpenAI / Anthropic Standard</li>
+                <li class="flex items-center gap-2 text-base-content"><svg class="w-5 h-5 text-[#f60]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>2 Workshops + Doku + 90-Min Team-Training</li>
+                <li class="flex items-center gap-2 text-base-content"><svg class="w-5 h-5 text-[#f60]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>E-Mail + Chat, 24h Reaktion</li>
+                <li class="flex items-center gap-2 text-base-content"><svg class="w-5 h-5 text-[#f60]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Dashboard + Alerts</li>
+              </ul>
+              <button class="btn btn-primary bg-[#f60] border-none hover:bg-[#ff751a] text-white w-full" @click="openPricingModal('KI Business')">Business wählen</button>
+            </div>
+          </div>
+
+          <!-- Enterprise -->
+          <div class="card bg-base-100 shadow-xl hover:shadow-2xl hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-body">
+              <h3 class="card-title text-2xl font-bold mb-2 text-base-content">Enterprise</h3>
+              <p class="text-sm text-base-content/70 mb-4">Maßgeschneidert für komplexe Anforderungen</p>
+              <p class="text-4xl font-bold mb-1 text-base-content">auf Anfrage</p>
+              <p class="text-sm text-base-content/70 mb-6">SLA &amp; Scope individuell</p>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-center gap-2 text-base-content"><svg class="w-5 h-5 text-[#f60]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>unbegrenzte Workflows + Agenten</li>
+                <li class="flex items-center gap-2 text-base-content"><svg class="w-5 h-5 text-[#f60]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>n8n self-hosted / API custom</li>
+                <li class="flex items-center gap-2 text-base-content"><svg class="w-5 h-5 text-[#f60]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>on-prem / EU-Hosting für Modelle</li>
+                <li class="flex items-center gap-2 text-base-content"><svg class="w-5 h-5 text-[#f60]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Discovery-Sprint + Inhouse-Workshop</li>
+                <li class="flex items-center gap-2 text-base-content"><svg class="w-5 h-5 text-[#f60]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>SLA nach Vereinbarung</li>
+                <li class="flex items-center gap-2 text-base-content"><svg class="w-5 h-5 text-[#f60]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>DPA + TOMs + Custom-Monitoring</li>
+              </ul>
+              <button class="btn btn-outline hover:bg-[#f60] hover:border-[#f60] w-full" @click="openPricingModal('KI Enterprise')">Beratung anfragen</button>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-center text-sm text-base-content/60 max-w-3xl mx-auto mt-10 italic">
+          Einmalige Preise als Richtwert. Exakter Aufwand wird nach Discovery-Call angeboten.
+          API-/Tool-Lizenzkosten (z.B. OpenAI-Tokens, Make-Operations) werden separat ausgewiesen.
+        </p>
+      </div>
+    </section>
+
     <!-- Kontaktformular -->
     <ContactForm />
 
