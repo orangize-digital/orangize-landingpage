@@ -573,6 +573,47 @@ ul.menu li.selected a {
   color: #ffffff !important;
 }
 
+/* =========================================================
+   Leistungen dropdown fix
+   The earlier global rules (e.g. `ul.menu li:focus a`) match
+   ALL anchor descendants of a focused <li>. When the user
+   focuses the dropdown summary, every link inside the
+   <details><ul>...</ul></details> gets the peach background.
+   These scoped rules undo that for `.dropdown-content` items
+   and ensure only the actually-hovered link lights up.
+   ========================================================= */
+
+/* Reset dropdown content links to transparent, kill inherited bg */
+.menu .dropdown-content li > a,
+.menu .dropdown-content li > .router-link-active,
+.menu .dropdown-content li > .router-link-exact-active {
+  background-color: transparent !important;
+  color: hsl(var(--bc)) !important;
+  border-radius: 0.5rem !important;
+}
+
+/* Only the truly hovered dropdown link gets the peach background */
+.menu .dropdown-content li > a:hover,
+.menu .dropdown-content li > .router-link-active:hover,
+.menu .dropdown-content li > .router-link-exact-active:hover {
+  background-color: rgba(255, 102, 0, 0.1) !important;
+  color: #f60 !important;
+}
+
+/* Current-page marker in the dropdown: orange text only, no bg */
+.menu .dropdown-content li > a.router-link-active,
+.menu .dropdown-content li > a.router-link-exact-active {
+  color: #f60 !important;
+  font-weight: 600 !important;
+}
+
+/* Kill the doubled background on the Leistungen trigger:
+   the outer <details> shouldn't get any background — only
+   the <summary> child does. */
+.menu li > details {
+  background-color: transparent !important;
+}
+
 /* CTA Section theme-aware styles */
 /* Light mode: white/light overlay with black text */
 [data-theme="light"] .cta-overlay {
