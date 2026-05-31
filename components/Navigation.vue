@@ -45,6 +45,18 @@
       <!-- Desktop Menu -->
       <div class="flex-none hidden lg:flex lg:flex-1 lg:justify-center">
         <ul class="menu menu-horizontal px-1 gap-8">
+          <li>
+            <details class="dropdown">
+              <summary class="hover:text-[#f60] text-base-content transition-colors duration-300 font-bold navi-items cursor-pointer">
+                Leistungen
+              </summary>
+              <ul class="menu dropdown-content bg-base-100 rounded-box z-[60] w-60 p-2 shadow mt-2">
+                <li><NuxtLink to="/google-ads" class="text-base-content hover:text-[#f60]">Google Ads</NuxtLink></li>
+                <li><NuxtLink to="/website-erstellen-lassen" class="text-base-content hover:text-[#f60]">Webdesign</NuxtLink></li>
+                <li><NuxtLink to="/ki-automatisierung" class="text-base-content hover:text-[#f60]">KI-Automatisierung</NuxtLink></li>
+              </ul>
+            </details>
+          </li>
           <li v-for="section in sections" :key="section.id">
             <a
               :href="'#' + section.id"
@@ -84,6 +96,16 @@
       class="lg:hidden absolute top-full left-0 right-0 bg-base-100/80 backdrop-blur-md shadow-md transition-opacity duration-500 ease-out"
     >
       <ul class="menu menu-vertical px-4 py-2">
+        <li>
+          <details>
+            <summary class="text-white hover:text-[#f60] font-semibold">Leistungen</summary>
+            <ul>
+              <li><NuxtLink to="/google-ads" class="text-white hover:text-[#f60]" @click="isMenuOpen = false">Google Ads</NuxtLink></li>
+              <li><NuxtLink to="/website-erstellen-lassen" class="text-white hover:text-[#f60]" @click="isMenuOpen = false">Webdesign</NuxtLink></li>
+              <li><NuxtLink to="/ki-automatisierung" class="text-white hover:text-[#f60]" @click="isMenuOpen = false">KI-Automatisierung</NuxtLink></li>
+            </ul>
+          </details>
+        </li>
         <li v-for="section in sections" :key="section.id">
           <a
             :href="'#' + section.id"
@@ -148,7 +170,6 @@ const updateTheme = () => {
 const sections = [
   { id: "losung", name: "Lösung" },
   { id: "fakten", name: "Fakten" },
-  { id: "ablauf", name: "Ablauf" },
   { id: "uber-mich", name: "Über uns" },
   { id: "faq", name: "FAQ" },
 ];
