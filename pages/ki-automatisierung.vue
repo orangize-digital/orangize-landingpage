@@ -385,6 +385,70 @@
       </div>
     </section>
 
+    <!-- DSGVO -->
+    <section id="dsgvo" class="py-20 bg-base-100">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right">
+            <h3 class="text-lg text-[#f60] font-semibold mb-4">DSGVO &amp; Datensicherheit</h3>
+            <h2 class="text-4xl text-base-content font-bold mb-6">Compliance ist kein Add-on — sondern Voraussetzung</h2>
+            <p class="text-lg text-base-content mb-6">
+              Für den deutschen Mittelstand ist die Frage nicht "Können wir KI?", sondern "Können wir KI rechtssicher?". Wir bauen Automatisierungen so, dass sie von Anfang an DSGVO-konform sind.
+            </p>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-4">
+                <div class="p-2 bg-[#f60] text-white rounded-full mt-1 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-base-content">EU-Hosting &amp; on-prem Optionen</h4>
+                  <p class="text-base-content">n8n self-hosted auf deinem Server, EU-Region für Cloud-Tools, lokale Modelle wenn nötig.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="p-2 bg-[#f60] text-white rounded-full mt-1 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-base-content">Auftragsverarbeitungs-Verträge (AVV)</h4>
+                  <p class="text-base-content">Vorbereitete AVVs mit allen relevanten Subunternehmern — sauber dokumentiert.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="p-2 bg-[#f60] text-white rounded-full mt-1 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-base-content">Modellauswahl mit Bedacht</h4>
+                  <p class="text-base-content">Für sensible Daten: Anthropic (EU), Mistral oder lokale Modelle. Klar dokumentiert, welcher Datenfluss wohin geht.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="p-2 bg-[#f60] text-white rounded-full mt-1 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-base-content">Audit-Logs &amp; Nachvollziehbarkeit</h4>
+                  <p class="text-base-content">Jede Automation protokolliert, welche Daten sie verarbeitet hat. Bei Bedarf jederzeit prüfbar.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div data-aos="fade-up" class="bg-base-200 rounded-lg p-8 border border-[#f60]/20">
+            <h3 class="text-2xl font-bold text-base-content mb-6">Unsere DSGVO-Checklist</h3>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3 text-base-content"><span class="text-[#f60] font-bold">✓</span> Datenfluss-Diagramm pro Automation</li>
+              <li class="flex items-center gap-3 text-base-content"><span class="text-[#f60] font-bold">✓</span> Hosting-Region dokumentiert</li>
+              <li class="flex items-center gap-3 text-base-content"><span class="text-[#f60] font-bold">✓</span> Subunternehmer-Verzeichnis</li>
+              <li class="flex items-center gap-3 text-base-content"><span class="text-[#f60] font-bold">✓</span> Löschkonzept inkl. KI-Modell-Daten</li>
+              <li class="flex items-center gap-3 text-base-content"><span class="text-[#f60] font-bold">✓</span> Technische &amp; organisatorische Maßnahmen (TOMs)</li>
+              <li class="flex items-center gap-3 text-base-content"><span class="text-[#f60] font-bold">✓</span> Schulung der Mitarbeitenden</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Kontaktformular -->
     <ContactForm />
 
