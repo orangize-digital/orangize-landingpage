@@ -281,6 +281,65 @@
       </div>
     </section>
 
+    <!-- Use Cases -->
+    <section id="usecases" class="py-20 bg-base-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h3 class="text-lg text-[#f60] font-semibold" data-aos="fade-up">
+            Konkrete Anwendungsfälle
+          </h3>
+          <h2 class="text-4xl text-base-content font-bold" data-aos="fade-up" data-aos-delay="100">
+            Was wir typischerweise automatisieren
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="card bg-base-200 border border-[#f60]/20" data-aos="fade-up">
+            <div class="card-body">
+              <h3 class="text-xl font-bold text-base-content mb-2">Lead-Qualifizierungs-Agent</h3>
+              <p class="text-base-content mb-4">Eingehende Anfragen werden automatisch nach Fit, Budget und Dringlichkeit bewertet und priorisiert.</p>
+              <p class="text-sm text-[#f60] font-semibold">Vorher: 30 Min/Lead manuell · Nachher: 2 Min Review</p>
+            </div>
+          </div>
+          <div class="card bg-base-200 border border-[#f60]/20" data-aos="fade-up" data-aos-delay="80">
+            <div class="card-body">
+              <h3 class="text-xl font-bold text-base-content mb-2">E-Mail-Sortierung &amp; Antwort-Vorschläge</h3>
+              <p class="text-base-content mb-4">Inbox wird kategorisiert, dringende Mails markiert, Standard-Antworten als Entwurf vorbereitet.</p>
+              <p class="text-sm text-[#f60] font-semibold">Spart 5–10 Stunden pro Woche</p>
+            </div>
+          </div>
+          <div class="card bg-base-200 border border-[#f60]/20" data-aos="fade-up" data-aos-delay="160">
+            <div class="card-body">
+              <h3 class="text-xl font-bold text-base-content mb-2">Recherche-Agent</h3>
+              <p class="text-base-content mb-4">Konkurrenz-Briefings, Markt-Updates, Lead-Recherche — auf Knopfdruck als strukturiertes PDF.</p>
+              <p class="text-sm text-[#f60] font-semibold">Aus 2 Stunden Recherche werden 5 Minuten</p>
+            </div>
+          </div>
+          <div class="card bg-base-200 border border-[#f60]/20" data-aos="fade-up">
+            <div class="card-body">
+              <h3 class="text-xl font-bold text-base-content mb-2">Angebots-Automatisierung</h3>
+              <p class="text-base-content mb-4">Anfrage → standardisiertes Angebot mit individuellen Positionen → PDF → E-Mail-Versand.</p>
+              <p class="text-sm text-[#f60] font-semibold">Angebot in 10 Min statt 1 Stunde</p>
+            </div>
+          </div>
+          <div class="card bg-base-200 border border-[#f60]/20" data-aos="fade-up" data-aos-delay="80">
+            <div class="card-body">
+              <h3 class="text-xl font-bold text-base-content mb-2">CRM-Sync</h3>
+              <p class="text-base-content mb-4">Kontakte, Aktivitäten und Notizen zwischen E-Mail, CRM, Kalender und Buchhaltung synchron halten.</p>
+              <p class="text-sm text-[#f60] font-semibold">Schluss mit Daten-Insellage</p>
+            </div>
+          </div>
+          <div class="card bg-base-200 border border-[#f60]/20" data-aos="fade-up" data-aos-delay="160">
+            <div class="card-body">
+              <h3 class="text-xl font-bold text-base-content mb-2">WhatsApp- &amp; Anruf-Triage</h3>
+              <p class="text-base-content mb-4">Eingehende Nachrichten und Anruf-Notizen werden ins CRM überführt und an die richtige Person geroutet.</p>
+              <p class="text-sm text-[#f60] font-semibold">Kein verlorener Lead mehr</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Kontaktformular -->
     <ContactForm />
 
