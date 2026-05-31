@@ -529,6 +529,94 @@
       </div>
     </section>
 
+    <!-- Keywords-Grid -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h3 class="text-lg text-[#f60] font-semibold" data-aos="fade-up">Unsere Expertise</h3>
+          <h2 class="text-4xl text-base-content font-bold" data-aos="fade-up" data-aos-delay="100">
+            KI-Automatisierung für deutsche Anforderungen
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div class="bg-base-100 p-4 rounded-lg border border-[#f60]/20 text-center"><p class="text-base-content">KI-Agenten erstellen</p></div>
+          <div class="bg-base-100 p-4 rounded-lg border border-[#f60]/20 text-center"><p class="text-base-content">n8n Agentur</p></div>
+          <div class="bg-base-100 p-4 rounded-lg border border-[#f60]/20 text-center"><p class="text-base-content">Make.com Beratung</p></div>
+          <div class="bg-base-100 p-4 rounded-lg border border-[#f60]/20 text-center"><p class="text-base-content">Zapier Setup</p></div>
+          <div class="bg-base-100 p-4 rounded-lg border border-[#f60]/20 text-center"><p class="text-base-content">Workflow-Automatisierung</p></div>
+          <div class="bg-base-100 p-4 rounded-lg border border-[#f60]/20 text-center"><p class="text-base-content">Prozessautomatisierung KMU</p></div>
+          <div class="bg-base-100 p-4 rounded-lg border border-[#f60]/20 text-center"><p class="text-base-content">DSGVO KI</p></div>
+          <div class="bg-base-100 p-4 rounded-lg border border-[#f60]/20 text-center"><p class="text-base-content">E-Mail-Automatisierung</p></div>
+          <div class="bg-base-100 p-4 rounded-lg border border-[#f60]/20 text-center"><p class="text-base-content">Recherche-Agent</p></div>
+          <div class="bg-base-100 p-4 rounded-lg border border-[#f60]/20 text-center"><p class="text-base-content">API-Integration</p></div>
+          <div class="bg-base-100 p-4 rounded-lg border border-[#f60]/20 text-center"><p class="text-base-content">CRM-Automatisierung</p></div>
+          <div class="bg-base-100 p-4 rounded-lg border border-[#f60]/20 text-center"><p class="text-base-content">Automatisierung Ostwestfalen</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Regionale Präsenz -->
+    <KiAutomatisierungRegionalePraesenz />
+
+    <!-- CTA -->
+    <CTA />
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 bg-base-200">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h3 class="text-lg text-[#f60] font-semibold" data-aos="fade-up">Häufig gestellte Fragen</h3>
+          <h2 class="text-4xl text-base-content font-bold" data-aos="fade-up" data-aos-delay="100">Alles Wichtige zu KI-Automatisierung</h2>
+        </div>
+        <div class="max-w-3xl mx-auto">
+          <div class="space-y-4">
+            <div class="collapse collapse-plus bg-base-100">
+              <input type="radio" name="ki-faq" checked="checked" />
+              <div class="collapse-title text-xl font-medium text-base-content">Was kostet eine KI-Automatisierung?</div>
+              <div class="collapse-content text-base-content">
+                <p>Einfache Workflows starten ab 1.490 € einmalig (Starter-Paket). Maßgeschneiderte Agenten und mehrere verbundene Workflows liegen ab 3.900 € (Business). Komplexe Enterprise-Setups individuell. Hinzu kommen monatliche Wartung und ggf. API-/Tool-Lizenzkosten — wir weisen die immer separat aus.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-100">
+              <input type="radio" name="ki-faq" />
+              <div class="collapse-title text-xl font-medium text-base-content">Wie lange dauert die Umsetzung?</div>
+              <div class="collapse-content text-base-content">
+                <p>Ein einzelner Workflow ist meist in 2 Wochen live. Komplexere Setups mit mehreren Automationen und KI-Agenten brauchen 4–8 Wochen. Discovery + Audit machen wir vorab in 1–2 Wochen.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-100">
+              <input type="radio" name="ki-faq" />
+              <div class="collapse-title text-xl font-medium text-base-content">Was darf KI eigentlich DSGVO-mäßig?</div>
+              <div class="collapse-content text-base-content">
+                <p>Viel — wenn man es richtig macht. Wir nutzen Modelle mit EU-Hosting oder lokale Modelle für sensible Daten, schließen Auftragsverarbeitungs-Verträge mit allen Beteiligten, dokumentieren den Datenfluss und nutzen wo möglich pseudonymisierte Eingaben. Jede Automation ist auditierbar.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-100">
+              <input type="radio" name="ki-faq" />
+              <div class="collapse-title text-xl font-medium text-base-content">Was ist der Unterschied zwischen n8n, Make und Zapier?</div>
+              <div class="collapse-content text-base-content">
+                <p>Zapier ist am einfachsten und teuersten pro Operation — gut für simple Sachen. Make bietet mehr Logik fürs gleiche Geld und ist unsere Standard-Wahl für mittlere Komplexität. n8n ist Open Source und kann auf deinem eigenen Server laufen — ideal wenn DSGVO oder Kostenkontrolle wichtig ist.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-100">
+              <input type="radio" name="ki-faq" />
+              <div class="collapse-title text-xl font-medium text-base-content">Was passiert wenn ein Tool sich ändert oder ein Workflow bricht?</div>
+              <div class="collapse-content text-base-content">
+                <p>Genau dafür ist die monatliche Wartung. Wir überwachen die Workflows, bekommen Fehler-Alerts und passen an, wenn APIs sich ändern. Du musst dich um nichts kümmern.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-100">
+              <input type="radio" name="ki-faq" />
+              <div class="collapse-title text-xl font-medium text-base-content">Was, wenn ich gar kein IT-Mensch bin?</div>
+              <div class="collapse-content text-base-content">
+                <p>Genau dann ist das der richtige Service. Wir übersetzen deine Prozesse in Automationen, du musst nur sagen "Wenn das passiert, soll das passieren". Den Rest — Tools wählen, einrichten, betreiben — machen wir.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Kontaktformular -->
     <ContactForm />
 
@@ -548,6 +636,7 @@ import ContactForm from "../components/ContactForm.vue";
 import FloatingCallButton from "../components/FloatingCallButton.vue";
 import PricingModal from "../components/PricingModal.vue";
 import HeroContactForm from "../components/HeroContactForm.vue";
+import CTA from "../components/CTA.vue";
 
 const route = useRoute();
 
