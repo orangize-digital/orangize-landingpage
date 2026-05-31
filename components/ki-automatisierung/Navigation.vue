@@ -38,10 +38,10 @@
               <summary class="hover:text-[#f60] text-base-content transition-colors duration-300 font-bold navi-items cursor-pointer">
                 Leistungen
               </summary>
-              <ul class="menu dropdown-content bg-base-100 rounded-box z-[60] w-60 p-2 shadow mt-2">
-                <li><router-link to="/google-ads" class="text-base-content hover:text-[#f60]">Google Ads</router-link></li>
-                <li><router-link to="/website-erstellen-lassen" class="text-base-content hover:text-[#f60]">Webdesign</router-link></li>
-                <li><router-link to="/ki-automatisierung" class="text-[#f60] font-semibold">KI-Automatisierung</router-link></li>
+              <ul class="menu dropdown-content bg-base-100 rounded-box z-[60] w-60 p-3 space-y-1 shadow mt-2">
+                <li><router-link to="/google-ads" class="text-base-content hover:text-[#f60] py-2">Google Ads</router-link></li>
+                <li><router-link to="/website-erstellen-lassen" class="text-base-content hover:text-[#f60] py-2">Webdesign</router-link></li>
+                <li><router-link to="/ki-automatisierung" class="text-[#f60] font-semibold py-2">KI-Automatisierung</router-link></li>
               </ul>
             </details>
           </li>
@@ -122,13 +122,12 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from "vue";
+import { ref, computed, onMounted } from "vue";
 import ThemeSwitcher from "../ThemeSwitcher.vue";
 
 const isMenuOpen = ref(false);
-const isScrolled = ref(false);
+const isScrolled = ref(true);
 const currentTheme = ref("light");
-let ticking = false;
 
 const logoSrc = computed(() =>
   currentTheme.value === "dark"
@@ -152,16 +151,6 @@ const sections = [
   { id: "faq", name: "FAQ" },
 ];
 
-const updateNavbar = () => {
-  if (!ticking) {
-    requestAnimationFrame(() => {
-      isScrolled.value = window.scrollY > 200;
-      ticking = false;
-    });
-    ticking = true;
-  }
-};
-
 const scrollToSection = (id) => {
   const element = document.getElementById(id);
   if (element) element.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -174,7 +163,6 @@ const scrollToContact = () => {
 };
 
 onMounted(() => {
-  window.addEventListener("scroll", updateNavbar);
   updateTheme();
 
   const observer = new MutationObserver((mutations) => {
@@ -185,10 +173,6 @@ onMounted(() => {
     });
   });
   observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
-});
-
-onUnmounted(() => {
-  window.removeEventListener("scroll", updateNavbar);
 });
 </script>
 

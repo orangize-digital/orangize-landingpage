@@ -50,10 +50,10 @@
               <summary class="hover:text-[#f60] text-base-content transition-colors duration-300 font-bold navi-items cursor-pointer">
                 Leistungen
               </summary>
-              <ul class="menu dropdown-content bg-base-100 rounded-box z-[60] w-60 p-2 shadow mt-2">
-                <li><NuxtLink to="/google-ads" class="text-base-content hover:text-[#f60]">Google Ads</NuxtLink></li>
-                <li><NuxtLink to="/website-erstellen-lassen" class="text-base-content hover:text-[#f60]">Webdesign</NuxtLink></li>
-                <li><NuxtLink to="/ki-automatisierung" class="text-base-content hover:text-[#f60]">KI-Automatisierung</NuxtLink></li>
+              <ul class="menu dropdown-content bg-base-100 rounded-box z-[60] w-60 p-3 space-y-1 shadow mt-2">
+                <li><NuxtLink to="/google-ads" class="text-base-content hover:text-[#f60] py-2">Google Ads</NuxtLink></li>
+                <li><NuxtLink to="/website-erstellen-lassen" class="text-base-content hover:text-[#f60] py-2">Webdesign</NuxtLink></li>
+                <li><NuxtLink to="/ki-automatisierung" class="text-base-content hover:text-[#f60] py-2">KI-Automatisierung</NuxtLink></li>
               </ul>
             </details>
           </li>
@@ -148,7 +148,7 @@
 // Nuxt auto-imports ref, computed, onMounted, onUnmounted
 
 const isMenuOpen = ref(false);
-const isScrolled = ref(false);
+const isScrolled = ref(true);
 const activeSection = ref(null);
 const currentTheme = ref("light");
 let ticking = false;
@@ -177,7 +177,6 @@ const sections = [
 const updateNavbar = () => {
   if (!ticking) {
     requestAnimationFrame(() => {
-      isScrolled.value = window.scrollY > 200;
       updateActiveSection();
       ticking = false;
     });
