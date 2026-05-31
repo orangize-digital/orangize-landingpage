@@ -340,6 +340,51 @@
       </div>
     </section>
 
+    <!-- Prozess -->
+    <section id="prozess" class="py-20 bg-base-200">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h3 class="text-lg text-[#f60] font-semibold" data-aos="fade-up">
+            Unser Prozess
+          </h3>
+          <h2 class="text-4xl text-base-content font-bold" data-aos="fade-up" data-aos-delay="100">
+            Vom Audit bis zum laufenden Workflow
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="card bg-base-100 shadow-xl border border-[#f60]/20" data-aos="fade-up">
+            <div class="card-body text-center">
+              <div class="w-16 h-16 rounded-full bg-[#f60]/30 text-neutral-content flex items-center justify-center text-2xl font-bold mx-auto mb-6">1</div>
+              <h3 class="text-xl font-bold text-base-content mb-4">Discovery &amp; Audit</h3>
+              <p class="text-base-content">Wir schauen uns deine Prozesse an, identifizieren die teuersten manuellen Schritte und priorisieren nach ROI.</p>
+            </div>
+          </div>
+          <div class="card bg-base-100 shadow-xl border border-[#f60]/20" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-body text-center">
+              <div class="w-16 h-16 rounded-full bg-[#f60]/30 text-neutral-content flex items-center justify-center text-2xl font-bold mx-auto mb-6">2</div>
+              <h3 class="text-xl font-bold text-base-content mb-4">Workflow-Design</h3>
+              <p class="text-base-content">Wir entwerfen die Automation, prüfen DSGVO-Anforderungen und stimmen das Design mit dir ab.</p>
+            </div>
+          </div>
+          <div class="card bg-base-100 shadow-xl border border-[#f60]/20" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-body text-center">
+              <div class="w-16 h-16 rounded-full bg-[#f60]/30 text-neutral-content flex items-center justify-center text-2xl font-bold mx-auto mb-6">3</div>
+              <h3 class="text-xl font-bold text-base-content mb-4">Implementierung</h3>
+              <p class="text-base-content">Wir bauen, testen, dokumentieren — und schulen dein Team bei der Übergabe.</p>
+            </div>
+          </div>
+          <div class="card bg-base-100 shadow-xl border border-[#f60]/20" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-body text-center">
+              <div class="w-16 h-16 rounded-full bg-[#f60]/30 text-neutral-content flex items-center justify-center text-2xl font-bold mx-auto mb-6">4</div>
+              <h3 class="text-xl font-bold text-base-content mb-4">Betrieb &amp; Optimierung</h3>
+              <p class="text-base-content">Monitoring, Fehler-Alerts, regelmäßige Reviews — und Anpassungen wenn sich Tools oder Prozesse ändern.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Kontaktformular -->
     <ContactForm />
 
