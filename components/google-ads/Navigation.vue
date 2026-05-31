@@ -47,13 +47,13 @@
         <ul class="menu menu-horizontal px-1 gap-8">
           <li>
             <details class="dropdown">
-              <summary class="hover:text-[#f60] text-base-content transition-colors duration-300 font-bold navi-items cursor-pointer">
+              <summary class="hover:text-[#f60] text-base-content transition-colors duration-300 font-bold navi-items cursor-pointer !rounded-lg">
                 Leistungen
               </summary>
               <ul class="menu dropdown-content bg-base-100 rounded-box z-[60] w-60 p-3 space-y-1 shadow mt-2">
-                <li><router-link to="/google-ads" class="text-[#f60] font-semibold py-2">Google Ads</router-link></li>
-                <li><router-link to="/website-erstellen-lassen" class="text-base-content hover:text-[#f60] py-2">Webdesign</router-link></li>
-                <li><router-link to="/ki-automatisierung" class="text-base-content hover:text-[#f60] py-2">KI-Automatisierung</router-link></li>
+                <li><router-link to="/google-ads" class="!bg-transparent hover:!bg-[#f60]/10 text-[#f60] font-semibold py-2 !rounded-lg">Google Ads</router-link></li>
+                <li><router-link to="/website-erstellen-lassen" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2 !rounded-lg">Webdesign</router-link></li>
+                <li><router-link to="/ki-automatisierung" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2 !rounded-lg">KI-Automatisierung</router-link></li>
               </ul>
             </details>
           </li>
@@ -65,14 +65,6 @@
             >
               {{ section.name }}
             </a>
-          </li>
-          <li>
-            <router-link
-              to="/website-erstellen-lassen"
-              class="hover:text-[#f60] text-base-content transition-colors duration-300 font-bold navi-items"
-            >
-              Websiten
-            </router-link>
           </li>
           <li>
             <router-link
@@ -124,15 +116,6 @@
           >
             {{ section.name }}
           </a>
-        </li>
-        <li>
-          <router-link
-            to="/website-erstellen"
-            class="text-white hover:text-[#f60] transition-colors duration-300"
-            @click="isMenuOpen = false"
-          >
-            Website erstellen
-          </router-link>
         </li>
         <li>
           <router-link

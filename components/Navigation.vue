@@ -47,13 +47,13 @@
         <ul class="menu menu-horizontal px-1 gap-8">
           <li>
             <details class="dropdown">
-              <summary class="hover:text-[#f60] text-base-content transition-colors duration-300 font-bold navi-items cursor-pointer">
+              <summary class="hover:text-[#f60] text-base-content transition-colors duration-300 font-bold navi-items cursor-pointer !rounded-lg">
                 Leistungen
               </summary>
               <ul class="menu dropdown-content bg-base-100 rounded-box z-[60] w-60 p-3 space-y-1 shadow mt-2">
-                <li><NuxtLink to="/google-ads" class="text-base-content hover:text-[#f60] py-2">Google Ads</NuxtLink></li>
-                <li><NuxtLink to="/website-erstellen-lassen" class="text-base-content hover:text-[#f60] py-2">Webdesign</NuxtLink></li>
-                <li><NuxtLink to="/ki-automatisierung" class="text-base-content hover:text-[#f60] py-2">KI-Automatisierung</NuxtLink></li>
+                <li><NuxtLink to="/google-ads" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2 !rounded-lg">Google Ads</NuxtLink></li>
+                <li><NuxtLink to="/website-erstellen-lassen" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2 !rounded-lg">Webdesign</NuxtLink></li>
+                <li><NuxtLink to="/ki-automatisierung" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2 !rounded-lg">KI-Automatisierung</NuxtLink></li>
               </ul>
             </details>
           </li>
