@@ -1,261 +1,172 @@
 <template>
   <section class="py-20 bg-base-100">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-12">
-        <h3 class="text-lg text-[#f60] font-semibold" data-aos="fade-up">
+    <!-- Heading (contained) -->
+    <div class="container mx-auto px-4 mb-16">
+      <div class="text-center">
+        <h3
+          class="text-sm text-[#f60] font-bold uppercase tracking-[0.3em] mb-4"
+          data-aos="fade-up"
+        >
           Unsere Kernkompetenzen
         </h3>
         <h2
-          class="text-4xl text-base-content font-bold mt-2"
+          class="text-4xl lg:text-5xl text-base-content font-black"
           data-aos="fade-up"
           data-aos-delay="100"
         >
           Digitale Lösungen für Ihren Erfolg
         </h2>
       </div>
+    </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        <!-- Website erstellen Card -->
-        <NuxtLink
-          to="/website-erstellen-lassen"
-          class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-base-200 to-base-300 p-1 transition-all duration-300 hover:shadow-xl hover:shadow-[#f60]/10"
-          data-aos="fade-up"
-        >
-          <div class="relative overflow-hidden rounded-xl bg-base-100 p-6 h-full">
-            <!-- Background gradient on hover -->
-            <div class="absolute inset-0 bg-gradient-to-br from-[#f60]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-            <div class="relative z-10 flex flex-col h-full">
-              <!-- Icon and Title Row -->
-              <div class="flex items-start gap-4 mb-4">
-                <div class="flex-shrink-0 w-12 h-12 bg-[#f60]/10 rounded-xl flex items-center justify-center group-hover:bg-[#f60] group-hover:scale-110 transition-all duration-300">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="text-[#f60] group-hover:text-white transition-colors duration-300"
-                  >
-                    <rect width="18" height="18" x="3" y="3" rx="2" />
-                    <path d="M7 7h10" />
-                    <path d="M7 12h10" />
-                    <path d="M7 17h10" />
-                  </svg>
-                </div>
-                <div class="flex-1">
-                  <h3 class="text-xl font-bold text-base-content group-hover:text-[#f60] transition-colors duration-300">
-                    Website erstellen lassen
-                  </h3>
-                  <p class="text-base-content/60 text-sm mt-1">
-                    Professionelle Websiten die konvertieren
-                  </p>
-                </div>
-              </div>
-
-              <!-- Features -->
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-3 py-1 text-xs font-medium bg-[#f60]/10 text-[#f60] rounded-full">
-                  Responsive
-                </span>
-                <span class="px-3 py-1 text-xs font-medium bg-[#f60]/10 text-[#f60] rounded-full">
-                  SEO-Optimiert
-                </span>
-                <span class="px-3 py-1 text-xs font-medium bg-[#f60]/10 text-[#f60] rounded-full">
-                  Conversion-stark
-                </span>
-              </div>
-
-              <!-- Arrow -->
-              <div class="mt-auto flex items-center text-[#f60] font-medium text-sm">
-                <span class="group-hover:mr-2 transition-all duration-300">Mehr erfahren</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="transform group-hover:translate-x-1 transition-transform duration-300"
-                >
-                  <path d="M5 12h14" />
-                  <path d="m12 5 7 7-7 7" />
-                </svg>
-              </div>
-            </div>
+    <!-- Full-bleed orange triptych — edge to edge, no container -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 w-full">
+      <!-- Card 1 — Webdesign -->
+      <NuxtLink
+        to="/website-erstellen-lassen"
+        class="service-tile group"
+        data-aos="fade-up"
+      >
+        <span class="service-tile__num">01</span>
+        <div class="service-tile__icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect width="18" height="18" x="3" y="3" rx="2" />
+            <path d="M3 9h18" />
+            <path d="M7 6.5h.01" />
+            <path d="M10 6.5h.01" />
+          </svg>
+        </div>
+        <div class="service-tile__body">
+          <h3 class="service-tile__title">Webdesign</h3>
+          <p class="service-tile__lead">Websites, die verkaufen.</p>
+          <div class="service-tile__cta">
+            <span>Mehr erfahren</span>
+            <svg
+              class="service-tile__arrow"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14" />
+              <path d="m13 5 7 7-7 7" />
+            </svg>
           </div>
-        </NuxtLink>
+        </div>
+      </NuxtLink>
 
-        <!-- Google Ads Card -->
-        <NuxtLink
-          to="/google-ads"
-          class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-base-200 to-base-300 p-1 transition-all duration-300 hover:shadow-xl hover:shadow-[#f60]/10"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <div class="relative overflow-hidden rounded-xl bg-base-100 p-6 h-full">
-            <!-- Background gradient on hover -->
-            <div class="absolute inset-0 bg-gradient-to-br from-[#f60]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-            <div class="relative z-10 flex flex-col h-full">
-              <!-- Icon and Title Row -->
-              <div class="flex items-start gap-4 mb-4">
-                <div class="flex-shrink-0 w-12 h-12 bg-[#f60]/10 rounded-xl flex items-center justify-center group-hover:bg-[#f60] group-hover:scale-110 transition-all duration-300">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="text-[#f60] group-hover:text-white transition-colors duration-300"
-                  >
-                    <path d="M12 2v8" />
-                    <path d="m4.93 10.93 1.41 1.41" />
-                    <path d="M2 18h2" />
-                    <path d="M20 18h2" />
-                    <path d="m19.07 10.93-1.41 1.41" />
-                    <path d="M22 22H2" />
-                    <path d="m16 6-4 4-4-4" />
-                    <path d="M16 18a4 4 0 0 0-8 0" />
-                  </svg>
-                </div>
-                <div class="flex-1">
-                  <h3 class="text-xl font-bold text-base-content group-hover:text-[#f60] transition-colors duration-300">
-                    Google Ads Kampagnen
-                  </h3>
-                  <p class="text-base-content/60 text-sm mt-1">
-                    Maximaler ROI für Ihr Werbebudget
-                  </p>
-                </div>
-              </div>
-
-              <!-- Features -->
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-3 py-1 text-xs font-medium bg-[#f60]/10 text-[#f60] rounded-full">
-                  Sofort sichtbar
-                </span>
-                <span class="px-3 py-1 text-xs font-medium bg-[#f60]/10 text-[#f60] rounded-full">
-                  Messbar
-                </span>
-                <span class="px-3 py-1 text-xs font-medium bg-[#f60]/10 text-[#f60] rounded-full">
-                  Kostenkontrolle
-                </span>
-              </div>
-
-              <!-- Arrow -->
-              <div class="mt-auto flex items-center text-[#f60] font-medium text-sm">
-                <span class="group-hover:mr-2 transition-all duration-300">Mehr erfahren</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="transform group-hover:translate-x-1 transition-transform duration-300"
-                >
-                  <path d="M5 12h14" />
-                  <path d="m12 5 7 7-7 7" />
-                </svg>
-              </div>
-            </div>
+      <!-- Card 2 — Google Ads -->
+      <NuxtLink
+        to="/google-ads"
+        class="service-tile service-tile--alt group"
+        data-aos="fade-up"
+        data-aos-delay="120"
+      >
+        <span class="service-tile__num">02</span>
+        <div class="service-tile__icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <circle cx="12" cy="12" r="6" />
+            <circle cx="12" cy="12" r="2" />
+          </svg>
+        </div>
+        <div class="service-tile__body">
+          <h3 class="service-tile__title">Google Ads</h3>
+          <p class="service-tile__lead">Werbung, die sich rechnet.</p>
+          <div class="service-tile__cta">
+            <span>Mehr erfahren</span>
+            <svg
+              class="service-tile__arrow"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14" />
+              <path d="m13 5 7 7-7 7" />
+            </svg>
           </div>
-        </NuxtLink>
+        </div>
+      </NuxtLink>
 
-        <!-- KI-Automatisierung Card -->
-        <NuxtLink
-          to="/ki-automatisierung"
-          class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-base-200 to-base-300 p-1 transition-all duration-300 hover:shadow-xl hover:shadow-[#f60]/10"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <div class="relative overflow-hidden rounded-xl bg-base-100 p-6 h-full">
-            <div class="absolute inset-0 bg-gradient-to-br from-[#f60]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-            <div class="relative z-10 flex flex-col h-full">
-              <div class="flex items-start gap-4 mb-4">
-                <div class="flex-shrink-0 w-12 h-12 bg-[#f60]/10 rounded-xl flex items-center justify-center group-hover:bg-[#f60] group-hover:scale-110 transition-all duration-300">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="text-[#f60] group-hover:text-white transition-colors duration-300"
-                  >
-                    <rect x="3" y="11" width="18" height="10" rx="2"/>
-                    <circle cx="12" cy="5" r="2"/>
-                    <path d="M12 7v4"/>
-                    <line x1="8" y1="16" x2="8" y2="16"/>
-                    <line x1="16" y1="16" x2="16" y2="16"/>
-                  </svg>
-                </div>
-                <div class="flex-1">
-                  <h3 class="text-xl font-bold text-base-content group-hover:text-[#f60] transition-colors duration-300">
-                    KI-Automatisierung
-                  </h3>
-                  <p class="text-base-content/60 text-sm mt-1">
-                    Workflows &amp; KI-Agenten, die für dich arbeiten
-                  </p>
-                </div>
-              </div>
-
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-3 py-1 text-xs font-medium bg-[#f60]/10 text-[#f60] rounded-full">n8n / Make / Zapier</span>
-                <span class="px-3 py-1 text-xs font-medium bg-[#f60]/10 text-[#f60] rounded-full">DSGVO-konform</span>
-                <span class="px-3 py-1 text-xs font-medium bg-[#f60]/10 text-[#f60] rounded-full">Personal sparen</span>
-              </div>
-
-              <div class="mt-auto flex items-center text-[#f60] font-medium text-sm">
-                <span class="group-hover:mr-2 transition-all duration-300">Mehr erfahren</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="transform group-hover:translate-x-1 transition-transform duration-300"
-                >
-                  <path d="M5 12h14"/>
-                  <path d="m12 5 7 7-7 7"/>
-                </svg>
-              </div>
-            </div>
+      <!-- Card 3 — KI-Automatisierung -->
+      <NuxtLink
+        to="/ki-automatisierung"
+        class="service-tile group"
+        data-aos="fade-up"
+        data-aos-delay="240"
+      >
+        <span class="service-tile__num">03</span>
+        <div class="service-tile__icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="3" y="11" width="18" height="10" rx="2" />
+            <circle cx="12" cy="5" r="2" />
+            <path d="M12 7v4" />
+            <line x1="8" y1="16" x2="8" y2="16" />
+            <line x1="16" y1="16" x2="16" y2="16" />
+          </svg>
+        </div>
+        <div class="service-tile__body">
+          <h3 class="service-tile__title">KI-Automation</h3>
+          <p class="service-tile__lead">Workflows, die für dich arbeiten.</p>
+          <div class="service-tile__cta">
+            <span>Mehr erfahren</span>
+            <svg
+              class="service-tile__arrow"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14" />
+              <path d="m13 5 7 7-7 7" />
+            </svg>
           </div>
-        </NuxtLink>
-      </div>
+        </div>
+      </NuxtLink>
+    </div>
 
-      <!-- CTA Button -->
-      <div class="text-center mt-10" data-aos="fade-up">
-        <button
-          class="btn btn-md text-white border-none bg-[#f60] hover:bg-[#ff751a] shadow-lg transition-all duration-300 hover:scale-105"
-          @click="scrollToContact"
-        >
-          Kostenlose Beratung vereinbaren
-        </button>
-      </div>
+    <!-- Sekundärer CTA-Button -->
+    <div class="container mx-auto px-4 mt-16 text-center" data-aos="fade-up">
+      <button
+        class="btn btn-md text-base-content border-2 border-[#f60] bg-transparent hover:bg-[#f60] hover:text-white transition-all duration-300 px-10 font-bold tracking-wide"
+        @click="scrollToContact"
+      >
+        Kostenlose Beratung vereinbaren
+      </button>
     </div>
   </section>
 </template>
@@ -278,3 +189,157 @@ onMounted(() => {
   }
 });
 </script>
+
+<style scoped>
+.service-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 480px;
+  padding: 3rem;
+  background-color: #f60;
+  color: #ffffff !important;
+  overflow: hidden;
+  transition: background-color 0.5s ease;
+  isolation: isolate;
+  text-decoration: none;
+}
+
+/* Alternierende mittlere Karte: leicht hellerer Orange-Ton für Rhythmus */
+.service-tile--alt {
+  background-color: #ff7a1f;
+}
+
+.service-tile:hover {
+  background-color: #e55300;
+}
+
+.service-tile--alt:hover {
+  background-color: #ff6608;
+}
+
+/* Subtle diagonal stripe overlay — keeps it from feeling flat */
+.service-tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 0) 28px,
+    rgba(255, 255, 255, 0.04) 28px,
+    rgba(255, 255, 255, 0.04) 29px
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Huge number watermark */
+.service-tile__num {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: clamp(7rem, 14vw, 12rem);
+  font-weight: 900;
+  line-height: 0.85;
+  color: rgba(255, 255, 255, 0.12);
+  letter-spacing: -0.05em;
+  user-select: none;
+  z-index: 1;
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1),
+    color 0.5s ease;
+}
+
+.service-tile:hover .service-tile__num {
+  transform: translate(-4px, 4px);
+  color: rgba(255, 255, 255, 0.18);
+}
+
+.service-tile__icon {
+  position: relative;
+  z-index: 2;
+  width: 64px;
+  height: 64px;
+  color: #ffffff !important;
+}
+
+.service-tile__icon svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+.service-tile__icon > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.service-tile__body {
+  position: relative;
+  z-index: 2;
+  transform: translateY(0);
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.service-tile:hover .service-tile__body {
+  transform: translateY(-6px);
+}
+
+.service-tile__title {
+  font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  color: #ffffff !important;
+  margin-bottom: 0.75rem;
+}
+
+.service-tile__lead {
+  font-size: 1.125rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.92) !important;
+  margin-bottom: 2rem;
+  max-width: 22ch;
+}
+
+.service-tile__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #ffffff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.service-tile__cta span {
+  color: #ffffff !important;
+}
+
+.service-tile__arrow {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+  transform: translateX(0);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-tile:hover .service-tile__arrow {
+  transform: translateX(10px);
+}
+
+/* On mobile keep the section breathing — full-width still but with a hint of separation */
+@media (max-width: 1023px) {
+  .service-tile {
+    min-height: 360px;
+    padding: 2.5rem 1.5rem;
+  }
+  .service-tile__num {
+    font-size: clamp(6rem, 22vw, 10rem);
+    top: 1rem;
+    right: 1rem;
+  }
+}
+</style>
