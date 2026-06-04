@@ -1,96 +1,62 @@
 <template>
   <div>
     <Navigation />
-    <!-- Hero Section -->
-    <div
-      class="hero min-h-[110vh] relative bg-[url('@/assets/images/website-erstellen-hero.jpg')] lg:mt-0"
-    >
-      <div class="hero-overlay bg-black bg-opacity-95"></div>
-      <div
-        class="hero-content relative z-10 w-full max-w-7xl mx-auto px-4 lg:py-0 py-[150px]"
-      >
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <!-- Left Side - Content -->
-          <div class="text-left text-neutral-content" data-aos="fade-right">
-            <div class="mb-4">
-              <span class="text-primary font-semibold text-lg">
-                Professionelle Websiten
-              </span>
-            </div>
-            <h1
-              class="text-4xl lg:text-6xl text-white font-bold mb-6 leading-tight"
-            >
-              Website erstellen lassen
-              <span class="text-primary">für Ihren Erfolg</span>
+
+    <!-- Hero — pain-point: visitors don't convert -->
+    <section class="hero-shell">
+      <div class="hero-shell__bg" aria-hidden="true"></div>
+      <div class="hero-shell__inner container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+          <div class="lg:col-span-7" data-aos="fade-right">
+            <p class="hero-shell__eyebrow">Webdesign · Ostwestfalen</p>
+            <h1 class="hero-shell__headline">
+              Eine Website ist kein Selbstzweck.<br />
+              <span class="hero-shell__accent">Sie soll verkaufen.</span>
             </h1>
-            <p class="text-xl lg:text-2xl mb-6 text-neutral-content/90">
-              Maßgeschneiderte Websites & Landingpages, die Besucher in Kunden
-              verwandeln – Ihr digitaler Erfolg beginnt hier
+            <p class="hero-shell__sub">
+              Schicke Bilder sind nicht das Geschäftsmodell. Wir bauen Websites, die aus Besuchern messbar Anfragen machen — performant, suchmaschinen-fit, ohne Schnickschnack.
             </p>
-            <div class="space-y-4 mb-8">
-              <div class="flex items-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                <span class="text-lg">Responsive Design für alle Geräte</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                <span class="text-lg">SEO-optimiert für bessere Google-Rankings</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                <span class="text-lg">Conversion-optimiert für mehr Kunden</span>
-              </div>
-            </div>
-            <div class="flex flex-col sm:flex-row gap-4">
-              <button
-                class="btn btn-primary bg-[#f60] border-none hover:bg-[#f60]/90 text-white px-8"
-                @click="scrollToSection('kontakt')"
-              >
-                Kostenloses Angebot erhalten
+            <div class="hero-shell__cta-row">
+              <button class="hero-shell__btn hero-shell__btn--primary" @click="scrollToSection('kontakt')">
+                Kostenloses Angebot
               </button>
-              <button
-                class="btn btn-outline border-white text-white hover:bg-white hover:text-black px-8"
-                @click="scrollToSection('projekte')"
-              >
+              <button class="hero-shell__btn hero-shell__btn--ghost" @click="scrollToSection('projekte')">
                 Referenzen ansehen
               </button>
             </div>
+            <div class="hero-shell__trust">
+              <div>
+                <div class="hero-shell__stat-num">100+</div>
+                <div class="hero-shell__stat-lbl">Live-Websites</div>
+              </div>
+              <div>
+                <div class="hero-shell__stat-num">3 ×</div>
+                <div class="hero-shell__stat-lbl">Mehr Anfragen</div>
+              </div>
+              <div>
+                <div class="hero-shell__stat-num">OWL</div>
+                <div class="hero-shell__stat-lbl">Persönlich vor Ort</div>
+              </div>
+            </div>
           </div>
 
-          <!-- Right Side - Contact Form -->
-          <div
-            class="flex justify-center lg:justify-end"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
+          <div class="lg:col-span-5" data-aos="fade-left" data-aos-delay="200">
             <HeroContactForm />
           </div>
         </div>
       </div>
-      <!-- Scroll indicator -->
-      <div class="absolute bottom-8 w-full flex justify-center">
-        <a
-          href="#"
-          @click.prevent="scrollToSection('losung')"
-          class="text-white animate-bounce"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-8 w-8"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
+
+      <div class="hero-shell__scroll">
+        <a href="#" @click.prevent="scrollToSection('losung')" aria-label="Nach unten scrollen">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </a>
       </div>
-    </div>
+    </section>
+
+    <!-- Google Certifications - trust signals -->
+    <GoogleCertifications />
 
     <!-- Lösung Section -->
     <section id="losung" class="py-20 bg-base-100">
@@ -118,13 +84,13 @@
               <br /><br />
               Viele Unternehmen verlieren täglich Kunden durch veraltete,
               langsame oder nicht mobiloptimierte Websites. Eine moderne,
-              **benutzerfreundliche Website** hingegen schafft Vertrauen,
+              <strong>benutzerfreundliche Website</strong> hingegen schafft Vertrauen,
               generiert Leads und steigert Ihren Umsatz – rund um die Uhr.
               <br /><br />
-              Wir erstellen **maßgeschneiderte Websites**, die nicht nur optisch
+              Wir erstellen <strong>maßgeschneiderte Websites</strong>, die nicht nur optisch
               überzeugen, sondern auch technisch auf dem neuesten Stand sind.
-              Mit **SEO-optimierten Inhalten** und einer
-              **conversion-orientierten Struktur** sorgen wir dafür, dass Ihre
+              Mit <strong>SEO-optimierten Inhalten</strong> und einer
+              <strong>conversion-orientierten Struktur</strong> sorgen wir dafür, dass Ihre
               Website bei Google gut rankt und Besucher zu Kunden macht.
             </p>
           </div>

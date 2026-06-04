@@ -120,14 +120,14 @@
               <br /><br />
               Viele Mindener Unternehmen verlieren täglich potenzielle Kunden
               durch veraltete oder nicht mobiloptimierte Websites. Eine
-              **moderne, benutzerfreundliche Website** hingegen schafft
+              <strong>moderne, benutzerfreundliche Website</strong> hingegen schafft
               Vertrauen bei Ihren lokalen Kunden und steigert Ihren Umsatz –
               rund um die Uhr.
               <br /><br />
-              Wir erstellen **maßgeschneiderte Websites für Minden**, die nicht
+              Wir erstellen <strong>maßgeschneiderte Websites für Minden</strong>, die nicht
               nur optisch überzeugen, sondern auch bei Google für "Minden + Ihr
-              Service" optimal gefunden werden. Mit **lokaler SEO-Optimierung**
-              und einer **conversion-orientierten Struktur** bringen wir mehr
+              Service" optimal gefunden werden. Mit <strong>lokaler SEO-Optimierung</strong>
+              und einer <strong>conversion-orientierten Struktur</strong> bringen wir mehr
               Mindener Kunden zu Ihnen.
             </p>
           </div>

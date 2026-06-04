@@ -1,98 +1,137 @@
 <template>
-  <section id="fakten" class="py-20 relative overflow-hidden bg-base-100">
-    <div class="container mx-auto px-4">
-      <h3
-        class="text-lg text-[#f60] font-semibold text-center"
+  <section id="fakten" class="facts-section">
+    <div class="container mx-auto px-4 mb-16">
+      <div class="text-center" data-aos="fade-up">
+        <h3 class="facts-eyebrow">Zahlen statt Behauptungen</h3>
+        <h2 class="facts-headline">Fakten, die nichts zu verstecken haben</h2>
+      </div>
+    </div>
+
+    <div class="facts-grid">
+      <div
+        v-for="(stat, idx) in stats"
+        :key="stat.label"
+        class="stat-tile"
         data-aos="fade-up"
+        :data-aos-delay="idx * 80"
       >
-        Unsere Motivation in Zahlen – weil Ergebnisse zählen.
-      </h3>
-      <h2 class="text-4xl text-base-content font-bold text-center mb-12">
-        Fakten, die uns antreiben
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="feature-card bg-base-200 rounded-lg p-6 floating shadow-xl">
-          <div class="text-5xl mb-4 text-orange-600 feature-icon">
-            <i class="fas fa-laptop-code"></i>
-          </div>
-          <h3 class="text-2xl font-bold mb-2 text-base-content">
-            Webdesign & Entwicklung
-          </h3>
-          <p class="text-base-content opacity-75">
-            Über 100+ moderne, performante und kundenorientierte Websites
-            erstellt.
-          </p>
-        </div>
-        <div
-          class="feature-card bg-base-200 rounded-lg p-6 floating shadow-xl"
-          style="animation-delay: 1s"
-        >
-          <div class="text-5xl mb-4 text-[#f60] feature-icon">
-            <i class="fas fa-chart-line"></i>
-          </div>
-          <h3 class="text-2xl font-bold mb-2 text-base-content">Google Ads</h3>
-          <p class="text-base-content opacity-75">
-            100+ optimierte Kampagnen mit besseren Klick- und Conversion-Raten.
-          </p>
-        </div>
-        <div
-          class="feature-card bg-base-200 rounded-lg p-6 floating shadow-xl"
-          style="animation-delay: 2s"
-        >
-          <div class="text-5xl mb-4 text-purple-500 feature-icon">
-            <i class="fas fa-rocket"></i>
-          </div>
-          <h3 class="text-2xl font-bold mb-2 text-base-content">
-            Mehr Traffic
-          </h3>
-          <p class="text-base-content opacity-75">
-            Bis zu 300% mehr Besucher für unsere Kunden durch gezielte
-            Strategien.
-          </p>
-        </div>
-        <div
-          class="feature-card bg-base-200 rounded-lg p-6 floating shadow-xl"
-          style="animation-delay: 0.5s"
-        >
-          <div class="text-5xl mb-4 text-green-400 feature-icon">
-            <i class="fas fa-users"></i>
-          </div>
-          <h3 class="text-2xl font-bold mb-2 text-base-content">
-            Kundenzufriedenheit
-          </h3>
-          <p class="text-base-content opacity-75">
-            Über 95% unserer Kunden arbeiten langfristig mit uns zusammen.
-          </p>
-        </div>
-        <div
-          class="feature-card bg-base-200 rounded-lg p-6 floating shadow-xl"
-          style="animation-delay: 1.5s"
-        >
-          <div class="text-5xl mb-4 text-yellow-400 feature-icon">
-            <i class="fas fa-mug-hot"></i>
-          </div>
-          <h3 class="text-2xl font-bold mb-2 text-base-content">
-            Kaffee-Konsum
-          </h3>
-          <p class="text-base-content opacity-75">
-            921 Liter Kaffee getrunken, um kreativ und fokussiert zu bleiben. ☕
-          </p>
-        </div>
-        <div
-          class="feature-card bg-base-200 rounded-lg p-6 floating shadow-xl"
-          style="animation-delay: 2.5s"
-        >
-          <div class="text-5xl mb-4 text-red-500 feature-icon">
-            <i class="fas fa-gamepad"></i>
-          </div>
-          <h3 class="text-2xl font-bold mb-2 text-base-content">
-            Spaß an der Arbeit
-          </h3>
-          <p class="text-base-content opacity-75">
-            100% Motivation, Kreativität und ein gutes Gespür für Trends.
-          </p>
-        </div>
+        <div class="stat-tile__num">{{ stat.num }}</div>
+        <div class="stat-tile__label">{{ stat.label }}</div>
       </div>
     </div>
   </section>
 </template>
+
+<script setup>
+const stats = [
+  { num: "850.000€", label: "Verwaltetes Werbebudget" },
+  { num: "100+", label: "Projekte umgesetzt" },
+  { num: "95%", label: "Kunden bleiben langfristig" },
+  { num: "3×", label: "Mehr Anfragen im Schnitt" },
+];
+</script>
+
+<style scoped>
+.facts-section {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 122, 31, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(255, 81, 0, 0.18) 0%, transparent 50%),
+    #0a0a0a;
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.facts-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #f60 !important;
+  margin-bottom: 1rem;
+}
+
+.facts-headline {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: #ffffff !important;
+  max-width: 18ch;
+  margin: 0 auto;
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .facts-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.stat-tile {
+  position: relative;
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+  isolation: isolate;
+}
+
+.stat-tile + .stat-tile::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 25%;
+  bottom: 25%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* On mobile (2 cols), the 3rd tile starts a new row so its left
+   divider is unwanted */
+@media (max-width: 1023px) {
+  .stat-tile:nth-child(3)::before {
+    display: none;
+  }
+}
+
+.stat-tile__num {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: clamp(2.75rem, 7vw, 5.5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  background: linear-gradient(135deg, #ff7a1f 0%, #f60 60%, #e55300 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-tile__label {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75) !important;
+  line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+  .facts-section {
+    padding: 4rem 0;
+  }
+  .stat-tile {
+    padding: 2.25rem 1rem;
+  }
+  .stat-tile__label {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+  }
+}
+</style>

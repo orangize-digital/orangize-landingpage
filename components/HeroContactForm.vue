@@ -1,18 +1,16 @@
 <template>
-  <div
-    class="bg-black-900/95 backdrop-blur-md p-8 rounded-xl shadow-2xl border border-orange-500/30 max-w-lg w-full"
-  >
+  <div class="hero-form max-w-lg w-full">
     <div class="text-center mb-6">
-      <h3 class="text-xl font-bold text-white mb-2">Kostenlose Beratung</h3>
-      <p class="text-sm text-gray-200">
-        Wir melden uns schnellstmöglich bei Ihnen!
+      <h3 class="hero-form__title">Kostenlose Beratung</h3>
+      <p class="hero-form__sub">
+        Wir melden uns schnellstmöglich bei Ihnen.
       </p>
     </div>
 
     <form @submit.prevent="handleSubmit" class="space-y-4">
       <div>
         <label
-          class="block text-left text-sm font-semibold mb-2 text-white"
+          class="hero-form__label"
           for="hero-name"
         >
           Ihr Name
@@ -29,7 +27,7 @@
 
       <div>
         <label
-          class="block text-left text-sm font-semibold mb-2 text-white"
+          class="hero-form__label"
           for="hero-email"
         >
           E-Mail
@@ -45,7 +43,7 @@
       </div>
 
       <div>
-        <label class="block text-left text-sm font-semibold mb-2 text-white">
+        <label class="hero-form__label">
           Interesse
         </label>
         <select
@@ -65,7 +63,7 @@
 
       <div>
         <label
-          class="block text-left text-sm font-semibold mb-2 text-white"
+          class="hero-form__label"
           for="hero-message"
         >
           Kurze Nachricht
@@ -98,12 +96,9 @@
       </div>
 
       <!-- Privacy Notice -->
-      <p class="text-xs text-gray-300 text-center mt-3">
+      <p class="hero-form__policy">
         Mit Absenden des Formulars stimmen Sie unseren
-        <router-link
-          to="/datenschutz"
-          class="text-[#f60] hover:text-[#f60]/80 underline"
-        >
+        <router-link to="/datenschutz" class="hero-form__policy-link">
           Datenschutzbestimmungen
         </router-link>
         zu.
@@ -199,16 +194,106 @@ ${form.message || 'Keine zusätzlichen Informationen'}
 </script>
 
 <style scoped>
+.hero-form {
+  background: rgba(10, 10, 10, 0.78);
+  backdrop-filter: blur(14px);
+  padding: 2rem;
+  box-shadow:
+    0 30px 80px -20px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 102, 0, 0.18);
+}
+
+.hero-form__title {
+  font-family: "Bricolage Grotesque", sans-serif !important;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #f60 !important;
+  margin-bottom: 0.5rem;
+}
+
+.hero-form__sub {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.hero-form__label {
+  display: block;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.hero-form__policy {
+  font-size: 0.75rem;
+  text-align: center;
+  margin-top: 0.75rem;
+  color: rgba(255, 255, 255, 0.6) !important;
+  line-height: 1.5;
+}
+
+.hero-form__policy-link {
+  color: #f60 !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.hero-form__policy-link:hover {
+  color: #ff7a1f !important;
+}
+
+.input,
+.select,
+.textarea {
+  background-color: #ffffff !important;
+  color: #0a0a0a !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
 .input:focus,
 .select:focus,
 .textarea:focus {
-  outline: none;
+  outline: none !important;
   border-color: #f60 !important;
-  box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.2) !important;
+  box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.25) !important;
+}
+
+.select {
+  color: #0a0a0a !important;
 }
 
 .select option {
-  background-color: #1f2937;
-  color: white;
+  background-color: #ffffff;
+  color: #0a0a0a;
+}
+
+.select option[disabled] {
+  color: #9ca3af;
+}
+
+.kostenlose {
+  background: var(--brand-gradient) !important;
+  background-size: 200% 200% !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  transition: background-position 0.4s ease, transform 0.2s ease, box-shadow 0.3s ease !important;
+}
+
+.kostenlose:hover {
+  background-position: 100% 0 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 18px 36px -12px rgba(255, 102, 0, 0.55) !important;
+}
+
+.kostenlose-btn,
+.kostenlose-btn * {
+  color: #ffffff !important;
 }
 </style>

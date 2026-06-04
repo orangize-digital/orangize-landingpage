@@ -5,9 +5,20 @@
 </template>
 
 <script setup>
-// Initialize theme from localStorage on client
+// Light theme only — set data-theme attribute on the root element
+// so DaisyUI variables resolve consistently from first paint.
+useHead({
+  htmlAttrs: {
+    "data-theme": "light",
+  },
+});
+
 onMounted(() => {
-  const savedTheme = localStorage.getItem('theme') || 'light'
-  document.documentElement.setAttribute('data-theme', savedTheme)
-})
+  document.documentElement.setAttribute("data-theme", "light");
+  try {
+    localStorage.removeItem("theme");
+  } catch (_) {
+    /* ignore */
+  }
+});
 </script>

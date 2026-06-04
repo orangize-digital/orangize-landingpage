@@ -47,13 +47,13 @@
         <ul class="menu menu-horizontal px-1 gap-8">
           <li>
             <details class="dropdown">
-              <summary class="hover:text-[#f60] text-base-content transition-colors duration-300 font-bold navi-items cursor-pointer !rounded-lg">
+              <summary class="hover:text-[#f60] text-base-content transition-colors duration-300 font-bold navi-items cursor-pointer">
                 Leistungen
               </summary>
               <ul class="menu dropdown-content bg-base-100 rounded-box z-[60] w-60 p-3 space-y-1 shadow mt-2">
-                <li><router-link to="/google-ads" class="!bg-transparent hover:!bg-[#f60]/10 text-[#f60] font-semibold py-2 !rounded-lg">Google Ads</router-link></li>
-                <li><router-link to="/website-erstellen-lassen" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2 !rounded-lg">Webdesign</router-link></li>
-                <li><router-link to="/ki-automatisierung" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2 !rounded-lg">KI-Automatisierung</router-link></li>
+                <li><router-link to="/google-ads" class="!bg-transparent hover:!bg-[#f60]/10 text-[#f60] font-semibold py-2">Google Ads</router-link></li>
+                <li><router-link to="/website-erstellen-lassen" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2">Webdesign</router-link></li>
+                <li><router-link to="/ki-automatisierung" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2">KI-Automatisierung</router-link></li>
               </ul>
             </details>
           </li>
@@ -79,7 +79,6 @@
 
       <!-- Theme Switcher & CTA Button -->
       <div class="flex-none hidden lg:flex lg:items-center lg:gap-4">
-        <ThemeSwitcher />
         <button
           class="btn btn-primary bg-[#f60] text-neutral-content border-none hover:bg-[#f60]/90"
           @click="scrollToContact"
@@ -92,7 +91,7 @@
     <!-- Mobile Menu -->
     <div
       v-if="isMenuOpen"
-      class="lg:hidden absolute top-full left-0 right-0 bg-base-100/80 backdrop-blur-md shadow-md transition-opacity duration-500 ease-out"
+      class="lg:hidden absolute top-full left-0 right-0 bg-base-100 backdrop-blur-md shadow-md transition-opacity duration-500 ease-out"
     >
       <ul class="menu menu-vertical px-4 py-2">
         <li>
@@ -108,7 +107,7 @@
         <li v-for="section in sections" :key="section.id">
           <a
             :href="'#' + section.id"
-            class="text-white hover:text-[#f60] transition-colors duration-300"
+            class="text-base-content hover:text-[#f60] transition-colors duration-300"
             @click.prevent="
               scrollToSection(section.id);
               isMenuOpen = false;
@@ -120,7 +119,7 @@
         <li>
           <router-link
             to="/blog"
-            class="text-white hover:text-[#f60] transition-colors duration-300"
+            class="text-base-content hover:text-[#f60] transition-colors duration-300"
             @click="isMenuOpen = false"
           >
             Blog
@@ -128,7 +127,6 @@
         </li>
         <li class="mt-4">
           <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
-            <ThemeSwitcher />
             <button
               class="btn btn-primary bg-[#f60] border-none hover:bg-[#f60]/90 w-full flex items-center justify-center sm:w-auto"
               @click="scrollToContact"
@@ -144,7 +142,6 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from "vue";
-import ThemeSwitcher from "../ThemeSwitcher.vue";
 
 const isMenuOpen = ref(false);
 const isScrolled = ref(true);

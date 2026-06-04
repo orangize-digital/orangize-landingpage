@@ -1,49 +1,33 @@
 <template>
   <div>
     <Navigation />
-    <!-- Blog Header Section -->
-    <div
-      class="hero min-h-[60vh] min-h relative bg-[url('@/assets/images/blog-header-1.jpg')]"
-    >
-      <div class="hero-overlay bg-black bg-opacity-80"></div>
-      <div class="hero-content text-center text-base-content relative z-10">
-        <div class="max-w-3xl">
-          <h1 class="text-5xl font-bold text-primary" data-aos="fade-down">
-            The Orangize Journal
+
+    <!-- Hero — same dark shell as service pages -->
+    <section class="hero-shell hero-shell--short">
+      <div class="hero-shell__bg" aria-hidden="true"></div>
+      <div class="hero-shell__inner container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <p class="hero-shell__eyebrow" data-aos="fade-up">Das Orangize Journal</p>
+          <h1 class="hero-shell__headline blog-headline" data-aos="fade-up" data-aos-delay="80">
+            Marketing-Insights,<br />
+            <span class="hero-shell__accent">die wirklich helfen.</span>
           </h1>
-          <p
-            class="py-6 text-2xl text-base-content"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            Insights, Tipps und Strategien für dein digitales Marketing
-          </p>
-          <p
-            class="mb-8 text-lg text-base-content"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            Erfahre mehr über Google Ads, Webdesign und erfolgreiche
-            Online-Strategien für dein Business.
+          <p class="hero-shell__sub blog-sub" data-aos="fade-up" data-aos-delay="160">
+            Google Ads, Webdesign, Automation, SEO — kuratierte Beiträge für Unternehmer, die ihr Marketing nicht dem Zufall überlassen wollen.
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Blog Categories -->
-    <section class="py-12 bg-base-100">
+    <!-- Category filter -->
+    <section class="blog-filter">
       <div class="container mx-auto px-4">
-        <div class="flex flex-wrap justify-center gap-4 md:mb-12 mb-0">
+        <div class="blog-filter__row">
           <button
             v-for="category in categories"
             :key="category.id"
             @click="activeCategory = category.id"
-            class="btn border-none transition-all duration-300"
-            :class="
-              activeCategory === category.id
-                ? 'bg-[#f60] text-white'
-                : 'bg-base-200 text-base-content hover:bg-primary hover:text-white'
-            "
+            :class="['blog-filter__btn', { 'is-active': activeCategory === category.id }]"
           >
             {{ category.name }}
           </button>
@@ -51,129 +35,78 @@
       </div>
     </section>
 
-    <!-- Featured Post -->
-    <section class="py-8 bg-base-100">
+    <!-- Featured post -->
+    <section class="blog-featured-wrap">
       <div class="container mx-auto px-4">
-        <div
-          class="card lg:card-side bg-base-200 shadow-xl border-blog-card overflow-hidden"
-          data-aos="fade-up"
-        >
-          <figure class="lg:w-1/2">
-            <img
-              :src="featuredPost.image"
-              :alt="featuredPost.title"
-              class="h-full w-full object-cover"
-            />
+        <p class="blog-section-eyebrow">Featured</p>
+        <article class="blog-featured" data-aos="fade-up">
+          <figure class="blog-featured__media">
+            <img :src="featuredPost.image" :alt="featuredPost.title" />
           </figure>
-          <div class="card-body lg:w-1/2">
-            <div class="flex items-center gap-2 mb-2">
-              <span class="badge badge-lg border-none bg-primary text-white">{{
-                featuredPost.category
-              }}</span>
-              <span class="text-base-content text-sm">{{
-                featuredPost.date
-              }}</span>
+          <div class="blog-featured__body">
+            <div class="blog-meta">
+              <span class="blog-meta__cat">{{ featuredPost.category }}</span>
+              <span class="blog-meta__dot"></span>
+              <span class="blog-meta__date">{{ featuredPost.date }}</span>
             </div>
-            <h2 class="card-title text-3xl text-base-content">
-              {{ featuredPost.title }}
-            </h2>
-            <p class="text-base-content mb-4">{{ featuredPost.excerpt }}</p>
-            <div class="flex items-center gap-4 mb-6">
-              <div class="avatar">
-                <div class="w-10 rounded-full">
-                  <img
-                    :src="featuredPost.author.avatar"
-                    :alt="featuredPost.author.name"
-                  />
-                </div>
-              </div>
+            <h2 class="blog-featured__title">{{ featuredPost.title }}</h2>
+            <p class="blog-featured__excerpt">{{ featuredPost.excerpt }}</p>
+            <div class="blog-author">
+              <img class="blog-author__avatar" :src="featuredPost.author.avatar" :alt="featuredPost.author.name" />
               <div>
-                <p class="font-semibold text-base-content">
-                  {{ featuredPost.author.name }}
-                </p>
-                <p class="text-sm text-base-content opacity-75">
-                  {{ featuredPost.author.title }}
-                </p>
+                <p class="blog-author__name">{{ featuredPost.author.name }}</p>
+                <p class="blog-author__role">{{ featuredPost.author.title }}</p>
               </div>
             </div>
-            <div class="card-actions justify-end">
-              <router-link
-                :to="`/blog/${featuredPost.slug}`"
-                class="btn btn-primary bg-[#f60] border-none hover:bg-[#f60]/90"
-              >
-                Weiterlesen
-              </router-link>
-            </div>
+            <router-link :to="`/blog/${featuredPost.slug}`" class="blog-cta">
+              Weiterlesen
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14" />
+                <path d="m13 5 7 7-7 7" />
+              </svg>
+            </router-link>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <!-- Blog Posts Grid -->
-    <section class="py-16 bg-base-100">
+    <!-- Posts grid -->
+    <section class="blog-grid-wrap">
       <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div
+        <p class="blog-section-eyebrow">Mehr Lesen</p>
+        <div class="blog-grid">
+          <router-link
             v-for="(post, index) in filteredPosts"
             :key="post.id"
-            class="card bg-base-200 border-blog-card shadow-xl hover:shadow-2xl transition-all duration-300 hover:translate-y-[-5px]"
+            :to="`/blog/${post.slug}`"
+            class="blog-card"
             data-aos="fade-up"
-            :data-aos-delay="index * 100"
+            :data-aos-delay="index * 80"
           >
-            <figure class="relative h-56 overflow-hidden">
-              <img
-                :src="post.image"
-                :alt="post.title"
-                class="w-full h-full object-cover"
-              />
-              <div class="absolute top-4 left-4">
-                <span
-                  class="badge badge-lg border-none bg-primary text-white"
-                  >{{ post.category }}</span
-                >
-              </div>
+            <figure class="blog-card__media">
+              <img :src="post.image" :alt="post.title" />
+              <span class="blog-card__cat">{{ post.category }}</span>
             </figure>
-            <div class="card-body">
-              <div class="flex justify-between items-center mb-2">
-                <span class="text-base-content text-sm">{{ post.date }}</span>
-                <span class="text-base-content text-sm"
-                  >{{ post.readTime }} min Lesezeit</span
-                >
+            <div class="blog-card__body">
+              <div class="blog-meta blog-meta--small">
+                <span class="blog-meta__date">{{ post.date }}</span>
+                <span class="blog-meta__dot"></span>
+                <span class="blog-meta__read">{{ post.readTime }} min</span>
               </div>
-              <h2 class="card-title text-xl text-base-content">
-                {{ post.title }}
-              </h2>
-              <p class="text-base-content mb-4">{{ post.excerpt }}</p>
-              <div class="flex items-center gap-3 mb-4">
-                <div class="avatar">
-                  <div class="w-8 rounded-full">
-                    <img :src="post.author.avatar" :alt="post.author.name" />
-                  </div>
-                </div>
-                <div>
-                  <p class="text-sm text-base-content">
-                    {{ post.author.name }}
-                  </p>
-                  <p class="text-sm text-base-content opacity-75">
-                    {{ post.author.title }}
-                  </p>
-                </div>
-              </div>
-              <div class="card-actions justify-end">
-                <router-link
-                  :to="`/blog/${post.slug}`"
-                  class="btn btn-outline text-base-content hover:bg-primary hover:border-primary hover:text-white"
-                >
-                  Weiterlesen
-                </router-link>
-              </div>
+              <h3 class="blog-card__title">{{ post.title }}</h3>
+              <p class="blog-card__excerpt">{{ post.excerpt }}</p>
+              <span class="blog-card__cta">
+                Weiterlesen
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="m13 5 7 7-7 7" />
+                </svg>
+              </span>
             </div>
-          </div>
+          </router-link>
         </div>
       </div>
     </section>
-
-    <!-- <NewsletterForm /> -->
 
     <CTA />
     <Footer />
@@ -282,16 +215,328 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Shorter hero for blog (60vh instead of 100vh) */
+.hero-shell--short :deep(.hero-shell__inner) {
+  min-height: 60vh;
+}
+.hero-shell--short {
+  min-height: 60vh;
+}
+.blog-headline {
+  font-size: clamp(2.5rem, 6vw, 4.5rem) !important;
+  margin-bottom: 1.25rem;
+}
+.blog-sub {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 48ch;
 }
 
-.card:hover {
-  box-shadow: 0 10px 25px rgba(255, 102, 0, 0.2);
+/* Category filter */
+.blog-filter {
+  background: hsl(var(--b1));
+  padding: 3rem 0 1rem;
+}
+.blog-filter__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding-bottom: 1rem;
+}
+.blog-filter__btn {
+  padding: 0.65rem 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: transparent;
+  color: hsl(var(--bc) / 0.55) !important;
+  cursor: pointer;
+  border: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+.blog-filter__btn:hover {
+  color: hsl(var(--bc)) !important;
+}
+.blog-filter__btn.is-active {
+  color: #f60 !important;
+  border-bottom-color: #f60;
 }
 
-.badge {
+/* Section eyebrows */
+.blog-section-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #f60 !important;
+  margin-bottom: 1.5rem;
+}
+
+/* Featured post */
+.blog-featured-wrap {
+  background: hsl(var(--b1));
+  padding: 4rem 0;
+}
+.blog-featured {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  background: #ffffff;
+  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+@media (min-width: 1024px) {
+  .blog-featured {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.blog-featured__media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+}
+.blog-featured__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.blog-featured:hover .blog-featured__media img {
+  transform: scale(1.04);
+}
+.blog-featured__body {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 1024px) {
+  .blog-featured__body {
+    padding: 3.5rem;
+  }
+}
+.blog-featured__title {
+  font-family: "Bricolage Grotesque", sans-serif !important;
+  font-size: clamp(1.6rem, 2.6vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  color: hsl(var(--bc)) !important;
+  margin-bottom: 1rem;
+}
+.blog-featured__excerpt {
+  font-size: 1.05rem;
+  color: hsl(var(--bc) / 0.75) !important;
+  line-height: 1.55;
+  margin-bottom: 1.75rem;
+}
+
+/* Meta strip */
+.blog-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+.blog-meta--small {
+  margin-bottom: 0.75rem;
+}
+.blog-meta__cat {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #f60 !important;
+  padding: 0.3rem 0.6rem;
+  background: rgba(255, 102, 0, 0.1);
+}
+.blog-meta__dot {
+  width: 3px;
+  height: 3px;
+  background: hsl(var(--bc) / 0.3);
+}
+.blog-meta__date,
+.blog-meta__read {
+  font-size: 0.78rem;
   font-weight: 500;
-  letter-spacing: 0.5px;
+  color: hsl(var(--bc) / 0.55) !important;
+  letter-spacing: 0.05em;
+}
+
+/* Author */
+.blog-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+.blog-author__avatar {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.blog-author__name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: hsl(var(--bc)) !important;
+  margin: 0;
+  line-height: 1.2;
+}
+.blog-author__role {
+  font-size: 0.78rem;
+  color: hsl(var(--bc) / 0.55) !important;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Featured CTA */
+.blog-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.9rem 1.5rem;
+  background: var(--brand-gradient) !important;
+  background-size: 200% 200% !important;
+  color: #ffffff !important;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: max-content;
+  transition: background-position 0.5s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+.blog-cta svg {
+  width: 1rem;
+  height: 1rem;
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+  transition: transform 0.3s ease;
+}
+.blog-cta:hover {
+  background-position: 100% 0 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px -12px rgba(255, 102, 0, 0.55);
+}
+.blog-cta:hover svg {
+  transform: translateX(4px);
+}
+
+/* Grid */
+.blog-grid-wrap {
+  background: hsl(var(--b2));
+  padding: 5rem 0;
+}
+.blog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.blog-card {
+  background: #ffffff;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 8px 24px -10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.35s ease;
+}
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 50px -20px rgba(255, 102, 0, 0.3),
+    0 8px 20px -10px rgba(0, 0, 0, 0.2);
+}
+.blog-card__media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+.blog-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.55s ease;
+}
+.blog-card:hover .blog-card__media img {
+  transform: scale(1.05);
+}
+.blog-card__cat {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.35rem 0.7rem;
+  background: var(--brand-gradient);
+  color: #ffffff !important;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.blog-card__body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.blog-card__title {
+  font-family: "Bricolage Grotesque", sans-serif !important;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  color: hsl(var(--bc)) !important;
+  margin-bottom: 0.75rem;
+}
+.blog-card__excerpt {
+  font-size: 0.95rem;
+  color: hsl(var(--bc) / 0.7) !important;
+  line-height: 1.55;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+.blog-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: #f60 !important;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.blog-card__cta svg {
+  width: 0.95rem;
+  height: 0.95rem;
+  color: #f60 !important;
+  stroke: #f60 !important;
+  transition: transform 0.3s ease;
+}
+.blog-card:hover .blog-card__cta svg {
+  transform: translateX(6px);
+}
+
+@media (max-width: 640px) {
+  .blog-featured__body { padding: 1.75rem; }
+  .blog-card__body { padding: 1.25rem; }
+  .blog-grid-wrap { padding: 3rem 0; }
 }
 </style>

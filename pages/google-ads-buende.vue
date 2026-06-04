@@ -123,10 +123,10 @@
               eingerichtete Kampagnen, unpassende Keywords oder ineffiziente
               Anzeigentexte. Das Ergebnis: hohe Kosten, aber wenig Conversions.
               <br /><br />
-              Unsere **Google Ads Experten** entwickeln für Sie maßgeschneiderte
-              Kampagnen, die **gezielt auf Ihre Zielgruppe ausgerichtet** sind.
+              Unsere <strong>Google Ads Experten</strong> entwickeln für Sie maßgeschneiderte
+              Kampagnen, die <strong>gezielt auf Ihre Zielgruppe ausgerichtet</strong> sind.
               Durch kontinuierliche Optimierung und datenbasierte Entscheidungen
-              **maximieren wir Ihren ROI** und sorgen für einen stetigen Strom
+              <strong>maximieren wir Ihren ROI</strong> und sorgen für einen stetigen Strom
               qualifizierter Leads und Neukunden.
             </p>
           </div>

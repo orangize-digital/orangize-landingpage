@@ -2,72 +2,61 @@
   <div>
     <Navigation />
 
-    <!-- Hero -->
-    <div
-      class="hero min-h-[110vh] relative bg-[url('@/assets/images/google-ads-hero.jpeg')] lg:mt-0"
-    >
-      <div class="hero-overlay bg-black bg-opacity-80"></div>
-      <div class="hero-content relative z-10 w-full lg:py-0 py-[150px]">
-        <div class="container mx-auto">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-            <div data-aos="fade-right">
-              <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                KI-Automatisierung &
-                <span class="text-[#f60]">KI-Agenten</span>
-              </h1>
-              <p class="text-xl text-white mb-8 leading-relaxed">
-                Workflows automatisieren, KI-Agenten einsetzen, Prozesse verschlanken
-                — DSGVO-konform und ohne zusätzliches Personal.
-              </p>
-
-              <div class="space-y-4 mb-8">
-                <div class="flex items-center gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                  <span class="text-white">Zeit sparen, Personalkosten senken</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                  <span class="text-white">DSGVO-konform, EU-Hosting möglich</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                  <span class="text-white">Maßgeschneidert für deine Prozesse</span>
-                </div>
-              </div>
-
-              <div class="flex flex-col sm:flex-row gap-4">
-                <button
-                  class="btn bg-[#f60] text-neutral-content border-none hover:bg-[#f60]/90 text-lg px-8"
-                  @click="scrollToSection('kontakt')"
-                >
-                  Kostenlose Beratung
-                </button>
-                <button
-                  class="btn btn-outline border-white text-white hover:bg-white hover:text-black text-lg px-8"
-                  @click="scrollToSection('losung')"
-                >
-                  Mehr erfahren
-                </button>
-              </div>
+    <!-- Hero — pain-point: hours of repetitive manual work -->
+    <section class="hero-shell">
+      <div class="hero-shell__bg" aria-hidden="true"></div>
+      <div class="hero-shell__inner container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+          <div class="lg:col-span-7" data-aos="fade-right">
+            <p class="hero-shell__eyebrow">KI-Automatisierung · Ostwestfalen</p>
+            <h1 class="hero-shell__headline">
+              Stundenlange Klick-Arbeit.<br />
+              <span class="hero-shell__accent">Endlich automatisiert.</span>
+            </h1>
+            <p class="hero-shell__sub">
+              Wachstum braucht kein neues Personal — nur kluge Automation. Wir bauen Workflows und KI-Agenten, die deine Routine übernehmen. DSGVO-konform, sauber dokumentiert, in zwei Wochen live.
+            </p>
+            <div class="hero-shell__cta-row">
+              <button class="hero-shell__btn hero-shell__btn--primary" @click="scrollToSection('kontakt')">
+                Kostenlose Beratung
+              </button>
+              <button class="hero-shell__btn hero-shell__btn--ghost" @click="scrollToSection('losung')">
+                Mehr erfahren
+              </button>
             </div>
-
-            <div data-aos="fade-up" class="relative">
-              <div class="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl blur-xl"></div>
-              <div class="relative">
-                <HeroContactForm />
+            <div class="hero-shell__trust">
+              <div>
+                <div class="hero-shell__stat-num">5–20h</div>
+                <div class="hero-shell__stat-lbl">Pro Woche gespart</div>
+              </div>
+              <div>
+                <div class="hero-shell__stat-num">2 Wo</div>
+                <div class="hero-shell__stat-lbl">Bis live</div>
+              </div>
+              <div>
+                <div class="hero-shell__stat-num">DSGVO</div>
+                <div class="hero-shell__stat-lbl">EU-Hosting möglich</div>
               </div>
             </div>
           </div>
+
+          <div class="lg:col-span-5" data-aos="fade-left" data-aos-delay="200">
+            <HeroContactForm />
+          </div>
         </div>
       </div>
-      <div class="absolute bottom-8 w-full flex justify-center">
-        <a href="#" @click.prevent="scrollToSection('losung')" class="text-white animate-bounce">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="#fff">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+
+      <div class="hero-shell__scroll">
+        <a href="#" @click.prevent="scrollToSection('losung')" aria-label="Nach unten scrollen">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </a>
       </div>
-    </div>
+    </section>
+
+    <!-- Google Certifications - trust signals -->
+    <GoogleCertifications />
 
     <!-- Tools & Stack -->
     <section class="py-12 bg-base-200">
@@ -438,12 +427,12 @@
           <div data-aos="fade-up" class="bg-base-200 rounded-lg p-8 border border-[#f60]/20">
             <h3 class="text-2xl font-bold text-base-content mb-6">Unsere DSGVO-Checklist</h3>
             <ul class="space-y-3">
-              <li class="flex items-center gap-3 text-base-content"><span class="text-[#f60] font-bold">✓</span> Datenfluss-Diagramm pro Automation</li>
-              <li class="flex items-center gap-3 text-base-content"><span class="text-[#f60] font-bold">✓</span> Hosting-Region dokumentiert</li>
-              <li class="flex items-center gap-3 text-base-content"><span class="text-[#f60] font-bold">✓</span> Subunternehmer-Verzeichnis</li>
-              <li class="flex items-center gap-3 text-base-content"><span class="text-[#f60] font-bold">✓</span> Löschkonzept inkl. KI-Modell-Daten</li>
-              <li class="flex items-center gap-3 text-base-content"><span class="text-[#f60] font-bold">✓</span> Technische &amp; organisatorische Maßnahmen (TOMs)</li>
-              <li class="flex items-center gap-3 text-base-content"><span class="text-[#f60] font-bold">✓</span> Schulung der Mitarbeitenden</li>
+              <li class="flex items-center gap-3 text-base-content"><svg class="w-5 h-5 text-[#f60] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Datenfluss-Diagramm pro Automation</li>
+              <li class="flex items-center gap-3 text-base-content"><svg class="w-5 h-5 text-[#f60] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Hosting-Region dokumentiert</li>
+              <li class="flex items-center gap-3 text-base-content"><svg class="w-5 h-5 text-[#f60] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Subunternehmer-Verzeichnis</li>
+              <li class="flex items-center gap-3 text-base-content"><svg class="w-5 h-5 text-[#f60] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Löschkonzept inkl. KI-Modell-Daten</li>
+              <li class="flex items-center gap-3 text-base-content"><svg class="w-5 h-5 text-[#f60] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Technische &amp; organisatorische Maßnahmen (TOMs)</li>
+              <li class="flex items-center gap-3 text-base-content"><svg class="w-5 h-5 text-[#f60] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Schulung der Mitarbeitenden</li>
             </ul>
           </div>
         </div>
@@ -484,7 +473,7 @@
           <!-- Business (Beliebt) -->
           <div class="card bg-base-100 shadow-xl border-4 border-[#f60] relative transform scale-105 z-10 bg-gradient-to-b from-base-100 to-[#f60]/5" data-aos="fade-up" data-aos-delay="100">
             <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 z-20">
-              <div class="badge badge-lg bg-[#f60] border-[#f60] text-white font-bold px-4 py-3 text-sm shadow-lg">⭐ BELIEBT ⭐</div>
+              <div class="badge badge-lg bg-[#f60] border-[#f60] text-white font-bold px-5 py-3 text-sm shadow-lg tracking-[0.25em] uppercase">Beliebt</div>
             </div>
             <div class="card-body pt-8">
               <h3 class="card-title text-2xl font-bold mb-2 text-base-content">Business</h3>

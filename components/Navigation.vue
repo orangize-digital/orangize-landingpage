@@ -47,13 +47,13 @@
         <ul class="menu menu-horizontal px-1 gap-8">
           <li>
             <details class="dropdown">
-              <summary class="hover:text-[#f60] text-base-content transition-colors duration-300 font-bold navi-items cursor-pointer !rounded-lg">
+              <summary class="hover:text-[#f60] text-base-content transition-colors duration-300 font-bold navi-items cursor-pointer">
                 Leistungen
               </summary>
               <ul class="menu dropdown-content bg-base-100 rounded-box z-[60] w-60 p-3 space-y-1 shadow mt-2">
-                <li><NuxtLink to="/google-ads" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2 !rounded-lg">Google Ads</NuxtLink></li>
-                <li><NuxtLink to="/website-erstellen-lassen" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2 !rounded-lg">Webdesign</NuxtLink></li>
-                <li><NuxtLink to="/ki-automatisierung" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2 !rounded-lg">KI-Automatisierung</NuxtLink></li>
+                <li><NuxtLink to="/google-ads" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2">Google Ads</NuxtLink></li>
+                <li><NuxtLink to="/website-erstellen-lassen" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2">Webdesign</NuxtLink></li>
+                <li><NuxtLink to="/ki-automatisierung" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2">KI-Automatisierung</NuxtLink></li>
               </ul>
             </details>
           </li>
@@ -80,7 +80,6 @@
 
       <!-- CTA Button and Theme Switcher -->
       <div class="flex-none hidden lg:flex lg:items-center lg:gap-4">
-        <ThemeSwitcher />
         <button
           class="btn btn-primary bg-[#f60] text-white border-none hover:bg-[#ff751a]"
           @click.prevent="scrollToSection('kontakt')"
@@ -93,23 +92,23 @@
     <!-- Mobile Menu -->
     <div
       v-if="isMenuOpen"
-      class="lg:hidden absolute top-full left-0 right-0 bg-base-100/80 backdrop-blur-md shadow-md transition-opacity duration-500 ease-out"
+      class="lg:hidden absolute top-full left-0 right-0 bg-base-100 backdrop-blur-md shadow-md transition-opacity duration-500 ease-out"
     >
       <ul class="menu menu-vertical px-4 py-2">
         <li>
           <details>
-            <summary class="text-white hover:text-[#f60] font-semibold">Leistungen</summary>
+            <summary class="text-base-content hover:text-[#f60] font-semibold">Leistungen</summary>
             <ul>
-              <li><NuxtLink to="/google-ads" class="text-white hover:text-[#f60]" @click="isMenuOpen = false">Google Ads</NuxtLink></li>
-              <li><NuxtLink to="/website-erstellen-lassen" class="text-white hover:text-[#f60]" @click="isMenuOpen = false">Webdesign</NuxtLink></li>
-              <li><NuxtLink to="/ki-automatisierung" class="text-white hover:text-[#f60]" @click="isMenuOpen = false">KI-Automatisierung</NuxtLink></li>
+              <li><NuxtLink to="/google-ads" class="text-base-content hover:text-[#f60]" @click="isMenuOpen = false">Google Ads</NuxtLink></li>
+              <li><NuxtLink to="/website-erstellen-lassen" class="text-base-content hover:text-[#f60]" @click="isMenuOpen = false">Webdesign</NuxtLink></li>
+              <li><NuxtLink to="/ki-automatisierung" class="text-base-content hover:text-[#f60]" @click="isMenuOpen = false">KI-Automatisierung</NuxtLink></li>
             </ul>
           </details>
         </li>
         <li v-for="section in sections" :key="section.id">
           <a
             :href="'#' + section.id"
-            class="text-white hover:text-[#f60] transition-colors duration-300"
+            class="text-base-content hover:text-[#f60] transition-colors duration-300"
             @click.prevent="
               scrollToSection(section.id);
               isMenuOpen = false;
@@ -122,19 +121,17 @@
         <li>
           <NuxtLink
             to="/blog"
-            class="text-white hover:text-[#f60] transition-colors duration-300"
+            class="text-base-content hover:text-[#f60] transition-colors duration-300"
             @click="isMenuOpen = false"
           >
             Blog
           </NuxtLink>
         </li>
         <li class="mt-4">
-          <ThemeSwitcher />
-        </li>
-        <li class="mt-4">
           <button
             class="btn btn-primary bg-[#f60] border-none hover:bg-[#ff751a] w-full flex items-center justify-center sm:w-auto"
             style="align-content: center !important"
+            @click="scrollToSection('kontakt')"
           >
             Beratung vereinbaren
           </button>

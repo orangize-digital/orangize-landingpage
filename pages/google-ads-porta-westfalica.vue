@@ -124,11 +124,11 @@
               eingerichtete Kampagnen, unpassende Keywords oder ineffiziente
               Anzeigentexte. Das Ergebnis: hohe Kosten, aber wenig Conversions.
               <br /><br />
-              Unsere **Google Ads Experten aus Porta Westfalica** entwickeln für
-              Sie maßgeschneiderte Kampagnen, die **gezielt auf Ihre Zielgruppe
-              im Weserbergland ausgerichtet** sind. Durch kontinuierliche
-              Optimierung und datenbasierte Entscheidungen **maximieren wir
-              Ihren ROI** und sorgen für einen stetigen Strom qualifizierter
+              Unsere <strong>Google Ads Experten aus Porta Westfalica</strong> entwickeln für
+              Sie maßgeschneiderte Kampagnen, die <strong>gezielt auf Ihre Zielgruppe
+              im Weserbergland ausgerichtet</strong> sind. Durch kontinuierliche
+              Optimierung und datenbasierte Entscheidungen <strong>maximieren wir
+              Ihren ROI</strong> und sorgen für einen stetigen Strom qualifizierter
               Leads und Neukunden in Porta Westfalica und Umgebung.
             </p>
           </div>

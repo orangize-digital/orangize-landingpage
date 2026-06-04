@@ -1,95 +1,59 @@
 <template>
   <div>
     <Navigation />
-    <!-- Hero Section -->
-    <div
-      class="hero min-h-[110vh] relative bg-[url('@/assets/images/google-ads-hero.jpeg')] lg:mt-0"
-    >
-      <div class="hero-overlay bg-black bg-opacity-80"></div>
-      <div class="hero-content relative z-10 w-full lg:py-0 py-[150px]">
-        <div class="container mx-auto">
-          <div
-            class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]"
-          >
-            <!-- Text Content -->
-            <div data-aos="fade-right">
-              <h1
-                class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
-              >
-                Google Ads Agentur in
-                <span class="text-primary">Ostwestfalen</span>
-              </h1>
-              <p class="text-xl text-white mb-8 leading-relaxed">
-                Professionelle Google Ads Betreuung für maximalen ROI. Gezielte
-                Kampagnen, die messbare Ergebnisse liefern.
-              </p>
 
-              <div class="space-y-4 mb-8">
-                <div class="flex items-center gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                  <span class="text-white">Sofortige Sichtbarkeit bei Google</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                  <span class="text-white">Messbare Ergebnisse & ROI-Optimierung</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                  <span class="text-white">Persönliche Betreuung aus OWL</span>
-                </div>
-              </div>
-
-              <div class="flex flex-col sm:flex-row gap-4">
-                <button
-                  class="btn bg-[#f60] text-neutral-content border-none hover:bg-[#f60]/90 text-lg px-8"
-                  @click="scrollToSection('kontakt')"
-                >
-                  Kostenlose Beratung
-                </button>
-                <button
-                  class="btn btn-outline border-white text-white hover:bg-white hover:text-black text-lg px-8"
-                  @click="scrollToSection('losung')"
-                >
-                  Mehr erfahren
-                </button>
-              </div>
+    <!-- Hero — pain-point: wasted ad budget → real inquiries -->
+    <section class="hero-shell">
+      <div class="hero-shell__bg" aria-hidden="true"></div>
+      <div class="hero-shell__inner container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+          <div class="lg:col-span-7" data-aos="fade-right">
+            <p class="hero-shell__eyebrow">Google Ads · Ostwestfalen</p>
+            <h1 class="hero-shell__headline">
+              Dein Werbebudget brennt.<br />
+              <span class="hero-shell__accent">Wir machen daraus Anfragen.</span>
+            </h1>
+            <p class="hero-shell__sub">
+              Klicks sind nicht das Ziel. Anfragen sind das Ziel. Wir bauen Google Ads Kampagnen, die nachweisbar Umsatz bringen — nicht Eitelkeits-Metriken.
+            </p>
+            <div class="hero-shell__cta-row">
+              <button class="hero-shell__btn hero-shell__btn--primary" @click="scrollToSection('kontakt')">
+                Kostenlose Beratung
+              </button>
+              <button class="hero-shell__btn hero-shell__btn--ghost" @click="scrollToSection('losung')">
+                Mehr erfahren
+              </button>
             </div>
-
-            <!-- Contact Form -->
-            <div data-aos="fade-up" class="relative">
-              <div
-                class="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl blur-xl"
-              ></div>
-              <div class="relative">
-                <HeroContactForm />
+            <div class="hero-shell__trust">
+              <div>
+                <div class="hero-shell__stat-num">850.000 €</div>
+                <div class="hero-shell__stat-lbl">Werbebudget</div>
+              </div>
+              <div>
+                <div class="hero-shell__stat-num">100+</div>
+                <div class="hero-shell__stat-lbl">Kampagnen</div>
+              </div>
+              <div>
+                <div class="hero-shell__stat-num">Partner</div>
+                <div class="hero-shell__stat-lbl">Google · Zertifiziert</div>
               </div>
             </div>
           </div>
+
+          <div class="lg:col-span-5" data-aos="fade-left" data-aos-delay="200">
+            <HeroContactForm />
+          </div>
         </div>
       </div>
-      <div class="absolute bottom-8 w-full flex justify-center">
-        <a
-          href="#"
-          @click.prevent="scrollToSection('losung')"
-          class="text-white animate-bounce"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-10 w-10"
-            fill="none"
-            viewBox="0 0 24 24 "
-            stroke="#fff"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
+
+      <div class="hero-shell__scroll">
+        <a href="#" @click.prevent="scrollToSection('losung')" aria-label="Nach unten scrollen">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </a>
       </div>
-    </div>
+    </section>
 
     <!-- Google Certifications -->
     <GoogleCertifications />
@@ -123,10 +87,10 @@
               eingerichtete Kampagnen, unpassende Keywords oder ineffiziente
               Anzeigentexte. Das Ergebnis: hohe Kosten, aber wenig Conversions.
               <br /><br />
-              Unsere **Google Ads Experten** entwickeln für Sie maßgeschneiderte
-              Kampagnen, die **gezielt auf Ihre Zielgruppe ausgerichtet** sind.
+              Unsere <strong>Google Ads Experten</strong> entwickeln für Sie maßgeschneiderte
+              Kampagnen, die <strong>gezielt auf Ihre Zielgruppe ausgerichtet</strong> sind.
               Durch kontinuierliche Optimierung und datenbasierte Entscheidungen
-              **maximieren wir Ihren ROI** und sorgen für einen stetigen Strom
+              <strong>maximieren wir Ihren ROI</strong> und sorgen für einen stetigen Strom
               qualifizierter Leads und Neukunden.
             </p>
           </div>

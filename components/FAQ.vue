@@ -1,71 +1,46 @@
 <template>
-  <section id="faq" class="py-20 bg-base-100">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-4xl font-bold mb-8 text-base-content">
-        Häufig gestellte Fragen
-      </h2>
+  <section id="faq" class="faq-section">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <p class="faq-eyebrow" data-aos="fade-up">Wenn du fragst</p>
+        <h2 class="faq-headline" data-aos="fade-up" data-aos-delay="80">
+          Häufig gestellte Fragen
+        </h2>
+      </div>
 
-      <!-- Toggle Switch -->
-      <div class="flex justify-center mb-10">
+      <div class="faq-toggle" data-aos="fade-up">
         <button
           @click="activeCategory = 'web'"
-          :class="
-            activeCategory === 'web'
-              ? 'bg-[#f60] text-white'
-              : 'bg-base-100 text-base-content border border-[#f60]'
-          "
-          class="px-6 py-2 rounded-l-lg text-lg font-semibold transition-all duration-300"
+          :class="['faq-toggle__btn', { 'is-active': activeCategory === 'web' }]"
         >
           Web-Projekte
         </button>
         <button
           @click="activeCategory = 'ads'"
-          :class="
-            activeCategory === 'ads'
-              ? 'bg-[#f60] text-white'
-              : 'bg-base-100 text-base-content border border-[#f60]'
-          "
-          class="px-6 py-2 rounded-r-lg text-lg font-semibold transition-all duration-300"
+          :class="['faq-toggle__btn', { 'is-active': activeCategory === 'ads' }]"
         >
           Google Ads
         </button>
       </div>
 
-      <!-- FAQ Content -->
-      <div class="w-full max-w-3xl mx-auto">
-        <div class="space-y-4">
-          <div
-            v-for="(faq, index) in faqs[activeCategory]"
-            :key="index"
-            class="border border-[#f60] rounded-lg overflow-hidden shadow-md"
-          >
-            <button
-              @click="toggleFAQ(index)"
-              class="w-full text-left px-6 py-4 bg-base-200 hover:bg-[#f60] flex justify-between items-center transition duration-200 group"
-            >
-              <span
-                class="text-lg font-medium text-base-content group-hover:text-white"
-                >{{ faq.question }}</span
-              >
-              <svg
-                :class="{ 'rotate-180': openFAQ === index }"
-                class="w-6 h-6 text-[#f60] group-hover:text-white transition-transform duration-300"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                />
+      <div class="faq-list">
+        <div
+          v-for="(faq, index) in faqs[activeCategory]"
+          :key="index"
+          :class="['faq-item', { 'is-open': openFAQ === index }]"
+        >
+          <button class="faq-item__head" @click="toggleFAQ(index)">
+            <span class="faq-item__num">{{ String(index + 1).padStart(2, '0') }}</span>
+            <span class="faq-item__q">{{ faq.question }}</span>
+            <span class="faq-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14" class="faq-icon__v" />
+                <path d="M5 12h14" />
               </svg>
-            </button>
-            <div
-              v-if="openFAQ === index"
-              class="p-6 bg-base-200 text-base-content text-left border-t border-[#f60]"
-            >
-              <p v-html="faq.answer"></p>
-            </div>
+            </span>
+          </button>
+          <div class="faq-item__body" v-show="openFAQ === index">
+            <p v-html="faq.answer"></p>
           </div>
         </div>
       </div>
@@ -84,7 +59,7 @@ export default {
           {
             question: "Wie läuft die Erstellung einer Website bei euch ab?",
             answer:
-              "<ul class='list-disc pl-5'><li>Erstgespräch zur Analyse</li><li>Design-Entwurf & Freigabe</li><li>Entwicklung & Umsetzung</li><li>Testing & Optimierung</li><li>Live-Schaltung & Support</li></ul>",
+              "Erstgespräch zur Analyse · Design-Entwurf & Freigabe · Entwicklung & Umsetzung · Testing & Optimierung · Live-Schaltung & Support.",
           },
           {
             question: "Kann ich meine bestehende Website optimieren lassen?",
@@ -94,7 +69,7 @@ export default {
           {
             question: "Wie lange dauert die Erstellung einer Website?",
             answer:
-              "One-Pager: ca. 2-3 Wochen, Firmenwebsites: 4-6 Wochen, größere Projekte: 6-12 Wochen.",
+              "One-Pager: ca. 2–3 Wochen. Firmenwebsites: 4–6 Wochen. Größere Projekte: 6–12 Wochen.",
           },
           {
             question: "Welche Informationen benötigt ihr für den Start?",
@@ -104,19 +79,19 @@ export default {
           {
             question: "Sind eure Websites für Mobilgeräte optimiert?",
             answer:
-              "Ja, alle unsere Websites sind responsiv und für Smartphones sowie Tablets optimiert.",
+              "Ja, alle unsere Websites sind responsiv und für Smartphones und Tablets optimiert.",
           },
         ],
         ads: [
           {
             question: "Bietet ihr Google Ads Betreuung an?",
             answer:
-              "Ja! Wir übernehmen Kampagnen-Setup, Optimierung, Keyword-Recherche und Budget-Management.",
+              "Ja. Wir übernehmen Kampagnen-Setup, Optimierung, Keyword-Recherche und Budget-Management.",
           },
           {
             question: "Wie hoch ist das Budget für eine Google Ads Kampagne?",
             answer:
-              "Das hängt von deiner Branche und deinen Zielen ab. Wir beraten dich gerne individuell!",
+              "Das hängt von deiner Branche und deinen Zielen ab. Wir beraten dich gerne individuell.",
           },
           {
             question: "Wie schnell sehe ich Ergebnisse mit Google Ads?",
@@ -126,12 +101,12 @@ export default {
           {
             question: "Welche Anzeigenformate könnt ihr erstellen?",
             answer:
-              "Wir erstellen Suchanzeigen, Display-Ads, Shopping-Anzeigen und YouTube-Werbung.",
+              "Suchanzeigen, Display-Ads, Shopping-Anzeigen und YouTube-Werbung.",
           },
           {
             question: "Kann ich mein Budget flexibel anpassen?",
             answer:
-              "Ja, du kannst dein Budget jederzeit anpassen oder pausieren, falls nötig.",
+              "Ja, du kannst dein Budget jederzeit anpassen oder pausieren.",
           },
         ],
       },
@@ -146,7 +121,173 @@ export default {
 </script>
 
 <style scoped>
-.rotate-180 {
-  transform: rotate(180deg);
+.faq-section {
+  padding: 6rem 0;
+  background: hsl(var(--b1));
+}
+
+.faq-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #f60 !important;
+  margin-bottom: 1rem;
+}
+
+.faq-headline {
+  font-family: "Bricolage Grotesque", sans-serif !important;
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  color: hsl(var(--bc)) !important;
+}
+
+.faq-toggle {
+  display: inline-flex;
+  margin: 0 auto 3rem;
+  gap: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.faq-toggle__btn {
+  padding: 0.75rem 1.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: transparent;
+  color: hsl(var(--bc) / 0.6) !important;
+  border-bottom: 2px solid transparent !important;
+  cursor: pointer;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.faq-toggle__btn:hover {
+  color: hsl(var(--bc)) !important;
+}
+
+.faq-toggle__btn.is-active {
+  color: #f60 !important;
+  border-bottom-color: #f60 !important;
+}
+
+.faq-list {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-top: 1px solid hsl(var(--bc) / 0.1);
+  transition: background 0.3s ease;
+}
+
+.faq-item:last-child {
+  border-bottom: 1px solid hsl(var(--bc) / 0.1);
+}
+
+.faq-item.is-open {
+  background: hsl(var(--bc) / 0.02);
+}
+
+.faq-item__head {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 1.75rem 0.5rem;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: padding 0.3s ease;
+}
+
+.faq-item__head:hover {
+  padding-left: 1rem;
+}
+
+.faq-item__num {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #f60 !important;
+  letter-spacing: -0.01em;
+  min-width: 2rem;
+}
+
+.faq-item__q {
+  flex: 1;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: hsl(var(--bc)) !important;
+  line-height: 1.3;
+}
+
+.faq-item__icon {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #f60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.faq-item__icon svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.is-open .faq-item__icon {
+  background: #0a0a0a;
+}
+
+.faq-item.is-open .faq-item__icon svg {
+  transform: rotate(45deg);
+}
+
+.faq-item__body {
+  padding: 0 0 2rem 4rem;
+  color: hsl(var(--bc) / 0.75) !important;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 60ch;
+}
+
+.faq-item__body :deep(p) {
+  color: hsl(var(--bc) / 0.75) !important;
+}
+
+@media (max-width: 640px) {
+  .faq-section {
+    padding: 4rem 0;
+  }
+  .faq-item__head {
+    padding: 1.25rem 0;
+    gap: 1rem;
+  }
+  .faq-item__head:hover {
+    padding-left: 0;
+  }
+  .faq-item__num {
+    min-width: 1.5rem;
+    font-size: 0.85rem;
+  }
+  .faq-item__icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  .faq-item__body {
+    padding: 0 0 1.5rem 2.5rem;
+  }
 }
 </style>

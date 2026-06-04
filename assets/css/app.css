@@ -2,6 +2,384 @@
 @tailwind components;
 @tailwind utilities;
 
+/* =====================================================================
+   DESIGN RESET — applied site-wide
+   Goals: hard edges everywhere, no decorative orange card borders,
+   brand gradient utilities available globally.
+   ===================================================================== */
+
+/* 1. Kill every border-radius across the app. */
+*,
+*::before,
+*::after {
+  border-radius: 0 !important;
+}
+
+/* 2. Neutralise DaisyUI's radius tokens so any future component
+      that consumes them (buttons, badges, modals) is also sharp. */
+:root,
+[data-theme],
+[data-theme="light"],
+[data-theme="dark"] {
+  --rounded-box: 0 !important;
+  --rounded-btn: 0 !important;
+  --rounded-badge: 0 !important;
+  --tab-radius: 0 !important;
+  --animation-btn: 0;
+}
+
+/* 3. Drop decorative orange borders. Form inputs keep theirs
+      (set further down in this file) because they're functional. */
+.card,
+.card-body,
+.feature-card,
+.border-blog-card,
+[data-theme="dark"] .card,
+[data-theme="light"] .card {
+  border: none !important;
+  outline: none !important;
+}
+
+/* 4. Strip orange-tinted Tailwind border utilities that were
+      sprinkled across page templates (border-[#f60]/20 etc.).
+      Targets only those that explicitly use the brand orange so
+      we don't kill structural section dividers. */
+[class*="border-[#f60]"],
+[class*="border-[#ff6600]"],
+[class*="border-orange"] {
+  border-color: transparent !important;
+  border-width: 0 !important;
+}
+
+/* 5. Brand gradient tokens — ready to use anywhere. */
+:root {
+  --brand-orange: #f60;
+  --brand-orange-light: #ff7a1f;
+  --brand-orange-deep: #e55300;
+  --brand-ember: #ff5100;
+  --brand-gradient: linear-gradient(135deg, #ff7a1f 0%, #f60 45%, #e55300 100%);
+  --brand-gradient-soft: linear-gradient(180deg, #ff7a1f 0%, #f60 100%);
+  --brand-gradient-deep: linear-gradient(135deg, #ff5100 0%, #f60 60%, #ff7a1f 100%);
+  --brand-radial: radial-gradient(circle at 30% 20%, #ff7a1f 0%, #f60 40%, #e55300 100%);
+}
+
+.bg-brand-gradient {
+  background: var(--brand-gradient) !important;
+}
+
+.bg-brand-gradient-soft {
+  background: var(--brand-gradient-soft) !important;
+}
+
+.bg-brand-gradient-deep {
+  background: var(--brand-gradient-deep) !important;
+}
+
+.bg-brand-radial {
+  background: var(--brand-radial) !important;
+}
+
+.text-brand-gradient {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 6. Display typography — Bricolage Grotesque for every heading.
+      Body stays on Roboto. The negative tracking and weight 800
+      give headings the chunky editorial feel the brand wants. */
+h1, h2, h3, h4, h5, h6,
+.display-font {
+  font-family: 'Bricolage Grotesque', 'Roboto', system-ui, sans-serif !important;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.02;
+}
+
+h1 { font-weight: 800; }
+h2 { font-weight: 800; }
+h3 { font-weight: 700; }
+h4 { font-weight: 700; }
+h5 { font-weight: 600; }
+h6 { font-weight: 600; }
+
+/* 7. Primary buttons get the brand gradient automatically. */
+.btn-primary,
+.btn.btn-primary,
+.btn.bg-\[\#f60\],
+button.bg-\[\#f60\]:not(.bg-transparent):not(.btn-outline) {
+  background: var(--brand-gradient) !important;
+  background-size: 200% 200% !important;
+  border: none !important;
+  color: #ffffff !important;
+  transition: background-position 0.5s ease, transform 0.2s ease, box-shadow 0.3s ease !important;
+}
+
+.btn-primary:hover,
+.btn.btn-primary:hover,
+.btn.bg-\[\#f60\]:hover,
+button.bg-\[\#f60\]:hover:not(.bg-transparent):not(.btn-outline) {
+  background-position: 100% 0 !important;
+  box-shadow: 0 12px 30px -10px rgba(255, 102, 0, 0.55) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* 8. Shared hero shell — dark canvas + radial brand gradient blobs.
+      Used by index, google-ads, website-erstellen-lassen and
+      ki-automatisierung. */
+.hero-shell {
+  position: relative;
+  min-height: 100vh;
+  background: #0a0a0a;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero-shell__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 28%, rgba(255, 122, 31, 0.32) 0%, transparent 45%),
+    radial-gradient(circle at 82% 72%, rgba(255, 81, 0, 0.28) 0%, transparent 50%),
+    radial-gradient(circle at 50% 100%, rgba(229, 83, 0, 0.18) 0%, transparent 55%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* subtle noise / grain layer for tactile feel */
+.hero-shell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 0px,
+    rgba(255, 255, 255, 0) 60px,
+    rgba(255, 255, 255, 0.018) 60px,
+    rgba(255, 255, 255, 0.018) 61px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-shell__inner {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  /* longhand so Tailwind's px-4 on this same element is preserved */
+  padding-top: 8rem;
+  padding-bottom: 6rem;
+}
+
+.hero-shell__eyebrow {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #f60 !important;
+  margin-bottom: 1.5rem;
+}
+
+.hero-shell__headline {
+  font-family: "Bricolage Grotesque", sans-serif !important;
+  font-size: clamp(2.75rem, 7.5vw, 6rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  color: #ffffff !important;
+  margin-bottom: 1.5rem;
+}
+
+.hero-shell__accent {
+  background: linear-gradient(135deg, #ff7a1f 0%, #f60 55%, #e55300 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-shell__sub {
+  font-size: clamp(1.05rem, 1.4vw, 1.35rem);
+  color: rgba(255, 255, 255, 0.85) !important;
+  max-width: 38ch;
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+}
+
+.hero-shell__trust {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  max-width: 32rem;
+}
+
+.hero-shell__stat-num {
+  font-family: "Bricolage Grotesque", sans-serif !important;
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  font-weight: 800;
+  color: #f60 !important;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 0.45rem;
+  white-space: nowrap;
+}
+
+.hero-shell__stat-lbl {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.65) !important;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+  .hero-shell__trust {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    max-width: 100%;
+  }
+  .hero-shell__stat-num {
+    font-size: 1.25rem;
+  }
+  .hero-shell__stat-lbl {
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+  }
+}
+
+.hero-shell__scroll {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 3;
+}
+
+.hero-shell__scroll a {
+  color: rgba(255, 255, 255, 0.55) !important;
+  animation: smooth-bounce 1.6s infinite ease-in-out;
+}
+
+.hero-shell__scroll svg {
+  width: 2rem;
+  height: 2rem;
+  stroke: rgba(255, 255, 255, 0.55) !important;
+}
+
+/* CTA pair below sub on service-page heroes (no form variant) */
+.hero-shell__cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero-shell__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.3s ease, background-position 0.4s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.hero-shell__btn--primary {
+  background: var(--brand-gradient) !important;
+  background-size: 200% 200% !important;
+  color: #ffffff !important;
+  box-shadow: 0 14px 30px -12px rgba(255, 102, 0, 0.55);
+}
+
+.hero-shell__btn--primary:hover {
+  background-position: 100% 0 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px -12px rgba(255, 102, 0, 0.7);
+}
+
+.hero-shell__btn--ghost {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+  backdrop-filter: blur(4px);
+}
+
+.hero-shell__btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.16) !important;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1023px) {
+  .hero-shell__inner {
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-shell__inner {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+  .hero-shell__sub {
+    margin-bottom: 2rem;
+  }
+}
+
+/* 9. Any black-background callout/box gets white text inside.
+      Many blog post components and other sections use
+      `<div class="bg-black ...">` as a contrast block. The earlier
+      global rule (`p, span, div { color: var(--bc) !important }`)
+      makes the body text black-on-black inside those boxes.
+      `body` prefix bumps specificity to unambiguously beat that rule
+      and any explicit `.text-base-content` inside the callout. */
+body .bg-black,
+body .bg-black p,
+body .bg-black span,
+body .bg-black div,
+body .bg-black li,
+body .bg-black a,
+body .bg-black h1,
+body .bg-black h2,
+body .bg-black h3,
+body .bg-black h4,
+body .bg-black h5,
+body .bg-black h6,
+body .bg-black em,
+body .bg-black i,
+body .bg-black strong,
+body .bg-black b,
+body .bg-black blockquote,
+body .bg-black ul,
+body .bg-black ol {
+  color: #ffffff !important;
+}
+
+/* Orange-highlighted text inside black callouts stays orange */
+body .bg-black .text-\[\#f60\],
+body .bg-black .text-primary,
+body .bg-black [class~="text-[#f60]"] {
+  color: #f60 !important;
+}
+
+/* =====================================================================
+   END DESIGN RESET
+   ===================================================================== */
+
 @font-face {
   font-family: "Roboto";
   src: url("~/assets/fonts/roboto/Roboto-Regular.ttf") format("truetype");
@@ -45,14 +423,6 @@ body {
   --bc: 0 0% 0%;
 }
 
-[data-theme="dark"] {
-  --fallback-b1: 0 0% 0%;
-  --b1: 0 0% 0%;
-  --b2: 0 0% 0%;
-  --b3: 0 0% 0%;
-  --bc: 0 0% 100%;
-}
-
 /* Ensure bg-base-100 works properly */
 .bg-base-100 {
   background-color: hsl(var(--b1) / 1) !important;
@@ -73,16 +443,6 @@ body {
 
 .card-body {
   border-radius: 1rem;
-}
-
-[data-theme="light"] .card {
-  /* border: 1px solid rgb(255, 102, 0);
-  box-shadow: 0 4px 6px -1px rgba(255, 102, 0, 0.1); */
-}
-
-[data-theme="dark"] .card {
-  border: 1px solid rgb(255, 102, 0);
-  box-shadow: 0 4px 6px -1px rgba(255, 102, 0, 0.1);
 }
 
 .border-none {
@@ -232,12 +592,6 @@ input[type="radio"].radio {
   border-color: rgba(0, 0, 0, 0.3) !important;
   background-color: transparent !important;
   background-image: none !important;
-}
-
-[data-theme="dark"] .radio,
-[data-theme="dark"] input[type="radio"],
-[data-theme="dark"] input[type="radio"].radio {
-  border-color: rgba(255, 255, 255, 0.3) !important;
 }
 
 .radio:checked,
@@ -583,52 +937,74 @@ ul.menu li.selected a {
    and ensure only the actually-hovered link lights up.
    ========================================================= */
 
-/* Reset dropdown content links to transparent, kill inherited bg */
-.menu .dropdown-content li > a,
-.menu .dropdown-content li > .router-link-active,
-.menu .dropdown-content li > .router-link-exact-active {
+/* Reset dropdown content links to transparent. The selectors here
+   are extra-specific so they beat the legacy `ul.menu li:focus a`
+   rule that bleeds the focus background to every dropdown child.
+   Covers BOTH patterns: desktop (`.dropdown-content`) and mobile
+   (`details > ul` without the dropdown-content class). */
+ul.menu .dropdown-content li > a,
+ul.menu .dropdown-content li > a:link,
+ul.menu .dropdown-content li > .router-link-active,
+ul.menu .dropdown-content li > .router-link-exact-active,
+ul.menu li:focus .dropdown-content li > a,
+ul.menu li.selected .dropdown-content li > a,
+ul.menu li:focus-within .dropdown-content li > a,
+ul.menu li > details > ul > li > a,
+ul.menu li > details[open] > ul > li > a,
+ul.menu li:focus > details > ul > li > a,
+ul.menu li:focus-within > details > ul > li > a {
   background-color: transparent !important;
   color: hsl(var(--bc)) !important;
-  border-radius: 0.5rem !important;
+  border-radius: 0 !important;
 }
 
-/* Only the truly hovered dropdown link gets the peach background */
-.menu .dropdown-content li > a:hover,
-.menu .dropdown-content li > .router-link-active:hover,
-.menu .dropdown-content li > .router-link-exact-active:hover {
+/* Only the truly hovered dropdown link gets the peach background.
+   Both desktop and mobile patterns. */
+ul.menu .dropdown-content li > a:hover,
+ul.menu .dropdown-content li > .router-link-active:hover,
+ul.menu .dropdown-content li > .router-link-exact-active:hover,
+ul.menu li:focus .dropdown-content li > a:hover,
+ul.menu li:focus-within .dropdown-content li > a:hover,
+ul.menu li > details > ul > li > a:hover,
+ul.menu li > details[open] > ul > li > a:hover,
+ul.menu li:focus > details > ul > li > a:hover,
+ul.menu li:focus-within > details > ul > li > a:hover {
   background-color: rgba(255, 102, 0, 0.1) !important;
   color: #f60 !important;
 }
 
 /* Current-page marker in the dropdown: orange text only, no bg */
-.menu .dropdown-content li > a.router-link-active,
-.menu .dropdown-content li > a.router-link-exact-active {
+ul.menu .dropdown-content li > a.router-link-active,
+ul.menu .dropdown-content li > a.router-link-exact-active,
+ul.menu li > details > ul > li > a.router-link-active,
+ul.menu li > details > ul > li > a.router-link-exact-active {
   color: #f60 !important;
   font-weight: 600 !important;
+  background-color: transparent !important;
 }
 
 /* Kill the doubled background on the Leistungen trigger:
    the outer <details> shouldn't get any background — only
-   the <summary> child does. */
-.menu li > details {
+   the <summary> child does. Plus the summary itself should be
+   sharp-cornered (the global * radius reset already handles it,
+   but explicit doesn't hurt). */
+ul.menu li > details,
+ul.menu li > details > summary {
   background-color: transparent !important;
 }
 
-/* CTA Section theme-aware styles */
-/* Light mode: white/light overlay with black text */
-[data-theme="light"] .cta-overlay {
+ul.menu li > details > summary:hover,
+ul.menu li > details[open] > summary {
+  background-color: rgba(255, 102, 0, 0.1) !important;
+  color: #f60 !important;
+  border-radius: 0 !important;
+}
+
+/* CTA Section — light theme only */
+.cta-overlay {
   background-color: rgba(255, 255, 255, 0.75) !important;
 }
 
-[data-theme="light"] .cta-text {
+.cta-text {
   color: #000000 !important;
-}
-
-/* Dark mode: black/dark overlay with white text */
-[data-theme="dark"] .cta-overlay {
-  background-color: rgba(0, 0, 0, 0.75) !important;
-}
-
-[data-theme="dark"] .cta-text {
-  color: #ffffff !important;
 }

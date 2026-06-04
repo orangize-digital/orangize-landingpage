@@ -1,189 +1,63 @@
 <template>
   <Navigation />
-  <!-- Hero Section -->
-  <div
-    class="hero min-h-[110vh] relative"
-    :style="`background-image: url('${brandsImage}')`"
-  >
-    <div class="hero-overlay bg-black bg-opacity-80"></div>
-    <div
-      class="hero-content relative z-10 w-full lg:py-0 py-[120px] max-w-7xl mx-auto px-4"
-    >
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <!-- Left Side - Text -->
-        <div class="text-left text-white" data-aos="fade-right">
-          <div class="mb-4">
-            <span class="text-primary font-semibold text-lg">
-              Deine Digitalagentur aus OWL
-            </span>
-          </div>
-          <h1
-            class="text-4xl lg:text-6xl font-bold mb-6 leading-tight text-white"
-          >
-            Weniger raten.
-            <span class="text-primary">Mehr Kunden.</span>
+
+  <!-- Hero — dark canvas + radial brand gradient blobs -->
+  <section class="hero-shell">
+    <div class="hero-shell__bg" aria-hidden="true"></div>
+    <div class="hero-shell__inner container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+        <div class="lg:col-span-7" data-aos="fade-right">
+          <p class="hero-shell__eyebrow">Digitalagentur aus Ostwestfalen</p>
+          <h1 class="hero-shell__headline">
+            Weniger raten.<br />
+            <span class="hero-shell__accent">Mehr Kunden.</span>
           </h1>
-          <p class="text-xl lg:text-2xl mb-6 text-white">
-            Wir bauen Websites, die verkaufen, schalten Google Ads, die sich
-            rechnen, und automatisieren Prozesse mit KI. Alles aus einer Hand.
+          <p class="hero-shell__sub">
+            Websites, die verkaufen. Google Ads, die sich rechnen. Prozesse, die sich selbst erledigen. Alles aus einer Hand — gebaut für Unternehmen, die nicht raten wollen.
           </p>
 
-          <div class="space-y-4 mb-8">
-            <div class="flex items-center gap-3">
-              <svg
-                class="w-5 h-5 text-white flex-shrink-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 12l2 2 4-4"
-                ></path>
-              </svg>
-              <span class="text-lg text-white"
-                >Conversion-optimierte Landingpages</span
-              >
+          <div class="hero-shell__trust">
+            <div>
+              <div class="hero-shell__stat-num">850.000 €</div>
+              <div class="hero-shell__stat-lbl">Werbebudget</div>
             </div>
-            <div class="flex items-center gap-3">
-              <svg
-                class="w-5 h-5 text-white flex-shrink-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 12l2 2 4-4"
-                ></path>
-              </svg>
-              <span class="text-lg text-white"
-                >Google Ads mit echtem ROI</span
-              >
+            <div>
+              <div class="hero-shell__stat-num">100+</div>
+              <div class="hero-shell__stat-lbl">Projekte</div>
             </div>
-            <div class="flex items-center gap-3">
-              <svg
-                class="w-5 h-5 text-white flex-shrink-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 12l2 2 4-4"
-                ></path>
-              </svg>
-              <span class="text-lg text-white"
-                >Transparentes Reporting & Tracking</span
-              >
+            <div>
+              <div class="hero-shell__stat-num">95 %</div>
+              <div class="hero-shell__stat-lbl">Retention</div>
             </div>
-            <div class="flex items-center gap-3">
-              <svg
-                class="w-5 h-5 text-white flex-shrink-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 12l2 2 4-4"
-                ></path>
-              </svg>
-              <span class="text-lg text-white"
-                >KI-Automationen, die Zeit &amp; Personal sparen</span
-              >
-            </div>
-            <div class="flex items-center gap-3">
-              <svg
-                class="w-5 h-5 text-white flex-shrink-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 12l2 2 4-4"
-                ></path>
-              </svg>
-              <span class="text-lg text-white"
-                >Persönliche Betreuung statt Agentur-Fließband</span
-              >
-            </div>
-          </div>
-
-          <div
-            class="bg-primary/20 border border-white/30 rounded-lg p-6 mb-8"
-          >
-            <div class="flex items-start gap-3 mb-2">
-              <svg
-                class="w-6 h-6 text-white mt-0.5 flex-shrink-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                ></path>
-              </svg>
-              <p class="text-lg font-semibold text-white">
-                Ergebnisse, keine Versprechen
-              </p>
-            </div>
-            <p class="text-base ml-9 text-white">
-              Über <strong class="text-[#f60]">850.000€ verwaltetes Werbebudget</strong>
-              und Websites, die im Schnitt 3x mehr Anfragen generieren.
-            </p>
           </div>
         </div>
 
-        <!-- Right Side - Contact Form -->
-        <div
-          class="flex justify-center lg:justify-end"
-          data-aos="fade-left"
-          data-aos-delay="200"
-        >
+        <div class="lg:col-span-5" data-aos="fade-left" data-aos-delay="200">
           <HeroContactForm />
         </div>
       </div>
     </div>
 
-    <!-- Scroll indicator -->
-    <div class="absolute bottom-8 w-full flex justify-center">
+    <div class="hero-shell__scroll">
       <a
         href="#"
         @click.prevent="scrollToSection('losung')"
-        class="text-white animate-bounce"
+        aria-label="Nach unten scrollen"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-10 w-10"
-          fill="none"
           viewBox="0 0 24 24"
-          stroke="#ffffff"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M19 14l-7 7m0 0l-7-7m7 7V3"
-          />
+          <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
         </svg>
       </a>
     </div>
-  </div>
+  </section>
 
   <!-- Google Certifications -->
   <section class="py-12 bg-base-200">
@@ -322,19 +196,19 @@
           <p class="text-lg text-white leading-relaxed">
             Du hast ein starkes Angebot – aber deine potenziellen Kunden wissen
             es noch nicht? Dann geht es dir wie vielen Unternehmern, die auf
-            klassische Werbung setzen, während andere mit **Google Ads &
-            Conversion-optimierten Landing Pages** bereits **planbar und
-            automatisiert Neukunden gewinnen**.
+            klassische Werbung setzen, während andere mit <strong>Google Ads &
+            Conversion-optimierten Landing Pages</strong> bereits <strong>planbar und
+            automatisiert Neukunden gewinnen</strong>.
             <br /><br />
-            Die Lösung? Ein smartes System aus **zielgerichteten Kampagnen,
-            hochperformanten Websiten und datengetriebenem Feintuning**. Keine
-            Streuverluste, keine leeren Klicks – sondern **reale Anfragen und
-            profitable Ergebnisse**.
+            Die Lösung? Ein smartes System aus <strong>zielgerichteten Kampagnen,
+            hochperformanten Websiten und datengetriebenem Feintuning</strong>. Keine
+            Streuverluste, keine leeren Klicks – sondern <strong>reale Anfragen und
+            profitable Ergebnisse</strong>.
             <br /><br />
-            Unser Ansatz ist **kein Rätselraten**, sondern basiert auf
+            Unser Ansatz ist <strong>kein Rätselraten</strong>, sondern basiert auf
             datenbasierter Analyse, modernsten Marketing-Techniken und
             jahrelanger Erfahrung. Wir optimieren nicht nur Werbeanzeigen,
-            sondern auch deine **Website, Call-to-Actions & Funnel** – damit aus
+            sondern auch deine <strong>Website, Call-to-Actions & Funnel</strong> – damit aus
             Besuchern echte Kunden werden.
           </p>
         </div>
@@ -434,8 +308,8 @@
               </h4>
               <p class="text-white text-lg">
                 Ein Klick auf die Anzeige ist nur der erste Schritt – die wahre
-                Magie passiert auf deiner Website. Wir bauen **Conversion-starke
-                Websiten**, die Besucher zu Kunden machen.
+                Magie passiert auf deiner Website. Wir bauen <strong>Conversion-starke
+                Websiten</strong>, die Besucher zu Kunden machen.
               </p>
             </div>
           </div>
@@ -490,7 +364,7 @@
               <p class="text-white text-lg">
                 Stell dir vor, du bekommst täglich neue Anfragen – ohne manuelle
                 Kaltakquise. Mit unserem System machst du dein Marketing
-                **planbar und skalierbar**.
+                <strong>planbar und skalierbar</strong>.
               </p>
             </div>
           </div>
@@ -671,127 +545,52 @@
     </div>
   </section>
 
-  <!-- Über Mich Section -->
-  <section id="uber-mich" class="py-20 bg-base-200">
-    <div class="container mx-auto px-6 lg:px-12">
-      <h2 class="text-4xl font-bold text-center mb-12 text-white">
-        Web & Ads – Die perfekte Kombination für dein Business
-      </h2>
-      <div class="flex flex-col md:flex-row items-start gap-12">
-        <!-- Bild -->
-        <div class="flex-1 text-center md:text-left">
-          <img
-            :src="naumcheImage"
-            alt="Naumche"
-            class="rounded-lg shadow-lg w-full max-w-sm md:max-w-md object-cover mx-auto md:mx-0"
-          />
-        </div>
-        <!-- Textbereich mit 1.5x Breite -->
-        <div class="flex-[1.5] space-y-8">
-          <!-- Google Ads Spezialist -->
-          <div class="bg-base-100 p-6 rounded-lg">
-            <h3 class="text-3xl font-bold text-[#f60] mb-4">
-              Webentwickler, Google Ads Spezialist &amp; Automation Engineer
-            </h3>
-            <p class="text-lg text-white mb-4">
-              Ich bin Naumche, dein Experte für professionelle Google Ads
-              Kampagnen und moderne Webentwicklung. Durch meine Erfahrung in
-              beiden Bereichen helfe ich Unternehmen, nicht nur mehr
-              Sichtbarkeit zu gewinnen, sondern auch mit einer performanten und
-              ansprechenden Website zu überzeugen.
-            </p>
-            <p class="text-lg text-white mb-4">
-              Dank meiner Doppelkompetenz optimiere ich Werbekampagnen gezielt
-              und stelle sicher, dass die Zielseite technisch und strategisch
-              perfekt darauf abgestimmt ist – für bessere Conversions und
-              langfristigen Erfolg.
-            </p>
-            <p class="text-lg text-white mb-4">
-              Seit Jahren baue ich nicht nur Websites und Kampagnen, sondern
-              auch die Workflows dahinter — von Lead-Routing bis KI-Agenten.
-              Diese drei Bereiche wachsen zusammen, und genau diese Verbindung
-              ist das, was meinen Kunden den größten Hebel bringt.
-            </p>
-            <div class="flex flex-wrap gap-3">
-              <div class="badge badge-lg border-none bg-[#f60] text-white">
-                Google Ads zertifiziert
-              </div>
-              <div class="badge badge-lg border-none bg-[#f60] text-white">
-                Analytics Experte
-              </div>
-              <div class="badge badge-lg border-none bg-[#f60] text-white">
-                Performance Marketing
-              </div>
-              <div class="badge badge-lg border-none bg-[#f60] text-white">
-                Workflow-Automatisierung
-              </div>
-              <div class="badge badge-lg border-none bg-[#f60] text-white">
-                KI-Agenten / LLM-Integration
-              </div>
-            </div>
+  <!-- Über Mich — editorial -->
+  <section id="uber-mich" class="bio-section">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <!-- Photo -->
+        <div class="lg:col-span-5" data-aos="fade-right">
+          <div class="bio-photo">
+            <img :src="naumcheImage" alt="Naumche Joshevski" />
           </div>
-          <!-- Meine Werte -->
-          <div class="bg-base-100 p-6 rounded-lg">
-            <h3 class="text-3xl font-bold text-[#f60] mb-6">Meine Werte</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="flex items-start gap-4">
-                <div
-                  class="w-8 h-8 rounded-full bg-[#f60] text-white flex items-center justify-center text-lg font-bold"
-                >
-                  ✓
-                </div>
-                <div>
-                  <h4 class="font-bold text-lg text-white">Transparenz</h4>
-                  <p class="text-white">
-                    Ehrliche Beratung und klare Kommunikation
-                  </p>
-                </div>
-              </div>
-              <div class="flex items-start gap-4">
-                <div
-                  class="w-8 h-8 rounded-full bg-[#f60] text-white flex items-center justify-center text-lg font-bold"
-                >
-                  ✓
-                </div>
-                <div>
-                  <h4 class="font-bold text-lg text-white">Flexibilität</h4>
-                  <p class="text-white">
-                    Individuelle Lösungen statt Standardpakete
-                  </p>
-                </div>
-              </div>
-              <div class="flex items-start gap-4">
-                <div
-                  class="w-8 h-8 rounded-full bg-[#f60] text-white flex items-center justify-center text-lg font-bold"
-                >
-                  ✓
-                </div>
-                <div>
-                  <h4 class="font-bold text-lg text-white">Ergebnisse</h4>
-                  <p class="text-white">
-                    Fokus auf messbaren Erfolg für meine Kunden
-                  </p>
-                </div>
-              </div>
-              <div class="flex items-start gap-4">
-                <div
-                  class="w-8 h-8 rounded-full bg-[#f60] text-white flex items-center justify-center text-lg font-bold"
-                >
-                  ✓
-                </div>
-                <div>
-                  <h4 class="font-bold text-lg text-white">
-                    Weiterentwicklung
-                  </h4>
-                  <p class="text-white">
-                    Immer auf dem neuesten Stand der Branche
-                  </p>
-                </div>
+          <div class="bio-photo-caption">
+            <span class="bio-photo-caption__name">Naumche Joshevski</span>
+            <span class="bio-photo-caption__role">Founder · Engineer</span>
+          </div>
+        </div>
+
+        <!-- Editorial copy -->
+        <div class="lg:col-span-7" data-aos="fade-left" data-aos-delay="150">
+          <p class="bio-eyebrow">Über uns</p>
+          <h2 class="bio-headline">
+            Drei Disziplinen.<br />Ein Hebel.
+          </h2>
+          <p class="bio-lead">
+            Websites, Google Ads und Automatisierung sind keine getrennten Spielwiesen. Wer alle drei beherrscht und verbindet, schafft den eigentlichen Hebel. Genau dort arbeiten wir — von der ersten Anzeige bis zum automatisierten Lead-Routing.
+          </p>
+          <p class="bio-body">
+            Ich bin Naumche. Ich baue Kampagnen, die sich rechnen, Websites, die verkaufen, und Workflows, die deinen Tag freiräumen. Unterstützt von einem Netzwerk aus erfahrenen Freelancern wenn ein Projekt mehr Hände braucht.
+          </p>
+
+          <div class="bio-tags">
+            <span>Google Ads zertifiziert</span>
+            <span>Analytics</span>
+            <span>Performance Marketing</span>
+            <span>Workflow-Automation</span>
+            <span>KI-Agenten / LLM</span>
+          </div>
+
+          <div class="bio-values">
+            <div class="bio-value" v-for="(val, idx) in values" :key="val.title">
+              <span class="bio-value__num">{{ String(idx + 1).padStart(2, '0') }}</span>
+              <div>
+                <h4>{{ val.title }}</h4>
+                <p>{{ val.text }}</p>
               </div>
             </div>
           </div>
         </div>
-        <!-- Ende rechte Spalte -->
       </div>
     </div>
   </section>
@@ -848,4 +647,196 @@ const scrollToSection = (id) => {
     element.scrollIntoView({ behavior: "smooth" });
   }
 };
+
+const values = [
+  {
+    title: "Transparenz",
+    text: "Ehrliche Beratung. Klare Reports. Keine Sales-Sprüche.",
+  },
+  {
+    title: "Flexibilität",
+    text: "Individuelle Lösungen statt Schubladen-Pakete.",
+  },
+  {
+    title: "Ergebnisse",
+    text: "Wir messen, was wirklich Anfragen bringt.",
+  },
+  {
+    title: "Weiterentwicklung",
+    text: "Stack & Methoden bleiben am Puls der Branche.",
+  },
+];
 </script>
+
+<style scoped>
+.bio-section {
+  padding: 8rem 0;
+  background: #0a0a0a;
+  position: relative;
+  overflow: hidden;
+}
+
+.bio-section::before {
+  content: "";
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 102, 0, 0.18) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.bio-photo {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+
+.bio-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.15) contrast(1.05);
+  transition: filter 0.5s ease, transform 0.6s ease;
+}
+
+.bio-photo:hover img {
+  filter: grayscale(0) contrast(1.1);
+  transform: scale(1.02);
+}
+
+.bio-photo-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bio-photo-caption__name {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #ffffff !important;
+  letter-spacing: -0.01em;
+}
+
+.bio-photo-caption__role {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #f60 !important;
+}
+
+.bio-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #f60 !important;
+  margin-bottom: 1.5rem;
+}
+
+.bio-headline {
+  font-family: "Bricolage Grotesque", sans-serif !important;
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: #ffffff !important;
+  margin-bottom: 2rem;
+}
+
+.bio-lead {
+  font-size: clamp(1.125rem, 1.5vw, 1.4rem);
+  color: rgba(255, 255, 255, 0.92) !important;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.bio-body {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.7) !important;
+  line-height: 1.65;
+  margin-bottom: 2.5rem;
+  max-width: 56ch;
+}
+
+.bio-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.bio-tags span {
+  padding: 0.4rem 0.85rem;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.bio-values {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 2rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 640px) {
+  .bio-values {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+}
+
+.bio-value {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.bio-value__num {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #f60 !important;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  min-width: 2rem;
+}
+
+.bio-value h4 {
+  font-family: "Bricolage Grotesque", sans-serif !important;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff !important;
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.01em;
+}
+
+.bio-value p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.65) !important;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 1023px) {
+  .bio-section {
+    padding: 5rem 0;
+  }
+  .bio-photo {
+    max-width: 460px;
+    margin: 0 auto;
+  }
+}
+</style>
