@@ -54,6 +54,7 @@
                 <li><NuxtLink to="/google-ads" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2">Google Ads</NuxtLink></li>
                 <li><NuxtLink to="/website-erstellen-lassen" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2">Webdesign</NuxtLink></li>
                 <li><NuxtLink to="/ki-automatisierung" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2">KI-Automatisierung</NuxtLink></li>
+                <li><NuxtLink to="/social-media-betreuung" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2">Social Media</NuxtLink></li>
               </ul>
             </details>
           </li>
@@ -102,6 +103,7 @@
               <li><NuxtLink to="/google-ads" class="text-base-content hover:text-[#f60]" @click="isMenuOpen = false">Google Ads</NuxtLink></li>
               <li><NuxtLink to="/website-erstellen-lassen" class="text-base-content hover:text-[#f60]" @click="isMenuOpen = false">Webdesign</NuxtLink></li>
               <li><NuxtLink to="/ki-automatisierung" class="text-base-content hover:text-[#f60]" @click="isMenuOpen = false">KI-Automatisierung</NuxtLink></li>
+              <li><NuxtLink to="/social-media-betreuung" class="text-base-content hover:text-[#f60]" @click="isMenuOpen = false">Social Media</NuxtLink></li>
             </ul>
           </details>
         </li>

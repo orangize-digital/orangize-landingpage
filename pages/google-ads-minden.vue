@@ -1,96 +1,60 @@
 <template>
   <div>
     <Navigation />
-    <!-- Hero Section -->
-    <div
-      class="hero min-h-[110vh] relative bg-[url('@/assets/images/google-ads-hero.jpeg')] lg:mt-0"
-    >
-      <div class="hero-overlay bg-black bg-opacity-80"></div>
-      <div class="hero-content relative z-10 w-full lg:py-0 py-[150px]">
-        <div class="container mx-auto px-4">
-          <div
-            class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]"
-          >
-            <!-- Text Content -->
-            <div data-aos="fade-right">
-              <h1
-                class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
-              >
-                Google Ads Agentur in
-                <span class="text-primary">Minden</span>
-              </h1>
-              <p class="text-xl text-white mb-8 leading-relaxed">
-                Professionelle Google Ads Betreuung direkt aus Minden.
-                Maximieren Sie Ihren ROI mit gezielten Kampagnen für das
-                Weserbergland.
-              </p>
-
-              <div class="space-y-4 mb-8">
-                <div class="flex items-center gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                  <span class="text-white">Sofortige Sichtbarkeit bei Google</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                  <span class="text-white">Messbare Ergebnisse & ROI-Optimierung</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                  <span class="text-white">Persönliche Betreuung aus Minden</span>
-                </div>
-              </div>
-
-              <div class="flex flex-col sm:flex-row gap-4">
-                <button
-                  class="btn bg-[#f60] text-neutral-content border-none hover:bg-[#f60]/90 text-lg px-8"
-                  @click="scrollToSection('kontakt')"
-                >
-                  Kostenlose Beratung
-                </button>
-                <button
-                  class="btn btn-outline border-white text-white hover:bg-white hover:text-black text-lg px-8"
-                  @click="scrollToSection('leistungen')"
-                >
-                  Unsere Leistungen
-                </button>
-              </div>
+    <!-- Hero — pain-point: wasted ad budget → real inquiries (Minden) -->
+    <section class="hero-shell">
+      <div class="hero-shell__bg" aria-hidden="true"></div>
+      <div class="hero-shell__inner container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+          <div class="lg:col-span-7" data-aos="fade-right">
+            <p class="hero-shell__eyebrow">Google Ads · Minden</p>
+            <h1 class="hero-shell__headline">
+              Google Ads Agentur in Minden.<br />
+              <span class="hero-shell__accent">Aus Klicks werden Anfragen.</span>
+            </h1>
+            <p class="hero-shell__sub">
+              Klicks sind nicht das Ziel — Anfragen sind es. Wir bauen Google Ads
+              Kampagnen für Unternehmen in Minden und dem Weserbergland, die nachweisbar
+              Umsatz bringen. Persönlich betreut, transparent gemessen.
+            </p>
+            <div class="hero-shell__cta-row">
+              <button class="hero-shell__btn hero-shell__btn--primary" @click="scrollToSection('kontakt')">
+                Kostenlose Beratung
+              </button>
+              <button class="hero-shell__btn hero-shell__btn--ghost" @click="scrollToSection('losung')">
+                Mehr erfahren
+              </button>
             </div>
-
-            <!-- Contact Form -->
-            <div data-aos="fade-up" class="relative">
-              <div
-                class="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl blur-xl"
-              ></div>
-              <div class="relative">
-                <HeroContactForm />
+            <div class="hero-shell__trust">
+              <div>
+                <div class="hero-shell__stat-num">850.000 €</div>
+                <div class="hero-shell__stat-lbl">Werbebudget</div>
+              </div>
+              <div>
+                <div class="hero-shell__stat-num">100+</div>
+                <div class="hero-shell__stat-lbl">Kampagnen</div>
+              </div>
+              <div>
+                <div class="hero-shell__stat-num">Partner</div>
+                <div class="hero-shell__stat-lbl">Google · Zertifiziert</div>
               </div>
             </div>
           </div>
+
+          <div class="lg:col-span-5" data-aos="fade-left" data-aos-delay="200">
+            <HeroContactForm />
+          </div>
         </div>
       </div>
-      <div class="absolute bottom-8 w-full flex justify-center">
-        <a
-          href="#"
-          @click.prevent="scrollToSection('losung')"
-          class="text-white animate-bounce"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-10 w-10"
-            fill="none"
-            viewBox="0 0 24 24 "
-            stroke="#fff"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
+
+      <div class="hero-shell__scroll">
+        <a href="#" @click.prevent="scrollToSection('losung')" aria-label="Nach unten scrollen">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </a>
       </div>
-    </div>
+    </section>
 
     <!-- Google Certifications -->
     <GoogleCertifications />
@@ -1053,38 +1017,77 @@ const route = useRoute();
 
 // SEO Meta Tags für Google Ads Betreuung in Minden und Umgebung
 useHead({
-  title:
-    "Google Ads Agentur Minden | Professionelle Kampagnen-Betreuung | Orangize",
+  htmlAttrs: { lang: "de" },
+  title: "Google Ads Agentur Minden | Professionelle Kampagnen-Betreuung | Orangize",
   meta: [
-    {
-      name: "description",
-      content:
-        "Google Ads Agentur Minden ✓ Professionelle Kampagnen für das Weserbergland ✓ ROI-Optimierung ✓ Lokale Expertise ✓ Kostenlose Beratung ✓ Messbare Ergebnisse.",
-    },
-    {
-      name: "keywords",
-      content:
-        "google ads minden, google ads agentur minden, sea agentur weserbergland, google ads beratung minden, google adwords minden, google ads optimierung, ppc agentur minden, google kampagnen weserbergland",
-    },
-    {
-      property: "og:title",
-      content:
-        "Google Ads Agentur Minden | Professionelle Kampagnen-Betreuung | Orangize",
-    },
-    {
-      property: "og:description",
-      content:
-        "Professionelle Google Ads Agentur in Minden. Spezialisiert auf ROI-Optimierung und messbare Ergebnisse für Unternehmen im Weserbergland. Kostenlose Erstberatung!",
-    },
-    {
-      property: "og:type",
-      content: "website",
-    },
+    { name: "description", content: "Google Ads Agentur Minden ✓ Professionelle Kampagnen für das Weserbergland ✓ ROI-Optimierung ✓ Lokale Expertise ✓ Kostenlose Beratung ✓ Messbare Ergebnisse." },
+    { name: "keywords", content: "google ads minden, google ads agentur minden, sea agentur weserbergland, google ads beratung minden, google adwords minden, google ads optimierung, ppc agentur minden, google kampagnen weserbergland" },
+    { name: "author", content: "Orangize Digital" },
+    { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
+    { name: "geo.region", content: "DE-NW" },
+    { name: "geo.placename", content: "Minden" },
+    { property: "og:title", content: "Google Ads Agentur Minden | Professionelle Kampagnen-Betreuung | Orangize" },
+    { property: "og:description", content: "Professionelle Google Ads Agentur in Minden. Spezialisiert auf ROI-Optimierung und messbare Ergebnisse für Unternehmen im Weserbergland. Kostenlose Erstberatung!" },
+    { property: "og:type", content: "website" },
+    { property: "og:locale", content: "de_DE" },
+    { property: "og:site_name", content: "Orangize Digital" },
+    { property: "og:url", content: `https://orangize.de${route.path}` },
+    { property: "og:image", content: "https://orangize.de/images/google-ads-hero.jpeg" },
+    { property: "og:image:width", content: "3000" },
+    { property: "og:image:height", content: "2021" },
+    { property: "og:image:alt", content: "Google Ads Agentur Minden | Professionelle Kampagnen-Betreuung | Orangize" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: "Google Ads Agentur Minden | Professionelle Kampagnen-Betreuung | Orangize" },
+    { name: "twitter:description", content: "Professionelle Google Ads Agentur in Minden. Spezialisiert auf ROI-Optimierung und messbare Ergebnisse für Unternehmen im Weserbergland. Kostenlose Erstberatung!" },
+    { name: "twitter:image", content: "https://orangize.de/images/google-ads-hero.jpeg" },
   ],
   link: [
+    { rel: "canonical", href: `https://orangize.de${route.path}` },
+  ],
+  script: [
     {
-      rel: "canonical",
-      href: `https://orangize.de${route.path}`,
+      type: "application/ld+json",
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Service",
+            "@id": `https://orangize.de${route.path}#service`,
+            serviceType: "Google Ads Betreuung",
+            name: "Google Ads Agentur Minden",
+            description: "Google Ads Agentur Minden ✓ Professionelle Kampagnen für das Weserbergland ✓ ROI-Optimierung ✓ Lokale Expertise ✓ Kostenlose Beratung ✓ Messbare Ergebnisse.",
+            url: `https://orangize.de${route.path}`,
+            areaServed: { "@type": "City", name: "Minden" },
+            provider: { "@id": "https://orangize.de/#organization" },
+          },
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://orangize.de/#organization",
+            name: "Orangize Digital",
+            image: "https://orangize.de/images/logo/orangize-black.svg",
+            url: "https://orangize.de",
+            telephone: "+4915122031093",
+            email: "info@orangize.de",
+            priceRange: "€€",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Brüderstr. 11",
+              postalCode: "32547",
+              addressLocality: "Bad Oeynhausen",
+              addressRegion: "Nordrhein-Westfalen",
+              addressCountry: "DE",
+            },
+            areaServed: "Minden",
+          },
+          {
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Startseite", item: "https://orangize.de" },
+              { "@type": "ListItem", position: 2, name: "Google Ads Agentur Minden", item: `https://orangize.de${route.path}` },
+            ],
+          },
+        ],
+      }),
     },
   ],
 });

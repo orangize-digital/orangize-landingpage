@@ -19,8 +19,8 @@
       </div>
     </div>
 
-    <!-- Full-bleed orange triptych — edge to edge, no container -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 w-full">
+    <!-- Full-bleed orange grid — edge to edge, no container -->
+    <div class="grid grid-cols-1 md:grid-cols-2 w-full">
       <!-- Card 1 — Webdesign -->
       <NuxtLink
         to="/website-erstellen-lassen"
@@ -114,7 +114,7 @@
       <!-- Card 3 — KI-Automatisierung -->
       <NuxtLink
         to="/ki-automatisierung"
-        class="service-tile group"
+        class="service-tile service-tile--alt group"
         data-aos="fade-up"
         data-aos-delay="240"
       >
@@ -139,6 +139,53 @@
         <div class="service-tile__body">
           <h3 class="service-tile__title">KI-Automation</h3>
           <p class="service-tile__lead">Workflows, die für dich arbeiten.</p>
+          <div class="service-tile__cta">
+            <span>Mehr erfahren</span>
+            <svg
+              class="service-tile__arrow"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14" />
+              <path d="m13 5 7 7-7 7" />
+            </svg>
+          </div>
+        </div>
+      </NuxtLink>
+
+      <!-- Card 4 — Social Media -->
+      <NuxtLink
+        to="/social-media-betreuung"
+        class="service-tile group"
+        data-aos="fade-up"
+        data-aos-delay="360"
+      >
+        <span class="service-tile__num">04</span>
+        <div class="service-tile__icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="18" cy="5" r="3" />
+            <circle cx="6" cy="12" r="3" />
+            <circle cx="18" cy="19" r="3" />
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+          </svg>
+        </div>
+        <div class="service-tile__body">
+          <h3 class="service-tile__title">Social Media</h3>
+          <p class="service-tile__lead">Sichtbar, wo deine Kunden scrollen.</p>
           <div class="service-tile__cta">
             <span>Mehr erfahren</span>
             <svg

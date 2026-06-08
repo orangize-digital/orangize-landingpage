@@ -41,8 +41,8 @@
               <ul class="menu dropdown-content bg-base-100 rounded-box z-[60] w-60 p-3 space-y-1 shadow mt-2">
                 <li><router-link to="/google-ads" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2">Google Ads</router-link></li>
                 <li><router-link to="/website-erstellen-lassen" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2">Webdesign</router-link></li>
-                <li><router-link to="/ki-automatisierung" class="!bg-transparent hover:!bg-[#f60]/10 text-[#f60] font-semibold py-2">KI-Automatisierung</router-link></li>
-                <li><router-link to="/social-media-betreuung" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2">Social Media</router-link></li>
+                <li><router-link to="/ki-automatisierung" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2">KI-Automatisierung</router-link></li>
+                <li><router-link to="/social-media-betreuung" class="!bg-transparent hover:!bg-[#f60]/10 text-[#f60] font-semibold py-2">Social Media</router-link></li>
               </ul>
             </details>
           </li>
@@ -64,7 +64,7 @@
         </ul>
       </div>
 
-      <!-- Theme Switcher & CTA Button -->
+      <!-- CTA Button -->
       <div class="flex-none hidden lg:flex lg:items-center lg:gap-4">
         <button
           class="btn btn-primary bg-[#f60] text-neutral-content border-none hover:bg-[#f60]/90"
@@ -87,8 +87,8 @@
             <ul>
               <li><router-link to="/google-ads" class="text-base-content hover:text-[#f60]" @click="isMenuOpen = false">Google Ads</router-link></li>
               <li><router-link to="/website-erstellen-lassen" class="text-base-content hover:text-[#f60]" @click="isMenuOpen = false">Webdesign</router-link></li>
-              <li><router-link to="/ki-automatisierung" class="text-[#f60] font-semibold" @click="isMenuOpen = false">KI-Automatisierung</router-link></li>
-              <li><router-link to="/social-media-betreuung" class="text-base-content hover:text-[#f60]" @click="isMenuOpen = false">Social Media</router-link></li>
+              <li><router-link to="/ki-automatisierung" class="text-base-content hover:text-[#f60]" @click="isMenuOpen = false">KI-Automatisierung</router-link></li>
+              <li><router-link to="/social-media-betreuung" class="text-[#f60] font-semibold" @click="isMenuOpen = false">Social Media</router-link></li>
             </ul>
           </details>
         </li>
@@ -144,8 +144,8 @@ const updateTheme = () => {
 const sections = [
   { id: "losung", name: "Lösung" },
   { id: "leistungen", name: "Leistungen" },
+  { id: "formate", name: "Formate" },
   { id: "prozess", name: "Prozess" },
-  { id: "dsgvo", name: "DSGVO" },
   { id: "pricing", name: "Pakete" },
   { id: "faq", name: "FAQ" },
 ];

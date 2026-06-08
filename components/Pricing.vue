@@ -13,12 +13,12 @@
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          Drei Standbeine, jedes mit eigenen Paketen. Such dir den Bereich raus —
+          Vier Standbeine, jedes mit eigenen Paketen. Such dir den Bereich raus —
           die Details findest du auf der Service-Seite.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-7xl mx-auto">
         <NuxtLink
           v-for="(svc, idx) in services"
           :key="svc.slug"
@@ -99,6 +99,15 @@ const ICON_KI = `
   <line x1="15" y1="16" x2="15" y2="16"/>
 </svg>`;
 
+const ICON_SOCIAL = `
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="18" cy="5" r="3"/>
+  <circle cx="6" cy="12" r="3"/>
+  <circle cx="18" cy="19" r="3"/>
+  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+  <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+</svg>`;
+
 const services = [
   {
     slug: "websites",
@@ -140,6 +149,20 @@ const services = [
       "Starter, Business, Enterprise",
       "n8n / Make / Zapier · OpenAI / Anthropic",
       "DSGVO-konform",
+    ],
+  },
+  {
+    slug: "social-media",
+    title: "Social Media",
+    href: "/social-media-betreuung#pricing",
+    icon: ICON_SOCIAL,
+    tagline: "Content & Betreuung, die sichtbar macht",
+    priceFrom: "490 €",
+    priceNote: "pro Monat",
+    bullets: [
+      "Starter, Wachstum, Premium",
+      "Content, Community & Reporting",
+      "Instagram · Facebook · LinkedIn · TikTok",
     ],
   },
 ];

@@ -54,6 +54,7 @@
                 <li><router-link to="/google-ads" class="!bg-transparent hover:!bg-[#f60]/10 text-[#f60] font-semibold py-2">Google Ads</router-link></li>
                 <li><router-link to="/website-erstellen-lassen" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2">Webdesign</router-link></li>
                 <li><router-link to="/ki-automatisierung" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2">KI-Automatisierung</router-link></li>
+                <li><router-link to="/social-media-betreuung" class="!bg-transparent hover:!bg-[#f60]/10 text-base-content hover:text-[#f60] py-2">Social Media</router-link></li>
               </ul>
             </details>
           </li>
@@ -101,6 +102,7 @@
               <li><router-link to="/google-ads" class="text-[#f60] font-semibold" @click="isMenuOpen = false">Google Ads</router-link></li>
               <li><router-link to="/website-erstellen-lassen" class="text-base-content hover:text-[#f60]" @click="isMenuOpen = false">Webdesign</router-link></li>
               <li><router-link to="/ki-automatisierung" class="text-base-content hover:text-[#f60]" @click="isMenuOpen = false">KI-Automatisierung</router-link></li>
+              <li><router-link to="/social-media-betreuung" class="text-base-content hover:text-[#f60]" @click="isMenuOpen = false">Social Media</router-link></li>
             </ul>
           </details>
         </li>

@@ -1,97 +1,63 @@
 <template>
   <div>
     <Navigation />
-    <!-- Hero Section -->
-    <div
-      class="hero min-h-[110vh] relative bg-[url('@/assets/images/website-erstellen-hero.jpg')] lg:mt-0"
-    >
-      <div class="hero-overlay bg-black bg-opacity-95"></div>
-      <div
-        class="hero-content relative z-10 w-full max-w-7xl mx-auto px-4 lg:py-0 py-[150px]"
-      >
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <!-- Left Side - Content -->
-          <div class="text-left text-neutral-content" data-aos="fade-right">
-            <div class="mb-4">
-              <span class="text-primary font-semibold text-lg"
-                >Webdesign Bünde</span
-              >
-            </div>
-            <h1
-              class="text-4xl lg:text-6xl text-white font-bold mb-6 leading-tight"
-            >
-              Website erstellen lassen in
-              <span class="text-primary">Bünde</span>
+    <!-- Hero — pain-point: a website should sell, not just look nice (Bünde) -->
+    <section class="hero-shell">
+      <div class="hero-shell__bg" aria-hidden="true"></div>
+      <div class="hero-shell__inner container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+          <div class="lg:col-span-7" data-aos="fade-right">
+            <p class="hero-shell__eyebrow">Webdesign · Bünde</p>
+            <h1 class="hero-shell__headline">
+              Website erstellen lassen in Bünde.<br />
+              <span class="hero-shell__accent">Die verkauft.</span>
             </h1>
-            <p class="text-xl lg:text-2xl mb-6 text-neutral-content/90">
-              Ihre lokale Webdesign-Agentur für professionelle Websites in Bünde
-              und Ostwestfalen
+            <p class="hero-shell__sub">
+              Schicke Bilder sind nicht das Geschäftsmodell. Wir bauen Websites
+              für Unternehmen in Bünde und Ostwestfalen, die aus Besuchern messbar
+              Anfragen machen — schnell, suchmaschinen-fit, ohne Schnickschnack.
             </p>
-            <div class="space-y-4 mb-8">
-              <div class="flex items-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                <span class="text-lg">Responsive Design für alle Geräte</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                <span class="text-lg">SEO-optimiert für bessere Google-Rankings</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                <span class="text-lg">Persönliche Betreuung vor Ort in Bünde</span>
-              </div>
+            <div class="hero-shell__cta-row">
+              <button class="hero-shell__btn hero-shell__btn--primary" @click="scrollToSection('kontakt')">
+                Kostenloses Angebot
+              </button>
+              <button class="hero-shell__btn hero-shell__btn--ghost" @click="scrollToSection('losung')">
+                Mehr erfahren
+              </button>
             </div>
-            <div class="flex flex-col sm:flex-row gap-4">
-              <button
-                class="btn btn-primary bg-[#f60] border-none hover:bg-[#f60]/90 text-white px-8"
-                @click="scrollToSection('kontakt')"
-              >
-                Kostenloses Angebot erhalten
-              </button>
-              <button
-                class="btn btn-outline border-white text-white hover:bg-white hover:text-black px-8"
-                @click="scrollToSection('projekte')"
-              >
-                Referenzen ansehen
-              </button>
+            <div class="hero-shell__trust">
+              <div>
+                <div class="hero-shell__stat-num">100+</div>
+                <div class="hero-shell__stat-lbl">Live-Websites</div>
+              </div>
+              <div>
+                <div class="hero-shell__stat-num">3 ×</div>
+                <div class="hero-shell__stat-lbl">Mehr Anfragen</div>
+              </div>
+              <div>
+                <div class="hero-shell__stat-num">Bünde</div>
+                <div class="hero-shell__stat-lbl">Persönlich vor Ort</div>
+              </div>
             </div>
           </div>
 
-          <!-- Right Side - Contact Form -->
-          <div
-            class="flex justify-center lg:justify-end"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
+          <div class="lg:col-span-5" data-aos="fade-left" data-aos-delay="200">
             <HeroContactForm />
           </div>
         </div>
       </div>
 
-      <!-- Scroll indicator -->
-      <div class="absolute bottom-8 w-full flex justify-center">
-        <a
-          href="#"
-          @click.prevent="scrollToSection('losung')"
-          class="text-white animate-bounce"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-8 w-8"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
+      <div class="hero-shell__scroll">
+        <a href="#" @click.prevent="scrollToSection('losung')" aria-label="Nach unten scrollen">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </a>
       </div>
-    </div>
+    </section>
+
+    <!-- Google Certifications - trust signals -->
+    <GoogleCertifications />
 
     <!-- Lösung Section -->
     <section id="losung" class="py-20 bg-base-100">
@@ -1077,38 +1043,77 @@ const route = useRoute();
 
 // SEO Meta Tags für Webdesign & Website-Erstellung in Bünde
 useHead({
-  title:
-    "Website erstellen lassen in Bünde | Professionelles Webdesign | Orangize",
+  htmlAttrs: { lang: "de" },
+  title: "Website erstellen lassen in Bünde | Professionelles Webdesign | Orangize",
   meta: [
-    {
-      name: "description",
-      content:
-        "Website erstellen lassen in Bünde ✓ Lokale Webdesign Agentur ✓ Responsive Design ✓ SEO-optimiert ✓ Persönliche Betreuung vor Ort in Bünde & Ostwestfalen.",
-    },
-    {
-      name: "keywords",
-      content:
-        "Website erstellen lassen bünde, webdesign bünde, homepage erstellen bünde, landingpage bünde, webdesign agentur bünde, professionelle Website bünde, responsive webdesign bünde, seo Website bünde",
-    },
-    {
-      property: "og:title",
-      content:
-        "Website erstellen lassen in Bünde | Professionelles Webdesign | Orangize",
-    },
-    {
-      property: "og:description",
-      content:
-        "Professionelles Webdesign & moderne Websiten für Minden und Ostwestfalen. Lokale Betreuung und maßgeschneiderte Lösungen für Ihr Unternehmen.",
-    },
-    {
-      property: "og:type",
-      content: "website",
-    },
+    { name: "description", content: "Website erstellen lassen in Bünde ✓ Lokale Webdesign Agentur ✓ Responsive Design ✓ SEO-optimiert ✓ Persönliche Betreuung vor Ort in Bünde & Ostwestfalen." },
+    { name: "keywords", content: "Website erstellen lassen bünde, webdesign bünde, homepage erstellen bünde, landingpage bünde, webdesign agentur bünde, professionelle Website bünde, responsive webdesign bünde, seo Website bünde" },
+    { name: "author", content: "Orangize Digital" },
+    { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
+    { name: "geo.region", content: "DE-NW" },
+    { name: "geo.placename", content: "Bünde" },
+    { property: "og:title", content: "Website erstellen lassen in Bünde | Professionelles Webdesign | Orangize" },
+    { property: "og:description", content: "Professionelles Webdesign & moderne Websiten für Minden und Ostwestfalen. Lokale Betreuung und maßgeschneiderte Lösungen für Ihr Unternehmen." },
+    { property: "og:type", content: "website" },
+    { property: "og:locale", content: "de_DE" },
+    { property: "og:site_name", content: "Orangize Digital" },
+    { property: "og:url", content: `https://orangize.de${route.path}` },
+    { property: "og:image", content: "https://orangize.de/images/website-erstellen-hero.jpg" },
+    { property: "og:image:width", content: "1200" },
+    { property: "og:image:height", content: "630" },
+    { property: "og:image:alt", content: "Website erstellen lassen in Bünde | Professionelles Webdesign | Orangize" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: "Website erstellen lassen in Bünde | Professionelles Webdesign | Orangize" },
+    { name: "twitter:description", content: "Professionelles Webdesign & moderne Websiten für Minden und Ostwestfalen. Lokale Betreuung und maßgeschneiderte Lösungen für Ihr Unternehmen." },
+    { name: "twitter:image", content: "https://orangize.de/images/website-erstellen-hero.jpg" },
   ],
   link: [
+    { rel: "canonical", href: `https://orangize.de${route.path}` },
+  ],
+  script: [
     {
-      rel: "canonical",
-      href: `https://orangize.de${route.path}`,
+      type: "application/ld+json",
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Service",
+            "@id": `https://orangize.de${route.path}#service`,
+            serviceType: "Webdesign & Website-Erstellung",
+            name: "Website erstellen lassen in Bünde",
+            description: "Website erstellen lassen in Bünde ✓ Lokale Webdesign Agentur ✓ Responsive Design ✓ SEO-optimiert ✓ Persönliche Betreuung vor Ort in Bünde & Ostwestfalen.",
+            url: `https://orangize.de${route.path}`,
+            areaServed: { "@type": "City", name: "Bünde" },
+            provider: { "@id": "https://orangize.de/#organization" },
+          },
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://orangize.de/#organization",
+            name: "Orangize Digital",
+            image: "https://orangize.de/images/logo/orangize-black.svg",
+            url: "https://orangize.de",
+            telephone: "+4915122031093",
+            email: "info@orangize.de",
+            priceRange: "€€",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Brüderstr. 11",
+              postalCode: "32547",
+              addressLocality: "Bad Oeynhausen",
+              addressRegion: "Nordrhein-Westfalen",
+              addressCountry: "DE",
+            },
+            areaServed: "Bünde",
+          },
+          {
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Startseite", item: "https://orangize.de" },
+              { "@type": "ListItem", position: 2, name: "Website erstellen lassen in Bünde", item: `https://orangize.de${route.path}` },
+            ],
+          },
+        ],
+      }),
     },
   ],
 });
