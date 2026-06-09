@@ -1,2 +1,11 @@
+# Legacy URLs from the old site — 301 to current structure
+# (these were returning the homepage with HTTP 200 = soft 404)
+/kontakt        /#kontakt   301
+/ueber-uns      /           301
+/expertise      /           301
+
+# API → serverless function
 /api/*  /.netlify/functions/server  200
+
+# SPA fallback for any route without prerendered HTML
 /*      /index.html                 200

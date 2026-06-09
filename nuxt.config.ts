@@ -59,9 +59,27 @@ export default defineNuxtConfig({
     '/website-erstellen-minden': { prerender: true },
     '/website-erstellen-porta-westfalica': { prerender: true },
     '/website-erstellen-bad-oeynhausen': { prerender: true },
+    '/ki-automatisierung': { prerender: true },
+    '/social-media-betreuung': { prerender: true },
     '/impressum': { prerender: true },
     '/datenschutz': { prerender: true },
     '/danke': { prerender: true },
     '/blog/**': { prerender: true }
+  },
+
+  nitro: {
+    prerender: {
+      // Follow internal links so dynamic blog posts (and any newly linked
+      // pages) get real static HTML instead of falling back to the SPA shell.
+      crawlLinks: true,
+      // Explicit safety net for the dynamic blog routes.
+      routes: [
+        '/blog/google-ads-einfuehrung',
+        '/blog/landing-page-psychologie',
+        '/blog/social-media-marketing-leitfaden',
+        '/sitemap.xml'
+      ],
+      failOnError: false
+    }
   }
 })
